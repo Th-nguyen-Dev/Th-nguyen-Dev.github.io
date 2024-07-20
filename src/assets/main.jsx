@@ -1,4 +1,5 @@
 import './style.css';
+import React from 'react'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
 const scene = new THREE.Scene();
