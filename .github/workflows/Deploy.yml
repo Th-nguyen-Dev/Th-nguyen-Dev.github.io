@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - 3DTest
+      - Test3D
 
 jobs:
   build:
@@ -35,7 +35,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/3DTest'
+    if: github.ref == 'refs/heads/Test3D'
 
     steps:
       - name: Download artifact
