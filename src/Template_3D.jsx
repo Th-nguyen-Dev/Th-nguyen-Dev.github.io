@@ -10,7 +10,7 @@ import cloud from "/textures/earth clouds.jpg";
 import { texture } from 'three/examples/jsm/nodes/Nodes.js';
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(10, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({
     canvas : document.querySelector('#bg'),
     antialias: true
@@ -38,7 +38,7 @@ scene.add(earth);
 
 
 //Add Cloud
-const cloudGeometry = new THREE.SphereGeometry(10.06, 100, 100, 0, Math.PI * 2, 0, Math.PI);
+const cloudGeometry = new THREE.SphereGeometry(10.02, 100, 100, 0, Math.PI * 2, 0, Math.PI);
 const cloudTexture = new THREE.TextureLoader().load(cloud);
 const cloudMaterial = new THREE.MeshStandardMaterial({
     color: 0xffffff,
@@ -51,7 +51,7 @@ scene.add(earthCloud);
 
 
 //Add light
-const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 5);
+const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 2);
 const ambientLight = new THREE.AmbientLight(0xfffffff,0);
 const lightHelper = new THREE.DirectionalLightHelper(directionalLight);
 
