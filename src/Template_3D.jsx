@@ -21,16 +21,23 @@ renderer.shadowMapSoft = true;
 camera.position.setZ(30);
 
 //Add Earth
-const earthGeometry = new THREE.SphereGeometry(10, 100, 100, 0, Math.PI * 2, 0, Math.PI);
+const earthGeometry = new THREE.SphereGeometry(10, 200, 200, 0, Math.PI * 2, 0, Math.PI);
 const earthTexture = new THREE.TextureLoader().load(earthAlbedo);
 const earthBumpTexture = new THREE.TextureLoader().load(earthBump);
 const earthSpecularTexture = new THREE.TextureLoader().load(earthSpecular);
 const earthMaterial = new THREE.MeshPhongMaterial({ 
-    map: earthTexture, bumpMap: earthBumpTexture, 
+    map: earthTexture, 
+    
+    bumpMap: earthBumpTexture, 
     bumpScale: 50, 
 
     specularMap: earthSpecularTexture, 
-    shininess: 100
+    shininess: 100,
+
+    displacementMap: earthBumpTexture,
+    displacementScale: 0.05,
+
+
 
 });
 const earth = new THREE.Mesh(earthGeometry, earthMaterial);
@@ -38,7 +45,7 @@ scene.add(earth);
 
 
 //Add Cloud
-const cloudGeometry = new THREE.SphereGeometry(10.02, 100, 100, 0, Math.PI * 2, 0, Math.PI);
+const cloudGeometry = new THREE.SphereGeometry(10.07, 200, 200, 0, Math.PI * 2, 0, Math.PI);
 const cloudTexture = new THREE.TextureLoader().load(cloud);
 const cloudMaterial = new THREE.MeshStandardMaterial({
     color: 0xffffff,
@@ -52,8 +59,10 @@ scene.add(earthCloud);
 
 //Add light
 const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 2);
-const ambientLight = new THREE.AmbientLight(0xfffffff,0);
-const lightHelper = new THREE.DirectionalLightHelper(directionalLight);
+const ambientLight = new THREE.AmbientLight(0xfffffff,0.02);
+
+// const lightHelper = new THREE.DirectionalLightHelper(directionalLight);
+// scene.add(lightHelper);
 
 //Add GridHelper
 // const girdHelper = new THREE.GridHelper(200,50);
@@ -68,7 +77,7 @@ const angle = Math.PI/3650;
 
 
 scene.add(ambientLight);
-scene.add(lightHelper);
+
 
 scene.add(directionalLight)
 scene.add(axis);
