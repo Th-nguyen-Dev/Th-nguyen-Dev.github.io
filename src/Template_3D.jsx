@@ -2,9 +2,10 @@ import './style.css';
 import React from 'react'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
-import earthAlbedo from "/textures/earth albedo.jpg";
-import earthBump from "/textures/earth bump.jpg";
+import earthAlbedo from "/textures/earth albedo dec.png";
+import earthBump from "/textures/earth elevation complete.png";
 import earthSpecular from "/textures/earth land ocean mask.png";
+import galaxy from "/textures/Galaxy.png";
 
 import cloud from "/textures/earth clouds.jpg";
 import { texture } from 'three/examples/jsm/nodes/Nodes.js';
@@ -21,31 +22,29 @@ renderer.shadowMapSoft = true;
 camera.position.setZ(30);
 
 //Add Earth
-const earthGeometry = new THREE.SphereGeometry(10, 200, 200, 0, Math.PI * 2, 0, Math.PI);
+const earthGeometry = new THREE.SphereGeometry(10, 400, 400, 0, Math.PI * 2, 0, Math.PI);
 const earthTexture = new THREE.TextureLoader().load(earthAlbedo);
 const earthBumpTexture = new THREE.TextureLoader().load(earthBump);
 const earthSpecularTexture = new THREE.TextureLoader().load(earthSpecular);
 const earthMaterial = new THREE.MeshPhongMaterial({ 
     map: earthTexture, 
     
+
+
     bumpMap: earthBumpTexture, 
     bumpScale: 50, 
 
     specularMap: earthSpecularTexture, 
     shininess: 100,
 
-    displacementMap: earthBumpTexture,
-    displacementScale: 0.05,
-
-
-
+    reflectivity: -1.0
 });
 const earth = new THREE.Mesh(earthGeometry, earthMaterial);
 scene.add(earth);
 
 
 //Add Cloud
-const cloudGeometry = new THREE.SphereGeometry(10.07, 200, 200, 0, Math.PI * 2, 0, Math.PI);
+const cloudGeometry = new THREE.SphereGeometry(10.07, 400, 400, 0, Math.PI * 2, 0, Math.PI);
 const cloudTexture = new THREE.TextureLoader().load(cloud);
 const cloudMaterial = new THREE.MeshStandardMaterial({
     color: 0xffffff,
@@ -91,7 +90,7 @@ function animate(){
     earth.rotateOnAxis(axis, angle);
 
     //Rotate Cloud
-    earthCloud.rotateOnAxis(axis, angle*0.9);
+    earthCloud.rotateOnAxis(axis, angle*0.6);
     renderer.render(scene,camera);
 
     control.update();
