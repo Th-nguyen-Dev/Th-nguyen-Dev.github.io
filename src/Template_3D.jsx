@@ -7,7 +7,8 @@ import earthBump from "/textures/earth elevation.png";
 import earthSpecular from "/textures/earth land ocean mask.png";
 import earthNight from "/textures/earth night_lights_modified.png";
 import galaxy from "/textures/Galaxy.png";
-
+import fragmentShader from "./shaders/fragment_fresnel.glsl";
+import vertexShader from "./shaders/vertex_fresnel.glsl";
 import cloud from "/textures/earth clouds.jpg";
 import { texture } from 'three/examples/jsm/nodes/Nodes.js';
 
@@ -23,18 +24,13 @@ renderer.shadowMapSoft = true;
 camera.position.setZ(30);
 
 //Add Earth
-const earthGeometry = new THREE.SphereGeometry(10, 400, 400, 0, Math.PI * 2, 0, Math.PI);
+const earthGeometry = new THREE.SphereGeometry(10, 100, 100, 0, Math.PI * 2, 0, Math.PI);
 const earthTexture = new THREE.TextureLoader().load(earthAlbedo);
 const earthBumpTexture = new THREE.TextureLoader().load(earthBump);
 const earthSpecularTexture = new THREE.TextureLoader().load(earthSpecular);
-const earthNightTexture = new THREE.TextureLoader().load(earthNight);
 const earthEnvTexture = new THREE.TextureLoader().load(galaxy);
 const earthMaterial = new THREE.MeshPhongMaterial({ 
     map: earthTexture, 
-
-    emissiveMap: earthNightTexture,
-    emissiveIntensity: 1,
-    emissive: 0xffff00,
 
     envMap: earthEnvTexture,
     
@@ -48,10 +44,26 @@ const earthMaterial = new THREE.MeshPhongMaterial({
 });
 const earth = new THREE.Mesh(earthGeometry, earthMaterial);
 scene.add(earth);
+const uniforms = {
+    cameraPosition : {value: new THREE.Vector3()}
+};
+const fresnelGeometry = new THREE.SphereGeometry(10.15, 100, 100, 0, Math.PI * 2, 0, Math.PI);
+const fresnelMaterial = new THREE.ShaderMaterial({
+    fragmentShader : fragmentShader,
+    vertexShader : vertexShader,
+    transparent : true,
+    uniforms: uniforms
+})
+
+fresnelMaterial.uniforms.uTime = {value :0}
+fresnelMaterial.uniforms.uRadius = {value : 0.5}
+
+const fresnel = new THREE.Mesh(fresnelGeometry, fresnelMaterial);
+scene.add(fresnel);
 
 
 //Add Cloud
-const cloudGeometry = new THREE.SphereGeometry(10.07, 400, 400, 0, Math.PI * 2, 0, Math.PI);
+const cloudGeometry = new THREE.SphereGeometry(10.07, 100, 100,0, Math.PI * 2, 0, Math.PI);
 const cloudTexture = new THREE.TextureLoader().load(cloud);
 const cloudMaterial = new THREE.MeshStandardMaterial({
     color: 0xffffff,
@@ -87,7 +99,7 @@ scene.add(ambientLight);
 
 scene.add(directionalLight)
 scene.add(axis);
-
+scene.add(camera);
 
 const control  = new OrbitControls(camera, renderer.domElement);
 renderer.render(scene,camera);
@@ -95,6 +107,7 @@ function animate(){
     //Rotate Earth
     requestAnimationFrame(animate);
     earth.rotateOnAxis(axis, angle);
+    uniforms.cameraPosition.value.copy(camera.getWorldPosition(new THREE.Vector3));
 
     //Rotate Cloud
     earthCloud.rotateOnAxis(axis, angle*1.5);
