@@ -6,6 +6,6 @@ void main(){
     float intensity = 1.0 - dot(vertexNormal, viewDirection);
     vec3 atmosphere = vec3(0.3,0.6,1.0);
 
-    gl_FragColor = vec4(atmosphere,pow(intensity,1.99));
+    gl_FragColor = vec4(atmosphere,pow(intensity,5.5));
 
 }

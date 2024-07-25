@@ -3,7 +3,7 @@ import React from 'react'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
 import earthAlbedo from "/textures/earth albedo dec.png";
-import earthBump from "/textures/earth elevation.png";
+import earthBump from "/textures/earth bump.jpg";
 import earthSpecular from "/textures/earth land ocean mask.png";
 import earthNight from "/textures/earth night_lights_modified.png";
 import galaxy from "/textures/Galaxy.png";
@@ -40,19 +40,24 @@ const earthMaterial = new THREE.MeshPhongMaterial({
     specularMap: earthSpecularTexture, 
     shininess: 100,
 
-    reflectivity: -1.0
+    reflectivity: -1.0,
+    polygonOffset : true,
+    polygonOffsetFactor: 20000,
+    precision : "highp"
 });
 const earth = new THREE.Mesh(earthGeometry, earthMaterial);
 scene.add(earth);
 const uniforms = {
     cameraPosition : {value: new THREE.Vector3()}
 };
-const fresnelGeometry = new THREE.SphereGeometry(10.15, 100, 100, 0, Math.PI * 2, 0, Math.PI);
+const fresnelGeometry = new THREE.SphereGeometry(10, 100, 100, 0, Math.PI * 2, 0, Math.PI);
 const fresnelMaterial = new THREE.ShaderMaterial({
     fragmentShader : fragmentShader,
     vertexShader : vertexShader,
     transparent : true,
-    uniforms: uniforms
+    uniforms: uniforms,
+    polygonOffset : true,
+    polygonOffsetFactor: -20000
 })
 
 fresnelMaterial.uniforms.uTime = {value :0}
@@ -63,12 +68,14 @@ scene.add(fresnel);
 
 
 //Add Cloud
-const cloudGeometry = new THREE.SphereGeometry(10.07, 100, 100,0, Math.PI * 2, 0, Math.PI);
+const cloudGeometry = new THREE.SphereGeometry(10, 100, 100,0, Math.PI * 2, 0, Math.PI);
 const cloudTexture = new THREE.TextureLoader().load(cloud);
 const cloudMaterial = new THREE.MeshStandardMaterial({
     color: 0xffffff,
     alphaMap: cloudTexture,
-    blending: THREE.AdditiveBlending
+    blending: THREE.AdditiveBlending,
+    polygonOffset : true,
+    polygonOffsetFactor: -10000
 });
 const earthCloud = new THREE.Mesh(cloudGeometry, cloudMaterial);
 scene.add(earthCloud);
