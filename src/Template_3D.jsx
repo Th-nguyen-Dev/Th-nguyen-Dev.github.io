@@ -5,15 +5,18 @@ import { OrbitControls } from 'three/examples/jsm/Addons.js';
 import earthAlbedo from "/textures/earth albedo dec.png";
 import earthBump from "/textures/earth bump.jpg";
 import earthSpecular from "/textures/earth land ocean mask.png";
-import earthNight from "/textures/earth night_lights_modified.png";
 import galaxy from "/textures/Galaxy.png";
 import fragmentShader from "./shaders/fragment_fresnel.glsl";
 import vertexShader from "./shaders/vertex_fresnel.glsl";
 import cloud from "/textures/earth clouds.jpg";
-import { texture } from 'three/examples/jsm/nodes/Nodes.js';
 
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { FilmPass } from 'three/addons/postprocessing/FilmPass.js';
+import {SAOPass} from 'three/addons/postprocessing/SAOPass.js';
+//Add Camera
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(10, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({
     canvas : document.querySelector('#bg'),
     antialias: true
@@ -40,17 +43,19 @@ const earthMaterial = new THREE.MeshPhongMaterial({
     specularMap: earthSpecularTexture, 
     shininess: 100,
 
-    reflectivity: -1.0,
+    reflectivity: -0.5,
     polygonOffset : true,
     polygonOffsetFactor: 20000,
     precision : "highp"
 });
+
+//Add Fresnel
 const earth = new THREE.Mesh(earthGeometry, earthMaterial);
 scene.add(earth);
 const uniforms = {
     cameraPosition : {value: new THREE.Vector3()}
 };
-const fresnelGeometry = new THREE.SphereGeometry(10, 100, 100, 0, Math.PI * 2, 0, Math.PI);
+const fresnelGeometry = new THREE.SphereGeometry(10.02, 100, 100, 0, Math.PI * 2, 0, Math.PI);
 const fresnelMaterial = new THREE.ShaderMaterial({
     fragmentShader : fragmentShader,
     vertexShader : vertexShader,
@@ -62,13 +67,12 @@ const fresnelMaterial = new THREE.ShaderMaterial({
 
 fresnelMaterial.uniforms.uTime = {value :0}
 fresnelMaterial.uniforms.uRadius = {value : 0.5}
-
 const fresnel = new THREE.Mesh(fresnelGeometry, fresnelMaterial);
 scene.add(fresnel);
 
 
 //Add Cloud
-const cloudGeometry = new THREE.SphereGeometry(10, 100, 100,0, Math.PI * 2, 0, Math.PI);
+const cloudGeometry = new THREE.SphereGeometry(10.01, 100, 100,0, Math.PI * 2, 0, Math.PI);
 const cloudTexture = new THREE.TextureLoader().load(cloud);
 const cloudMaterial = new THREE.MeshStandardMaterial({
     color: 0xffffff,
@@ -98,18 +102,29 @@ directionalLight.position.set(5,10,7.5)
 const axis = new THREE.Vector3(0,1,0);
 const lineHelper = new THREE.ArrowHelper(axis)
 const angle = Math.PI/3650;
-
-
-
 scene.add(ambientLight);
-
-
 scene.add(directionalLight)
 scene.add(axis);
 scene.add(camera);
 
+
+//Add PostProcessing
+const composer = new EffectComposer(renderer);
+const renderPass = new RenderPass(scene, camera);
+composer.addPass(renderPass);
+
+const filmPass = new FilmPass(0.5, false);
+composer.addPass(filmPass);
+
+
+
+
+
+
+
 const control  = new OrbitControls(camera, renderer.domElement);
 renderer.render(scene,camera);
+
 function animate(){
     //Rotate Earth
     requestAnimationFrame(animate);
@@ -118,7 +133,7 @@ function animate(){
 
     //Rotate Cloud
     earthCloud.rotateOnAxis(axis, angle*1.5);
-    renderer.render(scene,camera);
+    composer.render(scene,camera);
 
     control.update();
 }
