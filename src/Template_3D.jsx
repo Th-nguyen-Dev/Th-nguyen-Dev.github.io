@@ -14,6 +14,9 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { FilmPass } from 'three/addons/postprocessing/FilmPass.js';
 import {SAOPass} from 'three/addons/postprocessing/SAOPass.js';
+import { GlitchPass } from 'three/addons/postprocessing/GlitchPass.js';
+import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';   
+import { DigitalGlitch } from './shaders/DigitalGlitchModified.js';
 //Add Camera
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -116,6 +119,14 @@ composer.addPass(renderPass);
 const filmPass = new FilmPass(0.5, false);
 composer.addPass(filmPass);
 
+const glitchPass = new ShaderPass(DigitalGlitch);
+glitchPass.uniforms.distortion_x.value = 10;
+glitchPass.uniforms.distortion_y.value = 10;
+glitchPass.uniforms.amount.value = 0.0008;
+glitchPass.uniforms.col_s.value = 0.001;
+glitchPass.uniforms.snow.value = 0.001;
+composer.addPass(glitchPass);
+
 
 
 
@@ -130,6 +141,11 @@ function animate(){
     requestAnimationFrame(animate);
     earth.rotateOnAxis(axis, angle);
     uniforms.cameraPosition.value.copy(camera.getWorldPosition(new THREE.Vector3));
+
+    //Randomize glitchPass.uniforms.seed.value from 1 to 2
+    glitchPass.uniforms.seed.value = Math.random() + 1;
+
+
 
     //Rotate Cloud
     earthCloud.rotateOnAxis(axis, angle*1.5);
