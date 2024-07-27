@@ -61,8 +61,8 @@ const DigitalGlitch = {
 		void main() {
 			if(byp<1) {
 				vec2 p = vUv;
-				float xs = floor(gl_FragCoord.x / 0.5);
-				float ys = floor(gl_FragCoord.y / 0.5);
+				float xs = floor(gl_FragCoord.x);
+				float ys = floor(gl_FragCoord.y);
 				//based on staffantans glitch shader for unity https://github.com/staffantan/unityglitch
 				float disp = texture2D(tDisp, p*seed*seed).r;
 				if(p.y<distortion_x+col_s && p.y>distortion_x-col_s*seed) {
