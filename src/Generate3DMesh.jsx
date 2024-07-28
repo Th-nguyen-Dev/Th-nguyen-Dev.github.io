@@ -34,22 +34,6 @@ function Generate3DMesh({cameraRef}) {
             fresnelRef.current.material.uniforms.cameraPosition.value.copy(cameraRef.getWorldPosition(new THREE.Vector3()));
         }
     });
-    useEffect(() => {
-        console.log('Generate3DMesh component mounted with cameraRef:', cameraRef);
-    }, [cameraRef]);
-
-    useEffect(() => {
-        console.log('earthRef changed:', earthRef.current);
-    }, [earthRef]);
-
-    useEffect(() => {
-        console.log('fresnelRef changed:', fresnelRef.current);
-    }, [fresnelRef]);
-
-    useEffect(() => {
-        console.log('cloudRef changed:', cloudRef.current);
-    }, [cloudRef]);
-
     return (
         <>
             <mesh ref={earthRef}>
