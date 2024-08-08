@@ -22,7 +22,7 @@ function Generate3DScene() {
             }}
         >
             <ambientLight intensity={0.005} />
-            <directionalLight position={[5, 10, 7.5]} intensity={2} />
+            <directionalLight position={[5, 10, 7.5]} intensity={4} />
             {isCameraReady && <Generate3DMesh cameraRef={cameraRef.current} />}
             <OrbitControls camera={cameraRef.current} />
         </Canvas>

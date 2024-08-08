@@ -2,6 +2,7 @@ import earthAlbedo from "/textures/earth albedo dec.png";
 import earthBump from "/textures/earth bump.jpg";
 import earthSpecular from "/textures/earth land ocean mask.png";
 import galaxy from "/textures/Galaxy.png";
+import cloud from "/textures/earth clouds.jpg";
 
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef, useEffect } from 'react';
@@ -10,7 +11,6 @@ import * as THREE from 'three';
 
 function Earth(){
     const earthRef = useRef();
-    const materialRef = useRef();
 
     useFrame(() => {
         if (earthRef.current) {
@@ -26,9 +26,9 @@ function Earth(){
                 bumpMap={new THREE.TextureLoader().load(earthBump)}
                 specularMap={new THREE.TextureLoader().load(earthSpecular)}
                 envMap={new THREE.TextureLoader().load(galaxy)}
-                bumpScale={0.05}
-                shininess={0.5}
-                reflectivity={0.7}
+                bumpScale={50}
+                shininess={50}
+                reflectivity={-0.001}
                 polygonOffset
                 polygonOffsetFactor={1}
                 precision="highp"
