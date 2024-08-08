@@ -10,6 +10,8 @@ import Generate3DMesh from './Generate3DMesh';
 function Generate3DScene() {
     const cameraRef = useRef();
     const [isCameraReady, setIsCameraReady] = useState(false);
+    const lightRef = useRef();
+    const [isLightReady, setIsLightReady] = useState(false);
 
     return (
         <Canvas
@@ -21,9 +23,15 @@ function Generate3DScene() {
                 setIsCameraReady(true);
             }}
         >
-            <ambientLight intensity={0.005} />
-            <directionalLight position={[5, 10, 7.5]} intensity={4} />
-            {isCameraReady && <Generate3DMesh cameraRef={cameraRef.current} />}
+            
+            <ambientLight intensity={0.175} />
+
+            {isCameraReady && <Generate3DMesh cameraRef={cameraRef.current}  />}
+            <directionalLight 
+                ref={lightRef}
+                position={[5, 10, 7.5]} 
+                intensity={10}
+            />
             <OrbitControls camera={cameraRef.current} />
         </Canvas>
     );

@@ -8,20 +8,24 @@ import EarthCloudShadow from './meshes/earth_cloud_shadow';
 import Fresnel from './meshes/fresnel';
 import EarthCloud from './meshes/earth_cloud';
 import TestSphere from './meshes/test';
-
+import EarthAtmosphere from './meshes/earth_atmostphere';
 
 function Generate3DMesh({cameraRef}) {
 
+    const meshRef = useRef();
     return (
-        <>
+        <group
+            ref = {meshRef}
+        >
             <Earth />
             
             {/* <TestSphere /> */}
             {/* <EarthCloudShadow /> */}
             <EarthCloud />
+            {/* <EarthAtmosphere cameraRef={cameraRef} /> */}
             <Fresnel cameraRef={cameraRef} />
             
-        </>
+        </group>
     );
 
 }
