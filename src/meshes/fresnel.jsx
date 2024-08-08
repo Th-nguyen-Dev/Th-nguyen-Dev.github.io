@@ -18,7 +18,7 @@ function Fresnel({cameraRef}) {
     });
     return (
             <mesh ref={fresnelRef}>
-                <sphereGeometry args={[10.03, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
+                <sphereGeometry args={[10.05, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
                 <shaderMaterial
                     fragmentShader={fragmentShader}
                     vertexShader={vertexShader}

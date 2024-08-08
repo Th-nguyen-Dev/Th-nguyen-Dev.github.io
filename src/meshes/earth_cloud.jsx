@@ -10,19 +10,18 @@ function EarthCloud(){
     useFrame(() => {
 
         if (cloudRef.current) {
-            cloudRef.current.rotation.y += Math.PI / 3650 * 1.1;
+            cloudRef.current.rotation.y += Math.PI / 36500 * 2;
         }
     });
     const cloudTexture = new THREE.TextureLoader().load(cloud);
     return (
         <mesh ref={cloudRef}>
-        <sphereGeometry args={[10.02, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
+        <sphereGeometry args={[10.03, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
         <meshStandardMaterial
             color="white"
             alphaMap={cloudTexture}
             transparent = {true}
             side={THREE.DoubleSide}
-            blending = {THREE.AdditiveBlending}
 
         />
     </mesh>

@@ -14,7 +14,7 @@ function Earth(){
 
     useFrame(() => {
         if (earthRef.current) {
-            earthRef.current.rotation.y += Math.PI / 3650;
+            earthRef.current.rotation.y += Math.PI / 36500;
         }
     }); 
 
