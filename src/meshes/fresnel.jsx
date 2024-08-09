@@ -20,7 +20,6 @@ function Fresnel({cameraRef}) {
                 vertexShader={vertexShader}
                 fragmentShader={fragmentShader}
                 transparent = {true}
-                color = {0x76d6ff}
                 />
             </mesh>
 

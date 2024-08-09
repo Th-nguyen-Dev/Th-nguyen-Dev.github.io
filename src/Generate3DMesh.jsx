@@ -22,7 +22,7 @@ function Generate3DMesh({cameraRef}) {
             {/* <TestSphere /> */}
             {/* <EarthCloudShadow /> */}
             <EarthCloud />
-            {/* <EarthAtmosphere cameraRef={cameraRef} /> */}
+            <EarthAtmosphere cameraRef={cameraRef} />
             <Fresnel cameraRef={cameraRef} />
             
         </group>

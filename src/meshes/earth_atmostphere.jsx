@@ -11,15 +11,14 @@ const EarthAtmosphere = ({cameraRef}) => {
 
     return (
         <mesh ref = {atmosphereRef}>
-            <sphereGeometry args={[10.05, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
-            <CustomShaderMaterial
+            <sphereGeometry args={[15, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
+            <shaderMaterial
                 ref = {materialRef}
-                baseMaterial={THREE.MeshLambertMaterial}
                 vertexShader={atmosphere_vertex}
                 fragmentShader={atmosphere_fragment}
-                transparent = {true}
-                color={0x76d6ff}
-            ></CustomShaderMaterial>
+                blending={THREE.AdditiveBlending}
+                side={THREE.BackSide}
+            ></shaderMaterial>
         </mesh>
     );
 };

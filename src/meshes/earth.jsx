@@ -26,8 +26,8 @@ function Earth(){
                 bumpMap={new THREE.TextureLoader().load(earthBump)}
                 specularMap={new THREE.TextureLoader().load(earthSpecular)}
                 envMap={new THREE.TextureLoader().load(galaxy)}
-                bumpScale={50}
-                shininess={50}
+                bumpScale={150}
+                shininess={20}
                 reflectivity={-0.001}
                 polygonOffset
                 polygonOffsetFactor={1}
