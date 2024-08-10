@@ -14,7 +14,7 @@ return (
         <AudioPlayer
             ref={audioRef}
             src={EarthSleep}
-            autoPlay
+            // autoPlay
             loop
             style={{ display: 'none' }}
         />

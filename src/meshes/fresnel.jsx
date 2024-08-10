@@ -6,7 +6,7 @@ import fragmentShader from "../shaders/fragment_fresnel.glsl";
 import vertexShader from "../shaders/vertex_fresnel.glsl";
 import CustomShaderMaterial from 'three-custom-shader-material';
 
-function Fresnel({cameraRef}) {
+function Fresnel() {
 
     const fresnelRef = useRef();
     const materialRef = useRef();

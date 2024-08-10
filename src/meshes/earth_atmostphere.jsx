@@ -5,20 +5,22 @@ import { useFrame } from '@react-three/fiber';
 import CustomShaderMaterial from 'three-custom-shader-material'; 
 import * as THREE from 'three';
 
-const EarthAtmosphere = ({cameraRef}) => {
+const EarthAtmosphere = () => {
     const atmosphereRef = useRef();
     const materialRef = useRef();
 
     return (
         <mesh ref = {atmosphereRef}>
-            <sphereGeometry args={[15, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
-            <shaderMaterial
+            <sphereGeometry args={[11, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
+            <CustomShaderMaterial
                 ref = {materialRef}
+                baseMaterial={THREE.MeshLambertMaterial}
                 vertexShader={atmosphere_vertex}
                 fragmentShader={atmosphere_fragment}
                 blending={THREE.AdditiveBlending}
                 side={THREE.BackSide}
-            ></shaderMaterial>
+                
+            ></CustomShaderMaterial>
         </mesh>
     );
 };

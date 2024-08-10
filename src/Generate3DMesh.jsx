@@ -9,6 +9,7 @@ import Fresnel from './meshes/fresnel';
 import EarthCloud from './meshes/earth_cloud';
 import TestSphere from './meshes/test';
 import EarthAtmosphere from './meshes/earth_atmostphere';
+import EarthAtmosphereInner from './meshes/earth_atmostphere_inner';
 
 function Generate3DMesh({cameraRef}) {
 
@@ -22,8 +23,9 @@ function Generate3DMesh({cameraRef}) {
             {/* <TestSphere /> */}
             {/* <EarthCloudShadow /> */}
             <EarthCloud />
-            <EarthAtmosphere cameraRef={cameraRef} />
-            <Fresnel cameraRef={cameraRef} />
+            <EarthAtmosphereInner />
+            <EarthAtmosphere  />
+            <Fresnel  />
             
         </group>
     );

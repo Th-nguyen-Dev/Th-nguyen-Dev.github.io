@@ -3,6 +3,7 @@ import earthBump from "/textures/earth bump.jpg";
 import earthSpecular from "/textures/earth land ocean mask.png";
 import galaxy from "/textures/Galaxy.png";
 import cloud from "/textures/earth clouds.jpg";
+import cityLights from "/textures/earth night_lights_modified.png";
 
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef, useEffect } from 'react';
@@ -25,7 +26,9 @@ function Earth(){
                 map={new THREE.TextureLoader().load(earthAlbedo)}
                 bumpMap={new THREE.TextureLoader().load(earthBump)}
                 specularMap={new THREE.TextureLoader().load(earthSpecular)}
-                envMap={new THREE.TextureLoader().load(galaxy)}
+                emissiveMap={new THREE.TextureLoader().load(cityLights)}
+                emissive={0xF8D75F}
+                emissiveIntensity={0.1}
                 bumpScale={150}
                 shininess={20}
                 reflectivity={-0.001}

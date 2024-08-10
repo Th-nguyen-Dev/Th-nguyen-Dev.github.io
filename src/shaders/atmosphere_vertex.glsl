@@ -6,5 +6,6 @@ void main()
     vertexPosition = position;
     vertexNormal = normal;
     vertexUV = uv;
+    csm_Normal = -vertexNormal;
     gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
 }
