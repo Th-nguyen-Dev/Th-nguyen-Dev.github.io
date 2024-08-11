@@ -24,17 +24,20 @@ function EarthCities(){
             <CustomShaderMaterial
                 baseMaterial={THREE.MeshLambertMaterial}
                 alphaMap={new THREE.TextureLoader().load(cityLights)}
-                vertexShader={vertexShader}
+
+                emissive="#FFD200"
+                emissiveIntensity={5} 
                 fragmentShader={fragmentShader}
                 transparent={true}
-                depthTest={false}
                 patchMap={{
-                    Injection: {
+                    csm_luminanceRe: {
                         "#include <dithering_fragment>": `
                         #include <dithering_fragment>
-                        float luminanceRe = luminanceCal(outgoingLight);
-                        gl_FragColor = vec4(vec3(1.0,1.0,0), 1.0);
-                        `
+                        vec3 outgoingLightNoEmissive = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse;
+                        float luminanceRe = luminanceCal(outgoingLightNoEmissive);
+                        if (luminanceRe > 0.05) {
+                            gl_FragColor.a *= 0.0;
+                        }`
                     }
                 }}
             />
