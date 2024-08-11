@@ -22,7 +22,7 @@ function EarthCloudShadow(){
 
     return (
             <mesh ref={cloudShadowRef}>
-            <sphereGeometry args={[10.01, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
+            <sphereGeometry args={[10.01, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
             <meshStandardMaterial
                 color = "black"
                 alphaMap={cloudTexture}

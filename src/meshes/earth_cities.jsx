@@ -9,8 +9,15 @@ import vertexShader from '../shaders/city_vertex.glsl';
 
 import * as THREE from 'three';
 
-function EarthCities(){
-    const cityLightRef = useRef();
+function EarthCities({setSelectMesh}) {
+    const cityLightRef = useRef(null);
+
+    useEffect(() => {
+        if (cityLightRef.current) {
+            setSelectMesh(cityLightRef.current);
+            console.log("cityLightRef is no longer null");
+        }
+    }, [cityLightRef.current]);
 
     useFrame(() => {
         if (cityLightRef.current) {
@@ -19,16 +26,16 @@ function EarthCities(){
     }); 
 
     return (
-            <mesh ref = {cityLightRef}>
-            <sphereGeometry args={[10.01, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
+            <mesh ref = {cityLightRef}  layer = {2}>
+            <sphereGeometry args={[10.01, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
             <CustomShaderMaterial
                 baseMaterial={THREE.MeshLambertMaterial}
                 alphaMap={new THREE.TextureLoader().load(cityLights)}
-
                 emissive="#FFD200"
-                emissiveIntensity={4} 
+                emissiveIntensity={10} 
                 fragmentShader={fragmentShader}
                 transparent={true}
+                depthTest={false}
                 patchMap={{
                     csm_luminanceRe: {
                         "#include <dithering_fragment>": `

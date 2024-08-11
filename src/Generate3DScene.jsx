@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, Stats } from '@react-three/drei';
 import { useEffect, useState } from 'react';
 import { Suspense } from 'react';
 import { Bloom, EffectComposer, SelectiveBloom} from '@react-three/postprocessing'
@@ -12,15 +12,26 @@ function Generate3DScene() {
     const cameraRef = useRef();
     const [isCameraReady, setIsCameraReady] = useState(false);
     const lightRef = useRef();
+    const alightRef = useRef();
     const orbitRef = useRef();
     const [isLightReady, setIsLightReady] = useState(false);
+
+
+    const [selectMesh, setSelectMesh] = useState([]);
+
+    const addMesh = (object) => {
+        setSelectMesh((prevObjects) => [...prevObjects, object]);
+        console.log(selectMesh);
+    };
+
 
     const handleCameraChange = (event) => {
         console.log(orbitRef.current);
     };
+    const allLightRef = [lightRef, alightRef];
 
     return (
-        <Canvas
+        <Canvas 
             style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }}
             camera={{ 
                 position: [80, 12, 10],
@@ -32,9 +43,11 @@ function Generate3DScene() {
                 setIsCameraReady(true);
             }}
         >
-            <ambientLight intensity={0.1} />
+            <ambientLight
+            ref = {alightRef} 
+            intensity={0.1} />
 
-            {isCameraReady && <Generate3DMesh cameraRef={cameraRef.current}  />}
+            {isCameraReady && <Generate3DMesh cameraRef={cameraRef.current} setSelectMesh={addMesh}/>}
             <directionalLight 
                 ref={lightRef}
                 position={[5, 10, 7.5]} 
@@ -47,16 +60,14 @@ function Generate3DScene() {
             />
             <EffectComposer>
                 <SelectiveBloom
-                    selectionLayer={1}
-                    intensity={0.5}
-                    luminanceThreshold={0.1}
-                    luminanceSmoothing={0.9}
-                    height={300}
-                    opacity={1}
-                    scale={0.5}
-                />
-
+                    selection={selectMesh}
+                    lightRef={allLightRef}
+                    luminanceThreshold={0.99} 
+                    luminanceSmoothing={0.05}
+                    intensity={0.7} 
+                     />
             </EffectComposer>
+            <Stats />
         </Canvas>
     );
 

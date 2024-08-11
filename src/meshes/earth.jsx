@@ -23,7 +23,7 @@ function Earth(){
 
     return (
             <mesh ref={earthRef}>
-            <sphereGeometry args={[10, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
+            <sphereGeometry args={[10, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
             <meshPhongMaterial
                 map={new THREE.TextureLoader().load(earthAlbedo)}
                 bumpMap={new THREE.TextureLoader().load(earthBump)}
