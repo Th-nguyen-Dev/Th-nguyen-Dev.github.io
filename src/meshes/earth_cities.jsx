@@ -26,7 +26,7 @@ function EarthCities(){
                 alphaMap={new THREE.TextureLoader().load(cityLights)}
 
                 emissive="#FFD200"
-                emissiveIntensity={5} 
+                emissiveIntensity={4} 
                 fragmentShader={fragmentShader}
                 transparent={true}
                 patchMap={{

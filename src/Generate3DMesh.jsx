@@ -25,7 +25,7 @@ function Generate3DMesh({cameraRef}) {
             {/* <EarthCloudShadow /> */}
             <EarthCities />
             <EarthCloud />
-            <EarthAtmosphereInner />
+            {/* <EarthAtmosphereInner /> */}
             <EarthAtmosphere  />
             <Fresnel  />
             
