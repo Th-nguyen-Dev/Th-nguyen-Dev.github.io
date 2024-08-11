@@ -4,6 +4,7 @@ import { OrbitControls, Stats } from '@react-three/drei';
 import { useEffect, useState } from 'react';
 import { Suspense } from 'react';
 import { Bloom, EffectComposer, SelectiveBloom} from '@react-three/postprocessing'
+import { Perf } from 'r3f-perf'
 
 
 import Generate3DMesh from './Generate3DMesh';
@@ -15,6 +16,7 @@ function Generate3DScene() {
     const alightRef = useRef();
     const orbitRef = useRef();
     const [isLightReady, setIsLightReady] = useState(false);
+    
 
 
     const [selectMesh, setSelectMesh] = useState([]);
@@ -65,9 +67,11 @@ function Generate3DScene() {
                     luminanceThreshold={0.99} 
                     luminanceSmoothing={0.05}
                     intensity={0.7} 
+
                      />
             </EffectComposer>
             <Stats />
+            <Perf/>
         </Canvas>
     );
 

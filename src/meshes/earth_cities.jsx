@@ -26,7 +26,7 @@ function EarthCities({setSelectMesh}) {
     }); 
 
     return (
-            <mesh ref = {cityLightRef}  layer = {2}>
+            <mesh ref = {cityLightRef}>
             <sphereGeometry args={[10.01, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
             <CustomShaderMaterial
                 baseMaterial={THREE.MeshLambertMaterial}
@@ -35,7 +35,6 @@ function EarthCities({setSelectMesh}) {
                 emissiveIntensity={10} 
                 fragmentShader={fragmentShader}
                 transparent={true}
-                depthTest={false}
                 patchMap={{
                     csm_luminanceRe: {
                         "#include <dithering_fragment>": `
