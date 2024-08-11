@@ -11,7 +11,7 @@ const EarthAtmosphere = () => {
 
     return (
         <mesh ref = {atmosphereRef}>
-            <sphereGeometry args={[11, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
+            <sphereGeometry args={[10.4, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
             <CustomShaderMaterial
                 ref = {materialRef}
                 baseMaterial={THREE.MeshLambertMaterial}

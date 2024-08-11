@@ -31,7 +31,7 @@ function Generate3DScene() {
                 setIsCameraReady(true);
             }}
         >
-            <ambientLight intensity={0.3} />
+            <ambientLight intensity={0.1} />
 
             {isCameraReady && <Generate3DMesh cameraRef={cameraRef.current}  />}
             <directionalLight 

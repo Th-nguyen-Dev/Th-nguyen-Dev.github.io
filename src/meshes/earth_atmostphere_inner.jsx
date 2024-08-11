@@ -10,11 +10,11 @@ const EarthAtmosphereInner = ({cameraRef}) => {
             <sphereGeometry args={[10.08, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
             <meshStandardMaterial
                 ref = {materialRef}
-                color = 'blue'
+                color = "0x0033ff"
                 depthTest={false}
                 reflectivity={10}
                 transparent={true}
-                opacity={0.0}
+                opacity={0.05}
             ></meshStandardMaterial>
         </mesh>
     );

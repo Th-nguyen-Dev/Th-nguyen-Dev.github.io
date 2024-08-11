@@ -22,7 +22,6 @@ function EarthCloud(){
             alphaMap={cloudTexture}
             transparent = {true}
             side={THREE.DoubleSide}
-
         />
     </mesh>
     );

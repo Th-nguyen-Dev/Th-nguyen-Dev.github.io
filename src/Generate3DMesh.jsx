@@ -10,6 +10,7 @@ import EarthCloud from './meshes/earth_cloud';
 import TestSphere from './meshes/test';
 import EarthAtmosphere from './meshes/earth_atmostphere';
 import EarthAtmosphereInner from './meshes/earth_atmostphere_inner';
+import EarthCities from './meshes/earth_cities';
 
 function Generate3DMesh({cameraRef}) {
 
@@ -22,6 +23,7 @@ function Generate3DMesh({cameraRef}) {
             
             {/* <TestSphere /> */}
             {/* <EarthCloudShadow /> */}
+            <EarthCities />
             <EarthCloud />
             <EarthAtmosphereInner />
             <EarthAtmosphere  />
