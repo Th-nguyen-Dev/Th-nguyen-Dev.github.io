@@ -16,20 +16,23 @@ function Generate3DMesh({setSelectMesh}) {
 
     const meshRef = useRef();
     return (
-        <group
-            ref = {meshRef}
-        >
-            <Earth />
-            
-            {/* <TestSphere /> */}
-            {/* <EarthCloudShadow /> */}
+        <>
             <EarthCities setSelectMesh={setSelectMesh} />
-            <EarthCloud />
-            {/* <EarthAtmosphereInner /> */}
-            <EarthAtmosphere  />
-            <Fresnel  />
-            
-        </group>
+            <group
+                ref = {meshRef}
+            >
+                {/* <TestSphere /> */}
+                {/* <EarthCloudShadow /> */}
+                
+                <EarthCloud />
+                {/* <EarthAtmosphereInner /> */}
+                <EarthAtmosphere  />
+                <Fresnel  />
+                <Earth />
+                
+            </group>
+        </>
+
     );
 
 }

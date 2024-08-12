@@ -15,6 +15,7 @@ function Generate3DScene() {
     const lightRef = useRef();
     const alightRef = useRef();
     const orbitRef = useRef();
+    const bloomPassRef = useRef();
     const [isLightReady, setIsLightReady] = useState(false);
     
 
@@ -26,9 +27,12 @@ function Generate3DScene() {
         console.log(selectMesh);
     };
 
+    
+
 
     const handleCameraChange = (event) => {
-        console.log(orbitRef.current);
+        // console.log(orbitRef.current);
+        // console.log(bloomPassRef.current);
     };
     const allLightRef = [lightRef, alightRef];
 
@@ -47,13 +51,13 @@ function Generate3DScene() {
         >
             <ambientLight
             ref = {alightRef} 
-            intensity={0.1} />
+            intensity={0.025} />
 
             {isCameraReady && <Generate3DMesh cameraRef={cameraRef.current} setSelectMesh={addMesh}/>}
             <directionalLight 
                 ref={lightRef}
                 position={[5, 10, 7.5]} 
-                intensity={6}
+                intensity={5}
             />
             <OrbitControls 
                 ref = {orbitRef}
@@ -61,14 +65,19 @@ function Generate3DScene() {
                 // onChange={handleCameraChange}
             />
             <EffectComposer>
+                {/* <Bloom
+                    intensity={1.5}
+                    luminanceThreshold={0.01}
+                    luminanceSmoothing={0.2}
+                /> */}
                 <SelectiveBloom
+                    ref={bloomPassRef}
                     selection={selectMesh}
-                    lightRef={allLightRef}
-                    luminanceThreshold={0.99} 
-                    luminanceSmoothing={0.05}
-                    intensity={0.7} 
-
-                     />
+                    lights={lightRef}
+                    luminanceThreshold={0.7} 
+                    luminanceSmoothing={0.2}
+                    intensity={1} 
+                />
             </EffectComposer>
             <Stats />
             <Perf/>

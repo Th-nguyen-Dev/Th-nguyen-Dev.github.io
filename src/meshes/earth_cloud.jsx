@@ -4,8 +4,15 @@ import * as THREE from 'three';
 
 import cloud from "/textures/earth clouds.jpg";
 
-function EarthCloud(){
+function EarthCloud({setSelectMesh}){
     const cloudRef = useRef();
+
+    // useEffect(() => {
+    //     if (cloudRef.current) {
+    //         setSelectMesh(cloudRef.current);
+    //         console.log("cloudRef is no longer null");
+    //     }
+    // }, [cloudRef.current]);
 
     useFrame(() => {
 
@@ -16,12 +23,12 @@ function EarthCloud(){
     const cloudTexture = new THREE.TextureLoader().load(cloud);
     return (
         <mesh ref={cloudRef}>
-        <sphereGeometry args={[10.03, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
+        <sphereGeometry args={[10.06, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
         <meshStandardMaterial
             color="white"
             alphaMap={cloudTexture}
             transparent = {true}
-            side={THREE.DoubleSide}
+            depthTest={false}
         />
     </mesh>
     );

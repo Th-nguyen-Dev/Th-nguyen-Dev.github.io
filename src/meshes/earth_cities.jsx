@@ -27,12 +27,12 @@ function EarthCities({setSelectMesh}) {
 
     return (
             <mesh ref = {cityLightRef}>
-            <sphereGeometry args={[10.01, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
+            <sphereGeometry args={[10.02, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
             <CustomShaderMaterial
                 baseMaterial={THREE.MeshLambertMaterial}
                 alphaMap={new THREE.TextureLoader().load(cityLights)}
                 emissive="#FFD200"
-                emissiveIntensity={10} 
+                emissiveIntensity={2} 
                 fragmentShader={fragmentShader}
                 transparent={true}
                 patchMap={{
@@ -41,7 +41,7 @@ function EarthCities({setSelectMesh}) {
                         #include <dithering_fragment>
                         vec3 outgoingLightNoEmissive = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse;
                         float luminanceRe = luminanceCal(outgoingLightNoEmissive);
-                        if (luminanceRe > 0.05) {
+                        if (luminanceRe > 0.035) {
                             gl_FragColor.a *= 0.0;
                         }`
                     }
