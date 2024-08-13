@@ -2,8 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
-import fragmentShader from "../shaders/fragment_fresnel.glsl";
-import vertexShader from "../shaders/vertex_fresnel.glsl";
+import fragmentShader from "../../shaders/fragment_fresnel.glsl";
+import vertexShader from "../../shaders/vertex_fresnel.glsl";
 import CustomShaderMaterial from 'three-custom-shader-material';
 
 function Fresnel() {

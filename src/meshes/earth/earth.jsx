@@ -1,14 +1,10 @@
 import earthAlbedo from "/textures/earth albedo dec.png";
 import earthBump from "/textures/earth bump.jpg";
 import earthSpecular from "/textures/earth land ocean mask.png";
-import cityLights from "/textures/earth night_lights_modified.png";
 
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef, useEffect } from 'react';
 
-import CustomShaderMaterial from 'three-custom-shader-material';
-import fragmentShader from '../shaders/city_fragment.glsl';
-import vertexShader from '../shaders/city_vertex.glsl';
 
 import * as THREE from 'three';
 

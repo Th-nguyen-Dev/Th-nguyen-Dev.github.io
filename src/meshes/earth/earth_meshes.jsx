@@ -1,18 +1,17 @@
-import './style.css';
 import React, { useRef, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
-import Earth from './meshes/earth';
-import EarthCloudShadow from './meshes/earth_cloud_shadow';
-import Fresnel from './meshes/fresnel';
-import EarthCloud from './meshes/earth_cloud';
-import TestSphere from './meshes/test';
-import EarthAtmosphere from './meshes/earth_atmostphere';
-import EarthAtmosphereInner from './meshes/earth_atmostphere_inner';
-import EarthCities from './meshes/earth_cities';
+import Earth from './earth';
+import EarthCloudShadow from './earth_cloud_shadow';
+import Fresnel from './fresnel';
+import EarthCloud from './earth_cloud';
+import TestSphere from '../test';
+import EarthAtmosphere from './earth_atmostphere';
+import EarthAtmosphereInner from './earth_atmostphere_inner';
+import EarthCities from './earth_cities';
 
-function Generate3DMesh({setSelectMesh}) {
+function EarthMeshes({setSelectMesh}) {
 
     const meshRef = useRef();
     return (
@@ -23,18 +22,16 @@ function Generate3DMesh({setSelectMesh}) {
             >
                 {/* <TestSphere /> */}
                 {/* <EarthCloudShadow /> */}
-                
                 <EarthCloud />
                 {/* <EarthAtmosphereInner /> */}
                 <EarthAtmosphere  />
                 <Fresnel  />
                 <Earth />
-                
             </group>
         </>
 
     );
 
 }
-export default Generate3DMesh;
+export default EarthMeshes;
 

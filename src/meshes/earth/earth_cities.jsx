@@ -4,8 +4,8 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef, useEffect } from 'react';
 
 import CustomShaderMaterial from 'three-custom-shader-material';
-import fragmentShader from '../shaders/city_fragment.glsl';
-import vertexShader from '../shaders/city_vertex.glsl';
+import fragmentShader from '../../shaders/city_fragment.glsl';
+import vertexShader from '../../shaders/city_vertex.glsl';
 
 import * as THREE from 'three';
 

@@ -3,23 +3,16 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Stats } from '@react-three/drei';
 import { useEffect, useState } from 'react';
 import { Suspense } from 'react';
-import { Bloom, EffectComposer, SelectiveBloom} from '@react-three/postprocessing'
 import { Perf } from 'r3f-perf'
 
-
-import Generate3DMesh from './Generate3DMesh';
+import AmbientLights from './lights/ambient_lights';
+import DirectionalLights from './lights/directional_light';
+import PostProcessing from './postprocesses/effect_composer';
+import EarthMeshes from './meshes/earth/earth_meshes';
 
 function Generate3DScene() {
     const cameraRef = useRef();
-    const [isCameraReady, setIsCameraReady] = useState(false);
-    const lightRef = useRef();
-    const alightRef = useRef();
     const orbitRef = useRef();
-    const bloomPassRef = useRef();
-    const [isLightReady, setIsLightReady] = useState(false);
-    
-
-
     const [selectMesh, setSelectMesh] = useState([]);
 
     const addMesh = (object) => {
@@ -27,61 +20,34 @@ function Generate3DScene() {
         console.log(selectMesh);
     };
 
-    
-
-
-    const handleCameraChange = (event) => {
-        // console.log(orbitRef.current);
-        // console.log(bloomPassRef.current);
+    const [selectLight, setSelectLight] = useState([]);
+    const addLight = (light) => {
+        setSelectLight((prevLights) => [...prevLights, light]);
+        console.log(selectLight);
     };
-    const allLightRef = [lightRef, alightRef];
 
     return (
+    <>
         <Canvas 
             style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }}
             camera={{ 
                 position: [80, 12, 10],
+                rotation: [0, 0, 0],
                 fov: 20,
             }}
-            onCreated={({ camera }) => {
-                cameraRef.current = camera;
-                console.log('Canvas created with camera:', camera);
-                setIsCameraReady(true);
-            }}
         >
-            <ambientLight
-            ref = {alightRef} 
-            intensity={0.025} />
-
-            {isCameraReady && <Generate3DMesh cameraRef={cameraRef.current} setSelectMesh={addMesh}/>}
-            <directionalLight 
-                ref={lightRef}
-                position={[5, 10, 7.5]} 
-                intensity={5}
-            />
+            <AmbientLights addLight={addLight}/>
+            <DirectionalLights addLight={addLight}/>
+            <EarthMeshes setSelectMesh={addMesh}/>
+            <PostProcessing selectMesh={selectMesh} selectLight={selectLight}/>
             <OrbitControls 
                 ref = {orbitRef}
                 camera={cameraRef.current} 
-                // onChange={handleCameraChange}
             />
-            <EffectComposer>
-                {/* <Bloom
-                    intensity={1.5}
-                    luminanceThreshold={0.01}
-                    luminanceSmoothing={0.2}
-                /> */}
-                <SelectiveBloom
-                    ref={bloomPassRef}
-                    selection={selectMesh}
-                    lights={lightRef}
-                    luminanceThreshold={0.7} 
-                    luminanceSmoothing={0.2}
-                    intensity={1} 
-                />
-            </EffectComposer>
             <Stats />
             <Perf/>
         </Canvas>
+    </>
     );
 
 }

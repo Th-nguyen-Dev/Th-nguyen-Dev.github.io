@@ -6,10 +6,8 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    
     <Generate3DScene/>
     <MusicPlayer/>
-    
   </React.StrictMode>,
   document.getElementById('root')
 )

@@ -1,6 +1,6 @@
 import {React, useEffect, useRef} from 'react';
-import atmosphere_vertex from '../shaders/atmosphere_vertex.glsl';
-import atmosphere_fragment from '../shaders/atmosphere_fragment.glsl';
+import atmosphere_vertex from '../../shaders/atmosphere_vertex.glsl';
+import atmosphere_fragment from '../../shaders/atmosphere_fragment.glsl';
 import { useFrame } from '@react-three/fiber';
 import CustomShaderMaterial from 'three-custom-shader-material'; 
 import * as THREE from 'three';
