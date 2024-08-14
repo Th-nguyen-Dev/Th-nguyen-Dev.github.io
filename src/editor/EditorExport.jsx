@@ -3,10 +3,10 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Grid, OrbitControls, PerspectiveCamera, Stats, useHelper,GizmoHelper, GizmoViewport, View, Bounds, CameraControls } from '@react-three/drei';
 
 import * as THREE from 'three';
-import SceneExport from './Scene.jsx';
-import MainCamera from './cameras/main_camera';
-import PostProcessing from './postprocesses/effect_composer';
-function CanvasExport() {
+import SceneEditorExport from './SceneEditorExport.jsx';
+import MainCamera from '../cameras/main_camera.jsx';
+import PostProcessing from '../postprocesses/effect_composer.jsx';
+function EditorExport() {
     const SceneRef = useRef();
     const [viewCam, setViewCam] = useState();
     const addCam = (object) => {
@@ -29,10 +29,10 @@ function CanvasExport() {
     return (
         <div className="container">
             <View index={1} className="view1">
-                <color attach="background" args={['#2b2b2b']} />
+                <color attach="background" args={['#000000']} />    
                 <MainCamera makeDefault={false} />
                 <Bounds fit clip observe margin={1.5}>
-                    <SceneExport addMesh={addMesh} addLight={addLight} />
+                    <SceneEditorExport addMesh={addMesh} addLight={addLight} />
                 </Bounds>  
                 <PostProcessing selectMesh={selectMesh} selectLight={selectLight} />
                 <OrbitControls />
@@ -41,16 +41,16 @@ function CanvasExport() {
                 <color attach="background" args={['#d6edf3']} />
                 <MainCamera makeDefault={true} />
                 <Bounds fit clip observe margin={1.5}>
-                    <SceneExport addMesh={addMesh} addLight={addLight} />
+                    <SceneEditorExport addMesh={addMesh} addLight={addLight} />
                 </Bounds>  
             </View>
             
             <Canvas className="canvas">
+                <color attach="background" args={['#000000']} />
                 <View.Port />
-               
             </Canvas>        
         </div>
     );
 }
 
-export default CanvasExport;
+export default EditorExport;
