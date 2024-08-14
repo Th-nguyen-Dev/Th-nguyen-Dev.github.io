@@ -23,7 +23,7 @@ function EarthCloud({setSelectMesh}){
     const cloudTexture = new THREE.TextureLoader().load(cloud);
     return (
         <mesh ref={cloudRef}>
-        <sphereGeometry args={[10.06, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
+        <sphereGeometry args={[5.02, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
         <meshStandardMaterial
             color="white"
             alphaMap={cloudTexture}

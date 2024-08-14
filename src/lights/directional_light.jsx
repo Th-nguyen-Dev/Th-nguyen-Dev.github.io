@@ -5,7 +5,8 @@ function DirectionalLights({addLight}) {
     const directionalLightRef = useRef([]);
 
     useEffect(() => {  
-        if (directionalLightRef.current && directionalLightRef.current.length > 0){
+
+        if (addLight && directionalLightRef.current && directionalLightRef.current.length > 0){
             directionalLightRef.current.forEach(light => addLight(light));
         }
     } , [directionalLightRef]);

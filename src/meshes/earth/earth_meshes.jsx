@@ -15,20 +15,19 @@ function EarthMeshes({setSelectMesh}) {
 
     const meshRef = useRef();
     return (
-        <>
+
+        <group
+            ref = {meshRef}
+        >
             <EarthCities setSelectMesh={setSelectMesh} />
-            <group
-                ref = {meshRef}
-            >
-                {/* <TestSphere /> */}
-                {/* <EarthCloudShadow /> */}
-                <EarthCloud />
-                {/* <EarthAtmosphereInner /> */}
-                <EarthAtmosphere  />
-                <Fresnel  />
-                <Earth />
-            </group>
-        </>
+            {/* <TestSphere /> */}
+            {/* <EarthCloudShadow /> */}
+            <EarthCloud />
+            {/* <EarthAtmosphereInner /> */}
+            <EarthAtmosphere  />
+            <Fresnel  />
+            <Earth />
+        </group>
 
     );
 

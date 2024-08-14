@@ -7,7 +7,7 @@ const EarthAtmosphereInner = ({cameraRef}) => {
 
     return (
         <mesh ref = {atmosphereRef}>
-            <sphereGeometry args={[10.08, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
+            <sphereGeometry args={[5.08, 100, 100, 0, Math.PI * 2, 0, Math.PI]} />
             <meshStandardMaterial
                 ref = {materialRef}
                 color = "0x0033ff"
