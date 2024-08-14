@@ -29,20 +29,20 @@ function MainCamera({makeDefault}) {
         },
         cameraRotationX: {
             value: 0,
-            min: -5,
-            max: 5,
+            min: 0,
+            max: 2,
             step: 0.01,
         },
         cameraRotationY: {
             value: 0,
-            min: -5,
-            max: 5,
+            min: 0,
+            max: 2,
             step: 0.01,
         },
         cameraRotationZ: {
             value: 0,
-            min: -5,
-            max: 5,
+            min: 0,
+            max: 2,
             step: 0.01,
         },
         });
