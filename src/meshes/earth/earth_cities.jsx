@@ -25,12 +25,14 @@ function EarthCities({addMesh}) {
         }
     }); 
 
+    const alphaMapTexture = new THREE.TextureLoader().load(cityLights);
+
     return (
             <mesh ref = {cityLightRef}>
             <sphereGeometry args={[5.02, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
             <CustomShaderMaterial
                 baseMaterial={THREE.MeshLambertMaterial}
-                alphaMap={new THREE.TextureLoader().load(cityLights)}
+                alphaMap={alphaMapTexture}
                 emissive="#FFD200"
                 emissiveIntensity={2} 
                 fragmentShader={fragmentShader}

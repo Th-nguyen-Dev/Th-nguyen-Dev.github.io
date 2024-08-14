@@ -27,7 +27,8 @@ function EditorExport() {
     };
 
     return (
-        <div className="container">
+        <>
+            <div className="container">
             <View index={1} className="view1">
                 <color attach="background" args={['#000000']} />    
                 <MainCamera makeDefault={false} />
@@ -49,7 +50,9 @@ function EditorExport() {
                 <color attach="background" args={['#000000']} />
                 <View.Port />
             </Canvas>        
-        </div>
+            </div>
+        </>
+
     );
 }
 

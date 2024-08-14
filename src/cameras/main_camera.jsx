@@ -6,6 +6,7 @@ import * as THREE from 'three';
 
 function MainCamera({makeDefault}) {
     const mainCameraRef = useRef();
+    
     useHelper(mainCameraRef, THREE.CameraHelper, 'cyan');
     const { PositionX, PositionY, PositionZ, 
         RotationX, RotationY, RotationZ, Fov } = useControls('Camera', {

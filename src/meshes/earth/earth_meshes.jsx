@@ -10,6 +10,7 @@ import TestSphere from '../test';
 import EarthAtmosphere from './earth_atmostphere';
 import EarthAtmosphereInner from './earth_atmostphere_inner';
 import EarthCities from './earth_cities';
+import { Stats } from '@react-three/drei';
 
 function EarthMeshes({addMesh}) {
 
@@ -27,6 +28,7 @@ function EarthMeshes({addMesh}) {
             <EarthAtmosphere  />
             <Fresnel  />
             <Earth />
+            <Stats />
         </group>
 
     );

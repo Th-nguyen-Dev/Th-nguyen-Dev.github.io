@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { useEffect, useState } from 'react';
 
 import AmbientLights from '../lights/ambient_lights';
@@ -9,8 +9,13 @@ import EarthMeshes from '../meshes/earth/earth_meshes';
 import MainCamera from '../cameras/main_camera';
 import OfficialCamera from '../cameras/official_camera';
 import * as THREE from 'three';
-
-function OfficialExport() {
+function PerformanceConfig(){
+    const {gl} = useThree();
+    useEffect(() => {
+        gl.powerPreference = "high-performance";
+    },[]);
+}
+function OfficialExport({visible}) {
     const [selectMesh, setSelectMesh] = useState([]);
     const addMesh = (object) => {
         setSelectMesh((prevObjects) => [...prevObjects, object]);
@@ -25,7 +30,9 @@ function OfficialExport() {
         console.log(selectLight);
     };
     return (
-        <Canvas className="canvas">
+        <>
+            <Canvas className="canvas">
+            <PerformanceConfig/>
             {/* <MainCamera /> */}
             <color attach="background" args={['#000000']} />
             <AmbientLights addLight={addLight}/>
@@ -35,7 +42,8 @@ function OfficialExport() {
             <OfficialCamera makeDefault={true} />
             {/* <Stats />
             <Perf/> */}
-        </Canvas>  
+            </Canvas>  
+        </>
 
     );
 

@@ -17,23 +17,26 @@ function Earth(){
         }
     }); 
 
+    const earthAlbedoTexture = new THREE.TextureLoader().load(earthAlbedo);
+    const earthBumpTexture = new THREE.TextureLoader().load(earthBump);
+    const earthSpecularTexture = new THREE.TextureLoader().load(earthSpecular);
+
     return (
-            <mesh ref={earthRef}>
+        <mesh ref={earthRef}>
             <sphereGeometry args={[5, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
             <meshPhongMaterial
-                map={new THREE.TextureLoader().load(earthAlbedo)}
-                bumpMap={new THREE.TextureLoader().load(earthBump)}
-                specularMap={new THREE.TextureLoader().load(earthSpecular)}
+                map={earthAlbedoTexture}
+                bumpMap={earthBumpTexture}
+                specularMap={earthSpecularTexture}
                 bumpScale={100}
                 shininess={20}
                 reflectivity={-0.001}
                 polygonOffset
                 polygonOffsetFactor={1}
                 precision="highp"
-                
             >
-            </meshPhongMaterial>    
-            </mesh>
+            </meshPhongMaterial>
+        </mesh>
     );
 
 }

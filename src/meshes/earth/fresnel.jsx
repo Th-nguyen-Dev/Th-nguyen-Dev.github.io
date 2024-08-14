@@ -19,6 +19,7 @@ function Fresnel() {
                 baseMaterial={THREE.MeshLambertMaterial}
                 vertexShader={vertexShader}
                 fragmentShader={fragmentShader}
+                blending = {THREE.AdditiveBlending}
                 transparent = {true}
                 depthTest={false}
                 />
