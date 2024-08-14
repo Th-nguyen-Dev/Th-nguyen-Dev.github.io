@@ -35,10 +35,10 @@ function SceneExport() {
             {/* <AmbientLights addLight={addLight}/> */}
             <DirectionalLights addLight={addLight}/>
             <EarthMeshes setSelectMesh={addMesh}/>
-            {/* <PostProcessing selectMesh={selectMesh} selectLight={selectLight}/> */}
+            <PostProcessing selectMesh={selectMesh} selectLight={selectLight}/>
             {/* <Stats />
             <Perf/> */}
-            {/* <Grid 
+            <Grid 
                 position={[80, 0, 10]}
                 args={[10.5, 10.5]} cellSize={0.6} 
                 cellThickness={1} 
@@ -50,11 +50,11 @@ function SceneExport() {
                 fadeStrength={0.001} 
                 followCamera={false} 
                 infiniteGrid={true} 
-                side={THREE.DoubleSide}/> */}
-            {/* 
+                side={THREE.DoubleSide}/>
+            
             <GizmoHelper alignment="bottom-right" margin={[80, 80]}>
                 <GizmoViewport axisColors={['#9d4b4b', '#2f7f4f', '#3b5b9d']} labelColor="white" />
-            </GizmoHelper> */}
+            </GizmoHelper>
     </group>
     );
 
