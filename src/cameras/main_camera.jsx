@@ -22,7 +22,7 @@ function MainCamera({makeDefault}) {
             step: 0.01,
         },
         PositionZ: {
-            value: 0,
+            value: 10,
             min: -50,
             max: 50,
             step: 0.01,
