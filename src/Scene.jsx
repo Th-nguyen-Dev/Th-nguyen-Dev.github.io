@@ -13,29 +13,15 @@ import EarthMeshes from './meshes/earth/earth_meshes';
 import MainCamera from './cameras/main_camera';
 import * as THREE from 'three';
 
-function SceneExport() {
+function SceneExport({addMesh,addLight}) {
     const mainCameraRef = useRef();
-    const [selectMesh, setSelectMesh] = useState([]);
-
-    const addMesh = (object) => {
-        setSelectMesh((prevObjects) => [...prevObjects, object]);
-        console.log(selectMesh);
-    };
-
-    const [selectLight, setSelectLight] = useState([]);
-    const addLight = (light) => {
-        setSelectLight((prevLights) => [...prevLights, light]);
-        console.log(selectLight);
-    };
-
-
     return (
     <group>
             {/* <MainCamera /> */}
-            {/* <AmbientLights addLight={addLight}/> */}
+            <AmbientLights addLight={addLight}/>
             <DirectionalLights addLight={addLight}/>
-            <EarthMeshes setSelectMesh={addMesh}/>
-            <PostProcessing selectMesh={selectMesh} selectLight={selectLight}/>
+            <EarthMeshes addMesh={addMesh}/>
+            {/* <PostProcessing selectMesh={selectMesh} selectLight={selectLight}/> */}
             {/* <Stats />
             <Perf/> */}
             <Grid 
@@ -48,13 +34,8 @@ function SceneExport() {
                 sectionColor="#9d4b4b" 
                 fadeDistance={100} 
                 fadeStrength={0.001} 
-                followCamera={false} 
                 infiniteGrid={true} 
                 side={THREE.DoubleSide}/>
-            
-            <GizmoHelper alignment="bottom-right" margin={[80, 80]}>
-                <GizmoViewport axisColors={['#9d4b4b', '#2f7f4f', '#3b5b9d']} labelColor="white" />
-            </GizmoHelper>
     </group>
     );
 

@@ -11,7 +11,7 @@ import EarthAtmosphere from './earth_atmostphere';
 import EarthAtmosphereInner from './earth_atmostphere_inner';
 import EarthCities from './earth_cities';
 
-function EarthMeshes({setSelectMesh}) {
+function EarthMeshes({addMesh}) {
 
     const meshRef = useRef();
     return (
@@ -19,7 +19,7 @@ function EarthMeshes({setSelectMesh}) {
         <group
             ref = {meshRef}
         >
-            <EarthCities setSelectMesh={setSelectMesh} />
+            <EarthCities addMesh={addMesh} />
             {/* <TestSphere /> */}
             {/* <EarthCloudShadow /> */}
             <EarthCloud />

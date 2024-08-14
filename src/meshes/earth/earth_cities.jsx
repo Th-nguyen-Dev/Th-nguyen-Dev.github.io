@@ -9,12 +9,12 @@ import vertexShader from '../../shaders/city_vertex.glsl';
 
 import * as THREE from 'three';
 
-function EarthCities({setSelectMesh}) {
+function EarthCities({addMesh}) {
     const cityLightRef = useRef(null);
 
     useEffect(() => {
         if (cityLightRef.current) {
-            setSelectMesh(cityLightRef.current);
+            addMesh(cityLightRef.current);
             console.log("cityLightRef is no longer null");
         }
     }, [cityLightRef.current]);

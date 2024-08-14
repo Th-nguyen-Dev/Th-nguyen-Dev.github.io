@@ -7,39 +7,39 @@ import * as THREE from 'three';
 function MainCamera({makeDefault}) {
     const mainCameraRef = useRef();
     useHelper(mainCameraRef, THREE.CameraHelper, 'cyan');
-    const { cameraPositionX, cameraPositionY, cameraPositionZ, 
-        cameraRotationX, cameraRotationY, cameraRotationZ } = useControls('Camera', {
-        cameraPositionX: {
-            value: 80,
+    const { PositionX, PositionY, PositionZ, 
+        RotationX, RotationY, RotationZ } = useControls('Camera', {
+        PositionX: {
+            value: 0,
             min: -100,
             max: 100,
             step: 0.01,
         },
-        cameraPositionY: {
-            value: 12,
+        PositionY: {
+            value: 0,
             min: -100,
             max: 100,
             step: 0.01,
         },
-        cameraPositionZ: {
-            value: 10,
+        PositionZ: {
+            value: 0,
             min: -100,
             max: 100,
             step: 0.01,
         },
-        cameraRotationX: {
+        RotationX: {
             value: 0,
             min: 0,
             max: 2,
             step: 0.01,
         },
-        cameraRotationY: {
+        RotationY: {
             value: 0,
             min: 0,
             max: 2,
             step: 0.01,
         },
-        cameraRotationZ: {
+        RotationZ: {
             value: 0,
             min: 0,
             max: 2,
@@ -52,8 +52,8 @@ function MainCamera({makeDefault}) {
             <PerspectiveCamera 
                 ref={mainCameraRef} 
                 makeDefault = {makeDefault}
-                position = {[cameraPositionX, cameraPositionY, cameraPositionZ]}
-                rotation = {[cameraRotationX, cameraRotationY, cameraRotationZ]}
+                position = {[PositionX, PositionY, PositionZ]}
+                rotation = {[RotationX, RotationY, RotationZ]}
             />
         </>
     );

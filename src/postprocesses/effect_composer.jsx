@@ -3,7 +3,7 @@ import { EffectComposer, SelectiveBloom } from '@react-three/postprocessing';
 
 function PostProcessing({selectMesh, selectLight}) {
     const bloomPassRef = useRef();
-
+    
     return (
         <EffectComposer>
             <SelectiveBloom

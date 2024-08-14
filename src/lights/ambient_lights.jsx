@@ -8,7 +8,7 @@ function AmbientLights({addLight}) {
         if (ambientlightRef.current){
             addLight(ambientlightRef.current);
         }
-    } , [ambientlightRef]);
+    } , [ambientlightRef.current]);
 
 
     return (
