@@ -47,18 +47,24 @@ function TestEarth(){
     const earthTextures = [earthJanTexture, earthFebTexture, earthMarTexture, earthAprTexture, earthMayTexture, earthJuneTexture, earthJulyTexture, earthAugTexture, earthSepTexture, earthOctTexture, earthNovTexture, earthDecTexture];
     useFrame(() => {
         // Increment time from 1 to 12 and loop back
-        time.current = (time.current + 0.1) % 12;
+        time.current = (time.current + 0.002) % 12;
         // console.log(time.current);
-        uniforms.utime.value = time.current;
-        uniforms.monthIndex.value = Math.floor(time.current);
-        console.log(materialRef.current.uniforms);
+        if (earthRef.current) {
+            if (materialRef.current) {
+                materialRef.current.uniforms.utime.value = time.current;
+                materialRef.current.uniforms.monthIndex.value = Math.floor(time.current);
+                materialRef.current.uniforms.nextMonthIndex.value = (Math.floor(time.current) + 1)%12;
+            }
+        }
+        // console.log(materialRef.current.uniforms);
     });
 
     const uniforms = useMemo(() => ({
-        utime: { value: time.current },
-        month: { value: earthTextures },
-        monthIndex: { value: Math.floor(time.current) }
-    }), [time.current]);
+        utime: { value: 0.0 },
+        month: { value: earthTextures},
+        monthIndex: { value: 0 },
+        nextMonthIndex: { value: 1 }
+    }),[]);
 
     
     return (

@@ -1,23 +1,101 @@
 uniform sampler2D month[12];
 uniform float utime;
 uniform int monthIndex;
+uniform int nextMonthIndex;
 varying vec2 vMapUv;
 
 void main()
 {
-    vec4 colors[12];
-    colors[0] = vec4(1.0, 0.0, 0.0, 1.0); // Red
-    colors[1] = vec4(0.0, 1.0, 0.0, 1.0); // Green
-    colors[2] = vec4(0.0, 0.0, 1.0, 1.0); // Blue
-    colors[3] = vec4(1.0, 1.0, 0.0, 1.0); // Yellow
-    colors[4] = vec4(1.0, 0.0, 1.0, 1.0); // Magenta
-    colors[5] = vec4(0.0, 1.0, 1.0, 1.0); // Cyan
-    colors[6] = vec4(0.5, 0.5, 0.5, 1.0); // Gray
-    colors[7] = vec4(1.0, 0.5, 0.0, 1.0); // Orange
-    colors[8] = vec4(0.5, 0.0, 0.5, 1.0); // Purple
-    colors[9] = vec4(0.5, 0.5, 0.0, 1.0); // Olive
-    colors[10] = vec4(0.0, 0.5, 0.5, 1.0); // Teal
-    colors[11] = vec4(0.0, 0.0, 0.0, 1.0); // Black
+    vec4 colorMonthFirst;
+    vec4 colorMonthSecond;
 
-    gl_FragColor = colors[monthIndex];
+    switch (monthIndex) {
+        case 0:
+            colorMonthFirst = texture2D(month[0], vMapUv);
+            break;
+        case 1:
+            colorMonthFirst = texture2D(month[1], vMapUv);
+            break;
+        // Add cases for the remaining months
+        case 2:
+            colorMonthFirst = texture2D(month[2], vMapUv);
+            break;
+        case 3:
+            colorMonthFirst = texture2D(month[3], vMapUv);
+            break;
+        case 4:
+            colorMonthFirst = texture2D(month[4], vMapUv);
+            break;
+        case 5:
+            colorMonthFirst = texture2D(month[5], vMapUv);
+            break;
+        case 6:
+            colorMonthFirst = texture2D(month[6], vMapUv);
+            break;
+        case 7:
+            colorMonthFirst = texture2D(month[7], vMapUv);
+            break;
+        case 8:
+            colorMonthFirst = texture2D(month[8], vMapUv);
+            break;
+        case 9:
+            colorMonthFirst = texture2D(month[9], vMapUv);
+            break;
+        case 10:
+            colorMonthFirst = texture2D(month[10], vMapUv);
+            break;
+        case 11:
+            colorMonthFirst = texture2D(month[11], vMapUv);
+            break;
+
+        default:
+            colorMonthFirst = vec4(0.0);
+            break;
+    }
+
+    switch (nextMonthIndex) {
+        case 0:
+            colorMonthSecond = texture2D(month[0], vMapUv);
+            break;
+        case 1:
+            colorMonthSecond = texture2D(month[1], vMapUv);
+            break;
+        // Add cases for the remaining months
+        case 2:
+            colorMonthSecond = texture2D(month[2], vMapUv);
+            break;
+        case 3:
+            colorMonthSecond = texture2D(month[3], vMapUv);
+            break;
+        case 4:
+            colorMonthSecond = texture2D(month[4], vMapUv);
+            break;
+        case 5:
+            colorMonthSecond = texture2D(month[5], vMapUv);
+            break;
+        case 6:
+            colorMonthSecond = texture2D(month[6], vMapUv);
+            break;
+        case 7:
+            colorMonthSecond = texture2D(month[7], vMapUv);
+            break;
+        case 8:
+            colorMonthSecond = texture2D(month[8], vMapUv);
+            break;
+        case 9:
+            colorMonthSecond = texture2D(month[9], vMapUv);
+            break;
+        case 10:
+            colorMonthSecond = texture2D(month[10], vMapUv);
+            break;
+        case 11:
+            colorMonthSecond = texture2D(month[11], vMapUv);
+            break;
+
+        default:
+            colorMonthSecond = vec4(0.0);
+            break;
+    }
+    float blend = fract(utime);
+    gl_FragColor = mix(colorMonthFirst, colorMonthSecond, blend);
 }
