@@ -19,8 +19,9 @@ import { useRef, useEffect, useMemo } from 'react';
 import { useControls } from "leva";
 import CustomShaderMaterial from "three-custom-shader-material";
 
-import transitionFragment from "../../shaders/transition_fragment.glsl";
-import transitionVertex from "../../shaders/transition_vertex.glsl";
+import transitionMapFragment from "../../shaders/transition_map_fragment.glsl";
+import transitionParse from "../../shaders/transition_pars.glsl";
+import transitionPatchMap from "../../shaders/transition_patchmap.glsl";
 import * as THREE from 'three';
 
 function TestEarth(){
@@ -42,21 +43,23 @@ function TestEarth(){
     const earthOctTexture = new THREE.TextureLoader().load(earthOct);
     const earthNovTexture = new THREE.TextureLoader().load(earthNov);
     const earthDecTexture = new THREE.TextureLoader().load(earthDec);
-    const time = useRef(0);
     const materialRef = useRef();
-    const earthTextures = [earthJanTexture, earthFebTexture, earthMarTexture, earthAprTexture, earthMayTexture, earthJuneTexture, earthJulyTexture, earthAugTexture, earthSepTexture, earthOctTexture, earthNovTexture, earthDecTexture];
+    const earthTextures = useMemo(() => [earthJanTexture, earthFebTexture, earthMarTexture, earthAprTexture, earthMayTexture, earthJuneTexture, earthJulyTexture, earthAugTexture, earthSepTexture, earthOctTexture, earthNovTexture, earthDecTexture], []);
+
+
+    const { time } = useControls({
+        time: { value: 0, min: 0, max: 11, step: 0.01, slider: true, sliderMax: 100 },
+    });
+    useEffect(() => {
+        console.log(materialRef.current);
+
+    }, [materialRef.current]);
     useFrame(() => {
-        // Increment time from 1 to 12 and loop back
-        time.current = (time.current + 0.002) % 12;
-        // console.log(time.current);
-        if (earthRef.current) {
-            if (materialRef.current) {
-                materialRef.current.uniforms.utime.value = time.current;
-                materialRef.current.uniforms.monthIndex.value = Math.floor(time.current);
-                materialRef.current.uniforms.nextMonthIndex.value = (Math.floor(time.current) + 1)%12;
-            }
+        if (materialRef.current) {
+            materialRef.current.uniforms.utime.value = time;
+            materialRef.current.uniforms.monthIndex.value = Math.floor(time);
+            materialRef.current.uniforms.nextMonthIndex.value = (Math.floor(time) + 1)%12;
         }
-        // console.log(materialRef.current.uniforms);
     });
 
     const uniforms = useMemo(() => ({
@@ -70,13 +73,33 @@ function TestEarth(){
     return (
         <mesh ref={earthRef}>
             <sphereGeometry args={[5, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
-            <shaderMaterial
+            <CustomShaderMaterial
+                ref = {materialRef}
+                baseMaterial={THREE.MeshPhongMaterial}
+                uniforms={uniforms}
+                fragmentShader={transitionPatchMap}
+                map = {earthJanTexture}
+                bumpMap={earthBumpTexture}
+                specularMap={earthSpecularTexture}
+                bumpScale={100}
+                shininess={20}
+                reflectivity={-0.001}
+                polygonOffset
+                polygonOffsetFactor={1} 
+                patchMap={{
+                    patchParse:{"#include <map_pars_fragment>":`${transitionParse}`}, 
+                    patchDiffuse:{"#include <map_fragment>":`${transitionMapFragment}`}
+                }}
+            >
+
+            </CustomShaderMaterial>
+            {/* <shaderMaterial
                 ref={materialRef}
                 fragmentShader={transitionFragment}
                 vertexShader={transitionVertex}
                 uniforms={uniforms}
             >
-            </shaderMaterial>
+            </shaderMaterial> */}
             {/* <CustomShaderMaterial
                 baseMaterial={THREE.MeshPhongMaterial}
                 map={earthAlbedoTexture}
