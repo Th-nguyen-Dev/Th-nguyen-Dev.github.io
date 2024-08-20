@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { useEffect, useState } from 'react';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, Preload } from '@react-three/drei';
 
 import AmbientLights from '../lights/ambient_lights';
 import DirectionalLights from '../lights/directional_light';
+
 import OfficialCamera from '../cameras/official_camera';
 import test_earth from '../meshes/earth/test_earth';
 import * as THREE from 'three';
@@ -40,6 +41,7 @@ function TestExport() {
             <DirectionalLights addLight={addLight}/>
             <OfficialCamera makeDefault={true} />
             <OrbitControls />
+            <Preload all />
             {/* <Stats />
             <Perf/> */}
             </Canvas>  

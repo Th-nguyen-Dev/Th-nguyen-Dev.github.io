@@ -15,8 +15,10 @@ import earthNov from "/textures_transition/Nov.png";
 import earthDec from "/textures_transition/Dec.png";
 
 import { useFrame } from '@react-three/fiber';
+import { useTexture } from "@react-three/drei";
 import { useRef, useEffect, useMemo } from 'react';
 import { useControls } from "leva";
+import { useState } from 'react';
 import CustomShaderMaterial from "three-custom-shader-material";
 
 import transitionMapFragment from "../../shaders/transition_map_fragment.glsl";
@@ -25,28 +27,32 @@ import transitionPatchMap from "../../shaders/transition_patchmap.glsl";
 import transitionVertex from "../../shaders/transition_vertex.glsl";
 import * as THREE from 'three';
 
+import Fresnel from './fresnel';
+import EarthCloud from './earth_cloud';
+import TestSphere from '../test';
+import EarthAtmosphere from './earth_atmostphere';
+import EarthAtmosphereInner from './earth_atmostphere_inner';
+import EarthCities from './earth_cities';
+
 function TestEarth(){
     const earthRef = useRef();
-
+    const materialRef = useRef();
     const earthAlbedoTexture = new THREE.TextureLoader().load(earthAlbedo);
     const earthBumpTexture = new THREE.TextureLoader().load(earthBump);
     const earthSpecularTexture = new THREE.TextureLoader().load(earthSpecular);
-
-    const earthJanTexture = new THREE.TextureLoader().load(earthJan);
-    const earthFebTexture = new THREE.TextureLoader().load(earthFeb);
-    const earthMarTexture = new THREE.TextureLoader().load(earthMar);
-    const earthAprTexture = new THREE.TextureLoader().load(earthApr);
-    const earthMayTexture = new THREE.TextureLoader().load(earthMay);
-    const earthJuneTexture = new THREE.TextureLoader().load(earthJune);
-    const earthJulyTexture = new THREE.TextureLoader().load(earthJuly);
-    const earthAugTexture = new THREE.TextureLoader().load(earthAug);
-    const earthSepTexture = new THREE.TextureLoader().load(earthSep);
-    const earthOctTexture = new THREE.TextureLoader().load(earthOct);
-    const earthNovTexture = new THREE.TextureLoader().load(earthNov);
-    const earthDecTexture = new THREE.TextureLoader().load(earthDec);
-    const materialRef = useRef();
-    const earthTextures = useMemo(() => [earthJanTexture, earthFebTexture, earthMarTexture, earthAprTexture, earthMayTexture, earthJuneTexture, earthJulyTexture, earthAugTexture, earthSepTexture, earthOctTexture, earthNovTexture, earthDecTexture], []);
-
+    const earthJanTexture = useTexture(earthJan);
+    const earthFebTexture = useTexture(earthFeb);
+    const earthMarTexture = useTexture(earthMar);
+    const earthAprTexture = useTexture(earthApr);
+    const earthMayTexture = useTexture(earthMay);
+    const earthJuneTexture = useTexture(earthJune);
+    const earthJulyTexture = useTexture(earthJuly);
+    const earthAugTexture = useTexture(earthAug);
+    const earthSepTexture = useTexture(earthSep);
+    const earthOctTexture = useTexture(earthOct);
+    const earthNovTexture = useTexture(earthNov);
+    const earthDecTexture = useTexture(earthDec);
+    const earthTextures = [earthJanTexture, earthFebTexture, earthMarTexture, earthAprTexture, earthMayTexture, earthJuneTexture, earthJulyTexture, earthAugTexture, earthSepTexture, earthOctTexture, earthNovTexture, earthDecTexture];
     const time = useRef(0);
     // const { time } = useControls({
     //     time: { value: 0, min: 0, max: 11, step: 0.01, slider: true, sliderMax: 100 },
@@ -88,7 +94,8 @@ function TestEarth(){
 
     
     return (
-        <mesh ref={earthRef}>
+        <>
+            <mesh ref={earthRef}>
             <sphereGeometry args={[5, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
             <CustomShaderMaterial
                 ref = {materialRef}
@@ -109,32 +116,12 @@ function TestEarth(){
                 }}
             >
             </CustomShaderMaterial>
-            {/* <shaderMaterial
-                ref={materialRef}
-                fragmentShader={transitionFragment}
-                vertexShader={transitionVertex}
-                uniforms={uniforms}
-            >
-            </shaderMaterial> */}
-            {/* <CustomShaderMaterial
-                baseMaterial={THREE.MeshPhongMaterial}
-                map={earthAlbedoTexture}
-                bumpMap={earthBumpTexture}
-                specularMap={earthSpecularTexture}
-                bumpScale={100}
-                shininess={20}
-                reflectivity={-0.001}
-                polygonOffset
-                polygonOffsetFactor={1}
-                precision="highp"
-                fragmentShader={transitionFragment}
-                uniforms={{
-                    time: { value: time },
-                    month: { value : earthTextures}
-                }}
-            >
-            </CustomShaderMaterial> */}
+            <Fresnel />
+            <EarthCloud />
+            <EarthAtmosphere />
         </mesh>
+        </>
+       
     );
 
 }
