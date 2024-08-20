@@ -56,5 +56,5 @@ switch (monthIndex) {
 }
 
 float blend = fract(utime);
-vec4 sampledDiffuseColor = mix(colorMonthFirst, colorMonthSecond, blend);
-diffuseColor *= sampledDiffuseColor;
+vec4 sampledDiffuseColor = mix(colorMonthFirst, colorMonthSecond,  smoothstep(0.0,1.0,blend) );
+diffuseColor = vec4(diffuse, opacity) * sampledDiffuseColor;

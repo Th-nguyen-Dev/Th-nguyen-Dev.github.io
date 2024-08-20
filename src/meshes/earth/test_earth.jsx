@@ -22,6 +22,7 @@ import CustomShaderMaterial from "three-custom-shader-material";
 import transitionMapFragment from "../../shaders/transition_map_fragment.glsl";
 import transitionParse from "../../shaders/transition_pars.glsl";
 import transitionPatchMap from "../../shaders/transition_patchmap.glsl";
+import transitionVertex from "../../shaders/transition_vertex.glsl";
 import * as THREE from 'three';
 
 function TestEarth(){
@@ -46,21 +47,14 @@ function TestEarth(){
     const materialRef = useRef();
     const earthTextures = useMemo(() => [earthJanTexture, earthFebTexture, earthMarTexture, earthAprTexture, earthMayTexture, earthJuneTexture, earthJulyTexture, earthAugTexture, earthSepTexture, earthOctTexture, earthNovTexture, earthDecTexture], []);
 
-
-    const { time } = useControls({
-        time: { value: 0, min: 0, max: 11, step: 0.01, slider: true, sliderMax: 100 },
-    });
+    const time = useRef(0);
+    // const { time } = useControls({
+    //     time: { value: 0, min: 0, max: 11, step: 0.01, slider: true, sliderMax: 100 },
+    // });
     useEffect(() => {
         console.log(materialRef.current);
 
     }, [materialRef.current]);
-    useFrame(() => {
-        if (materialRef.current) {
-            materialRef.current.uniforms.utime.value = time;
-            materialRef.current.uniforms.monthIndex.value = Math.floor(time);
-            materialRef.current.uniforms.nextMonthIndex.value = (Math.floor(time) + 1)%12;
-        }
-    });
 
     const uniforms = useMemo(() => ({
         utime: { value: 0.0 },
@@ -68,6 +62,29 @@ function TestEarth(){
         monthIndex: { value: 0 },
         nextMonthIndex: { value: 1 }
     }),[]);
+
+    useFrame(() => {
+
+        time.current += 0.005;
+        if (time.current > 12) {
+            time.current = 0;
+        }
+        if (materialRef.current) {
+            uniforms.utime.value = time.current;
+            uniforms.monthIndex.value = Math.floor(time.current);
+            uniforms.nextMonthIndex.value = (Math.floor(time.current) + 1)%12;
+        }
+    });
+    
+    // useFrame(() => {
+    //     if (materialRef.current) {
+    //         uniforms.utime.value = time;
+    //         uniforms.monthIndex.value = Math.floor(time);
+    //         uniforms.nextMonthIndex.value = (Math.floor(time) + 1)%12;
+    //     }
+    // });
+
+
 
     
     return (
@@ -78,7 +95,7 @@ function TestEarth(){
                 baseMaterial={THREE.MeshPhongMaterial}
                 uniforms={uniforms}
                 fragmentShader={transitionPatchMap}
-                map = {earthJanTexture}
+                vertexShader = {transitionVertex}
                 bumpMap={earthBumpTexture}
                 specularMap={earthSpecularTexture}
                 bumpScale={100}
@@ -91,7 +108,6 @@ function TestEarth(){
                     patchDiffuse:{"#include <map_fragment>":`${transitionMapFragment}`}
                 }}
             >
-
             </CustomShaderMaterial>
             {/* <shaderMaterial
                 ref={materialRef}
