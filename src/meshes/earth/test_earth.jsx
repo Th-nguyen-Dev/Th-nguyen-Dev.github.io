@@ -1,18 +1,18 @@
 import earthAlbedo from "/textures/earth albedo dec.png";
 import earthBump from "/textures/earth bump.jpg";
 import earthSpecular from "/textures/earth land ocean mask.png";
-import earthJan from "/textures_transition/Jan.png";
-import earthFeb from "/textures_transition/Feb.png";
-import earthMar from "/textures_transition/March.png";
-import earthApr from "/textures_transition/April.png";
-import earthMay from "/textures_transition/May.png";
-import earthJune from "/textures_transition/June.png";
-import earthJuly from "/textures_transition/July.png";
-import earthAug from "/textures_transition/Fall.png";
-import earthSep from "/textures_transition/Sep.png";
-import earthOct from "/textures_transition/Oct.png";
-import earthNov from "/textures_transition/Nov.png";
-import earthDec from "/textures_transition/Dec.png";
+import earthJan from "/textures_transition/0.png";
+import earthFeb from "/textures_transition/1.png";
+import earthMar from "/textures_transition/2.png";
+import earthApr from "/textures_transition/3.png";
+import earthMay from "/textures_transition/4.png";
+import earthJune from "/textures_transition/5.png";
+import earthJuly from "/textures_transition/6.png";
+import earthAug from "/textures_transition/7.png";
+import earthSep from "/textures_transition/8.png";
+import earthOct from "/textures_transition/9.png";
+import earthNov from "/textures_transition/10.png";
+import earthDec from "/textures_transition/11.png";
 
 import { useFrame } from '@react-three/fiber';
 import { useTexture } from "@react-three/drei";
@@ -40,18 +40,18 @@ function TestEarth(){
     const earthAlbedoTexture = new THREE.TextureLoader().load(earthAlbedo);
     const earthBumpTexture = new THREE.TextureLoader().load(earthBump);
     const earthSpecularTexture = new THREE.TextureLoader().load(earthSpecular);
-    const earthJanTexture = useTexture(earthJan);
-    const earthFebTexture = useTexture(earthFeb);
-    const earthMarTexture = useTexture(earthMar);
-    const earthAprTexture = useTexture(earthApr);
-    const earthMayTexture = useTexture(earthMay);
-    const earthJuneTexture = useTexture(earthJune);
-    const earthJulyTexture = useTexture(earthJuly);
-    const earthAugTexture = useTexture(earthAug);
-    const earthSepTexture = useTexture(earthSep);
-    const earthOctTexture = useTexture(earthOct);
-    const earthNovTexture = useTexture(earthNov);
-    const earthDecTexture = useTexture(earthDec);
+    const earthJanTexture = new THREE.TextureLoader().load(earthJan);
+    const earthFebTexture = new THREE.TextureLoader().load(earthFeb);
+    const earthMarTexture = new THREE.TextureLoader().load(earthMar);
+    const earthAprTexture = new THREE.TextureLoader().load(earthApr);
+    const earthMayTexture = new THREE.TextureLoader().load(earthMay);
+    const earthJuneTexture = new THREE.TextureLoader().load(earthJune);
+    const earthJulyTexture = new THREE.TextureLoader().load(earthJuly);
+    const earthAugTexture = new THREE.TextureLoader().load(earthAug);
+    const earthSepTexture = new THREE.TextureLoader().load(earthSep);
+    const earthOctTexture = new THREE.TextureLoader().load(earthOct);
+    const earthNovTexture = new THREE.TextureLoader().load(earthNov);
+    const earthDecTexture = new THREE.TextureLoader().load(earthDec);
     const earthTextures = [earthJanTexture, earthFebTexture, earthMarTexture, earthAprTexture, earthMayTexture, earthJuneTexture, earthJulyTexture, earthAugTexture, earthSepTexture, earthOctTexture, earthNovTexture, earthDecTexture];
     const time = useRef(0);
     // const { time } = useControls({
@@ -71,7 +71,7 @@ function TestEarth(){
 
     useFrame(() => {
 
-        time.current += 0.005;
+        time.current += 0.5;
         if (time.current > 12) {
             time.current = 0;
         }
