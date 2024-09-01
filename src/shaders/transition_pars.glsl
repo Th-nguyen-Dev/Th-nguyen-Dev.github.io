@@ -1,6 +1,6 @@
-uniform sampler2D month[12];
+// varying vec2 vMapUv;
 uniform float utime;
-uniform int monthIndex;
-uniform int nextMonthIndex;
+uniform sampler2D map1;
+uniform sampler2D map2;
 uniform sampler2D map;
-varying vec2 vMapUv;
+// varying vec2 vMapUv;

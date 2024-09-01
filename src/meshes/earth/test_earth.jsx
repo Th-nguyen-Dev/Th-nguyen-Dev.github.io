@@ -13,10 +13,15 @@ import earthSep from "/textures_transition/8.png";
 import earthOct from "/textures_transition/9.png";
 import earthNov from "/textures_transition/10.png";
 import earthDec from "/textures_transition/11.png";
+import earthTest from "/textures_transition/Testy.png";
+
+import earthSpriteSheet from "/textures_transition/earth_sprite_sheet.png";
+import earthSpriteSheetH from "/textures_transition/earth_sprite_sheet_horizontal.png";
+
 
 import { useFrame } from '@react-three/fiber';
 import { useTexture } from "@react-three/drei";
-import { useRef, useEffect, useMemo } from 'react';
+import { useRef, useEffect, useMemo,useLayoutEffect } from 'react';
 import { useControls } from "leva";
 import { useState } from 'react';
 import CustomShaderMaterial from "three-custom-shader-material";
@@ -33,6 +38,7 @@ import TestSphere from '../test';
 import EarthAtmosphere from './earth_atmostphere';
 import EarthAtmosphereInner from './earth_atmostphere_inner';
 import EarthCities from './earth_cities';
+import Earth from "./earth";
 
 function TestEarth(){
     const earthRef = useRef();
@@ -52,57 +58,107 @@ function TestEarth(){
     const earthOctTexture = new THREE.TextureLoader().load(earthOct);
     const earthNovTexture = new THREE.TextureLoader().load(earthNov);
     const earthDecTexture = new THREE.TextureLoader().load(earthDec);
+    const earthTestTexture = new THREE.TextureLoader().load(earthTest);
     const earthTextures = [earthJanTexture, earthFebTexture, earthMarTexture, earthAprTexture, earthMayTexture, earthJuneTexture, earthJulyTexture, earthAugTexture, earthSepTexture, earthOctTexture, earthNovTexture, earthDecTexture];
     const time = useRef(0);
+    const earthFirstMonthTexture = useRef(null);
+    const earthSecondMonthTexture = useRef(null);
+    
+    const EarthTextureSheetBase = useMemo(() => {
+        const texture = new THREE.TextureLoader().load(earthSpriteSheetH);
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set(1/12, 1);
+        return texture;
+    }, []);
+
+    const EarthTextureSheetFirst = useMemo(() => {
+        const texture = new THREE.TextureLoader().load(earthSpriteSheetH);
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set(1/12, 1);
+        return texture;
+    }, []);
+
+    const EarthTextureSheetSecond = useMemo(() => {
+        const texture = new THREE.TextureLoader().load(earthSpriteSheetH);
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set(1/12, 1);
+        return texture;
+    }, []);
+
+    earthFirstMonthTexture.current = EarthTextureSheetFirst;
+    earthSecondMonthTexture.current = EarthTextureSheetFirst;
+
+
     // const { time } = useControls({
     //     time: { value: 0, min: 0, max: 11, step: 0.01, slider: true, sliderMax: 100 },
     // });
-    useEffect(() => {
-        console.log(materialRef.current);
 
-    }, [materialRef.current]);
+    useLayoutEffect(() => void (materialRef.current.needsUpdate = true));
 
-    const uniforms = useMemo(() => ({
-        utime: { value: 0.0 },
-        month: { value: earthTextures},
-        monthIndex: { value: 0 },
-        nextMonthIndex: { value: 1 }
-    }),[]);
+    // const onBeforeCompile = (shader) => {
+    //     shader.uniforms.utime = time.current;
+    //     shader.uniforms.map1 = earthFirstMonthTexture;
+    //     shader.uniforms.map2 = earthSecondMonthTexture;
+    //     console.log(shader.uniforms);
+    //     // console.log(shader.vertexShader);
+    //     shader.fragmentShader = shader.fragmentShader.replace('#include <map_pars_fragment>', transitionParse);
+    //     shader.fragmentShader = shader.fragmentShader.replace('#include <map_fragment>', transitionMapFragment);
+    //     // console.log(shader.fragmentShader);
+
+    //     // console.log(shader.fragmentShader);
+
+    //     materialRef.current.userData.shader = shader;
+
+    // };
 
     useFrame(() => {
-
-        time.current += 0.5;
-        if (time.current > 12) {
+        time.current += 0.005;
+        if (time.current > 11) {
             time.current = 0;
         }
-        if (materialRef.current) {
-            uniforms.utime.value = time.current;
-            uniforms.monthIndex.value = Math.floor(time.current);
-            uniforms.nextMonthIndex.value = (Math.floor(time.current) + 1)%12;
+        if (time.current){
+            const currentTileX = Math.floor(time.current % 12);
+            const nextTileX = currentTileX + 1;
+            materialRef.current.uniforms.utime.value = time.current;
+            earthFirstMonthTexture.current.offset.x = currentTileX / 12.0;
+            materialRef.current.uniforms.map1.value = earthFirstMonthTexture.current;
+            earthSecondMonthTexture.current.offset.x = nextTileX / 12.0;
+            materialRef.current.uniforms.map2.value = earthSecondMonthTexture.current;
+            // console.log(earthFirstMonthTexture.current.offset.x, earthSecondMonthTexture.current.offset.x);
         }
     });
-    
-    // useFrame(() => {
-    //     if (materialRef.current) {
-    //         uniforms.utime.value = time;
-    //         uniforms.monthIndex.value = Math.floor(time);
-    //         uniforms.nextMonthIndex.value = (Math.floor(time) + 1)%12;
-    //     }
-    // });
-
-
-
-    
+    const uniforms = useMemo(() => ({
+        utime: { value: 0 },
+        map1: { value:  EarthTextureSheetFirst },
+        map2: { value: EarthTextureSheetSecond }
+    }), []);
     return (
         <>
             <mesh ref={earthRef}>
             <sphereGeometry args={[5, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
+            {/* <meshPhongMaterial
+                ref = {materialRef}
+                map = {earthFirstMonthTexture}
+                bumpMap={earthBumpTexture}
+                specularMap={earthSpecularTexture}
+                bumpScale={100}
+                shininess={20}
+                reflectivity={-0.001}
+                polygonOffset
+                polygonOffsetFactor={1} 
+                onBeforeCompile = {onBeforeCompile}
+            >
+            </meshPhongMaterial> */}
             <CustomShaderMaterial
                 ref = {materialRef}
                 baseMaterial={THREE.MeshPhongMaterial}
                 uniforms={uniforms}
                 fragmentShader={transitionPatchMap}
-                vertexShader = {transitionVertex}
+                // vertexShader = {transitionVertex}
+                map = {EarthTextureSheetBase}
                 bumpMap={earthBumpTexture}
                 specularMap={earthSpecularTexture}
                 bumpScale={100}
@@ -114,11 +170,25 @@ function TestEarth(){
                     patchParse:{"#include <map_pars_fragment>":`${transitionParse}`}, 
                     patchDiffuse:{"#include <map_fragment>":`${transitionMapFragment}`}
                 }}
+                
             >
             </CustomShaderMaterial>
-            <Fresnel />
-            <EarthCloud />
-            <EarthAtmosphere />
+            {/* <CustomShaderMaterial
+                ref = {materialRef}
+                baseMaterial={THREE.MeshPhongMaterial}
+                uniforms={uniforms}
+                map = {earthJanTexture}
+                bumpMap={earthBumpTexture}
+                specularMap={earthSpecularTexture}
+                bumpScale={100}
+                shininess={20}
+                reflectivity={-0.001}
+                polygonOffset
+                polygonOffsetFactor={1} 
+            ></CustomShaderMaterial> */}
+            {/* <Fresnel /> */}
+            {/* <EarthCloud /> */}
+            {/* <EarthAtmosphere /> */}
         </mesh>
         </>
        
