@@ -1,7 +1,2 @@
-uniform mat3 mapTransform;
-varying vec2 vMapUv;
-
-void main()
-{
-    vMapUv = ( mapTransform * vec3( MAP_UV, 1 ) ).xy;
-}
+#include <uv_vertex>
+vMapUv = ( mapTransform * vec3( uv, 1 ) ).xy;
