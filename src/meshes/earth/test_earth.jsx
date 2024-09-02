@@ -65,45 +65,44 @@ function TestEarth(){
     // const earthTestTexture = new THREE.TextureLoader().load(earthTest);
     // const earthTextures = [earthJanTexture, earthFebTexture, earthMarTexture, earthAprTexture, earthMayTexture, earthJuneTexture, earthJulyTexture, earthAugTexture, earthSepTexture, earthOctTexture, earthNovTexture, earthDecTexture];
     const time = useRef(0);
-    const earthFirstMonthTexture = useRef(null);
-    const earthSecondMonthTexture = useRef(null);
-    const EarthTextureBase = useMemo(() => {
-        const texture = new THREE.TextureLoader().load(boundarySetter);
-        texture.wrapS = THREE.RepeatWrapping;
-        texture.wrapT = THREE.RepeatWrapping;
-        texture.repeat.set(1/12, 1);
-        return texture;
-    }, []);
-    const EarthTextureSheetFirst = useMemo(() => {
-        const texture = new THREE.TextureLoader().load(earthSpriteSheetH);
-        texture.wrapS = THREE.RepeatWrapping;
-        texture.wrapT = THREE.RepeatWrapping;
-        texture.repeat.set(1/12, 1);
-        return texture;
-    }, []);
+    // const earthFirstMonthTexture = useRef(null);
+    // const earthSecondMonthTexture = useRef(null);
+    // const EarthTextureBase = useMemo(() => {
+    //     const texture = new THREE.TextureLoader().load(boundarySetter);
+    //     texture.wrapS = THREE.RepeatWrapping;
+    //     texture.wrapT = THREE.RepeatWrapping;
+    //     texture.repeat.set(1/12, 1);
+    //     return texture;
+    // }, []);
+    // const EarthTextureSheetFirst = useMemo(() => {
+    //     const texture = new THREE.TextureLoader().load(earthSpriteSheetH);
+    //     texture.wrapS = THREE.RepeatWrapping;
+    //     texture.wrapT = THREE.RepeatWrapping;
+    //     texture.repeat.set(1/12, 1);
+    //     return texture;
+    // }, []);
 
-    const EarthTextureSheetSecond = useMemo(() => {
-        const texture = new THREE.TextureLoader().load(earthSpriteSheetH);
-        texture.wrapS = THREE.RepeatWrapping;
-        texture.wrapT = THREE.RepeatWrapping;
-        texture.repeat.set(1/12, 1);
-        return texture;
-    }, []);
+    // const EarthTextureSheetSecond = useMemo(() => {
+    //     const texture = new THREE.TextureLoader().load(earthSpriteSheetH);
+    //     texture.wrapS = THREE.RepeatWrapping;
+    //     texture.wrapT = THREE.RepeatWrapping;
+    //     texture.repeat.set(1/12, 1);
+    //     return texture;
+    // }, []);
 
-    earthFirstMonthTexture.current = EarthTextureSheetFirst;
-    earthSecondMonthTexture.current = EarthTextureSheetSecond;
-
+    // earthFirstMonthTexture.current = EarthTextureSheetFirst;
+    // earthSecondMonthTexture.current = EarthTextureSheetSecond;
 
     // const { time } = useControls({
     //     time: { value: 0, min: 0, max: 11, step: 0.01, slider: true, sliderMax: 100 },
     // });
 
-    useLayoutEffect(() => void (materialRef.current.needsUpdate = true));
+    // useLayoutEffect(() => void (materialRef.current.needsUpdate = true));
 
     // const onBeforeCompile = (shader) => {
-    //     shader.uniforms.utime = time.current;
-    //     shader.uniforms.map1 = earthFirstMonthTexture;
-    //     shader.uniforms.map2 = earthSecondMonthTexture;
+    //     shader.uniforms.utime = {value: time.current};
+    //     shader.uniforms.map1 = {value :earthFirstMonthTexture.current};
+    //     shader.uniforms.map2 = {value:earthSecondMonthTexture.current};
     //     console.log(shader.uniforms);
     //     // console.log(shader.vertexShader);
     //     shader.fragmentShader = shader.fragmentShader.replace('#include <map_pars_fragment>', transitionParse);
@@ -112,9 +111,34 @@ function TestEarth(){
 
     //     // console.log(shader.fragmentShader);
 
-    //     materialRef.current.userData.shader = shader;
+    //     // materialRef.current.userData.shader = shader;
 
     // };
+    const firstMonthTex = useTexture(earthSpriteSheetH);
+    const secondMonthTex = useTexture(earthSpriteSheetH);
+    const textureBase = useTexture(boundarySetter);
+
+    firstMonthTex.wrapS = THREE.RepeatWrapping;
+    firstMonthTex.wrapT = THREE.RepeatWrapping;
+    firstMonthTex.repeat.set(1/12, 1);
+    secondMonthTex.wrapS = THREE.RepeatWrapping;
+    secondMonthTex.wrapT = THREE.RepeatWrapping;
+    secondMonthTex.repeat.set(1/12, 1);
+    textureBase.wrapS = THREE.RepeatWrapping;
+    textureBase.wrapT = THREE.RepeatWrapping;
+    textureBase.repeat.set(1/12, 1);
+    const handleTextureLoad = (texture) => {
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set(1 / 12, 1);
+    };
+
+    const baseTexture = new THREE.TextureLoader().load(boundarySetter, handleTextureLoad);
+    const uniforms = useMemo(() => ({
+        utime: { value: 0 },
+        map1: { value: new THREE.TextureLoader().load(earthSpriteSheetH, handleTextureLoad) },
+        map2: { value: new THREE.TextureLoader().load(earthSpriteSheetH, handleTextureLoad) }
+    }), []);
 
     useFrame(() => {
         time.current += 0.005;
@@ -125,56 +149,55 @@ function TestEarth(){
             const currentTileX = Math.floor(time.current % 12);
             const nextTileX = currentTileX + 1;
             if (materialRef.current){
-                EarthTextureSheetFirst.offset.x = currentTileX / 12.0;
-                EarthTextureSheetSecond.offset.x = nextTileX / 12.0;
-                materialRef.current.uniforms.map1.value = EarthTextureSheetFirst;
-                materialRef.current.uniforms.map2.value = EarthTextureSheetSecond;
-                materialRef.current.uniforms.utime.value = time.current;
+                // earthFirstMonthTexture.current.offset.x = 1 / 12.0;
+                // earthSecondMonthTexture.current.offset.x = 6 / 12.0;
+                // earthRef.current.material.uniforms.map1.value = earthFirstMonthTexture.current;
+                // earthRef.current.material.uniforms.map2.value = earthSecondMonthTexture.current;
+                // materialRef.current.uniforms.map1.value = EarthTextureSheetFirst;
+                // materialRef.current.uniforms.map2.value = EarthTextureSheetSecond;
+                // materialRef.current.uniforms.utime.value = time.current;
+                uniforms.utime.value = time.current;
+                uniforms.map1.value.transformUv = (uv) => {
+                    uv.x = uv.x + 1 / 12.0;
+                    return uv;
+                };
+                uniforms.map2.value.transformUv = (uv) => {
+                    uv.x = uv.x + 1 / 12.0;
+                    return uv;
+                };
             }
-
-            // console.log(earthFirstMonthTexture.current.offset.x, earthSecondMonthTexture.current.offset.x);
         }
     });
-    const uniforms = useMemo(() => ({
-        utime: { value: 0 },
-        map1: { value: earthFirstMonthTexture.current },
-        map2: { value: earthSecondMonthTexture.current }
-    }), []);
+
     return (
         <>
             <mesh ref={earthRef}>
             <sphereGeometry args={[5, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
             {/* <meshPhongMaterial
                 ref = {materialRef}
-                map = {earthFirstMonthTexture}
-                bumpMap={earthBumpTexture}
-                specularMap={earthSpecularTexture}
-                bumpScale={100}
-                shininess={20}
-                reflectivity={-0.001}
-                polygonOffset
-                polygonOffsetFactor={1} 
+                map = {EarthTextureBase}
+                // bumpMap={earthBumpTexture}
+                // specularMap={earthSpecularTexture}
+                // bumpScale={100}
+                // shininess={20}
+                // reflectivity={-0.001}
                 onBeforeCompile = {onBeforeCompile}
             >
             </meshPhongMaterial> */}
             <CustomShaderMaterial
                 ref = {materialRef}
                 baseMaterial={THREE.MeshPhongMaterial}
-                uniforms={{
-                    utime: { value: 0 },
-                    map1: { type: "t" , value: EarthTextureSheetFirst },
-                    map2: { type: "t", value: EarthTextureSheetSecond }
-                }}
+                uniforms={uniforms}
                 fragmentShader={transitionPatchMap}
                 // vertexShader = {transitionVertex}
-                map = {EarthTextureBase}
-                bumpMap={earthBumpTexture}
-                specularMap={earthSpecularTexture}
-                bumpScale={100}
-                shininess={20}
-                reflectivity={-0.001}
-                polygonOffset
-                polygonOffsetFactor={1} 
+                map = {textureBase}
+                // bumpMap={earthBumpTexture}
+                // specularMap={earthSpecularTexture}
+                // bumpScale={100}
+                // shininess={20}
+                // reflectivity={-0.001}
+                // polygonOffset
+                // polygonOffsetFactor={1} 
                 patchMap={{
                     patchParse:{"#include <map_pars_fragment>":`${transitionParse}`}, 
                     patchDiffuse:{"#include <map_fragment>":`${transitionMapFragment}`}
