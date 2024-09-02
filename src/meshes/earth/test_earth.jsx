@@ -124,12 +124,14 @@ function TestEarth(){
         if (time.current){
             const currentTileX = Math.floor(time.current % 12);
             const nextTileX = currentTileX + 1;
-            
-            earthFirstMonthTexture.current.offset.x = currentTileX / 12.0;
-            earthSecondMonthTexture.current.offset.x = nextTileX / 12.0;
-            materialRef.current.uniforms.map1.value = earthFirstMonthTexture.current;
-            materialRef.current.uniforms.map2.value = earthSecondMonthTexture.current;
-            materialRef.current.uniforms.utime.value = time.current;
+            if (materialRef.current){
+                EarthTextureSheetFirst.offset.x = currentTileX / 12.0;
+                EarthTextureSheetSecond.offset.x = nextTileX / 12.0;
+                materialRef.current.uniforms.map1.value = EarthTextureSheetFirst;
+                materialRef.current.uniforms.map2.value = EarthTextureSheetSecond;
+                materialRef.current.uniforms.utime.value = time.current;
+            }
+
             // console.log(earthFirstMonthTexture.current.offset.x, earthSecondMonthTexture.current.offset.x);
         }
     });
@@ -160,8 +162,8 @@ function TestEarth(){
                 baseMaterial={THREE.MeshPhongMaterial}
                 uniforms={{
                     utime: { value: 0 },
-                    map1: { value: earthFirstMonthTexture.current },
-                    map2: { value: earthSecondMonthTexture.current }
+                    map1: { type: "t" , value: EarthTextureSheetFirst },
+                    map2: { type: "t", value: EarthTextureSheetSecond }
                 }}
                 fragmentShader={transitionPatchMap}
                 // vertexShader = {transitionVertex}
