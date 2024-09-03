@@ -30,8 +30,6 @@ import CustomShaderMaterial from "three-custom-shader-material";
 import transitionMapFragment from "../../shaders/transition_map_fragment.glsl";
 import transitionParse from "../../shaders/transition_pars.glsl";
 import transitionPatchMap from "../../shaders/transition_patchmap.glsl";
-import transitionVertexPatchMap from "../../shaders/transition_vertex_patchmap.glsl";
-import transitionVertexParse from "../../shaders/transition_vertex_pars.glsl";
 import transitionVertex from "../../shaders/transition_vertex.glsl";
 
 import * as THREE from 'three';
@@ -133,11 +131,13 @@ function TestEarth(){
         texture.repeat.set(1 / 12, 1);
     };
 
-    const baseTexture = new THREE.TextureLoader().load(boundarySetter, handleTextureLoad);
+    const baseTexture = useRef(new THREE.TextureLoader().load(earthSpriteSheetH, handleTextureLoad));
     const uniforms = useMemo(() => ({
         utime: { value: 0 },
-        map1: { value: new THREE.TextureLoader().load(earthSpriteSheetH, handleTextureLoad) },
-        map2: { value: new THREE.TextureLoader().load(earthSpriteSheetH, handleTextureLoad) }
+        // map1: { value: new THREE.TextureLoader().load(earthSpriteSheetH, handleTextureLoad) },
+        // map2: { value: new THREE.TextureLoader().load(earthSpriteSheetH, handleTextureLoad) },
+        map1Transform: { value: new THREE.Matrix3() },
+        map2Transform: { value: new THREE.Matrix3() },
     }), []);
 
     useFrame(() => {
@@ -149,26 +149,26 @@ function TestEarth(){
             const currentTileX = Math.floor(time.current % 12);
             const nextTileX = currentTileX + 1;
             if (materialRef.current){
-                // earthFirstMonthTexture.current.offset.x = 1 / 12.0;
-                // earthSecondMonthTexture.current.offset.x = 6 / 12.0;
-                // earthRef.current.material.uniforms.map1.value = earthFirstMonthTexture.current;
-                // earthRef.current.material.uniforms.map2.value = earthSecondMonthTexture.current;
-                // materialRef.current.uniforms.map1.value = EarthTextureSheetFirst;
-                // materialRef.current.uniforms.map2.value = EarthTextureSheetSecond;
-                // materialRef.current.uniforms.utime.value = time.current;
                 uniforms.utime.value = time.current;
-                uniforms.map1.value.transformUv = (uv) => {
-                    uv.x = uv.x + 1 / 12.0;
-                    return uv;
-                };
-                uniforms.map2.value.transformUv = (uv) => {
-                    uv.x = uv.x + 1 / 12.0;
-                    return uv;
-                };
+                materialRef.current.needsUpdate = true;
+                uniforms.map1Transform.value.elements = [1 / 12.0, 0, 0,
+                                                         0, 1, 0 ,
+                                                         currentTileX/12.0 , 0, 1];
+                uniforms.map2Transform.value.elements = [1 / 12.0, 0, 0,
+                                                        0, 1, 0 ,
+                                                        nextTileX/12.0 , 0, 1];
+                // console.log("My transform");
+                // console.log(uniforms.map1Transform.value);
+                // console.log("Desire Transform");    
+                // baseTexture.current.offset.x = currentTileX / 12.0;
+                // console.log(baseTexture.current.matrix);
+                // baseTexture.current.offset.y = 0;
             }
         }
     });
-
+    useEffect(() => {
+        console.log(baseTexture.current);
+    }, []);
     return (
         <>
             <mesh ref={earthRef}>
@@ -189,8 +189,8 @@ function TestEarth(){
                 baseMaterial={THREE.MeshPhongMaterial}
                 uniforms={uniforms}
                 fragmentShader={transitionPatchMap}
-                // vertexShader = {transitionVertex}
-                map = {textureBase}
+                vertexShader = {transitionVertex}
+                map = {baseTexture.current}
                 // bumpMap={earthBumpTexture}
                 // specularMap={earthSpecularTexture}
                 // bumpScale={100}
