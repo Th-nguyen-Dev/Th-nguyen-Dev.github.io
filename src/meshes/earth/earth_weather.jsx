@@ -80,9 +80,9 @@ function EarthWeather(){
 
     useFrame(() => {
         time.current += 0.02;
-        // if (earthRef.current) {
-        //     earthRef.current.rotation.y += Math.PI / 3650;
-        // }
+        if (earthRef.current) {
+            earthRef.current.rotation.y += Math.PI / 3650;
+        }
         if (time.current > 12) {
             time.current = 0;
         }

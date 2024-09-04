@@ -14,7 +14,7 @@ function AmbientLights({addLight}) {
     return (
         <ambientLight
         ref = {ambientlightRef} 
-        intensity={10} />
+        intensity={0.025} />
     );
 
 }
