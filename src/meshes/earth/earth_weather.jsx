@@ -1,10 +1,9 @@
 import earthBump from "/textures/earth_bump_map.png";
 import earthSpecular from "/textures/earth land ocean mask.png";
 import earthSpriteSheetH from "/textures_transition/earth_sprite_sheet_horizontal.png";
-import earthSpriteSheetHS from "/textures_transition/earth_sprite_sheet_horizontal_small.png";
+import earthSpriteSheetG from "/textures_transition/earth_sprite_grid.png";
 
 import { useFrame } from '@react-three/fiber';
-import { useTexture } from "@react-three/drei";
 import { useRef, useEffect, useMemo,useLayoutEffect } from 'react';
 import { useControls } from "leva";
 import { useState } from 'react';
@@ -27,49 +26,68 @@ function EarthWeather(){
     const time = useRef(0);
     const prevTime = useRef(0); 
     const currentTileX = useRef(0);
-    const nextTileX = useRef(0);    
+    const currentTileY = useRef(0);
+    const nextTileX = useRef(0);   
+    const nextTileY = useRef(0); 
 
 
-    const handleTextureLoad = (texture) => {
+    const handleTextureLoadH = (texture) => {
         texture.wrapS = THREE.RepeatWrapping;
         texture.wrapT = THREE.RepeatWrapping;
         texture.repeat.set(1 / 12, 1);
     };
+    const handleTextureLoadG = (texture) => {
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set(1 / 3, 1 / 4);
+    };
 
-    const baseTexture = useRef(new THREE.TextureLoader().load(earthSpriteSheetH, handleTextureLoad));
+    const baseTexture = useRef(new THREE.TextureLoader().load(earthSpriteSheetH, handleTextureLoadH));
+    const baseTextureG = useRef(new THREE.TextureLoader().load(earthSpriteSheetG));
     const uniforms = useMemo(() => ({
         utime: { value: 0 },
         prevMonth: { value: 0 },
         map1Transform: { value: new THREE.Matrix3() },
         map2Transform: { value: new THREE.Matrix3() },
     }), []);
-    useEffect(() => {
-        uniforms.map1Transform.value.elements = [1 / 12.0, 0, 0, 1, 0, 1/12, 0, 1];
-        uniforms.map2Transform.value.elements = [1 / 12.0, 0, 0, 1, 0, 2/12, 0, 1];
-    }, []);
-    useFrame(() => {
-        time.current += 0.01;
-        if (earthRef.current) {
-            earthRef.current.rotation.y += Math.PI / 3650;
+
+    function updateTexture(){
+        currentTileX.current = Math.floor(time.current % 3);
+        currentTileY.current = Math.floor(time.current / 3) % 4;
+        
+        nextTileX.current = Math.floor((time.current + 1) % 3);
+        nextTileY.current = Math.floor((time.current + 1) / 3) % 4;
+
+        // console.log("current tile",currentTileX.current, "and", currentTileY.current);
+        // console.log("next tile",nextTileX.current, "and", nextTileY.current);
+        
+        
+        if (materialRef.current){
+            uniforms.utime.value = time.current;
+            uniforms.prevMonth.value = currentTileX.current + currentTileY.current * 3;
+            // console.log("time: ", uniforms.utime.value, "prevMonth: ", uniforms.prevMonth.value);
+            // console.log(uniforms.prevMonth.value);
+            uniforms.map1Transform.value.elements = [1 / 3, 0, 0,
+                                                     0, 1 / 4, 0 ,
+                                                    currentTileX.current / 3 , currentTileY.current / 4 , 1 ];
+            // console.log("test:",uniforms.map1Transform.value.elements);
+            uniforms.map2Transform.value.elements = [1 / 3, 0, 0,
+                                                    0, 1 / 4, 0 ,
+                                                    nextTileX.current / 3 , nextTileY.current / 4 , 1 ];
+            materialRef.current.needsUpdate = true;
         }
+    }
+
+    useFrame(() => {
+        time.current += 0.02;
+        // if (earthRef.current) {
+        //     earthRef.current.rotation.y += Math.PI / 3650;
+        // }
         if (time.current > 12) {
             time.current = 0;
         }
         if (time.current){
-            prevTime.current = currentTileX.current;
-            currentTileX.current = Math.floor(time.current % 12);
-            nextTileX.current = currentTileX.current + 1;
-            uniforms.utime.value = time.current;
-            if (materialRef.current ){
-                uniforms.prevMonth.value = currentTileX.current;
-                uniforms.map1Transform.value.elements = [1 / 12.0, 0, 0,
-                                                         0, 1, 0 ,
-                                                         currentTileX.current/12.0 , 0, 1];
-                uniforms.map2Transform.value.elements = [1 / 12.0, 0, 0,
-                                                        0, 1, 0 ,
-                                                        nextTileX.current/12.0 , 0, 1];
-                materialRef.current.needsUpdate = true;
-            }
+            updateTexture();
         }
     });
     useEffect(() => {
@@ -85,7 +103,7 @@ function EarthWeather(){
                 uniforms={uniforms}
                 fragmentShader={transitionPatchMap}
                 vertexShader = {transitionVertex}
-                map = {baseTexture.current}
+                map = {baseTextureG.current}
                 bumpMap={earthBumpTexture}
                 specularMap={earthSpecularTexture}
                 bumpScale={100}
@@ -102,7 +120,6 @@ function EarthWeather(){
             </CustomShaderMaterial>
         </mesh>
         </>
-       
     );
 
 }
