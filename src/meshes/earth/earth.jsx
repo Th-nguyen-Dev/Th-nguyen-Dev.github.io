@@ -1,5 +1,5 @@
 import earthAlbedo from "/textures/earth albedo dec.png";
-import earthBump from "/textures/earth bump.jpg";
+import earthBump from "/textures/earth_bump_map.png";
 import earthSpecular from "/textures/earth land ocean mask.png";
 
 import { Canvas, useFrame } from '@react-three/fiber';

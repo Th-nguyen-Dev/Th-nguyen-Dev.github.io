@@ -6,6 +6,7 @@ import Earth from './earth';
 import EarthCloudShadow from './earth_cloud_shadow';
 import Fresnel from './fresnel';
 import EarthCloud from './earth_cloud';
+import EarthWeather from './earth_weather';
 import TestSphere from '../test';
 import EarthAtmosphere from './earth_atmostphere';
 import EarthAtmosphereInner from './earth_atmostphere_inner';
@@ -23,11 +24,11 @@ function EarthMeshes({addMesh}) {
             <EarthCities addMesh={addMesh} />
             {/* <TestSphere /> */}
             {/* <EarthCloudShadow /> */}
-            <EarthCloud />
+            <EarthWeather />
             {/* <EarthAtmosphereInner /> */}
             <EarthAtmosphere  />
             <Fresnel  />
-            <Earth />
+            {/* <Earth /> */}
             <Stats />
         </group>
 

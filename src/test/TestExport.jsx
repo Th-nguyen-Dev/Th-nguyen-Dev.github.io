@@ -7,9 +7,9 @@ import AmbientLights from '../lights/ambient_lights';
 import DirectionalLights from '../lights/directional_light';
 
 import OfficialCamera from '../cameras/official_camera';
-import test_earth from '../meshes/earth/test_earth';
+import test_earth from '../meshes/earth/earth_weather';
 import * as THREE from 'three';
-import TestEarth from '../meshes/earth/test_earth';
+import TestEarth from '../meshes/earth/earth_weather';
 function PerformanceConfig(){
     const {gl} = useThree();
     useEffect(() => {
