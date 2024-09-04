@@ -16,9 +16,9 @@ const App = () => {
 
   return (
     <React.StrictMode>
-      {/* {showOfficial ? <OfficialExport /> : <EditorExport />}
-      <PrototypeUI toogleView={toggleView}/> */}
-      <TestExport />
+      {showOfficial ? <OfficialExport /> : <EditorExport />}
+      <PrototypeUI toogleView={toggleView}/>
+      {/* <TestExport /> */}
       <MusicPlayer />
     </React.StrictMode>
   );
