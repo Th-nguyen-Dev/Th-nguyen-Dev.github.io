@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useMemo, useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { useEffect, useState } from 'react';
 
@@ -15,8 +15,21 @@ function PerformanceConfig(){
         gl.powerPreference = "high-performance";
     },[]);
 }
+// function MouseMovement({selectMesh, mouse}) {
+//     useFrame(() => {
+//         const { width, height } = useThree().size;
+//         const mouseTransform = new THREE.Vector2();
+//         mouseTransform.x = (e.clientX / width) * 2 - 1;
+//         mouseTransform.y = -(e.clientY / height) * 2 + 1;
+//         selectMesh.forEach(mesh => {
+//             mesh.rotation.x = mouse.y;
+//             mesh.rotation.y = mouse.x;
+//         });
+//     });
+// }
 function OfficialExport({visible}) {
     const [selectMesh, setSelectMesh] = useState([]);
+    const canvasRef = useRef();
     const addMesh = (object) => {
         setSelectMesh((prevObjects) => [...prevObjects, object]);
         console.log("mesh added");
@@ -29,10 +42,12 @@ function OfficialExport({visible}) {
         console.log("light added");
         console.log(selectLight);
     };
+
+
     return (
         <>
-            <Canvas className="canvas">
-            <PerformanceConfig/>
+            <Canvas ref={canvasRef} className="canvas">
+
             {/* <MainCamera /> */}
             <color attach="background" args={['#000000']} />
             <AmbientLights addLight={addLight}/>
@@ -40,6 +55,7 @@ function OfficialExport({visible}) {
             <EarthMeshes addMesh={addMesh}/>
             <PostProcessing selectMesh={selectMesh} selectLight={selectLight}/>
             <OfficialCamera makeDefault={true} />
+            <PerformanceConfig/>
             {/* <Stats />
             <Perf/> */}
             </Canvas>  

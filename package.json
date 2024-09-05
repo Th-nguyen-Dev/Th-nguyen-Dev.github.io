@@ -15,6 +15,7 @@
   "dependencies": {
     "@react-three/postprocessing": "^2.16.2",
     "@types/three": "^0.167.1",
+    "gsap": "^3.12.5",
     "leva": "^0.9.35",
     "react": "^18.3.1",
     "react-audio-player": "^0.17.0",

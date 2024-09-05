@@ -11,10 +11,11 @@ function OfficialCamera() {
             <PerspectiveCamera 
                 ref={OfficialCameraRef} 
                 makeDefault = {true}
-                position = {[40.15, 0.00, 6]}
-                rotation = {[0.00, 7.85, 0.00]}
+                position = {[-6.54, 14.56, 35.63]}
+                rotation = {[5.90, 0.00, 0.00]}
                 fov = {20}
             />
+            
         </>
     );
 }
