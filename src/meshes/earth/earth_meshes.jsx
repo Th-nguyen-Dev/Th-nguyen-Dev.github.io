@@ -18,21 +18,12 @@ function EarthMeshes({addMesh}) {
     const meshRef = useRef();
     const earthRef = useRef();
     const { width, height } = useThree().size;
-    // useFrame((state) => {
-    //     meshRef.current.rotation.x = state.pointer.y;
-    //     meshRef.current.rotation.y = state.pointer.x;
-    // });'
+
     const mouse = useRef({ x: 0, y: 0 });
     useFrame(() => {
-        // earthRef.current.rotateLeft(mouse.current.x);
-        // earthRef.current.rotateUp(mouse.current.y);
-        // earthRef.current.rotation.y = mouse.current.x * Math.PI;
-        // earthRef.current.rotation.x = mouse.current.y * Math.PI;
+        const { rotation } = earthRef.current;
         gsap.to(earthRef.current.rotation, {
-            y : mouse.current.x,
-            // // z : mouse.current.y,
-            // x : mouse.current.y,
-            // z : mouse.current.x,
+            y : (rotation.y + mouse.current.x * 0.2),
             duration: 1
         });
     });
