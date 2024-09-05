@@ -39,7 +39,6 @@ function EarthMeshes({addMesh}) {
     addEventListener('mousemove', (e) => {
         const { clientX, clientY } = e;
         mouse.current = { x: clientX/height * 2 - 1, y: clientY/width  *2 - 1};
-        console.log("mouse x: ", mouse.current.x, "mouse y: ", mouse.current.y);
     });
     return (
         
