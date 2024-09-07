@@ -1,18 +1,19 @@
-import React, { useRef, useEffect } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import React, { useRef, useEffect, useContext } from 'react';
+import { Canvas, useFrame} from '@react-three/fiber';
+import { WebContext } from '../../context/web_context';
 import * as THREE from 'three';
 
 import cloud from "/textures/earth clouds.jpg";
 
-function EarthCloud({setSelectMesh}){
+function EarthCloud(){
     const cloudRef = useRef();
+    const { addMesh } = useContext(WebContext);
 
-    // useEffect(() => {
-    //     if (cloudRef.current) {
-    //         setSelectMesh(cloudRef.current);
-    //         console.log("cloudRef is no longer null");
-    //     }
-    // }, [cloudRef.current]);
+    useEffect(() => {
+        if (cloudRef.current) {
+            addMesh(cloudRef.current);
+        }
+    }, [cloudRef.current]);
 
     useFrame(() => {
 

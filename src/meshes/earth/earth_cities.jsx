@@ -1,17 +1,19 @@
 import cityLights from "/textures/earth night_lights_modified.png";
 
 import { Canvas, useFrame } from '@react-three/fiber';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useContext } from 'react';
 
 import CustomShaderMaterial from 'three-custom-shader-material';
 import fragmentShader from '../../shaders/city_fragment.glsl';
 import vertexShader from '../../shaders/city_vertex.glsl';
 
+import {WebContext} from '../../context/web_context';
+
 import * as THREE from 'three';
 
-function EarthCities({addMesh}) {
+function EarthCities() {
     const cityLightRef = useRef(null);
-
+    const {addMesh} = useContext(WebContext);
     useEffect(() => {
         if (cityLightRef.current) {
             addMesh(cityLightRef.current);
@@ -34,7 +36,7 @@ function EarthCities({addMesh}) {
                 baseMaterial={THREE.MeshLambertMaterial}
                 alphaMap={alphaMapTexture}
                 emissive="#FFD200"
-                emissiveIntensity={2} 
+                emissiveIntensity={10} 
                 fragmentShader={fragmentShader}
                 transparent={true}
                 patchMap={{

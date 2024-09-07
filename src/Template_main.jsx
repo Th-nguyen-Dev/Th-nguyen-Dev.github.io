@@ -5,28 +5,19 @@ import OfficialExport from './official/OfficialExport.jsx';
 import MusicPlayer from './music/music_player.jsx';
 import PrototypeUI from './prototype_UI.jsx';
 import TestExport from './test/TestExport.jsx';
-
+import { WebProvider } from './context/web_context';
 import './index.css';
 
 const App = () => {
-  const [showOfficial, setShowOfficial] = useState(true);
-
-  const toggleView = () => {
-    setShowOfficial(!showOfficial);
-  };
 
   return (
     <React.StrictMode>
-      {/* <PrototypeUI toogleView={toggleView} /> */}
-      <Suspense fallback={null}>
-        <OfficialExport />
-      </Suspense>
-
-      {/* {showOfficial ? <OfficialExport /> : <EditorExport />}
-      <PrototypeUI toogleView={toggleView}/> */}
-      {/* <TestExport /> */}
-      
-      <MusicPlayer />
+      <WebProvider>
+        <Suspense fallback={null}>
+          <OfficialExport />
+        </Suspense>
+        <MusicPlayer />
+      </WebProvider>
     </React.StrictMode>
   );
 };

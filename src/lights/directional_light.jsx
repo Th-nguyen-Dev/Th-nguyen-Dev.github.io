@@ -1,13 +1,11 @@
 import React, { useRef } from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { WebContext } from '../context/web_context';
 
-function DirectionalLights({addLight}) {
+function DirectionalLights() {
     const directionalLightRef = useRef([]);
-
+    const { addLight } = useContext(WebContext);
     useEffect(() => {
-        if (typeof addLight !== 'function') {
-            console.log('addLight is not a function');
-        }
         if (directionalLightRef.current && directionalLightRef.current.length > 0){
             directionalLightRef.current.forEach(light => addLight(light));
         }

@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { WebContext } from '../context/web_context';
 
-function AmbientLights({addLight}) {
+function AmbientLights() {
     const ambientlightRef = useRef();
-
+    const { addLight } = useContext(WebContext);
     useEffect(() => {  
         if (ambientlightRef.current){
             addLight(ambientlightRef.current);

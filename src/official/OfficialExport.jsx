@@ -14,39 +14,33 @@ import { Environment } from '@react-three/drei';
 import StarrySky from '/textures/starry_sky.jpg';
 import * as THREE from 'three';
 import PrototypeUI from '../prototype_UI';
-function PerformanceConfig(){
+export function PerformanceConfig(){
     const {gl} = useThree();
     useEffect(() => {
         gl.powerPreference = "high-performance";
     },[]);
-    }
+}
 function OfficialExport({visible}) {
     const [selectMesh, setSelectMesh] = useState([]);
     const canvasRef = useRef();
     const starrySkyTexture = new THREE.TextureLoader().load(StarrySky);
     const addMesh = (object) => {
         setSelectMesh((prevObjects) => [...prevObjects, object]);
-        console.log("mesh added");
-        console.log(selectMesh);
     };
 
     const [selectLight, setSelectLight] = useState([]);
     const addLight = (light) => {
         setSelectLight((prevLights) => [...prevLights, light]);
-        console.log("light added");
-        console.log(selectLight);
     };
-
-
     return (
         <>
             <Canvas ref={canvasRef} className="canvas">
             <   color attach="background" args={['#000000']} />
                 <ScrollControls pages={5}>                        
-                    <AmbientLights addLight={addLight}/>
-                    <DirectionalLights addLight={addLight}/>
-                    <EarthMeshes addMesh={addMesh}/>
-                    <PostProcessing selectMesh={selectMesh} selectLight={selectLight}/>
+                    <AmbientLights/>
+                    <DirectionalLights/>
+                    <EarthMeshes/>
+                    <PostProcessing/>
                     <OfficialCamera makeDefault={true} />
                     <PerformanceConfig/>
                     <Scroll html style={{width: '50%', height: '100%'}}>

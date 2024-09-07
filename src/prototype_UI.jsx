@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+
 import './index.css';
 
 function PrototypeUI({toogleView}) {
@@ -19,7 +20,7 @@ function PrototypeUI({toogleView}) {
     }  
 return (
     <div>
-        <div className="absolute text-white  top-1/4 right-10  mr-24 ml-20">
+        <div className="absolute text-white  top-1/4 right-10  mr-20 ml-20">
         <h1>
             <p className = "text-6xl mb-1">
                 <strong
@@ -33,7 +34,7 @@ return (
                 My name is Ryan Nguyen
             </p> 
         </h1>
-        <br/><br/>
+        <br/>
         <h2 className = "text-xl">
             I am a full stack developer with a passion for designs and all things interactive. 
             <br/>

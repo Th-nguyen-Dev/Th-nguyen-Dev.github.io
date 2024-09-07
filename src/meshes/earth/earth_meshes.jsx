@@ -38,7 +38,7 @@ function EarthMeshes({addMesh}) {
             ref = {meshRef}
         >
             <group ref = {earthRef}>
-                <EarthCities addMesh={addMesh} />
+                <EarthCities />
                 <EarthWeather />
                 <EarthCloud />
             </group>
