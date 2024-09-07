@@ -20,17 +20,16 @@ function EarthMeshes({addMesh}) {
     const { width, height } = useThree().size;
     const mouse = useRef({ x: 0, y: 0 });
     useFrame(() => {
-        
+        gsap.to(earthRef.current.rotation, {
+            y: mouse.current.x,
+            duration: 2,
+        });
     });
     
     addEventListener('mousemove', (e) => {
         const { clientX, clientY } = e;
         mouse.current = { x: clientX/height * 2 - 1, y: clientY/width  *2 - 1};
-        gsap.to(earthRef.current.rotation, {
-            y: mouse.current.x,
-            duration: 2,
-        });
-        // console.log(mouse.current.x, mouse.current.y);
+
     });
     return (
         
@@ -42,15 +41,8 @@ function EarthMeshes({addMesh}) {
                 <EarthWeather />
                 <EarthCloud />
             </group>
-            
-            {/* <TestSphere /> */}
-            {/* <EarthCloudShadow /> */}
-            
-            {/* <EarthAtmosphereInner /> */}
             <EarthAtmosphere  />
             <Fresnel  />
-            {/* <Earth /> */}
-            {/* <Stats /> */}
         </group>
 
     );
