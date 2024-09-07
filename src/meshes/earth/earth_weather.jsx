@@ -57,20 +57,13 @@ function EarthWeather(){
         
         nextTileX.current = Math.floor((time.current + 1) % 3);
         nextTileY.current = Math.floor((time.current + 1) / 3) % 4;
-
-        // console.log("current tile",currentTileX.current, "and", currentTileY.current);
-        // console.log("next tile",nextTileX.current, "and", nextTileY.current);
-        
         
         if (materialRef.current){
             uniforms.utime.value = time.current;
             uniforms.prevMonth.value = currentTileX.current + currentTileY.current * 3;
-            // console.log("time: ", uniforms.utime.value, "prevMonth: ", uniforms.prevMonth.value);
-            // console.log(uniforms.prevMonth.value);
             uniforms.map1Transform.value.elements = [1 / 3, 0, 0,
                                                      0, 1 / 4, 0 ,
                                                     currentTileX.current / 3 , currentTileY.current / 4 , 1 ];
-            // console.log("test:",uniforms.map1Transform.value.elements);
             uniforms.map2Transform.value.elements = [1 / 3, 0, 0,
                                                     0, 1 / 4, 0 ,
                                                     nextTileX.current / 3 , nextTileY.current / 4 , 1 ];
@@ -80,9 +73,7 @@ function EarthWeather(){
 
     useFrame(() => {
         time.current += 0.005;
-        if (earthRef.current) {
-            earthRef.current.rotation.y += Math.PI / 3650;
-        }
+        earthRef.current.rotation.y += Math.PI / 3650 ;
         if (time.current > 12) {
             time.current = 0;
         }
