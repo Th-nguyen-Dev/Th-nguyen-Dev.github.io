@@ -14,44 +14,40 @@ function PrototypeUI({toogleView}) {
             textRef.current.style.display = "none";
         }
     };
-  return (
-        <div style={{ 
-            position: "absolute", 
-            left: "30%", 
-            top: "100%", 
-            transform: "translate(-50%, -150%)",
-            width: "40%", 
-            height: "30%", 
-            zIndex: 10, 
-            color: "white",
-            textAlign: "left",
-            display: "flex",
-            flexDirection: "column", // Add this line
-            alignItems: "left",
-            justifyContent: "flex-start",
-            fontFamily: "Source Code Pro",
-            fontSize: "1.25em"
-        }}>
-            <div ref = {textRef}>
-                Hi there.
-                <br />
-                This is my personal website. I'm currently working on it!
-            </div>
-        
-        <button ref={buttonRef} onClick={onHandleToggle} style={{ 
-          width: "250px", 
-          height: "50px", 
-          whiteSpace: "nowrap", 
-          overflow: "hidden", 
-          textOverflow: "ellipsis",
-          alignItems: "center",
-          justifyContent: "flex-start",
-          zIndex: 99999,
-         }}>
-          {showOfficial ? 'Switch to Editor' : 'Switch to Official'}
-        </button>
-      </div>
-  );
+    const changeTextColor =(color) => (event) => {
+        event.target.style.color = color;
+    }  
+return (
+    <div>
+        <div className="absolute text-white  top-1/4  mr-20 ml-14">
+        <h1>
+            <p className = "text-7xl mb-1">
+                <strong
+                     onPointerOver={changeTextColor("#00ff00")} 
+                     onPointerLeave={changeTextColor('white')}
+                >
+                    Hello World!
+                </strong>
+            </p>
+            <p className= "text-4xl">
+                My name is Ryan Nguyen
+            </p> 
+        </h1>
+        <br/><br/>
+        <h2>
+            I am a full stack developer with a passion for designs and all things interactive. 
+            <br/>
+            <br/>
+            Currently, I am working toward a degree in Computer Sciene at Bellevue College in Washington.
+            I have a background in graphic design, graphic programming, game development, algorithm, and UI design. 
+            I grew up with computers and technology, and have always been fascinated with the use of technology to create interactive experiences.
+            From video games to tools that allows for these creative experiences, I have always wanted to be at every step of the process.
+
+        </h2>
+        </div>
+    </div>
+    
+);
 };
 
 export default PrototypeUI;

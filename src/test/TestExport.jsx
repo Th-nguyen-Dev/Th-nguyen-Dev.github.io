@@ -10,6 +10,7 @@ import OfficialCamera from '../cameras/official_camera';
 import test_earth from '../meshes/earth/earth_weather';
 import * as THREE from 'three';
 import TestEarth from '../meshes/earth/earth_weather';
+import TestMesh from '../meshes/earth/test_mesh';
 function PerformanceConfig(){
     const {gl} = useThree();
     useEffect(() => {
@@ -37,7 +38,7 @@ function TestExport() {
             {/* <MainCamera /> */}
             <color attach="background" args={['#000000']} />
             <AmbientLights addLight={addLight}/>
-            <TestEarth/>
+            <TestMesh />
             <DirectionalLights addLight={addLight}/>
             <OfficialCamera makeDefault={true} />
             <OrbitControls />

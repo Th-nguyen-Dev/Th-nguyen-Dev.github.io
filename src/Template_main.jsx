@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import EditorExport from './editor/EditorExport.jsx';
 import OfficialExport from './official/OfficialExport.jsx';
 import MusicPlayer from './music/music_player.jsx';
 import PrototypeUI from './prototype_UI.jsx';
 import TestExport from './test/TestExport.jsx';
+
 import './index.css';
 
 const App = () => {
@@ -16,9 +17,15 @@ const App = () => {
 
   return (
     <React.StrictMode>
-      {showOfficial ? <OfficialExport /> : <EditorExport />}
-      <PrototypeUI toogleView={toggleView}/>
+      {/* <PrototypeUI toogleView={toggleView} /> */}
+      <Suspense fallback={null}>
+        <OfficialExport />
+      </Suspense>
+
+      {/* {showOfficial ? <OfficialExport /> : <EditorExport />}
+      <PrototypeUI toogleView={toggleView}/> */}
       {/* <TestExport /> */}
+      
       <MusicPlayer />
     </React.StrictMode>
   );

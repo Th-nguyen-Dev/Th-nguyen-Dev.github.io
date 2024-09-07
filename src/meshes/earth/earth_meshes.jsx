@@ -23,7 +23,7 @@ function EarthMeshes({addMesh}) {
     useFrame(() => {
         const { rotation } = earthRef.current;
         gsap.to(earthRef.current.rotation, {
-            y: ( mouse.current.x * 0.2),
+            y: ( mouse.current.x * 0.5),
             duration: 1,
         });
     });
