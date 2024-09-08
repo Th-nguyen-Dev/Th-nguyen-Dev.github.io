@@ -5,6 +5,8 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  width: 100%;
+  height: 100%;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -61,6 +63,8 @@ button:focus-visible {
   :root {
     color: #213547;
     background-color: #ffffff;
+    width: 100%;
+    height: 100%;
   }
   a:hover {
     color: #747bff;
@@ -71,34 +75,34 @@ button:focus-visible {
 }
 .view1 {
   z-index: 10;
-  position: absolute;
+  position: absolute !important;
   width: 100%;
   height: 100%;
 }
 
 .view2 {
-  position: absolute;
+  position: absolute !important;
   bottom: 2em;
   left: 2em;
   width: 20%;
   height: 20%;
 }
 
-.container {
-  position: absolute;
+.canvas_container {
+  position: absolute !important;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .canvas {
   pointer-events: none;
   position: absolute !important;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 @layer base {

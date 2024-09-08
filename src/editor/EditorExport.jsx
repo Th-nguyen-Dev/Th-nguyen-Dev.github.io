@@ -1,11 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Grid, OrbitControls, PerspectiveCamera, Stats, useHelper,GizmoHelper, GizmoViewport, View, Bounds, CameraControls } from '@react-three/drei';
+import { Canvas, useFrame,  useThree } from '@react-three/fiber';
+import { Grid, OrbitControls, PerspectiveCamera, Stats, 
+useHelper,GizmoHelper, GizmoViewport, View, Bounds, CameraControls  } from '@react-three/drei';
 
 import * as THREE from 'three';
 import SceneEditorExport from './SceneEditorExport.jsx';
 import MainCamera from '../cameras/main_camera.jsx';
 import PostProcessing from '../postprocesses/effect_composer.jsx';
+export function PerformanceConfig(){
+    const {gl} = useThree();
+    useEffect(() => {
+        gl.powerPreference = "high-performance";
+    },[]);
+}
 function EditorExport() {
     const SceneRef = useRef();
     const [viewCam, setViewCam] = useState();
@@ -27,8 +34,7 @@ function EditorExport() {
     };
 
     return (
-        <>
-            <div className="container">
+        <div className="canvas_container">
             <View index={1} className="view1">
                 <color attach="background" args={['#000000']} />    
                 <MainCamera makeDefault={false} />
@@ -49,10 +55,9 @@ function EditorExport() {
             <Canvas className="canvas">
                 <color attach="background" args={['#000000']} />
                 <View.Port />
+                <PerformanceConfig />
             </Canvas>        
-            </div>
-        </>
-
+        </div>
     );
 }
 
