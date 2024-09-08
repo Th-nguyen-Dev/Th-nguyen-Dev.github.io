@@ -29,20 +29,7 @@ function EarthWeather(){
     const currentTileY = useRef(0);
     const nextTileX = useRef(0);   
     const nextTileY = useRef(0); 
-
-
-    const handleTextureLoadH = (texture) => {
-        texture.wrapS = THREE.RepeatWrapping;
-        texture.wrapT = THREE.RepeatWrapping;
-        texture.repeat.set(1 / 12, 1);
-    };
-    const handleTextureLoadG = (texture) => {
-        texture.wrapS = THREE.RepeatWrapping;
-        texture.wrapT = THREE.RepeatWrapping;
-        texture.repeat.set(1 / 3, 1 / 4);
-    };
-
-    const baseTexture = useRef(new THREE.TextureLoader().load(earthSpriteSheetH, handleTextureLoadH));
+    
     const baseTextureG = useRef(new THREE.TextureLoader().load(earthSpriteSheetG));
     const uniforms = useMemo(() => ({
         utime: { value: 0 },
@@ -73,7 +60,6 @@ function EarthWeather(){
 
     useFrame(() => {
         time.current += 0.005;
-        earthRef.current.rotation.y += Math.PI / 3650 ;
         if (time.current > 12) {
             time.current = 0;
         }
@@ -81,9 +67,6 @@ function EarthWeather(){
             updateTexture();
         }
     });
-    useEffect(() => {
-        console.log(baseTexture.current);
-    }, []);
     return (
         <>
             <mesh ref={earthRef}>

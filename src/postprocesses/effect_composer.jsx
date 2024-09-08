@@ -10,9 +10,9 @@ function PostProcessing() {
                 ref={bloomPassRef}
                 selection={meshes}
                 lights={lights}
-                luminanceThreshold={0.7}
+                luminanceThreshold={0.9}
                 luminanceSmoothing={0.2}
-                intensity={1}
+                intensity={0.75}
             />
         </EffectComposer>
     );

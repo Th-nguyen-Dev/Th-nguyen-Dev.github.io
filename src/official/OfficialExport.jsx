@@ -7,10 +7,10 @@ import AmbientLights from '../lights/ambient_lights';
 import DirectionalLights from '../lights/directional_light';
 import PostProcessing from '../postprocesses/effect_composer';
 import EarthMeshes from '../meshes/earth/earth_meshes';
-import MainCamera from '../cameras/main_camera';
 import OfficialCamera from '../cameras/official_camera';
 
-import { Environment } from '@react-three/drei';  
+import { Stats } from '@react-three/drei';
+
 import StarrySky from '/textures/starry_sky.jpg';
 import * as THREE from 'three';
 import PrototypeUI from '../prototype_UI';
@@ -18,6 +18,8 @@ export function PerformanceConfig(){
     const {gl} = useThree();
     useEffect(() => {
         gl.powerPreference = "high-performance";
+        gl.presition = "highp";
+        gl.antialias = true;
     },[]);
 }
 function OfficialExport({visible}) {
@@ -47,7 +49,7 @@ function OfficialExport({visible}) {
                         <PrototypeUI/>
                     </Scroll>
                 </ScrollControls>
-
+                <Stats/>
             </Canvas>  
         </>
 

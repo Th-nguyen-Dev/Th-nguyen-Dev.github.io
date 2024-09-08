@@ -20,13 +20,7 @@ function EarthCities() {
             console.log("cityLightRef is no longer null");
         }
     }, [cityLightRef.current]);
-
-    useFrame(() => {
-        if (cityLightRef.current) {
-            cityLightRef.current.rotation.y += Math.PI / 3650;
-        }
-    }); 
-
+    
     const alphaMapTexture = new THREE.TextureLoader().load(cityLights);
 
     return (
