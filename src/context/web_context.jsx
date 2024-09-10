@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createContext, useState, useMemo } from "react";
 import { useControls } from "leva";
 import * as THREE from 'three';
@@ -6,14 +6,6 @@ import * as THREE from 'three';
 export const WebContext = createContext();
 
 export const WebProvider = ({ children }) => {
-    const [meshes, setMeshes] = useState([]);
-    const [lights, setLights] = useState([]);
-    const [coordinates, setCoordinates] = useState(
-        new Map([
-            ['Seattle', [47.608013, -122.335167]],
-            ['Ho Chi Minh City', [10.762622, 106.660172]]
-    ]));
-    const [radius, setRadius] = useState(5);
 
     const getCoordPosition = (name) => {
         const coord = coordinates.get(name);
@@ -25,6 +17,11 @@ export const WebProvider = ({ children }) => {
            radius * Math.sin(lat) * Math.sin(lon)
         );
     }
+    const getQuaternions = (name) => {
+        const desVec = getCoordPosition(name).normalize();
+        const cameraVec = new THREE.Vector3(32.00, 0, 25.50).normalize();
+        return new THREE.Quaternion().setFromUnitVectors(desVec, cameraVec);
+    }
 
     const addMesh = (mesh) => {
         setMeshes([...meshes, mesh]);
@@ -32,6 +29,28 @@ export const WebProvider = ({ children }) => {
     const addLight = (light) => {
         setLights([...lights, light]);
     }
+
+    const [meshes, setMeshes] = useState([]);
+    const [lights, setLights] = useState([]);
+    const [toggleDes, setToggleDes] = useState(null);
+    const [radius] = useState(5);
+
+    const [coordinates] = useState(
+        new Map([
+            ['Seattle', [47.608013, -122.335167]],
+            ['Ho Chi Minh City', [10.762622, 106.660172]]
+        ])
+    );
+
+    const quaternions = useMemo(() => {
+        const newQuaternions = new Map();
+        coordinates.forEach((_, key) => {
+            newQuaternions.set(key, getQuaternions(key));
+        });
+        console.log(newQuaternions);
+        return newQuaternions;
+    }, [coordinates]);
+
     return (
         <WebContext.Provider value={{ 
             meshes, 
@@ -40,6 +59,9 @@ export const WebProvider = ({ children }) => {
             addLight, 
             coordinates, 
             getCoordPosition,
+            toggleDes, 
+            setToggleDes,
+            quaternions
         }}>
             {children}
         </WebContext.Provider>

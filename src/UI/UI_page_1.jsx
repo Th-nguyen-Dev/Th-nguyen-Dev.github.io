@@ -1,23 +1,21 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
+import { WebContext } from '../context/web_context';
+import '@/index.css';
 
-import './index.css';
-
-function PrototypeUI({toogleView}) {
-    const textRef = useRef();   
-    const buttonRef = useRef();
-    const [showOfficial, setShowOfficial] = useState(true);
-    const onHandleToggle = () => {
-        setShowOfficial(!showOfficial);
-        toogleView();
-        if (textRef.current.style.display === "none") {
-            textRef.current.style.display = "block";
-        } else {
-            textRef.current.style.display = "none";
-        }
-    };
+function UIPage1() {
     const changeTextColor =(color) => (event) => {
         event.target.style.color = color;
     }  
+    const {toggleDes,setToggleDes} = useContext(WebContext);
+    useEffect(() => {
+        console.log("UI Page 1",toggleDes);
+    }, [toggleDes]);
+    const onPointerEnter = (name) => () =>{
+        setToggleDes(name);
+    }
+    const onPointerLeave = () => {
+        setToggleDes(null);
+    }
 return (
     <div>
         <div className="absolute text-white  top-1/4 right-10  mr-20 ml-20">
@@ -34,7 +32,7 @@ return (
                 My name is Ryan Nguyen
             </p> 
         </h1>
-        <br/>
+        <br></br>
         <h2 className = "text-xl">
             I am a full stack developer with a passion for designs and all things interactive. 
             <br/>
@@ -45,10 +43,20 @@ return (
             From video games to tools that allows for these creative experiences, I have always wanted to be at every step of the process.
 
         </h2>
+        <br></br>
+        <br></br>
+        <div className="text-2xl columns-lg">
+            <h1  onPointerEnter={onPointerEnter("Seattle") } onPointerLeave={onPointerLeave}> 
+                <strong>Seattle</strong>
+            </h1>
+            <h1  onPointerEnter={onPointerEnter("Ho Chi Minh City")} onPointerLeave={onPointerLeave}>
+                <strong>Ho Chi Minh City</strong>
+            </h1>
+        </div>
         </div>
     </div>
     
 );
 };
 
-export default PrototypeUI;
+export default UIPage1;

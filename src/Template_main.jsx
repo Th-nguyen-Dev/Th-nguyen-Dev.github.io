@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import EditorExport from './editor/EditorExport.jsx';
 import OfficialExport from './official/OfficialExport.jsx';
 import MusicPlayer from './music/music_player.jsx';
-import PrototypeUI from './prototype_UI.jsx';
 import TestExport from './test/TestExport.jsx';
 import { WebProvider } from './context/web_context';
 import './index.css';

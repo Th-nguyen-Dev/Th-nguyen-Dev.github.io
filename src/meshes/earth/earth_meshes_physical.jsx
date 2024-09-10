@@ -14,11 +14,18 @@ import gsap from 'gsap';
 function EarthMeshesPhysical() {
     const meshRef = useRef();
     const { getCoordPosition } = useContext(WebContext);
+    const {quaternions} = useContext(WebContext);
     const {toggleDes} = useContext(WebContext);
+    useEffect(() => {
+        console.log("Entire",toggleDes);
+    }, [toggleDes]);
     // const SeattleDesVec = getCoordPosition('Seattle').normalize();
     // const SeattleSrcVec = new THREE.Vector3(0, 1, 0);
     // const SeattleQuaterion = new THREE.Quaternion().setFromUnitVectors(SeattleSrcVec, SeattleDesVec);
-
+    const selectedQuaterion = useRef(new THREE.Quaternion());
+    if (toggleDes) {
+        selectedQuaterion.current = quaternions.get(toggleDes);
+    }
     const quaternionDes = useMemo(() => {
         const cameraVec = new THREE.Vector3(32.00, 0, 25.50).normalize();
         const desVec = getCoordPosition('Seattle').normalize();
@@ -30,6 +37,7 @@ function EarthMeshesPhysical() {
     const toggle = useRef(false);
     const returnToBase = useRef(true);
     const startRotation = useRef(false);
+
     const handleEnter = () => {
         toggle.current = true;
         if (returnToBase.current){

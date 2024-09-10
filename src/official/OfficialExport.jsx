@@ -13,7 +13,9 @@ import { Stats } from '@react-three/drei';
 
 import StarrySky from '/textures/starry_sky.jpg';
 import * as THREE from 'three';
-import PrototypeUI from '../prototype_UI';
+import UIPage1 from '../UI/UI_page_1';
+import UIPage2 from '../UI/UI_page_2';
+import { WebProvider } from '@/context/web_context';
 export function PerformanceConfig(){
     const {gl} = useThree();
     useEffect(() => {
@@ -22,7 +24,7 @@ export function PerformanceConfig(){
         gl.antialias = true;
     },[]);
 }
-function OfficialExport({visible}) {
+function OfficialExport() {
     const [selectMesh, setSelectMesh] = useState([]);
     const canvasRef = useRef();
     const starrySkyTexture = new THREE.TextureLoader().load(StarrySky);
@@ -36,6 +38,7 @@ function OfficialExport({visible}) {
     };
     return (
         <>
+            
             <Canvas ref={canvasRef} className="canvas">
             <   color attach="background" args={['#000000']} />
                 <ScrollControls pages={5}>                        
@@ -46,11 +49,11 @@ function OfficialExport({visible}) {
                     <OfficialCamera makeDefault={true} />
                     <PerformanceConfig/>
                     <Scroll html style={{width: '50%', height: '100%'}}>
-                        <PrototypeUI/>
                     </Scroll>
                 </ScrollControls>
                 <Stats/>
             </Canvas>  
+            <UIPage1/>
         </>
 
     );
