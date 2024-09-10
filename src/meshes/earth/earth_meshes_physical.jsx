@@ -20,7 +20,7 @@ function EarthMeshesPhysical() {
     // const SeattleQuaterion = new THREE.Quaternion().setFromUnitVectors(SeattleSrcVec, SeattleDesVec);
 
     const quaternionDes = useMemo(() => {
-        const cameraVec = new THREE.Vector3(32.00, 0, 12.50).normalize();
+        const cameraVec = new THREE.Vector3(32.00, 0, 25.50).normalize();
         const desVec = getCoordPosition('Seattle').normalize();
         return new THREE.Quaternion().setFromUnitVectors(desVec, cameraVec);
     }, []);
