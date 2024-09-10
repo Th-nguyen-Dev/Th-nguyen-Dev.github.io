@@ -1,5 +1,6 @@
 import React from "react";
-import { createContext, useState } from "react";
+import { createContext, useState, useMemo } from "react";
+import { useControls } from "leva";
 import * as THREE from 'three';
 
 export const WebContext = createContext();
@@ -18,7 +19,6 @@ export const WebProvider = ({ children }) => {
         const coord = coordinates.get(name);
         const lat = (90 - coord[0]) * Math.PI / 180;
         const lon = -coord[1] * Math.PI / 180;
-        console.log(lat, lon);
         return new THREE.Vector3(
            radius * Math.sin(lat) * Math.cos(lon),
            radius * Math.cos(lat),
@@ -39,7 +39,7 @@ export const WebProvider = ({ children }) => {
             lights, 
             addLight, 
             coordinates, 
-            getCoordPosition
+            getCoordPosition,
         }}>
             {children}
         </WebContext.Provider>

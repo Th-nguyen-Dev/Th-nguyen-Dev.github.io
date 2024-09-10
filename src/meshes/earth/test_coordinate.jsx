@@ -10,17 +10,6 @@ const meshRef = useRef();
 const meshRef2 = useRef();
 const {getCoordPosition} = useContext(WebContext);
 useFrame(() => {
-    // lon.current += 0.1;
-    // const latR1 = (90 - 47.608013) * Math.PI / 180;
-    // const lonR1 = (122.335167) * Math.PI / 180;
-    // meshRef.current.position.x = radius * Math.sin(latR1) * Math.cos(lonR1);
-    // meshRef.current.position.z = radius * Math.sin(latR1) * Math.sin(lonR1);
-    // meshRef.current.position.y = radius * Math.cos(latR1);
-    // const latR2 = (90 - 10.762622) * Math.PI / 180;
-    // const lonR2 = (-106.660172) * Math.PI / 180;
-    // meshRef2.current.position.x = radius * Math.sin(latR2) * Math.cos(lonR2);
-    // meshRef2.current.position.y = radius * Math.cos(latR2);
-    // meshRef2.current.position.z = radius * Math.sin(latR2) * Math.sin(lonR2);
 
 })
 return (

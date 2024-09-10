@@ -13,10 +13,7 @@ function EarthMeshes({addMesh}) {
     const { width, height } = useThree().size;
     const mouse = useRef({ x: 0, y: 0 });
     useFrame(() => {
-        gsap.to(earthRef.current.rotation, {
-            y: mouse.current.x,
-            duration: 2,
-        });
+        earthRef.current.rotation.y = THREE.MathUtils.lerp(earthRef.current.rotation.y, mouse.current.x * 0.3, 0.1);
     });
     
     addEventListener('mousemove', (e) => {
