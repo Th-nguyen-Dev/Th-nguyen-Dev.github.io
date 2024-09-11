@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import { WebContext } from '../context/web_context';
 import { useSelector, useDispatch } from 'react-redux';
 import {setTimelineToggle} from '@/context/reducer/timeline_toggle';
+import { Button } from "@/components/ui/button"
 import '@/index.css';
 
 function UIPage1() {
@@ -49,6 +50,12 @@ return (
         <br></br>
         <br></br>
         <div className="text-1xl columns-lg">
+            <Button variant="outline" size={"lg"} style={{
+                height: "10rem",
+                width: "25rem",
+                fontSize: "5rem",
+            }}>Seattle</Button>
+
             <h1  onPointerOver={onPointerEnter("Seattle") } onPointerOut={onPointerLeave}> 
                 <strong>Seattle</strong>
             </h1>
