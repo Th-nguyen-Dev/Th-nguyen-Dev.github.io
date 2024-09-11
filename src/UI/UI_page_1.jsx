@@ -10,9 +10,6 @@ function UIPage1() {
     }  
     const toggleDes = useSelector((state) => state.timelineToggle.value);
     const dispatch = useDispatch();
-    useEffect(() => {
-        console.log("UI Page 1",toggleDes);
-    }, [toggleDes]);
     const onPointerEnter = (name) => (event) =>{
         dispatch(setTimelineToggle(name));
         changeTextColor("#00ff00")(event);

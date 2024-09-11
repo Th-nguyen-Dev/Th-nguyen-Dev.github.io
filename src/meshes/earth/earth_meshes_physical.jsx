@@ -21,7 +21,6 @@ function EarthMeshesPhysical() {
 
     const selectedQuaterion = useRef(new THREE.Quaternion());
 
-
     useEffect(() => {
         if (toggleDes) {
             selectedQuaterion.current = localQuaternions.current.get(toggleDes);
@@ -53,8 +52,6 @@ function EarthMeshesPhysical() {
             if (meshRef.current.quaternion.equals(lastQuaternion.current)){
                 returnToBase.current = true;
                 startRotation.current = true;
-                console.log(meshRef.current.quaternion);
-                console.log(meshRef.current.rotation);
             }
         }
         if (startRotation.current){
