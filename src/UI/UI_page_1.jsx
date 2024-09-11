@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import { WebContext } from '../context/web_context';
 import { useSelector, useDispatch } from 'react-redux';
 import {setTimelineToggle} from '@/context/reducer/timeline_toggle';
+import { Button } from '@/components/ui/button';
 import '@/index.css';
 
 function UIPage1() {
@@ -15,7 +16,7 @@ function UIPage1() {
     }, [toggleDes]);
     const onPointerEnter = (name) => (event) =>{
         dispatch(setTimelineToggle(name));
-        changeTextColor("#00ff00")(event);
+        changeTextColor("black")(event);
         
     }
     const onPointerLeave = (event) => {
@@ -51,10 +52,6 @@ return (
         </h2>
         <br></br>
         <br></br>
-<<<<<<< Updated upstream
-        <div className="text-1xl columns-lg">
-            <h1  onPointerOver={onPointerEnter("Seattle") } onPointerOut={onPointerLeave}> 
-=======
         <div className="text-xl columns-lg flex-row">
 
             <Button 
@@ -74,7 +71,7 @@ return (
             <br></br>
             <br></br>
             <span>
-                Originally from the small city of My Tho, Vietnam, I grew up with
+                {/* Originally from the small city of My Tho, Vietnam, I grew up with */}
             </span>
             <br></br>
             <br></br>
@@ -127,21 +124,10 @@ return (
             onPointerOut={onPointerLeave} >
                Bellevue, WA
             </Button>
-
-
-
-            {/* <h1  onPointerOver={onPointerEnter("Seattle") } onPointerOut={onPointerLeave}> 
->>>>>>> Stashed changes
-                <strong>Seattle</strong>
-            </h1>
-            <h1  onPointerOver={onPointerEnter("Ho Chi Minh City")} onPointerOut={onPointerLeave}>
-                <strong>Ho Chi Minh City</strong>
-            </h1>
         </div>
         </div>
     </div>
-    
-);
-};
+    );
+}
 
 export default UIPage1;
