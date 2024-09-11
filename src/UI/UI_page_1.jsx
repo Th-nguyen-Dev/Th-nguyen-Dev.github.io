@@ -50,34 +50,74 @@ return (
         <br></br>
         <br></br>
         <div className="text-1xl columns-lg flex-row">
+
+
+
             <Button 
             variant="outline" 
             size={"lg"} 
+            className='font-bold'
             style={{
                 height: "5rem",
                 width: "30rem",
                 fontSize: "3rem",
                 borderRadius: "9999px",
             }} 
-            onPointerOver={onPointerEnter("Seattle") } 
+            onPointerOver={onPointerEnter("My Tho, Vietnam") } 
             onPointerOut={onPointerLeave} >
-                <strong>Seattle</strong>
+               My Tho, VN
             </Button>
             <br></br>
             <br></br>
             <Button 
             variant="outline" 
             size={"lg"} 
+            className='font-bold'
             style={{
                 height: "5rem",
                 width: "30rem",
                 fontSize: "3rem",
                 borderRadius: "9999px",
             }} 
-            onPointerOver={onPointerEnter("Ho Chi Minh City") } 
+            onPointerOver={onPointerEnter("Houston") } 
             onPointerOut={onPointerLeave} >
-                <strong>Ho Chi Minh City</strong>
+               Houston, TX
             </Button>
+
+            <br></br>
+            <br></br>
+            <Button 
+            variant="outline" 
+            size={"lg"} 
+            className = "font-bold"
+            style={{
+                height: "5rem",
+                width: "30rem",
+                fontSize: "3rem",
+                borderRadius: "9999px",
+            }} 
+            onPointerOver={onPointerEnter("Edmonds") } 
+            onPointerOut={onPointerLeave} >
+               Edmonds, WA
+            </Button>
+
+            <br></br>
+            <br></br>
+            <Button 
+            variant="outline" 
+            size={"lg"} 
+            className = "font-bold"
+            style={{
+                height: "5rem",
+                width: "30rem",
+                fontSize: "3rem",
+                borderRadius: "9999px",
+            }} 
+            onPointerOver={onPointerEnter("Renton") } 
+            onPointerOut={onPointerLeave} >
+               Bellevue, WA
+            </Button>
+
 
 
             {/* <h1  onPointerOver={onPointerEnter("Seattle") } onPointerOut={onPointerLeave}> 

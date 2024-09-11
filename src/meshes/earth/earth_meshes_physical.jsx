@@ -40,13 +40,13 @@ function EarthMeshesPhysical() {
             returnToBase.current = false;
             startRotation.current = false;
             if (!meshRef.current.quaternion.equals(selectedQuaterion.current)){
-                meshRef.current.quaternion.rotateTowards(selectedQuaterion.current, 0.015);
+                meshRef.current.quaternion.rotateTowards(selectedQuaterion.current, 0.02);
             }
         }
         else
         {
             if (!returnToBase.current){
-                meshRef.current.quaternion.rotateTowards(lastQuaternion.current, 0.015);
+                meshRef.current.quaternion.rotateTowards(lastQuaternion.current, 0.02);
                 returnToBase.current = false;
             }
             if (meshRef.current.quaternion.equals(lastQuaternion.current)){

@@ -59,7 +59,7 @@ function EarthWeather(){
     }
 
     useFrame(() => {
-        time.current += 0.005;
+        time.current += 0.02;
         if (time.current > 12) {
             time.current = 0;
         }

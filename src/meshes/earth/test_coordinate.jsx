@@ -5,25 +5,26 @@ import { WebContext } from '@/context/web_context';
 import * as THREE from 'three';
 
 function TestCoordinate(){
-
-const meshRef = useRef();
-const meshRef2 = useRef();
 const {getCoordPosition} = useContext(WebContext);
-useFrame(() => {
+const {coordinates} = useContext(WebContext);
 
-})
-return (
-    <>
-        <mesh ref= {meshRef} position={getCoordPosition("Seattle")}>
-            <sphereGeometry args={[0.1, 50, 50]} />
-            <meshBasicMaterial color="red" />
-        </mesh>
-        <mesh ref= {meshRef2} position={getCoordPosition("Ho Chi Minh City")}>
-            <sphereGeometry args={[0.1, 50, 50]} />
-            <meshBasicMaterial color="red" />
-        </mesh>
-    </>
+    const generateMeshes = () => {
+        const meshes = [];
+        coordinates.forEach((value, key) => {
+            meshes.push(
+                <mesh key={key} position={getCoordPosition(key)}>
+                    <sphereGeometry args={[0.05, 32, 32]} />
+                    <meshStandardMaterial color="green" emissiveIntensity={10} emissive={"green"}/>
+                </mesh>
+            );
+        });
+        return meshes;
+    };
 
-);
+    return (
+        <>
+            {generateMeshes()}
+        </>
+    );
 }
 export default TestCoordinate;
