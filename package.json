@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@react-three/postprocessing": "^2.16.2",
+    "@reduxjs/toolkit": "^2.2.7",
     "@types/three": "^0.167.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -24,6 +25,7 @@
     "react-audio-player": "^0.17.0",
     "react-dom": "^18.3.1",
     "react-h5-audio-player": "^3.9.3",
+    "react-redux": "^9.1.2",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "three-extended-material": "^0.3.0"

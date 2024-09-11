@@ -16,6 +16,8 @@ import * as THREE from 'three';
 import UIPage1 from '../UI/UI_page_1';
 import UIPage2 from '../UI/UI_page_2';
 import { WebProvider } from '@/context/web_context';
+import { Provider } from 'react-redux';
+import redux_store from '@/context/redux_store.jsx';
 export function PerformanceConfig(){
     const {gl} = useThree();
     useEffect(() => {
@@ -38,7 +40,6 @@ function OfficialExport() {
     };
     return (
         <>
-            
             <Canvas ref={canvasRef} className="canvas">
             <   color attach="background" args={['#000000']} />
                 <ScrollControls pages={5}>                        
@@ -49,11 +50,14 @@ function OfficialExport() {
                     <OfficialCamera makeDefault={true} />
                     <PerformanceConfig/>
                     <Scroll html style={{width: '50%', height: '100%'}}>
+                    <Provider store={redux_store}>
+                        <UIPage1/>
+                    </Provider> 
                     </Scroll>
                 </ScrollControls>
                 <Stats/>
             </Canvas>  
-            <UIPage1/>
+            
         </>
 
     );

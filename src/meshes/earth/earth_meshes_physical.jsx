@@ -9,19 +9,22 @@ import EarthWeather from './earth_weather';
 import EarthCities from './earth_cities';
 import TestCoordinate from './test_coordinate';
 import { WebContext } from '../../context/web_context';
+import { useSelector, useDispatch } from 'react-redux';
+import { setTimelineToggle } from '@/context/reducer/timeline_toggle';
 import gsap from 'gsap';
 
 function EarthMeshesPhysical() {
     const meshRef = useRef();
-    const { getCoordPosition } = useContext(WebContext);
     const {quaternions} = useContext(WebContext);
-    const {toggleDes} = useContext(WebContext);
+    const localQuaternions = useRef(quaternions);
+    const toggleDes = useSelector((state) => state.timelineToggle.value);
 
     const selectedQuaterion = useRef(new THREE.Quaternion());
 
+
     useEffect(() => {
         if (toggleDes) {
-            selectedQuaterion.current = quaternions.get(toggleDes);
+            selectedQuaterion.current = localQuaternions.current.get(toggleDes);
         }
     }, [toggleDes]);
 
@@ -61,19 +64,16 @@ function EarthMeshesPhysical() {
     };
 
     useFrame(handleFrame);
-
-    return (
+    return useMemo(() => (
         <Bvh firstHitOnly>
-            <group ref = {meshRef}>
+            <group ref={meshRef}>
                 <EarthCities />
                 <EarthWeather />
                 <EarthCloud />
                 <TestCoordinate />
             </group>
         </Bvh>
-
-
-    );
+    ), []);
 
 }
 export default EarthMeshesPhysical;

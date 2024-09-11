@@ -1,27 +1,30 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { WebContext } from '../context/web_context';
+import { useSelector, useDispatch } from 'react-redux';
+import {setTimelineToggle} from '@/context/reducer/timeline_toggle';
 import '@/index.css';
 
 function UIPage1() {
     const changeTextColor =(color) => (event) => {
         event.target.style.color = color;
     }  
-    const {toggleDes,setToggleDes} = useContext(WebContext);
+    const toggleDes = useSelector((state) => state.timelineToggle.value);
+    const dispatch = useDispatch();
     useEffect(() => {
         console.log("UI Page 1",toggleDes);
     }, [toggleDes]);
     const onPointerEnter = (name) => (event) =>{
-        setToggleDes(name);
+        dispatch(setTimelineToggle(name));
         changeTextColor("#00ff00")(event);
         
     }
     const onPointerLeave = (event) => {
-        setToggleDes(null);
+        dispatch(setTimelineToggle(null));
         changeTextColor('white')(event);
     }
 return (
     <div>
-        <div className="absolute text-white  top-1/4 right-1/2  mr-20 ml-20">
+        <div className="absolute text-white  top-1/4 right-10  mr-20 ml-20">
         <h1>
             <p className = "text-6xl mb-1">
                 <strong
@@ -49,10 +52,10 @@ return (
         <br></br>
         <br></br>
         <div className="text-1xl columns-lg">
-            <h1  onPointerEnter={onPointerEnter("Seattle") } onPointerLeave={onPointerLeave}> 
+            <h1  onPointerOver={onPointerEnter("Seattle") } onPointerOut={onPointerLeave}> 
                 <strong>Seattle</strong>
             </h1>
-            <h1  onPointerEnter={onPointerEnter("Ho Chi Minh City")} onPointerLeave={onPointerLeave}>
+            <h1  onPointerOver={onPointerEnter("Ho Chi Minh City")} onPointerOut={onPointerLeave}>
                 <strong>Ho Chi Minh City</strong>
             </h1>
         </div>

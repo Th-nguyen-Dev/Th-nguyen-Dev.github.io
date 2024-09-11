@@ -5,24 +5,20 @@ import OfficialExport from './official/OfficialExport.jsx';
 import MusicPlayer from './music/music_player.jsx';
 import TestExport from './test/TestExport.jsx';
 import { WebProvider } from './context/web_context';
+import redux_store from './context/redux_store.jsx';
+import { Provider } from 'react-redux';
 import './index.css';
 
 const App = () => {
-  const renderOutput = useMemo(() => {
-    return (
-      <>
+  return (
+    <React.StrictMode>
+      <WebProvider>
+        <Provider store={redux_store}>
           <Suspense fallback={null}>
              <OfficialExport />
           </Suspense>
          <MusicPlayer />
-      </>
-    )
-  }, []);
-  return (
-    <React.StrictMode>
-      <WebProvider>
-        {/* <EditorExport /> */}
-        {renderOutput}
+        </Provider>
       </WebProvider>
     </React.StrictMode>
   );
