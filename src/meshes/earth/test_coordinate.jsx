@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useMemo, useContext} from 'react';
 import { useControls } from "leva";
 import { WebContext } from '@/context/web_context';
 import * as THREE from 'three';
+import { randFloat } from 'three/src/math/MathUtils';
 
 function TestCoordinate(){
 const {getCoordPosition} = useContext(WebContext);
@@ -14,7 +15,7 @@ const {coordinates} = useContext(WebContext);
             meshes.push(
                 <mesh key={key} position={getCoordPosition(key)}>
                     <sphereGeometry args={[0.05, 32, 32]} />
-                    <meshStandardMaterial color="green" emissiveIntensity={10} emissive={"green"}/>
+                    <meshStandardMaterial color="green" emissiveIntensity={20} emissive={"green"}/>
                 </mesh>
             );
         });

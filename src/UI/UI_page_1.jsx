@@ -51,8 +51,6 @@ return (
         <br></br>
         <div className="text-1xl columns-lg flex-row">
 
-
-
             <Button 
             variant="outline" 
             size={"lg"} 
