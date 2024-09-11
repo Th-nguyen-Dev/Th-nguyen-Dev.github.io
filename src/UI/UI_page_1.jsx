@@ -14,14 +14,15 @@ import {Progress} from '@/components/ui/progress';
 import * as THREE from 'three';
 import '@/index.css';
 import { useFrame } from '@react-three/fiber';
+import gsap from 'gsap';
 
 function UIPage1() {
     const [progressValue, setProgressValue] = useState(0);
     const progressData = useScroll();
+    const progressValueRef = useRef({value:0})
     useFrame(() => {
-            setProgressValue(progressData.range(0, 1/2)*100);
-
-    })
+        setProgressValue(Math.floor(progressData.range(0, 1/2)*100));
+    });
     const changeTextColor =(color) => (event) => {
         event.target.style.color = color;
     }  
@@ -71,6 +72,7 @@ return (
                 <span className= "text-7xl font-bold"> Timeline</span>
                 <br></br>
                 <br></br>
+                
                 <Progress 
                 value={progressValue}
                 dir='left'
