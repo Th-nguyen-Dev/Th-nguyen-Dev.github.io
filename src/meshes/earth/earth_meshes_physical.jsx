@@ -16,13 +16,14 @@ function EarthMeshesPhysical() {
     const { getCoordPosition } = useContext(WebContext);
     const {quaternions} = useContext(WebContext);
     const {toggleDes} = useContext(WebContext);
-    useEffect(() => {
-        console.log("Entire",toggleDes);
-    }, [toggleDes]);
+
     const selectedQuaterion = useRef(new THREE.Quaternion());
-    if (toggleDes) {
-        selectedQuaterion.current = quaternions.get(toggleDes);
-    }
+
+    useEffect(() => {
+        if (toggleDes) {
+            selectedQuaterion.current = quaternions.get(toggleDes);
+        }
+    }, [toggleDes]);
 
     const lastQuaternion = useRef(new THREE.Quaternion());
     const rotateEarth = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), 0.001);

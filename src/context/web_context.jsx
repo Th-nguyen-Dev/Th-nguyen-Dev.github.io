@@ -19,7 +19,7 @@ export const WebProvider = ({ children }) => {
     }
     const getQuaternions = (name) => {
         const desVec = getCoordPosition(name).normalize();
-        const cameraVec = new THREE.Vector3(32.00, 0, 25.50).normalize();
+        const cameraVec = new THREE.Vector3(32.00, 0, 8.50).normalize();
         return new THREE.Quaternion().setFromUnitVectors(desVec, cameraVec);
     }
 

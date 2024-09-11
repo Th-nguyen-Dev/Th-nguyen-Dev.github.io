@@ -21,7 +21,7 @@ function UIPage1() {
     }
 return (
     <div>
-        <div className="absolute text-white  top-1/4 right-1/2 right-10  mr-20 ml-20">
+        <div className="absolute text-white  top-1/4 right-1/2  mr-20 ml-20">
         <h1>
             <p className = "text-6xl mb-1">
                 <strong

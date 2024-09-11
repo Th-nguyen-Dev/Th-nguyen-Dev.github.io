@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useMemo, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import EditorExport from './editor/EditorExport.jsx';
 import OfficialExport from './official/OfficialExport.jsx';
@@ -8,15 +8,21 @@ import { WebProvider } from './context/web_context';
 import './index.css';
 
 const App = () => {
-
+  const renderOutput = useMemo(() => {
+    return (
+      <>
+          <Suspense fallback={null}>
+             <OfficialExport />
+          </Suspense>
+         <MusicPlayer />
+      </>
+    )
+  }, []);
   return (
     <React.StrictMode>
       <WebProvider>
         {/* <EditorExport /> */}
-        <Suspense fallback={null}>
-          <OfficialExport />
-        </Suspense>
-        <MusicPlayer />
+        {renderOutput}
       </WebProvider>
     </React.StrictMode>
   );
