@@ -51,8 +51,87 @@ return (
         </h2>
         <br></br>
         <br></br>
+<<<<<<< Updated upstream
         <div className="text-1xl columns-lg">
             <h1  onPointerOver={onPointerEnter("Seattle") } onPointerOut={onPointerLeave}> 
+=======
+        <div className="text-xl columns-lg flex-row">
+
+            <Button 
+            variant="outline" 
+            size={"lg"} 
+            className='font-bold'
+            style={{
+                height: "5rem",
+                width: "30rem",
+                fontSize: "3rem",
+                borderRadius: "9999px",
+            }} 
+            onPointerOver={onPointerEnter("My Tho, Vietnam") } 
+            onPointerOut={onPointerLeave} >
+               My Tho, VN
+            </Button>
+            <br></br>
+            <br></br>
+            <span>
+                Originally from the small city of My Tho, Vietnam, I grew up with
+            </span>
+            <br></br>
+            <br></br>
+            <br></br>
+            <Button 
+            variant="outline" 
+            size={"lg"} 
+            className='font-bold'
+            style={{
+                height: "5rem",
+                width: "30rem",
+                fontSize: "3rem",
+                borderRadius: "9999px",
+            }} 
+            onPointerOver={onPointerEnter("Houston") } 
+            onPointerOut={onPointerLeave} >
+               Houston, TX
+            </Button>
+
+            <br></br>
+            <br></br>
+            <Button 
+            variant="outline" 
+            size={"lg"} 
+            className = "font-bold"
+            style={{
+                height: "5rem",
+                width: "30rem",
+                fontSize: "3rem",
+                borderRadius: "9999px",
+            }} 
+            onPointerOver={onPointerEnter("Edmonds") } 
+            onPointerOut={onPointerLeave} >
+               Edmonds, WA
+            </Button>
+
+            <br></br>
+            <br></br>
+            <Button 
+            variant="outline" 
+            size={"lg"} 
+            className = "font-bold"
+            style={{
+                height: "5rem",
+                width: "30rem",
+                fontSize: "3rem",
+                borderRadius: "9999px",
+            }} 
+            onPointerOver={onPointerEnter("Renton") } 
+            onPointerOut={onPointerLeave} >
+               Bellevue, WA
+            </Button>
+
+
+
+            {/* <h1  onPointerOver={onPointerEnter("Seattle") } onPointerOut={onPointerLeave}> 
+>>>>>>> Stashed changes
                 <strong>Seattle</strong>
             </h1>
             <h1  onPointerOver={onPointerEnter("Ho Chi Minh City")} onPointerOut={onPointerLeave}>
