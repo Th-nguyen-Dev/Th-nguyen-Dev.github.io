@@ -49,11 +49,7 @@ function OfficialExport() {
                     <PostProcessing/>
                     <OfficialCamera makeDefault={true} />
                     <PerformanceConfig/>
-                    <Scroll html style={{width: '50%', height: '100%'}}>
-                    <Provider store={redux_store}>
-                        <UIPage1/>
-                    </Provider> 
-                    </Scroll>
+                    <UIPage1/>
                 </ScrollControls>
                 <Stats/>
             </Canvas>  
