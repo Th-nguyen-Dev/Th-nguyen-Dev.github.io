@@ -13,7 +13,7 @@ function UIPage1() {
     const dispatch = useDispatch();
     const onPointerEnter = (name) => (event) =>{
         dispatch(setTimelineToggle(name));
-        changeTextColor("#00ff00")(event);
+        changeTextColor("black")(event);
         
     }
     const onPointerLeave = (event) => {
@@ -49,19 +49,43 @@ return (
         </h2>
         <br></br>
         <br></br>
-        <div className="text-1xl columns-lg">
-            <Button variant="outline" size={"lg"} style={{
-                height: "10rem",
-                width: "25rem",
-                fontSize: "5rem",
-            }}>Seattle</Button>
+        <div className="text-1xl columns-lg flex-row">
+            <Button 
+            variant="outline" 
+            size={"lg"} 
+            style={{
+                height: "5rem",
+                width: "30rem",
+                fontSize: "3rem",
+                borderRadius: "9999px",
+            }} 
+            onPointerOver={onPointerEnter("Seattle") } 
+            onPointerOut={onPointerLeave} >
+                <strong>Seattle</strong>
+            </Button>
+            <br></br>
+            <br></br>
+            <Button 
+            variant="outline" 
+            size={"lg"} 
+            style={{
+                height: "5rem",
+                width: "30rem",
+                fontSize: "3rem",
+                borderRadius: "9999px",
+            }} 
+            onPointerOver={onPointerEnter("Ho Chi Minh City") } 
+            onPointerOut={onPointerLeave} >
+                <strong>Ho Chi Minh City</strong>
+            </Button>
 
-            <h1  onPointerOver={onPointerEnter("Seattle") } onPointerOut={onPointerLeave}> 
+
+            {/* <h1  onPointerOver={onPointerEnter("Seattle") } onPointerOut={onPointerLeave}> 
                 <strong>Seattle</strong>
             </h1>
             <h1  onPointerOver={onPointerEnter("Ho Chi Minh City")} onPointerOut={onPointerLeave}>
                 <strong>Ho Chi Minh City</strong>
-            </h1>
+            </h1> */}
         </div>
         </div>
     </div>
