@@ -10,15 +10,18 @@ function UIPage1() {
     useEffect(() => {
         console.log("UI Page 1",toggleDes);
     }, [toggleDes]);
-    const onPointerEnter = (name) => () =>{
+    const onPointerEnter = (name) => (event) =>{
         setToggleDes(name);
+        changeTextColor("#00ff00")(event);
+        
     }
-    const onPointerLeave = () => {
+    const onPointerLeave = (event) => {
         setToggleDes(null);
+        changeTextColor('white')(event);
     }
 return (
     <div>
-        <div className="absolute text-white  top-1/4 right-10  mr-20 ml-20">
+        <div className="absolute text-white  top-1/4 right-1/2 right-10  mr-20 ml-20">
         <h1>
             <p className = "text-6xl mb-1">
                 <strong
@@ -45,7 +48,7 @@ return (
         </h2>
         <br></br>
         <br></br>
-        <div className="text-2xl columns-lg">
+        <div className="text-1xl columns-lg">
             <h1  onPointerEnter={onPointerEnter("Seattle") } onPointerLeave={onPointerLeave}> 
                 <strong>Seattle</strong>
             </h1>

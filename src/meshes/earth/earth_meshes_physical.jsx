@@ -19,44 +19,25 @@ function EarthMeshesPhysical() {
     useEffect(() => {
         console.log("Entire",toggleDes);
     }, [toggleDes]);
-    // const SeattleDesVec = getCoordPosition('Seattle').normalize();
-    // const SeattleSrcVec = new THREE.Vector3(0, 1, 0);
-    // const SeattleQuaterion = new THREE.Quaternion().setFromUnitVectors(SeattleSrcVec, SeattleDesVec);
     const selectedQuaterion = useRef(new THREE.Quaternion());
     if (toggleDes) {
         selectedQuaterion.current = quaternions.get(toggleDes);
     }
-    const quaternionDes = useMemo(() => {
-        const cameraVec = new THREE.Vector3(32.00, 0, 25.50).normalize();
-        const desVec = getCoordPosition('Seattle').normalize();
-        return new THREE.Quaternion().setFromUnitVectors(desVec, cameraVec);
-    }, []);
 
     const lastQuaternion = useRef(new THREE.Quaternion());
     const rotateEarth = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), 0.001);
-    const toggle = useRef(false);
     const returnToBase = useRef(true);
     const startRotation = useRef(false);
 
-    const handleEnter = () => {
-        toggle.current = true;
-        if (returnToBase.current){
-            lastQuaternion.current = meshRef.current.quaternion.clone();
-        }
-        console.log('enter');
-    }
-    const handleOut = () => {
-        toggle.current = false;
-        console.log('out');
-    }
+
 
     const handleFrame = () => {
-        if (toggle.current)
+        if (toggleDes)
         {
             returnToBase.current = false;
             startRotation.current = false;
-            if (!meshRef.current.quaternion.equals(quaternionDes)){
-                meshRef.current.quaternion.rotateTowards(quaternionDes, 0.015);
+            if (!meshRef.current.quaternion.equals(selectedQuaterion.current)){
+                meshRef.current.quaternion.rotateTowards(selectedQuaterion.current, 0.015);
             }
         }
         else
@@ -82,7 +63,7 @@ function EarthMeshesPhysical() {
 
     return (
         <Bvh firstHitOnly>
-            <group ref = {meshRef} onPointerEnter={handleEnter} onPointerOut={handleOut}>
+            <group ref = {meshRef}>
                 <EarthCities />
                 <EarthWeather />
                 <EarthCloud />
