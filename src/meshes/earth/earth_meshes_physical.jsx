@@ -48,7 +48,9 @@ function EarthMeshesPhysical() {
             meshRef.current.quaternion.slerp(quaternionStep,1);
             },
             onComplete: () => {
-                returnToBase.current = true;
+                if (!toggleDes){
+                    returnToBase.current = true;
+                }
             }
         })
     };
@@ -64,7 +66,6 @@ function EarthMeshesPhysical() {
 
     const handleFrame = () => {
         if (returnToBase.current){
-            
             meshRef.current.quaternion.multiply(rotateEarth);
         }
     };
