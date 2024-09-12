@@ -51,7 +51,6 @@ function OfficialExport() {
                     <PerformanceConfig/>
                     <UIPage1/>
                 </ScrollControls>
-                <Stats/>
             </Canvas>  
             
         </>
