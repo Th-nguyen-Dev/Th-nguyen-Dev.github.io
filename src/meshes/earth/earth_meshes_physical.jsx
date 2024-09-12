@@ -44,8 +44,9 @@ function EarthMeshesPhysical() {
                 returnToBase.current = false;
             },
             onUpdate: () => {
-            const quaternionStep = new THREE.Quaternion().slerpQuaternions(startQuaternion, quaternion, temp.value);
-            meshRef.current.quaternion.slerp(quaternionStep,1);
+                returnToBase.current = false;
+                const quaternionStep = new THREE.Quaternion().slerpQuaternions(startQuaternion, quaternion, temp.value);
+                meshRef.current.quaternion.slerp(quaternionStep,1);
             },
             onComplete: () => {
                 if (!toggleDes){
