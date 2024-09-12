@@ -32,29 +32,38 @@ function EarthMeshesPhysical() {
     const returnToBase = useRef(true);
     const startRotation = useRef(false);
 
+    const rotateEase = (quaternion) => {
+        const tl = gsap.timeline();
+        const temp = {value: 0};
+        const startQuaternion = meshRef.current.quaternion.clone();
+        tl.to(temp,{
+            value: 1, 
+            duration: 1, 
+            ease: "sine.inOut", 
+            onStart: () => {
+                returnToBase.current = false;
+            },
+            onUpdate: () => {
+            const quaternionStep = new THREE.Quaternion().slerpQuaternions(startQuaternion, quaternion, temp.value);
+            meshRef.current.quaternion.slerp(quaternionStep,1);
+            },
+            onComplete: () => {
+                returnToBase.current = true;
+            }
+        })
+    };
+    useEffect(() => {
+        if (toggleDes){
+            rotateEase(selectedQuaterion.current);
+        }
+        else{
+            rotateEase(lastQuaternion.current);
+        }
+    }, [toggleDes]);
 
 
     const handleFrame = () => {
-        if (toggleDes)
-        {
-            returnToBase.current = false;
-            startRotation.current = false;
-            if (!meshRef.current.quaternion.equals(selectedQuaterion.current)){
-                meshRef.current.quaternion.rotateTowards(selectedQuaterion.current, 0.02);
-            }
-        }
-        else
-        {
-            if (!returnToBase.current){
-                meshRef.current.quaternion.rotateTowards(lastQuaternion.current, 0.02);
-                returnToBase.current = false;
-            }
-            if (meshRef.current.quaternion.equals(lastQuaternion.current)){
-                returnToBase.current = true;
-                startRotation.current = true;
-            }
-        }
-        if (startRotation.current){
+        if (returnToBase.current){
             
             meshRef.current.quaternion.multiply(rotateEarth);
         }
