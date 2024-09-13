@@ -24,7 +24,6 @@ function EarthWeather(){
     const earthSpecularTexture = new THREE.TextureLoader().load(earthSpecular);
 
     const time = useRef(0);
-    const prevTime = useRef(0); 
     const currentTileX = useRef(0);
     const currentTileY = useRef(0);
     const nextTileX = useRef(0);   
@@ -88,8 +87,7 @@ function EarthWeather(){
                 patchMap={{
                     patchParse:{"#include <map_pars_fragment>":`${transitionParse}`}, 
                     patchDiffuse:{"#include <map_fragment>":`${transitionMapFragment}`}
-                }}
-                
+                }}      
             >
             </CustomShaderMaterial>
         </mesh>
