@@ -17,7 +17,7 @@ const App = () => {
           <Suspense fallback={null}>
              <OfficialExport />
           </Suspense>
-         <MusicPlayer />
+         {/* <MusicPlayer /> */}
         </Provider>
       </WebProvider>
     </React.StrictMode>
