@@ -1,17 +1,4 @@
 # 3D Interactive Globe Landing Page
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Explaination](#explaination)
-- [Curiosities](#curiosities)
-- [Contribution](#contribution)
-
-## Introduction
-
-
 Hello!
 
 You have arrived at my landing page repository. Feel free to look around!
