@@ -43,7 +43,7 @@ This project is a 3D Globe Landing Page built with React, Three.js, and Tailwind
 - Tailwind CSS for styling
 
 ### The Globe
-![Gif](/public/readme_assets//Earth_Examine.gif){: .center-image }
+![Gif](/public/readme_assets//Earth_Examine.gif)
 
 The Globe is composed of multiple layers, spread across multiple levels. There are 5 total parts to creating this model: 
 - **The Earth Sphere**
