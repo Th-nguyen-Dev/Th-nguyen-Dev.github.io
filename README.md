@@ -43,7 +43,8 @@ This project is a 3D Globe Landing Page built with React, Three.js, and Tailwind
 - Tailwind CSS for styling
 
 ### The Globe
-![Video](https://github.com/Th-nguyen-Dev/Th-nguyen-Dev.github.io/blob/Test3D_ReadMe/public/readme_assets/Earth_Examine_Video.mp4)
+![Gif](/public/readme_assets//Earth_Examine.gif)
+
 The Globe is composed of multiple layers, spread across multiple levels. There are 5 total parts to creating this model: 
 - **The Earth Sphere**
     The Earth Sphere is by far the most complex layer consisiting of a custom shader that allows texture map animation, a bump map, and a specular map applied.
