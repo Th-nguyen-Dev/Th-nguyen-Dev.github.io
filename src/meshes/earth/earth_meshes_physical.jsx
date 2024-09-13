@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useContext, useMemo } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Bvh } from '@react-three/drei';
+import { Bvh, Html, Scroll } from '@react-three/drei';
 import * as THREE from 'three';
 import { useControls } from 'leva';
 
@@ -71,16 +71,39 @@ function EarthMeshesPhysical() {
         }
     };
 
+    const cityRef = useRef();
+    const weatherRef = useRef();
+    const cloudRef = useRef();
+    const coordinateRef = useRef();
+
     useFrame(handleFrame);
     return useMemo(() => (
-        <Bvh firstHitOnly>
-            <group ref={meshRef}>
-                <EarthCities />
-                <EarthWeather />
-                <EarthCloud />
-                <TestCoordinate />
-            </group>
-        </Bvh>
+            <Bvh firstHitOnly>
+                <Html fullscreen>
+                    <button onClick={() => cityRef.current.visible = !cityRef.current.visible}>Toggle Cities</button>
+                    <button onClick={() => weatherRef.current.visible = !weatherRef.current.visible}>Toggle Weather</button>
+                    <button onClick={() => cloudRef.current.visible = !cloudRef.current.visible}>Toggle Clouds</button>
+                    <button onClick={() => coordinateRef.current.visible = !coordinateRef.current.visible}>Toggle Coordinates</button>
+                </Html>
+                <group ref={meshRef}>
+                        <group ref={cityRef}>
+                            <EarthCities />
+                        </group>
+                        <group ref={weatherRef}>
+                            <EarthWeather />
+                        </group>
+                        <group ref={cloudRef}>
+                            <EarthCloud />
+                        </group>
+                        <group ref={coordinateRef}>
+                            <TestCoordinate />
+                        </group>
+                        {/* <EarthWeather ref={weatherRef} />
+                        <EarthCloud ref={cloudRef} />
+                        <TestCoordinate ref={coordinateRef} /> */}
+                </group>
+
+            </Bvh>
     ), []);
 
 }

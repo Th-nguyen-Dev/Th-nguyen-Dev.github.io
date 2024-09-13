@@ -1,6 +1,6 @@
 import React, { useMemo, useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Scroll, ScrollControls } from '@react-three/drei';
+import { OrbitControls, Scroll, ScrollControls } from '@react-three/drei';
 import { useEffect, useState } from 'react';
 
 import AmbientLights from '../lights/ambient_lights';
@@ -49,7 +49,8 @@ function OfficialExport() {
                     <PostProcessing/>
                     <OfficialCamera makeDefault={true} />
                     <PerformanceConfig/>
-                    <UIPage1/>
+                    {/* <UIPage1/> */}
+                    <OrbitControls/>
                 </ScrollControls>
             </Canvas>  
             
