@@ -69,9 +69,9 @@ The Globe is composed of multiple layers, spread across multiple levels. There a
 
 The Earth Sphere is by far the most complex layer, consisting of a custom shader that allows texture map animation, a bump map, and a specular map applied. There are two versions of the earth sphere, one with season animations and one without.
 
-- [Earth](/src/meshes/earth/earth.jsx)
+  - [Earth](/src/meshes/earth/earth.jsx)
 
-- [Earth Season](/src/meshes/earth/earth_weather.jsx)
+  - [Earth Season](/src/meshes/earth/earth_weather.jsx)
 
 -  **The Earth Cities Light**
 
@@ -81,7 +81,7 @@ The Earth Cities Light layer makes use of a custom shader that allows cities lig
 
 nighttime. The light itself is a combination of an alpha map and missive property of the material.
 
-- [Earth Cities Light](/src/meshes/earth/earth_cities.jsx)
+  - [Earth Cities Light](/src/meshes/earth/earth_cities.jsx)
 
 -  **The Earth Cloud**
 
@@ -89,7 +89,7 @@ nighttime. The light itself is a combination of an alpha map and missive propert
 
 The Earth Cloud layer is a simple sphere with the cloud texture applied as an alpha map.
 
-- [Earth Cloud](/src/meshes/earth/earth_cloud.jsx)
+  - [Earth Cloud](/src/meshes/earth/earth_cloud.jsx)
 
 -  **The Earth Fresnel**
 
@@ -97,7 +97,7 @@ The Earth Cloud layer is a simple sphere with the cloud texture applied as an al
 
 The Earth Fresnel layer is a simple single color sphere that uses a custom shader that allows for a light-accurate Fresnel effect.
 
-- [Earth Fresnel](/src/meshes/earth/fresnel.jsx)
+  - [Earth Fresnel](/src/meshes/earth/fresnel.jsx)
 
 -  **The Earth Atmosphere**
 
