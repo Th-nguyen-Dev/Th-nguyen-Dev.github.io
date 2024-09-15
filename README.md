@@ -47,7 +47,9 @@ This project is a 3D Globe Landing Page built with React, Three.js, and Tailwind
 
 The Globe is composed of multiple layers, spread across multiple levels. There are 5 total parts to creating this model: 
 - **The Earth Sphere**
-    The Earth Sphere is by far the most complex layer consisiting of a custom shader that allows texture map animation, a bump map, and a specular map applied.
+    The Earth Sphere is by far the most complex layer consisiting of a custom shader that allows texture map animation, a bump map, and a specular map applied. There are two version of the earth sphere, one with season animations and one without.
+        - **[Earth](/src/meshes/earth/earth.jsx)**
+        - **[Earth Weather](/src/meshes/earth/earth_weather.jsx)**
 - **The Earth Cities Light**
     The Earth Cities Light layer makes use of a custom shader that allows cities lights to only show up at 
     night time. The light itself is a combination of an alphamap and emmisve property of the material. 
