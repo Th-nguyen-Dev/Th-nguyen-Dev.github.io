@@ -1,24 +1,10 @@
 
 # 3D Interactive Globe Landing Page
-
-  
-
-## Table of Contents
-
-  
-
-- [Introduction](#introduction)
-
-- [Features](#features)
-
-- [Installation](#installation)
-
   
 
 ## Introduction
 
-  
-  
+
 
 Hello!
 
@@ -32,7 +18,7 @@ This is my first time creating and deploying a JavaScript website, and here is w
 
   
 
-This README will serve to help you understand how the website works, as well as interesting curiosities I discovered while making this website. I hope you enjoy the read!
+This README will serve to help you understand how the website works, as well as the interesting curiosities I discovered while making this website. I hope you enjoy the read!
 
   
 
@@ -49,11 +35,11 @@ This README will serve to help you understand how the website works, as well as 
 
 - [Features](#features)
 
-- [The Globe](#the-globe)
+  - [The Globe](#the-globe)
 
-- [Animation](#animation)
+  - [Animation](#animation)
 
-- [GUI](#gui)
+  - [GUI](#gui)
 
 - [Installation](#installation)
 
