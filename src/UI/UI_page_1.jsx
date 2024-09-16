@@ -10,6 +10,19 @@ import redux_store from '@/context/redux_store.jsx';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import {Progress} from '@/components/ui/progress';
+import {
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuIndicator,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+    NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
+
+  
 import { ProgressVert } from '@/components/ui/progress_vert';
 
 import * as THREE from 'three';
@@ -41,7 +54,7 @@ function UIPage1() {
 return (
     <Scroll html style={{width: '50%', height: '100%'}} >
     <Provider store={redux_store}>
-        <div>
+        <div className='w-full h-full'>
             <div className="absolute text-white  top-1/4 right-10  mr-20 ml-20">
             <h1>
                 <p className = "text-7xl mb-1">
