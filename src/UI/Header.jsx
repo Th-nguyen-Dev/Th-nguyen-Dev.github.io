@@ -16,13 +16,14 @@ import redux_store from '@/context/redux_store.jsx';
 
 import '@/index.css';
 import Triangle from '../../public/readme_assets/Triangle.svg';
+import Behance from '../../public/readme_assets/Behance.svg';
+import Github from '../../public/readme_assets/Github.svg';
+import LinkedIn from '../../public/readme_assets/LinkedIn.png';
 
-
+function Header() {
 const onSelect = (event) => {
     event.target.blur(); 
 }
-
-function Header() {
     return (
         <header className='sticky top-0 hover:translate-y-0 -translate-y-20 transition-all h-36'>
             <div className='absolute w-full h-20 bg-background'></div>
@@ -31,17 +32,17 @@ function Header() {
                     <NavigationMenuList>
                         <NavigationMenuItem>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()} href="https://github.com/Th-nguyen-Dev" target="_blank" onClick={onSelect}>
-                                Github
+                                <img src={Github} className="w-10" />
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()} href="https://www.linkedin.com/in/hung-nguyen-dev/" target="_blank" onClick={onSelect}>
-                                LinkedIn
+                                <img src={LinkedIn} className="w-10"></img>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()} href="https://www.behance.net/ryannguyen35" target="_blank" onClick={onSelect}>
-                                Behance
+                                <img src={Behance} className="w-10"></img> 
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                     </NavigationMenuList>
