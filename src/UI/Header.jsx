@@ -47,8 +47,8 @@ function Header() {
                     </NavigationMenuList>
                 </NavigationMenu>
             </Provider>
-            <div className="w-full items-center justify-center flex">
-                <img src={Triangle} className="w-8"></img>
+            <div className="w-full items-center justify-center flex-col flex mt-4">
+                <img src={Triangle} className="w-9"></img>
             </div>
         </header>
     );
