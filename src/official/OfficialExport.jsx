@@ -22,22 +22,12 @@ export function PerformanceConfig(){
     const {gl} = useThree();
     useEffect(() => {
         gl.powerPreference = "high-performance";
-        gl.presition = "highp";
+        gl.precision = "highp";
         gl.antialias = true;
     },[]);
 }
 function OfficialExport() {
-    const [selectMesh, setSelectMesh] = useState([]);
     const canvasRef = useRef();
-    const starrySkyTexture = new THREE.TextureLoader().load(StarrySky);
-    const addMesh = (object) => {
-        setSelectMesh((prevObjects) => [...prevObjects, object]);
-    };
-
-    const [selectLight, setSelectLight] = useState([]);
-    const addLight = (light) => {
-        setSelectLight((prevLights) => [...prevLights, light]);
-    };
     return (
         <>
             <Canvas ref={canvasRef} className="canvas">
