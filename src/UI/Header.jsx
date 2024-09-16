@@ -15,10 +15,10 @@ import { Provider } from 'react-redux';
 import redux_store from '@/context/redux_store.jsx';
 
 import '@/index.css';
-import Triangle from '../../public/readme_assets/Triangle.svg';
-import Behance from '../../public/readme_assets/Behance.svg';
-import Github from '../../public/readme_assets/Github.svg';
-import LinkedIn from '../../public/readme_assets/LinkedIn.png';
+import Triangle from '/readme_assets/Triangle.svg';
+import Behance from '/readme_assets/Behance.svg';
+import Github from '/readme_assets/Github.svg';
+import LinkedIn from '/readme_assets/LinkedIn.svg';
 
 function Header() {
 const onSelect = (event) => {
@@ -29,7 +29,7 @@ const onSelect = (event) => {
             <div className='absolute w-full h-20 bg-background'></div>
             <Provider store={redux_store}>
                 <NavigationMenu>
-                    <NavigationMenuList>
+                    <NavigationMenuList className="mr-5">
                         <NavigationMenuItem>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()} href="https://github.com/Th-nguyen-Dev" target="_blank" onClick={onSelect}>
                                 <img src={Github} className="w-10" />
