@@ -43,7 +43,10 @@ const onPointerOut = (func) =>(event) => {
                     <NavigationMenuList className="mr-5 flex-nowrap">
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
-                                    className={navigationMenuTriggerStyle()} >
+                                    className={navigationMenuTriggerStyle()}
+                                    href="https://en.wikipedia.org/wiki/Rickrolling"
+                                    target="_blank"
+                                    onClick={onSelect} >
                                     <h1 className="w-60 h-auto text-center font-bold">Home</h1>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
