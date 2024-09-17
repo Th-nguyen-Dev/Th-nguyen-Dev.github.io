@@ -44,19 +44,25 @@ const onPointerOut = (func) =>(event) => {
                                     className={navigationMenuTriggerStyle()}
                                     target="_blank"
                                     onFocus={onSelect}>
-                                    <h1 className="w-60 h-auto text-center font-bold text-4xl">Home</h1>
+                                    <div className="w-80 h-fit flex items-center justify-center">
+                                        <h1 className="font-bold text-4xl">Home</h1>
+                                    </div> 
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
                                     className={navigationMenuTriggerStyle()} onFocus={onSelect}>
-                                    <h1 className="w-60 h-auto text-center font-bold text-4xl">Timeline</h1>
+                                    <div className="w-80 h-fit flex items-center justify-center">
+                                        <h1 className="font-bold text-4xl">Timeline</h1>
+                                    </div> 
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
                                     className={navigationMenuTriggerStyle()} onFocus={onSelect}>
-                                    <h1 className="w-60 h-auto text-center font-bold text-4xl">Project</h1>
+                                    <div className="w-80 h-fit flex items-center justify-center">
+                                        <h1 className="font-bold text-4xl">Project</h1>
+                                    </div> 
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                     </NavigationMenuList>
@@ -64,14 +70,14 @@ const onPointerOut = (func) =>(event) => {
                     <NavigationMenuList className="flex-nowrap">
                         <NavigationMenuItem>
                             <NavigationMenuLink 
-                                className={navigationMenuTriggerStyle()+"w-32"} 
+                                className={navigationMenuTriggerStyle()} 
                                 href="https://github.com/Th-nguyen-Dev" 
                                 target="_blank" 
                                 onFocus={onSelect}
                                 onPointerOver={onPointerOver(setGithubColor)}
                                 onPointerOut= {onPointerOut(setGithubColor)}
                                 >
-                                    <div>
+                                    <div className="w-36 flex items-center justify-center">
                                         <GithubReact fill={githubColor} className="w-14 h-auto"></GithubReact>
                                     </div>
                             </NavigationMenuLink>
@@ -85,7 +91,9 @@ const onPointerOut = (func) =>(event) => {
                                 onPointerOver={onPointerOver(setLinkedInColor)}
                                 onPointerOut= {onPointerOut(setLinkedInColor)}>
                                 {/* <img src={LinkedIn} className="w-10"></img> */}
-                                <LinkedInReact fill={linkedInColor} className="w-14 h-auto"></LinkedInReact>
+                                <div className="w-36 flex items-center justify-center">
+                                    <LinkedInReact fill={linkedInColor} className="w-14 h-auto"></LinkedInReact>
+                                </div>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
@@ -97,7 +105,9 @@ const onPointerOut = (func) =>(event) => {
                                 onPointerOver={onPointerOver(setBehanceColor)}
                                 onPointerOut= {onPointerOut(setBehanceColor)}>
                                 {/* <img src={Behance} className="w-10"></img>  */}
-                                <BehanceReact fill={behanceColor} className="w-14 h-auto"></BehanceReact>   
+                                <div className="w-36 flex items-center justify-center">
+                                    <BehanceReact fill={behanceColor} className="w-14 h-auto"></BehanceReact>
+                                </div>   
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                     </NavigationMenuList>
