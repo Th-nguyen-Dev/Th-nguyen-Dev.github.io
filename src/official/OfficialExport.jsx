@@ -40,7 +40,6 @@ function OfficialExport() {
                     <OfficialCamera makeDefault={true} />
                     <PerformanceConfig/>
                     <UIPage1/>
-                    <Stats/>
                 </ScrollControls>
             </Canvas>  
             

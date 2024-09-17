@@ -57,6 +57,7 @@
     "three-custom-shader-material": "^5.4.0",
     "vite": "^5.3.4",
     "vite-plugin-glsl": "^1.3.0",
-    "vite-plugin-string": "^1.2.3"
+    "vite-plugin-string": "^1.2.3",
+    "vite-plugin-svgr": "^4.2.0"
   }
 }
