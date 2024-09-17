@@ -22,7 +22,7 @@ import LinkedInReact from '@/../public/readme_assets/LinkedIn.svg?react';
 
 function Header() {
 const onSelect = (event) => {
-    event.target.blur(); 
+    event.target.blur();
 }
 const [githubColor, setGithubColor] = useState('white');
 const [linkedInColor, setLinkedInColor] = useState('white');
@@ -34,7 +34,7 @@ const onPointerOut = (func) =>(event) => {
     func("white");
 }
     return (
-        <header className='sticky top-0 hover:translate-y-0 -translate-y-20 transition-all h-36'>
+        <header className='sticky top-0 hover:translate-y-0 transition-all h-36'>
             <div className='absolute w-full h-20 bg-background '></div>
             <Provider store={redux_store}>
                 <NavigationMenu className="justify-start flex-nowrap select-none">
@@ -44,19 +44,19 @@ const onPointerOut = (func) =>(event) => {
                                     className={navigationMenuTriggerStyle()}
                                     href="https://en.wikipedia.org/wiki/Rickrolling"
                                     target="_blank"
-                                    onClick={onSelect}>
+                                    onFocus={onSelect}>
                                     <h1 className="w-60 h-auto text-center font-bold">Home</h1>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
-                                    className={navigationMenuTriggerStyle()} >
+                                    className={navigationMenuTriggerStyle()} onFocus={onSelect}>
                                     <h1 className="w-60 h-auto text-center font-bold">Timeline</h1>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
-                                    className={navigationMenuTriggerStyle()} >
+                                    className={navigationMenuTriggerStyle()} onFocus={onSelect}>
                                     <h1 className="w-60 h-auto text-center font-bold">Project</h1>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
@@ -68,7 +68,7 @@ const onPointerOut = (func) =>(event) => {
                                 className={navigationMenuTriggerStyle()} 
                                 href="https://github.com/Th-nguyen-Dev" 
                                 target="_blank" 
-                                onClick={onSelect}
+                                onFocus={onSelect}
                                 onPointerOver={onPointerOver(setGithubColor)}
                                 onPointerOut= {onPointerOut(setGithubColor)}
                                 >
@@ -82,7 +82,7 @@ const onPointerOut = (func) =>(event) => {
                                 className={navigationMenuTriggerStyle()} 
                                 href="https://www.linkedin.com/in/hung-nguyen-dev/" 
                                 target="_blank" 
-                                onClick={onSelect}
+                                onFocus={onSelect}
                                 onPointerOver={onPointerOver(setLinkedInColor)}
                                 onPointerOut= {onPointerOut(setLinkedInColor)}>
                                 {/* <img src={LinkedIn} className="w-10"></img> */}
@@ -94,7 +94,7 @@ const onPointerOut = (func) =>(event) => {
                                 className={navigationMenuTriggerStyle()} 
                                 href="https://www.behance.net/ryannguyen35" 
                                 target="_blank" 
-                                onClick={onSelect}
+                                onFocus={onSelect}
                                 onPointerOver={onPointerOver(setBehanceColor)}
                                 onPointerOut= {onPointerOut(setBehanceColor)}>
                                 {/* <img src={Behance} className="w-10"></img>  */}
