@@ -64,7 +64,7 @@ const onPointerOut = (func) =>(event) => {
                     <NavigationMenuList className="flex-nowrap">
                         <NavigationMenuItem>
                             <NavigationMenuLink 
-                                className={navigationMenuTriggerStyle()} 
+                                className={navigationMenuTriggerStyle()+"w-32"} 
                                 href="https://github.com/Th-nguyen-Dev" 
                                 target="_blank" 
                                 onFocus={onSelect}
@@ -78,7 +78,7 @@ const onPointerOut = (func) =>(event) => {
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuLink 
-                                className={navigationMenuTriggerStyle()} 
+                                className={navigationMenuTriggerStyle()+"w-32"} 
                                 href="https://www.linkedin.com/in/hung-nguyen-dev/" 
                                 target="_blank" 
                                 onFocus={onSelect}
@@ -90,7 +90,7 @@ const onPointerOut = (func) =>(event) => {
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuLink 
-                                className={navigationMenuTriggerStyle()} 
+                                className={navigationMenuTriggerStyle()+"w-32"} 
                                 href="https://www.behance.net/ryannguyen35" 
                                 target="_blank" 
                                 onFocus={onSelect}
