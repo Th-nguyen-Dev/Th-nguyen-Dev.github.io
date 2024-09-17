@@ -14,7 +14,7 @@ import { Stats } from '@react-three/drei';
 import StarrySky from '/textures/starry_sky.jpg';
 import * as THREE from 'three';
 import UIPage1 from '../UI/UI_page_1';
-import UIPage2 from '../UI/UI_page_2';
+import UIPage2 from '../UI/TImeline';
 import { WebProvider } from '@/context/web_context';
 import { Provider } from 'react-redux';
 import redux_store from '@/context/redux_store.jsx';
