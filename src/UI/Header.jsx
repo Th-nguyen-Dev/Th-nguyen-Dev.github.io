@@ -13,7 +13,7 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 
 import { Provider } from 'react-redux';
 import redux_store from '@/context/redux_store.jsx';
-
+import { Input } from "@/components/ui/input";
 import '@/index.css';
 import Triangle from '/readme_assets/Triangle.svg';
 import BehanceReact from '@/../public/readme_assets/Behance.svg?react';
@@ -32,6 +32,9 @@ const onPointerOver = (func) =>(event) => {
 }
 const onPointerOut = (func) =>(event) => {  
     func("white");
+}
+const onInput = (event) => {
+    console.log(event.target.value);
 }
     return (
         <header className='sticky top-0 hover:translate-y-0 -translate-y-24 transition-all'>
@@ -113,7 +116,7 @@ const onPointerOut = (func) =>(event) => {
                     </NavigationMenuList>
                 </NavigationMenu>
             </Provider>
-            <div className="w-full items-center justify-center flex-col flex mt-4">
+            <div className="w-full items-center justify-center flex-col flex mt-4 select-none">
                 <img src={Triangle} className="w-7"></img>
             </div>
         </header>
