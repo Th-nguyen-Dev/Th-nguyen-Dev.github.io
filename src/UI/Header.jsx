@@ -22,9 +22,7 @@ import LinkedInReact from '@/../public/readme_assets/LinkedIn.svg?react';
 
 function Header() {
 const onSelect = (event) => {
-    console.log("Before Select", event.target);
     event.target.blur(); 
-    console.log("onSelect");
 }
 const [githubColor, setGithubColor] = useState('white');
 const [linkedInColor, setLinkedInColor] = useState('white');
@@ -46,7 +44,7 @@ const onPointerOut = (func) =>(event) => {
                                     className={navigationMenuTriggerStyle()}
                                     href="https://en.wikipedia.org/wiki/Rickrolling"
                                     target="_blank"
-                                    onClick={onSelect} >
+                                    onClick={onSelect}>
                                     <h1 className="w-60 h-auto text-center font-bold">Home</h1>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
