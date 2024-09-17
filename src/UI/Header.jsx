@@ -34,7 +34,7 @@ const onPointerOut = (func) =>(event) => {
     func("white");
 }
     return (
-        <header className='sticky top-0 hover:translate-y-0 transition-all h-36'>
+        <header className='sticky top-0 hover:translate-y-0 -translate-y-20 transition-all h-36'>
             <div className='absolute w-full h-20 bg-background '></div>
             <Provider store={redux_store}>
                 <NavigationMenu className="justify-start flex-nowrap select-none">
