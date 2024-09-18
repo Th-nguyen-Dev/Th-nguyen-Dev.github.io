@@ -15,10 +15,10 @@ import { Provider } from 'react-redux';
 import redux_store from '@/context/redux_store.jsx';
 import { Input } from "@/components/ui/input";
 import '@/index.css';
-import Triangle from '/readme_assets/Triangle.svg';
-import BehanceReact from '@/../public/readme_assets/Behance.svg?react';
-import GithubReact from '@/../public/readme_assets/Github.svg?react';
-import LinkedInReact from '@/../public/readme_assets/LinkedIn.svg?react';
+import Triangle from '/svg/Triangle.svg';
+import BehanceReact from '@/../public/svg/Behance.svg?react';
+import GithubReact from '@/../public/svg/Github.svg?react';
+import LinkedInReact from '@/../public/svg/LinkedIn.svg?react';
 
 function Header() {
 const onSelect = (event) => {
