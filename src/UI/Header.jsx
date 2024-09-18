@@ -13,7 +13,7 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 
 import { Provider } from 'react-redux';
 import redux_store from '@/context/redux_store.jsx';
-
+import { Input } from "@/components/ui/input";
 import '@/index.css';
 import Triangle from '/readme_assets/Triangle.svg';
 import BehanceReact from '@/../public/readme_assets/Behance.svg?react';
@@ -33,35 +33,44 @@ const onPointerOver = (func) =>(event) => {
 const onPointerOut = (func) =>(event) => {  
     func("white");
 }
+const onInput = (event) => {
+    console.log(event.target.value);
+}
     return (
-        <header className='sticky top-0 hover:translate-y-0 -translate-y-24 transition-all'>
-            <div className='absolute w-full h-20 bg-background '></div>
+         <header className='sticky w-full top-0 hover:translate-y-0  transition-all'>
+            <div className='absolute w-full h-16 bg-background '></div>
             <Provider store={redux_store}>
-                <NavigationMenu className="justify-start select-none border-b-2">
-                    <NavigationMenuList className="mr-5 flex-nowrap">
+                <NavigationMenu className="justify-start select-none border-b-2 flex-shrink">
+                    <NavigationMenuList className="mr-5 ">
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
                                     className={navigationMenuTriggerStyle()}
                                     target="_blank"
                                     onFocus={onSelect}>
-                                    <h1 className="w-60 h-auto text-center font-bold text-4xl">Home</h1>
+                                    <div className=" w-60 max-lg:w-40 max-md:w-20 flex-auto h-fit justify-center transition-all">
+                                        <h1 className="font-bold text-3xl max-md:text-xl text-center">Home</h1>
+                                    </div> 
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
                                     className={navigationMenuTriggerStyle()} onFocus={onSelect}>
-                                    <h1 className="w-60 h-auto text-center font-bold text-4xl">Timeline</h1>
+                                    <div className="w-60 max-lg:w-40 max-md:w-20 flex-auto h-fit justify-center transition-all">
+                                        <h1 className="font-bold text-3xl max-md:text-xl text-center">Timeline</h1>
+                                    </div> 
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
                                     className={navigationMenuTriggerStyle()} onFocus={onSelect}>
-                                    <h1 className="w-60 h-auto text-center font-bold text-4xl">Project</h1>
+                                    <div className="w-60  max-lg:w-40 max-md:w-20 flex-auto h-fit justify-center transition-all">
+                                        <h1 className="font-bold text-3xl max-md:text-xl text-center ">Project</h1>
+                                    </div> 
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                     </NavigationMenuList>
-                    <div className="w-full"></div>
-                    <NavigationMenuList className="flex-nowrap">
+                    <div className="max-w-full min-w-0 w-full"></div>
+                    <NavigationMenuList>
                         <NavigationMenuItem>
                             <NavigationMenuLink 
                                 className={navigationMenuTriggerStyle()} 
@@ -71,8 +80,8 @@ const onPointerOut = (func) =>(event) => {
                                 onPointerOver={onPointerOver(setGithubColor)}
                                 onPointerOut= {onPointerOut(setGithubColor)}
                                 >
-                                    <div>
-                                        <GithubReact fill={githubColor} className="w-14 h-auto"></GithubReact>
+                                    <div className="h-fit justify-center">
+                                        <GithubReact fill={githubColor} className="w-12 h-auto"></GithubReact>
                                     </div>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
@@ -84,8 +93,9 @@ const onPointerOut = (func) =>(event) => {
                                 onFocus={onSelect}
                                 onPointerOver={onPointerOver(setLinkedInColor)}
                                 onPointerOut= {onPointerOut(setLinkedInColor)}>
-                                {/* <img src={LinkedIn} className="w-10"></img> */}
-                                <LinkedInReact fill={linkedInColor} className="w-14 h-auto"></LinkedInReact>
+                                <div className=" h-fit justify-center">
+                                    <LinkedInReact fill={linkedInColor} className="w-12 h-auto"></LinkedInReact>
+                                </div>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
@@ -96,14 +106,15 @@ const onPointerOut = (func) =>(event) => {
                                 onFocus={onSelect}
                                 onPointerOver={onPointerOver(setBehanceColor)}
                                 onPointerOut= {onPointerOut(setBehanceColor)}>
-                                {/* <img src={Behance} className="w-10"></img>  */}
-                                <BehanceReact fill={behanceColor} className="w-14 h-auto"></BehanceReact>   
+                                <div className=" h-fit justify-center">
+                                    <BehanceReact fill={behanceColor} className="w-12 h-auto"></BehanceReact>
+                                </div>   
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                     </NavigationMenuList>
                 </NavigationMenu>
             </Provider>
-            <div className="w-full items-center justify-center flex-col flex mt-4">
+            <div className="w-full items-center justify-center flex-col flex mt-4 select-none">
                 <img src={Triangle} className="w-7"></img>
             </div>
         </header>
