@@ -13,7 +13,7 @@ import './index.css';
 const App = () => {
   return (
     <React.StrictMode>
-      <div className="absolute top-0 left-0 w-full h-full">
+      <div className="absolute top-0 left-0  w-full h-full ">
         <WebProvider>
           <Provider store={redux_store}>
             <Suspense fallback={null}>
