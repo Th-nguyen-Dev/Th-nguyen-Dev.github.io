@@ -15,7 +15,7 @@ import StarrySky from '/textures/starry_sky.jpg';
 import * as THREE from 'three';
 
 import Introduction from '@/UI/Introduction';
-import Timeline from '@/UI/Timeline.jsx';;
+import Timeline from '@/UI/Timeline.jsx';
 
 import { WebProvider } from '@/context/web_context';
 import { Provider } from 'react-redux';
