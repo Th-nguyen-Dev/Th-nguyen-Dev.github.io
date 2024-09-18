@@ -36,35 +36,37 @@ const onPointerOut = (func) =>(event) => {
 const onInput = (event) => {
     console.log(event.target.value);
 }
+const headerItemStyle = "w-60 max-xl:w-40 max-lg:w-32 max-md:w-20 max-sm:w-14 max-xs:w-6 text-3xl max-md:text-xl max-sm:text-xs max-xs:text-xxs flex-auto h-fit font-bold text-center transition-resize "
+const headerItemIconStyle = "w-12 max-md:w-10 max-sm:w-6 h-fit justify-center transition-resize";
     return (
-         <header className='sticky w-full top-0 hover:translate-y-0 -translate-y-20  transition-all'>
-            <div className='absolute w-full h-16 bg-background '></div>
+         <header className='sticky w-full top-0 hover:translate-y-0  transition-transform'>
+            <div className='absolute w-full h-16 max-sm:h-10 bg-background '></div>
             <Provider store={redux_store}>
-                <NavigationMenu className="justify-start select-none border-b-2 flex-shrink">
-                    <NavigationMenuList className="mr-5 ">
+                <NavigationMenu className="justify-start select-none border-b-2">
+                    <NavigationMenuList>
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
                                     className={navigationMenuTriggerStyle()}
-                                    target="_blank"
+
                                     onFocus={onSelect}>
-                                    <div className=" w-60 max-lg:w-40 max-md:w-20 flex-auto h-fit justify-center transition-all">
-                                        <h1 className="font-bold text-3xl max-md:text-xl text-center">Home</h1>
+                                    <div className={headerItemStyle}>
+                                        Home
                                     </div> 
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
                                     className={navigationMenuTriggerStyle()} onFocus={onSelect}>
-                                    <div className="w-60 max-lg:w-40 max-md:w-20 flex-auto h-fit justify-center transition-all">
-                                        <h1 className="font-bold text-3xl max-md:text-xl text-center">Timeline</h1>
+                                    <div className={headerItemStyle}>
+                                        Timeline
                                     </div> 
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
                                     className={navigationMenuTriggerStyle()} onFocus={onSelect}>
-                                    <div className="w-60  max-lg:w-40 max-md:w-20 flex-auto h-fit justify-center transition-all">
-                                        <h1 className="font-bold text-3xl max-md:text-xl text-center ">Project</h1>
+                                    <div className={headerItemStyle}>
+                                        Projects
                                     </div> 
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
@@ -80,9 +82,7 @@ const onInput = (event) => {
                                 onPointerOver={onPointerOver(setGithubColor)}
                                 onPointerOut= {onPointerOut(setGithubColor)}
                                 >
-                                    <div className="h-fit justify-center">
-                                        <GithubReact fill={githubColor} className="w-12 h-auto"></GithubReact>
-                                    </div>
+                                    <GithubReact fill={githubColor} className={headerItemIconStyle}></GithubReact>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
@@ -94,7 +94,7 @@ const onInput = (event) => {
                                 onPointerOver={onPointerOver(setLinkedInColor)}
                                 onPointerOut= {onPointerOut(setLinkedInColor)}>
                                 <div className=" h-fit justify-center">
-                                    <LinkedInReact fill={linkedInColor} className="w-12 h-auto"></LinkedInReact>
+                                    <LinkedInReact fill={linkedInColor} className={headerItemIconStyle}></LinkedInReact>
                                 </div>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
@@ -107,7 +107,7 @@ const onInput = (event) => {
                                 onPointerOver={onPointerOver(setBehanceColor)}
                                 onPointerOut= {onPointerOut(setBehanceColor)}>
                                 <div className=" h-fit justify-center">
-                                    <BehanceReact fill={behanceColor} className="w-12 h-auto"></BehanceReact>
+                                    <BehanceReact fill={behanceColor} className={headerItemIconStyle}></BehanceReact>
                                 </div>   
                             </NavigationMenuLink>
                         </NavigationMenuItem>

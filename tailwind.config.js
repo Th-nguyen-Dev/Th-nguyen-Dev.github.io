@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
 export default {
     darkMode: ["class"],
     content: [
@@ -6,7 +7,21 @@ export default {
 		'./src/**/*.{js,jsx,ts,tsx}'
 	],
   theme: {
+
   	extend: {
+		fontSize:{
+			'xxs': '.4rem'
+		},
+		screens:{
+			'xs': '475px',
+			...defaultTheme.screens
+		},
+		transitionProperty: {
+			'height': 'height',
+			'width': 'width',
+			'resize': 'width, height, font-size',
+			'spacing': 'margin, padding',
+		  },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
