@@ -13,9 +13,10 @@ import { Stats } from '@react-three/drei';
 
 import StarrySky from '/textures/starry_sky.jpg';
 import * as THREE from 'three';
+
 import Introduction from '@/UI/Introduction';
 import Timeline from '@/UI/Timeline';
-import Header from '@/UI/Header';
+
 import { WebProvider } from '@/context/web_context';
 import { Provider } from 'react-redux';
 import redux_store from '@/context/redux_store.jsx';
