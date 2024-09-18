@@ -37,7 +37,7 @@ const onInput = (event) => {
     console.log(event.target.value);
 }
     return (
-         <header className='sticky w-full top-0 hover:translate-y-0 -translate-y-20  transition-all'>
+         <header className='sticky w-full top-0 hover:translate-y-0  transition-transform'>
             <div className='absolute w-full h-16 bg-background '></div>
             <Provider store={redux_store}>
                 <NavigationMenu className="justify-start select-none border-b-2 flex-shrink">
@@ -47,24 +47,24 @@ const onInput = (event) => {
                                     className={navigationMenuTriggerStyle()}
                                     target="_blank"
                                     onFocus={onSelect}>
-                                    <div className=" w-60 max-lg:w-40 max-md:w-20 flex-auto h-fit justify-center transition-all">
-                                        <h1 className="font-bold text-3xl max-md:text-xl text-center">Home</h1>
+                                    <div className=" w-60 max-lg:w-40 max-md:w-20 flex-auto h-fit justify-center font-bold text-3xl max-md:text-xl text-center transition-resize ">
+                                        Home
                                     </div> 
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
                                     className={navigationMenuTriggerStyle()} onFocus={onSelect}>
-                                    <div className="w-60 max-lg:w-40 max-md:w-20 flex-auto h-fit justify-center transition-all">
-                                        <h1 className="font-bold text-3xl max-md:text-xl text-center">Timeline</h1>
+                                    <div className=" w-60 max-lg:w-40 max-md:w-20 flex-auto h-fit justify-center font-bold text-3xl max-md:text-xl text-center transition-resize">
+                                        Timeline
                                     </div> 
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
                                     className={navigationMenuTriggerStyle()} onFocus={onSelect}>
-                                    <div className="w-60  max-lg:w-40 max-md:w-20 flex-auto h-fit justify-center transition-all">
-                                        <h1 className="font-bold text-3xl max-md:text-xl text-center ">Project</h1>
+                                    <div className=" w-60 max-lg:w-40 max-md:w-20 flex-auto h-fit justify-center font-bold text-3xl max-md:text-xl text-center transition-resize">
+                                        Projects
                                     </div> 
                                 </NavigationMenuLink>
                             </NavigationMenuItem>

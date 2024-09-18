@@ -7,6 +7,12 @@ export default {
 	],
   theme: {
   	extend: {
+		transitionProperty: {
+			'height': 'height',
+			'width': 'width',
+			'resize': 'width, height, font-size',
+			'spacing': 'margin, padding',
+		  },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
