@@ -37,7 +37,7 @@ const onInput = (event) => {
     console.log(event.target.value);
 }
     return (
-         <header className='sticky w-full top-0 hover:translate-y-0  transition-all'>
+         <header className='sticky w-full top-0 hover:translate-y-0 -translate-y-20  transition-all'>
             <div className='absolute w-full h-16 bg-background '></div>
             <Provider store={redux_store}>
                 <NavigationMenu className="justify-start select-none border-b-2 flex-shrink">
