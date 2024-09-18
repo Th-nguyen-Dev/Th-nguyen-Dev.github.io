@@ -4,8 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import {setTimelineToggle} from '@/context/reducer/timeline_toggle';
 
 import { Scroll, ScrollControls, useScroll } from '@react-three/drei';
-import { Provider } from 'react-redux';
-import redux_store from '@/context/redux_store.jsx';
 
 import { Button } from '@/components/ui/button';
   
