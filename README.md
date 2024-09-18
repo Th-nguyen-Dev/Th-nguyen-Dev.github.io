@@ -36,7 +36,7 @@ This README will serve to help you understand how the website works, as well as 
 
   
 
-![Image](/public/readme_assets/Screenshot%20(508).png)
+![Image](/readme_assets/Screenshot%20(508).png)
 
   
   
@@ -71,7 +71,7 @@ This project is a 3D Globe Landing Page built with React, Three.js, and Tailwind
 
 ### The Globe
 
-![Gif](/public/readme_assets//Earth_Examine.gif)
+![Gif](/readme_assets//Earth_Examine.gif)
 
   
 
@@ -110,7 +110,7 @@ There are also a combination version of these layers:
 
 ## Animation
 
-![Gif](/public/readme_assets/Animation.gif)
+![Gif](/readme_assets/Animation.gif)
 
 There are several animations both pre-determined and responsive that are used in the project. The animation makes use of many libraries such as [GSAP](https://gsap.com/), [Three.js](https://threejs.org/), and [React Three Fiber](https://r3f.docs.pmnd.rs/getting-started/introduction).
 
