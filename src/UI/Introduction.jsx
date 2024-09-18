@@ -39,8 +39,8 @@ function Introduction() {
     }
 return (
     <>
-            <div className='w-1/2'>
-                <div className="relative w-fit flex-col text-white top-1/4 right-10 mr-20 ml-20 ">
+            <div className='w-1/2 h-fit'>
+                <div className="relative w-fit text-white mt-60 right-10 mr-20 ml-20 ">
                 <h1>
                     <p className = "text-7xl mb-1">
                         <strong
