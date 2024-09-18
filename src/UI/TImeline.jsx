@@ -34,7 +34,8 @@ function Timeline() {
         dispatch(setTimelineToggle(null));
         changeTextColor('white')(event);
     }
-    
+
+const buttonStyle = "font-bold max-w-full min-w-6 w-full max-h-28 min-h-20 h-auto text-5xl max-sm:text-2xl transition-resize";
 return (
 
     <div className ="w-1/2">
@@ -51,7 +52,7 @@ return (
                     <Button 
                     variant="outline" 
                     size={"lg"} 
-                    className='font-bold max-w-full min-w-12 w-full h-28 text-5xl'
+                    className={buttonStyle}
                     style={{
                         borderRadius: "9999px",
                     }} 
@@ -74,7 +75,7 @@ return (
                     <Button 
                     variant="outline" 
                     size={"lg"} 
-                    className='font-bold max-w-full min-w-12 w-full h-28 text-5xl'
+                    className={buttonStyle}
                     style={{
                         borderRadius: "9999px",
                     }}
@@ -96,7 +97,7 @@ return (
                     <Button 
                     variant="outline" 
                     size={"lg"} 
-                    className='font-bold max-w-full min-w-12 w-full h-28 text-5xl'
+                    className={buttonStyle}
                     style={{
                         borderRadius: "9999px",
                     }}
@@ -115,7 +116,7 @@ return (
                     <Button 
                     variant="outline" 
                     size={"lg"} 
-                    className='font-bold max-w-full min-w-12 w-full h-28 text-5xl'
+                    className={buttonStyle}
                     style={{
                         borderRadius: "9999px",
                     }}

@@ -39,7 +39,7 @@ const onInput = (event) => {
 const headerItemStyle = "w-60 max-xl:w-40 max-lg:w-32 max-md:w-20 max-sm:w-14 max-xs:w-6 text-3xl max-md:text-xl max-sm:text-xs max-xs:text-xxs flex-auto h-fit font-bold text-center transition-resize "
 const headerItemIconStyle = "w-12 max-md:w-10 max-sm:w-6 h-fit justify-center transition-resize";
     return (
-         <header className='sticky w-full top-0 hover:translate-y-0 focus:translate-x-0 -translate-y-20 transition-transform'>
+         <header className='sticky w-full top-0 h-52  hover:translate-y-0 focus:translate-x-0 -translate-y-20 transition-transform'>
             <div className='absolute w-full h-16 max-sm:h-10 bg-background '></div>
             <Provider store={redux_store}>
                 <NavigationMenu className="justify-start select-none border-b-2">
@@ -114,7 +114,7 @@ const headerItemIconStyle = "w-12 max-md:w-10 max-sm:w-6 h-fit justify-center tr
                     </NavigationMenuList>
                 </NavigationMenu>
             </Provider>
-            <div className="w-full items-center justify-center flex-col flex mt-4 select-none">
+            <div className="w-full items-center justify-center flex-col flex mt-5 select-none">
                 <img src={Triangle} className="w-7"></img>
             </div>
         </header>
