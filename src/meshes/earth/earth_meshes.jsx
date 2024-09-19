@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import EarthMeshesPhysical from './earth_meshes_physical';
 import EarthMeshesAtmosphere from './earth_meshes_atmosphere';
 import gsap from 'gsap';
+import { MeshReflectorMaterial } from '@react-three/drei';
 
 function EarthMeshes({addMesh}) {
 
@@ -26,6 +27,7 @@ function EarthMeshes({addMesh}) {
         <group
             ref = {meshRef}
         >
+
             <group ref = {earthRef}>
                 <EarthMeshesPhysical/>
             </group>

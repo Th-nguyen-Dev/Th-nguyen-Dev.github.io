@@ -12,6 +12,8 @@ import MainCamera from '../cameras/main_camera';
 import OfficialCamera from '../cameras/official_camera';
 import * as THREE from 'three';
 
+import { MeshReflectorMaterial } from '@react-three/drei';
+
 function SceneEditorExport({addMesh, addLight}) {
     const { gridSize, ...gridConfig } = useControls("Grid",{
         gridSize: [10.5, 10.5],
@@ -28,11 +30,24 @@ function SceneEditorExport({addMesh, addLight}) {
       })
     return (
         <group>
+            <mesh position={[0,0,8]} rotation={[0, Math.PI, -Math.PI / 2]}>
+                <planeGeometry args={[10,10]}/>
+                <MeshReflectorMaterial
+                    resolution={1024}
+                    mixBlur={1}
+                    mixStrength={1000} // Strength of the reflections
+                    mixContrast={1} // Contrast of the reflections 
+                    mirror={1}
+                    color="#ffffff"
+                    metalness={0.1}
+                ></MeshReflectorMaterial>
+            </mesh>
             <AmbientLights addLight={addLight}/>
             <DirectionalLights addLight={addLight}/>
             <EarthMeshes addMesh={addMesh}/>
             <Grid position={[0, 0, 0]} args={gridSize} {...gridConfig} />
             <Stats />
+
         </group>
 
     );

@@ -20,6 +20,7 @@ import Timeline from '@/UI/Timeline.jsx';;
 import { WebProvider } from '@/context/web_context';
 import { Provider } from 'react-redux';
 import redux_store from '@/context/redux_store.jsx';
+import { MeshReflectorMaterial } from '@react-three/drei';
 
 export function PerformanceConfig(){
     const {gl} = useThree();

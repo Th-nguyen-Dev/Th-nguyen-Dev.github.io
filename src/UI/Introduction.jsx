@@ -39,8 +39,8 @@ function Introduction() {
     }
 return (
     <>
-            <div className='w-1/2 h-fit'>
-                <div className="relative w-fit text-white mt-60 right-10 mr-20 ml-20 ">
+            <div className='w-1/2 h-auto'>
+                <div className="relative w-fit text-white right-10 mr-20 ml-20 " style={{marginTop:'18rem'}}>
                 <h1>
                     <p className = "text-7xl mb-1">
                         <strong
