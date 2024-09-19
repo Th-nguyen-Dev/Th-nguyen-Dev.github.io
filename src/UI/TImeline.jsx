@@ -93,6 +93,28 @@ return (
                     </span>
                     <br></br>
                     <br></br>
+                    <div className='ml-10'>
+                        <span>
+                            High School
+                            <br></br>
+                            <a href='https://www.skystudiohouston.com/' className="text-sm">The Village School</a>
+                            <br></br>
+                            <span className="text-sm">2019-2021</span>
+                            <br></br>
+                            <br></br>
+                        </span>
+                        <span>
+                            Second Camera Operator Volunteer
+                            <br></br>
+                            <a href='https://www.skystudiohouston.com/' className="text-sm">Sky Studio</a>
+                            <br></br>
+                            <span className="text-sm">2019-2021</span>
+                            <br></br>
+                            <br></br>
+                        </span>
+                    </div>
+                    <br></br>
+                    <br></br>
                     <br></br>
                     <Button 
                     variant="outline" 
@@ -110,6 +132,39 @@ return (
                     <span>
                         After a year in Houston, I decided to move to Edmonds, Washington to finish my high school education and get an early start on my college degree. It was at this time that I finally decided to pick up where my 8th grade self left off, I wanted to fall back in love with programming and graphic deisign. I mananged to get a job as a motion graphic designer at Edmonds College while I persue my associates in Computer Science. Being able to participated, and lead in many marketing campaigns and projects, I have learned a lot about the industry and the importance of design in the world of technology.  
                     </span>
+                    <br></br>
+                    <br></br>
+                    <div className='ml-10'>
+                         <span>
+                            High School Degree
+                            <br></br>
+                            <a href='https://www.skystudiohouston.com/' className="text-sm">Edmonds College</a>
+                            <br></br>
+                            <span className="text-sm">2020-2021</span>
+                            <br></br>
+                            <br></br>
+                        </span>
+                        <span>
+                            Associate in Computer Science
+                            <br></br>
+                            <a href='https://www.skystudiohouston.com/' className="text-sm">Edmonds College</a>
+                            <br></br>
+                            <span className="text-sm">2021-2023</span>
+                            <br></br>
+                            <br></br>
+                        </span>
+                        <span>
+                            Motion Graphic Designer
+                            <br></br>
+                            <a href='https://www.skystudiohouston.com/' className="text-sm">Edmonds College</a>
+                            <br></br>
+                            <span className="text-sm">2019-2021</span>
+                            <br></br>
+                            <a href='https://www.skystudiohouston.com/' className="text-sm">Sky Studio</a>
+                            <br></br>
+                            <br></br>
+                        </span>
+                    </div>
                     <br></br>
                     <br></br>
                     <br></br>
@@ -130,6 +185,30 @@ return (
                         In 2023, I graduated from Edmonds College with an Associates in Computer Science and transferred to Bellevue College to finish my Bachelor's degree. 2025 will be my year of graduation and I am excited to see where my journey will take me. I am excited to apply all the knowledge I gained and developed in the last 4 years into crafting elegant and efficient solutions that boths look good and work well! I am eager to learn, grow, see what
                         we can build from the technology we have today!
                     </span>
+                    <br></br>
+                    <br></br>
+                    <div className='ml-10'>
+                        <span>
+                            Bachelor in Computer Science
+                            <br></br>
+                            <a href='https://www.skystudiohouston.com/' className="text-sm">Bellevue College</a>
+                            <br></br>
+                            <span className="text-sm">2021-2023</span>
+                            <br></br>
+                            <br></br>
+                        </span>
+                        <span>
+                            Newsletter Deisgner and Editor 
+                            <br></br>
+                            <a href='https://www.skystudiohouston.com/' className="text-sm">Edmonds College</a>
+                            <br></br>
+                            <span className="text-sm">2019-2021</span>
+                            <br></br>
+                            <a href='https://www.skystudiohouston.com/' className="text-sm">Sky Studio</a>
+                            <br></br>
+                            <br></br>
+                        </span>
+                    </div>
                     <br></br>
                     <br></br>
                     <br></br>
