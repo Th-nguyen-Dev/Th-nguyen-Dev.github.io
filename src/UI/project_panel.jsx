@@ -2,6 +2,7 @@ import React,{useState, useRef, useEffect} from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useIsVisible } from "@/Hook/useIsVisible";
+import { Carousel } from "@/components/ui/carousel";
 function ProjectPanel({text, images, link},props){
     const panelRef = useRef();
     const isVisible = useIsVisible(panelRef);
@@ -14,6 +15,7 @@ function ProjectPanel({text, images, link},props){
     }, [isVisible]);
     return(
         <div ref={panelRef} {...props}>
+            <Carousel images={images}/>
             <h1>{text}</h1>
         </div>
     );
