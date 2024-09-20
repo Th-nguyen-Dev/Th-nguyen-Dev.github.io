@@ -20,6 +20,8 @@ import Timeline from '@/UI/Timeline.jsx';;
 import { WebProvider } from '@/context/web_context';
 import { Provider } from 'react-redux';
 import redux_store from '@/context/redux_store.jsx';
+import { MeshReflectorMaterial } from '@react-three/drei';
+import LocationSprite from '@/meshes/earth/location_sprite';
 
 export function PerformanceConfig(){
     const {gl} = useThree();
@@ -37,7 +39,8 @@ function OfficialExport() {
                 <ScrollControls pages={10}>                        
                     <AmbientLights/>
                     <DirectionalLights/>
-                    <EarthMeshes/>
+                    <EarthMeshes visible={true}/>
+                    <LocationSprite/>
                     <PostProcessing/>
                     <OfficialCamera makeDefault={true} />
                     <PerformanceConfig/>
