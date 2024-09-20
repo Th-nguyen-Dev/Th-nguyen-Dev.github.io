@@ -16,6 +16,7 @@ import * as THREE from 'three';
 
 import Introduction from '@/UI/Introduction';
 import Timeline from '@/UI/Timeline';
+import Project from '@/UI/Project';
 
 import { WebProvider } from '@/context/web_context';
 import { Provider } from 'react-redux';
@@ -48,6 +49,7 @@ function OfficialExport() {
                     <Provider store={redux_store}>
                         <Introduction/>
                         <Timeline/>
+                        <Project/>
                     </Provider>
                     </Scroll>
                     {/* <Stats/> */}

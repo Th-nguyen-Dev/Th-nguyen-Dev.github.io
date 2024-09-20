@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { WebContext } from '../context/web_context';
 import { useSelector, useDispatch } from 'react-redux';
 import {setTimelineToggle} from '@/context/reducer/timeline_toggle';
@@ -12,6 +12,7 @@ import { ProgressVert } from '@/components/ui/progress_vert';
 import * as THREE from 'three';
 import '@/index.css';
 import { useFrame } from '@react-three/fiber';
+import { useIsVisible } from '@/Hook/useIsVisible';
 import gsap from 'gsap';
 
 function Timeline() {
@@ -38,6 +39,17 @@ function Timeline() {
 const buttonStyle = "font-bold max-w-full min-w-6 w-full max-h-28 min-h-20 h-auto text-5xl max-sm:text-2xl transition-resize select-none";
 const listItemHeaderStyle = "text-3xl font-bold";
 const listItemStyle = "text-xl font-normal ml-2";
+
+
+// useEffect(() => {
+//     locationRef.current.forEach((ref, index) => {
+//         gsap.to(ref, {
+//             y: isLocationVisible[index] ? 0 : 100,
+//             opacity: isLocationVisible[index] ? 1 : 0,
+//             duration: 1,
+//         });
+//     });
+// }, [isLocationVisible]);
 return (
 
     <div className ="w-1/2">
@@ -51,7 +63,8 @@ return (
                 className='h-auto w-36 min-w-2 rotate-180'
                 />
                 <div className='columns-1 flex-row '>
-                    <Button 
+                    <div className='My Tho Vietnam' ref={setLocationRef}>
+                <Button 
                     variant="outline" 
                     size={"lg"} 
                     className={buttonStyle}
@@ -75,6 +88,8 @@ return (
                     <br></br>
                     <br></br>
                     <br></br>
+                    </div>
+                    <div className='Houston Texas' ref={setLocationRef}>
                     <Button 
                     variant="outline" 
                     size={"lg"} 
@@ -115,6 +130,8 @@ return (
                     </ul>
                     <br></br>
                     <br></br>
+                    </div>
+                    <div className='Edmonds College' ref={setLocationRef}>
                     <Button 
                     variant="outline" 
                     size={"lg"} 
@@ -162,6 +179,8 @@ return (
                     </ul>
                     <br></br>
                     <br></br>
+                    </div>
+                    <div className='Belleve College' ref={setLocationRef}>
                     <Button 
                     variant="outline" 
                     size={"lg"} 
@@ -203,6 +222,7 @@ return (
                     <br></br>
                     <br></br>
                     <br></br>
+                </div>
                 </div>
             </div>
         </div>
