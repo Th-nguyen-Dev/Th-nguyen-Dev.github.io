@@ -15,7 +15,7 @@ import { useFrame } from '@react-three/fiber';
 import { useIsVisible } from '@/Hook/useIsVisible';
 import gsap from 'gsap';
 
-export function MileStonePanel({milestoneText,location,date,link}){
+export function MileStonePanel({title,location,date,link}){
     const milestonePanelRef = useRef();
     const milestonePanelVisibile = useIsVisible(milestonePanelRef)
     useEffect(() => {
@@ -29,7 +29,7 @@ export function MileStonePanel({milestoneText,location,date,link}){
     const listItemStyle = "text-xl font-normal ml-2";
     return(
         <div className='flex-col flex' ref={milestonePanelRef}>
-            <span className={listItemHeaderStyle}>{milestoneText}</span>
+            <span className={listItemHeaderStyle}>{title}</span>
             <a href={link} className={listItemStyle}>{location}</a>
             <span className={listItemStyle}>{date}</span>
             <br></br>
@@ -43,7 +43,7 @@ export function MileStoneList({milestones}){
                 return(
                     <li key={index} className='mb-4'>
                         <MileStonePanel 
-                        milestoneText={milestone.milestoneText}
+                        title={milestone.title}
                         location={milestone.location}
                         date={milestone.date}
                         link={milestone.link}
@@ -71,7 +71,6 @@ function LocationPanel({location, buttonText, mainText, milestones}){
         dispatch(setTimelineToggle(null));
         changeTextColor('white')(event);
     }
-    console.log(location)
 
     const mainTextRef = useRef();
     const mainTextVisible = useIsVisible(mainTextRef);
@@ -88,7 +87,7 @@ function LocationPanel({location, buttonText, mainText, milestones}){
             variant="outline" 
             size={"lg"} 
             className={buttonStyle}
-            onPointerOver={onPointerEnter({location}) } 
+            onPointerOver={onPointerEnter(location) } 
             onPointerOut={onPointerLeave}>
                 {buttonText}
             </Button>
