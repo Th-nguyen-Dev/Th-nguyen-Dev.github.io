@@ -16,11 +16,20 @@ import { useIsVisible } from '@/Hook/useIsVisible';
 import gsap from 'gsap';
 
 export function MileStonePanel({milestoneText,location,date,link}){
-    const listItemHeaderStyle = "text-3xl font-bold";
+    const milestonePanelRef = useRef();
+    const milestonePanelVisibile = useIsVisible(milestonePanelRef)
+    useEffect(() => {
+        gsap.to(milestonePanelRef.current,{
+            x: milestonePanelVisibile? 0 : 100,
+            opacity: milestonePanelVisibile ? 1 : 0,
+            duration: 1,
+        })
+    },[milestonePanelVisibile])
+    const listItemHeaderStyle = "text-3xl font-bold mb-2";
     const listItemStyle = "text-xl font-normal ml-2";
     return(
-        <div className='flex-col flex'>
-            <span className='mb-2'>{milestone}</span>
+        <div className='flex-col flex' ref={milestonePanelRef}>
+            <span className={listItemHeaderStyle}>{milestoneText}</span>
             <a href={link} className={listItemStyle}>{location}</a>
             <span className={listItemStyle}>{date}</span>
             <br></br>
@@ -30,11 +39,11 @@ export function MileStonePanel({milestoneText,location,date,link}){
 export function MileStoneList({milestones}){
     return(
         <ul className='ml-10 list-disc'>
-            {milestones.map((milestone) => {
+            {milestones.map((milestone, index) => {
                 return(
-                    <li className='mb-4'>
+                    <li key={index} className='mb-4'>
                         <MileStonePanel 
-                        milestone={milestone.milestoneText}
+                        milestoneText={milestone.milestoneText}
                         location={milestone.location}
                         date={milestone.date}
                         link={milestone.link}
@@ -47,9 +56,12 @@ export function MileStoneList({milestones}){
     )
 }
 
-function LocationPanel({buttonText, mainText, milestones}){
-    const buttonStyle = "font-bold max-w-full min-w-6 w-full max-h-28 min-h-20 h-auto text-5xl max-sm:text-2xl transition-resize select-none";
+function LocationPanel({location, buttonText, mainText, milestones}){
+    const buttonStyle = "font-bold max-w-full min-w-6 w-full max-h-28 min-h-20 h-auto text-5xl max-sm:text-2xl transition-resize select-none rounded-full";
     const dispatch = useDispatch();
+    const changeTextColor =(color) => (event) => {
+        event.target.style.color = color;
+    }  
     const onPointerEnter = (name) => (event) =>{
         dispatch(setTimelineToggle(name));
         changeTextColor("black")(event);
@@ -59,27 +71,35 @@ function LocationPanel({buttonText, mainText, milestones}){
         dispatch(setTimelineToggle(null));
         changeTextColor('white')(event);
     }
+    console.log(location)
+
+    const mainTextRef = useRef();
+    const mainTextVisible = useIsVisible(mainTextRef);
+    useEffect(()=>{
+        gsap.to(mainTextRef.current,{
+            opacity: mainTextVisible? 1 : 0,
+            duration: 1,
+        })
+
+    },[mainTextVisible])
     return (
-        <div className='Houston Texas' ref={setLocationRef}>
+        <div >
             <Button 
             variant="outline" 
             size={"lg"} 
             className={buttonStyle}
-            style={{
-                borderRadius: "9999px",
-            }}
-            onPointerOver={onPointerEnter("Houston") } 
+            onPointerOver={onPointerEnter({location}) } 
             onPointerOut={onPointerLeave}>
                 {buttonText}
             </Button>
             <br></br>
             <br></br>
-            <span>
+            <span ref={mainTextRef}>
                 {mainText}
             </span>
             <br></br>
             <br></br>
-                <MileStoneList milestones={milestones}/>
+                {milestones && milestones.length > 0 && <MileStoneList milestones={milestones} />}
             <br></br>
             <br></br>
             </div>

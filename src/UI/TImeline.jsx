@@ -13,6 +13,7 @@ import * as THREE from 'three';
 import '@/index.css';
 import { useFrame } from '@react-three/fiber';
 import { useIsVisible } from '@/Hook/useIsVisible';
+import LocationPanel from './location_panel';
 import gsap from 'gsap';
 
 function Timeline() {
@@ -39,17 +40,6 @@ function Timeline() {
 const buttonStyle = "font-bold max-w-full min-w-6 w-full max-h-28 min-h-20 h-auto text-5xl max-sm:text-2xl transition-resize select-none";
 const listItemHeaderStyle = "text-3xl font-bold";
 const listItemStyle = "text-xl font-normal ml-2";
-
-
-// useEffect(() => {
-//     locationRef.current.forEach((ref, index) => {
-//         gsap.to(ref, {
-//             y: isLocationVisible[index] ? 0 : 100,
-//             opacity: isLocationVisible[index] ? 1 : 0,
-//             duration: 1,
-//         });
-//     });
-// }, [isLocationVisible]);
 return (
 
     <div className ="w-1/2">
@@ -63,7 +53,17 @@ return (
                 className='h-auto w-36 min-w-2 rotate-180'
                 />
                 <div className='columns-1 flex-row '>
-                    <div className='My Tho Vietnam' ref={setLocationRef}>
+                    <LocationPanel 
+                    location={"My Tho"}
+                    buttonText={"My Tho, Vietnam"}
+                    mainText={"Originally from the small city of My Tho, Vietnam, I grew up with a little Windows XP computer passed down from my brother. I remember spending hours playing games and dreaming of the day I could make one myself. Around 8th grade, that dream came true. The school-mandated textbook introduced me to Turbo Pascal, an ancient, forgotten, user-friendly, 1-indexed array language, and I was completely hooked! I even asked my parents to pay for extra classes so I could learn more about programming and attend coding competitions. Even though I no longer have any of the old code I wrote back then, I still hold on to the countless hours of debugging and crafting the perfect Turbo Pascal program."}
+                    />
+                    <LocationPanel
+                    location={"Houston"}
+                    buttonText={"Houston, TX"}
+                    
+                    />
+                    {/* <div className='My Tho Vietnam' ref={setLocationRef}>
                 <Button 
                     variant="outline" 
                     size={"lg"} 
@@ -222,7 +222,7 @@ return (
                     <br></br>
                     <br></br>
                     <br></br>
-                </div>
+                    </div> */}
                 </div>
             </div>
         </div>

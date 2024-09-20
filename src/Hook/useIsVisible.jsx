@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 export function useIsVisible(ref) {
     const [isIntersecting, setIntersecting] = useState(false)
 
