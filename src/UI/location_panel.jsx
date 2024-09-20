@@ -22,7 +22,7 @@ export function MileStonePanel({title,location,date,link}){
         gsap.to(milestonePanelRef.current,{
             x: milestonePanelVisibile? 0 : 100,
             opacity: milestonePanelVisibile ? 1 : 0,
-            duration: 1,
+            duration: 0.5,
         })
     },[milestonePanelVisibile])
     const listItemHeaderStyle = "text-3xl font-bold mb-2";
@@ -77,7 +77,7 @@ function LocationPanel({location, buttonText, mainText, milestones}){
     useEffect(()=>{
         gsap.to(mainTextRef.current,{
             opacity: mainTextVisible? 1 : 0,
-            duration: 1,
+            duration: 0.75,
         })
 
     },[mainTextVisible])

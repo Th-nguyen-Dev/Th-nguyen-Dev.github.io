@@ -78,8 +78,8 @@ return (
                     ]}
                     />
                     <LocationPanel
-                    location={"Bellevue"}
-                    buttonText={"Bellevue, WA"}
+                    location={"Renton"}
+                    buttonText={"Renton, WA"}
                     mainText={"In 2023, I graduated from Edmonds College and transferred to Bellevue College to complete my bachelor's degree. I am excited to graduate in 2025 and apply my knowledge to create elegant and efficient solutions. I am eager to learn, grow, and see what we can build with today's technology!"}
                     milestones={[
                         {title: "Bachelor in Computer Science", location: "Bellevue College", date: "2023-2025"},
