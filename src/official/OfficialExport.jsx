@@ -49,7 +49,7 @@ function OfficialExport() {
                     <Provider store={redux_store}>
                         <Introduction/>
                         <Timeline/>
-                        {/* <Project/> */}
+                        <Project/>
                     </Provider>
                     </Scroll>
                     {/* <Stats/> */}
