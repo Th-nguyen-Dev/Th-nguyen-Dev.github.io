@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useEffect, useState } from 'react';
+import React, { useMemo, useRef, useEffect, useState, Suspense } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Html, Scroll, ScrollControls, Stats, MeshReflectorMaterial } from '@react-three/drei';
 import { useSelector } from 'react-redux';
@@ -36,9 +36,11 @@ function OfficialExport() {
                 <ScrollControls pages={20}>                        
                     <AmbientLights/>
                     <DirectionalLights/>
-                    <group ref={earthRef}>
-                        <EarthMeshes/>
-                     </group>   
+                    <Suspense fallback={null}>
+                        <group ref={earthRef}>
+                            <EarthMeshes/>
+                        </group>  
+                    </Suspense>
                     <EarthClippingMask visible = {false}/>
                     <PostProcessing/>
                     <OfficialCamera makeDefault={true} />

@@ -21,10 +21,10 @@ function Introduction() {
     
 return (
     <>
-            <div className='w-1/2 h-auto' ref={introRef}>
-                <div className="relative w-fit text-white right-10 mr-20 ml-20 " style={{marginTop:'10rem'}}>
+        <div className='relative w-1/2 h-auto top-1/4' ref={introRef}>
+            <div className="relative w-fit text-white right-10 mr-20 ml-20">
                 <h1>
-                    <p className = "text-7xl mb-1">
+                    <p className="text-7xl mb-1">
                         <strong
                             onPointerOver={changeTextColor("#00ff00")} 
                             onPointerLeave={changeTextColor('white')}
@@ -32,27 +32,26 @@ return (
                             Hello World!
                         </strong>
                     </p>
-                    <p className= "text-3xl">
+                    <p className="text-3xl">
                         My name is Ryan Nguyen
                     </p> 
                 </h1>
                 <br></br>
-                <h2 className = "text-xl">
+                <h2 className="text-xl">
                     I am a full stack developer with a passion for designs and all things interactive. 
                     <br/>
                     <br/>
-                    Currently, I am working toward a degree in Computer Sciene at Bellevue College in Washington.
+                    Currently, I am working toward a degree in Computer Science at Bellevue College in Washington.
                     I have a background in graphic design, graphic programming, game development, algorithm, and UI design. 
                     I grew up with computers and technology, and have always been fascinated with the use of technology to create interactive experiences.
                     From video games to tools that allows for these creative experiences, I have always wanted to be at every step of the process.
                 </h2>
                 <br></br>
                 <br></br>
-                </div>
             </div>
+        </div>
     </> 
-    
-    );
+);
 }
 
 export default Introduction;
