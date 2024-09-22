@@ -2,6 +2,7 @@ import React, { useCallback, useContext, useEffect, useMemo, useRef, useState } 
 import { WebContext } from '../context/web_context';
 import { useSelector, useDispatch } from 'react-redux';
 import {setTimelineToggle} from '@/context/reducer/timeline_toggle';
+import { setTimelineIntroToggle } from '@/context/reducer/timelineIntro_toggle';
 
 import { Scroll, ScrollControls, useScroll } from '@react-three/drei';
 
@@ -27,22 +28,23 @@ function Timeline() {
     }  
 
     const dispatch = useDispatch();
-    const onPointerEnter = (name) => (event) =>{
-        dispatch(setTimelineToggle(name));
-        changeTextColor("black")(event);
-        
-    }
-    const onPointerLeave = (event) => {
-        dispatch(setTimelineToggle(null));
-        changeTextColor('white')(event);
-    }
+    const timelineRef = useRef();
+    const isVisibile = useIsVisible(timelineRef);
+    useEffect(() => {
+        if(isVisibile){
+            dispatch(setTimelineIntroToggle(true));
+        }else{
+            dispatch(setTimelineIntroToggle(false));
+        }
+    }, [isVisibile]);
+
 
 const buttonStyle = "font-bold max-w-full min-w-6 w-full max-h-28 min-h-20 h-auto text-5xl max-sm:text-2xl transition-resize select-none";
 const listItemHeaderStyle = "text-3xl font-bold";
 const listItemStyle = "text-xl font-normal ml-2";
 return (
 
-    <div className ="w-1/2">
+    <div className ="w-1/2" ref={timelineRef}>
         <div className="relative text-white top-1/4 right-10  mr-20 ml-20">
             <span className= "text-7xl font-bold"> Timeline</span>
                 <br></br>

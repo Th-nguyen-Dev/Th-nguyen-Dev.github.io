@@ -14,7 +14,6 @@ const EarthAtmosphereInner = ({cameraRef}) => {
                 depthTest={false}
                 reflectivity={10}
                 transparent={true}
-                opacity={0.05}
             ></meshStandardMaterial>
         </mesh>
     );

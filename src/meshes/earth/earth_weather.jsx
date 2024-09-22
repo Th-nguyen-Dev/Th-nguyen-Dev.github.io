@@ -72,6 +72,7 @@ function EarthWeather(){
             <mesh ref={earthRef}>
             <sphereGeometry args={[5, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
             <CustomShaderMaterial
+                
                 ref = {materialRef}
                 baseMaterial={THREE.MeshPhongMaterial}
                 uniforms={uniforms}
