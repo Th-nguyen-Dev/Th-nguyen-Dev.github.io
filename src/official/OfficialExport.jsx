@@ -52,7 +52,7 @@ function OfficialExport() {
                         <Project/>
                     </Provider>
                     </Scroll>
-                    <Stats/>
+                    {/* <Stats/> */}
                 </ScrollControls>
             </Canvas>  
     );
