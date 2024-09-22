@@ -1,5 +1,6 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useMemo } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { useSelector } from 'react-redux';
 import * as THREE from 'three';
 
 import EarthMeshesPhysical from './earth_meshes_physical';
@@ -11,7 +12,7 @@ function EarthMeshes(props) {
     const earthRef = useRef();
     const { width, height } = useThree().size;
     const mouse = useRef({ x: 0, y: 0 });
-
+    
     useFrame(() => {
         if (earthRef.current) {
             earthRef.current.rotation.y = THREE.MathUtils.lerp(earthRef.current.rotation.y, mouse.current.x * 0.2, 0.1);
@@ -30,14 +31,14 @@ function EarthMeshes(props) {
         };
     }, [width, height]);
 
-    return (
+    return ( useMemo(() => (
         <group ref={meshRef} {...props}>
-            <group ref={earthRef} >
-                <EarthMeshesPhysical />
-            </group>
-            <EarthMeshesAtmosphere />
+        <group ref={earthRef} >
+            <EarthMeshesPhysical />
         </group>
-    );
+        <EarthMeshesAtmosphere />
+        </group>
+    ),[props]))
 }
 
 export default EarthMeshes;

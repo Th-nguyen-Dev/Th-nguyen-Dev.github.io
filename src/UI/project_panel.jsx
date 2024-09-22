@@ -9,6 +9,7 @@ import {
     CarouselNext,
     CarouselPrevious,
   } from "@/components/ui/carousel"
+
 function ProjectPanel({text, images, link},props){
     const [api, setApi] = useState();
     const panelRef = useRef();
@@ -22,22 +23,30 @@ function ProjectPanel({text, images, link},props){
     }, [isVisible]);
 
     const intervalRef = useRef(null);
+    const firstScrollRef = useRef(null);
 
     const onPointerEnter = useCallback(() => {
-        if (intervalRef.current) return
-        else{
-            if (api) {
-                api.scrollNext();
-            }
+        if (intervalRef.current) return;
+
+        if (firstScrollRef.current == null) {
+            api.scrollNext();
         }
-        intervalRef.current = setInterval(() => {
-            if (api) {
-                api.scrollNext();
-            }
-        }, 2000);
+            intervalRef.current = setInterval(() => {
+                if (api) {
+                    api.scrollNext();
+                }
+            }, 2000);
+
+
+
     }, [api]);
 
     const onPointerLeave = useCallback(() => {
+        if (firstScrollRef.current == null) {
+            firstScrollRef.current = setTimeout(() => {
+                firstScrollRef.current = null;
+            }, 2000);
+        }
         if (intervalRef.current) {
             clearInterval(intervalRef.current);
             intervalRef.current = null;
@@ -55,14 +64,15 @@ function ProjectPanel({text, images, link},props){
             onPointerEnter={onPointerEnter}
             onPointerLeave={onPointerLeave}
             >
-                 <CarouselNext/>   
+                  
                 <CarouselContent>
                     {images.map((image, index) => (
                         <CarouselItem key={index}>
                             <img src={image} alt="Project" />
                         </CarouselItem>
                     ))}
-                 </CarouselContent>   
+                 </CarouselContent>  
+                 <CarouselNext/> 
                  <CarouselPrevious/>
 
             </Carousel>

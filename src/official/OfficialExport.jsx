@@ -41,10 +41,13 @@ function OfficialExport() {
                     <AmbientLights/>
                     <DirectionalLights/>
                     <EarthMeshes visible={true}/>
-                    <LocationSprite/>
                     <PostProcessing/>
                     <OfficialCamera makeDefault={true} />
                     <PerformanceConfig/>
+                    {/* <mesh position={[0,0,0]} rotation={[0, 1.36, 0]}>
+                        <planeGeometry args={[10,10]}/>
+                        <meshBasicMaterial color="red"/>
+                    </mesh> */}
                     <Scroll html style={{width: '100%', height: '100%'}} >
                     <Provider store={redux_store}>
                         <Introduction/>
