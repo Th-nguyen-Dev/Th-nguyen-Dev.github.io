@@ -30,7 +30,7 @@ function EarthCities() {
                 baseMaterial={THREE.MeshLambertMaterial}
                 alphaMap={alphaMapTexture}
                 emissive="#FFD200"
-                emissiveIntensity={10} 
+                emissiveIntensity={4} 
                 fragmentShader={fragmentShader}
                 transparent={true}
                 patchMap={{

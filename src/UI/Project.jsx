@@ -18,24 +18,17 @@ function Project(){
             dispatch(setProjectToggle(false));
         }
     }, [isVisible]);
-    useEffect(() =>{
-        gsap.to(backgroundRef.current, { 
-            x: isVisible? 0 : 10000,
-            ease:"sine.inOut",
-            duration: 1}
-        );
-    },[isVisible])
-    useEffect(() =>{
-        gsap.to(backgroundRef.current, { 
-            opacity: isVisible? 0.75 : 0,
-            ease:"sine.inOut",
-            duration: 2}
-        );
-    },[isVisible])
+    // useEffect(() =>{
+    //     gsap.to(backgroundRef.current, { 
+    //         opacity: isVisible? 0.75 : 0,
+    //         ease:"sine.inOut",
+    //         duration: 2}
+    //     );
+    // },[isVisible])
     return(
         <>
-            <div className="absolute w-full h-full bg-background opacity-70 mt-36" ref = {backgroundRef} ></div>
-            <div className="relative ml-10 mr-10" ref={projectRef}>
+            {/* <div className="absolute w-full bg-background opacity-70 mt-36" ref = {backgroundRef} style={{height : "10000rem"}}></div> */}
+            <div className="relative h-full ml-10 mr-10" ref={projectRef} style={{height : "10000rem"}}>
                 <br></br>
                 <br></br>
                 <span 
@@ -46,7 +39,7 @@ function Project(){
                 <br></br>
                 <br></br>
                 <br></br>
-                <div className=" relative w-full flex space-x-56"> 
+                <div className=" relative w-full flex space-x-40"> 
                     <div className="absolute w-1/2 flex-row">
                         <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
                         <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
@@ -55,10 +48,23 @@ function Project(){
                         <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
                         <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
                         <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
                     </div>
-                    <div className="absolute translate-x-1/2 flex flex-col">
-                        <div className="-translate-x-10">
-                        <ProjectPanel images={images} />
+                    <div className="absolute translate-x-1/2 translate-y-1/2 flex flex-col">
+                        <div className="-translate-x-14 ">
                         <ProjectPanel images={images} />
                         </div>
                     </div>

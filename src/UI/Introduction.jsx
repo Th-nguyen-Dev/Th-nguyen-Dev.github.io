@@ -22,7 +22,7 @@ function Introduction() {
 return (
     <>
             <div className='w-1/2 h-auto' ref={introRef}>
-                <div className="relative w-fit text-white right-10 mr-20 ml-20 " style={{marginTop:'18rem'}}>
+                <div className="relative w-fit text-white right-10 mr-20 ml-20 " style={{marginTop:'10rem'}}>
                 <h1>
                     <p className = "text-7xl mb-1">
                         <strong
