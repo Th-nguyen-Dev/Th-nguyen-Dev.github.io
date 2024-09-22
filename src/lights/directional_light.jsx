@@ -29,9 +29,7 @@ function DirectionalLights() {
                     gsap.registerPlugin(PixiPlugin);
                     PixiPlugin.registerPIXI(PIXI);
                     let tl = gsap.timeline();
-                    let currentColor = light.color.getHSL({});
-                    let currentColorToString = { value: `hsl(${currentColor.h * 360}, ${currentColor.s * 100}%, ${currentColor.l * 100}%)` };
-                    console.log(currentColorToString.value);
+
                     tl.to(light.position, {
                         x: projectToggle ? newPosition.x : lightPosition.x,
                         y: projectToggle ? newPosition.y : lightPosition.y,
@@ -39,21 +37,29 @@ function DirectionalLights() {
                         duration: 1,
                         ease: "sine.inOut"
                     });
+                }
+            });
+        }
+    }, [projectToggle]);
+    useEffect(() => {
+        if (directionalLightRef.current && directionalLightRef.current.length > 0) {
+            directionalLightRef.current.forEach(light => {
+                if (light) {
+                    let currentColor = light.color.getHSL({});
+                    let currentColorToString = { value: `hsl(${currentColor.h * 360}, ${currentColor.s * 100}%, ${currentColor.l * 100}%)` };
+                    let tl = gsap.timeline();
+
                     tl.to(currentColorToString, {
-                        pixi: { value: projectToggle ?"hsl(35, 89%, 81%)"  : "hsl(0, 0%, 100%)" },
-                        duration: 0.5,
-                        delay: 0,
-                        onUpdate: () =>{
+                        pixi: { value: projectToggle ? "hsl(35, 89%, 81%)" : "hsl(0, 0%, 100%)" },
+                        duration: 1,
+                        onUpdate: () => {
                             const hslValue = { h: 0, s: 0, l: 0 };
                             currentColorToString.value.replace(/hsla?\(([^,]+),([^,]+)%,([^,]+)%[^)]*\)/, (_, h, s, l) => {
-                                console.log("hslValue", h, s, l);
                                 hslValue.h = parseFloat(h) / 360;
                                 hslValue.s = parseFloat(s) / 100;
                                 hslValue.l = parseFloat(l) / 100;
                             });
                             light.color.setHSL(hslValue.h, hslValue.s, hslValue.l);
-                        },
-                        onComplete: () => {
                         },
                         ease: "sine.inOut"
                     });

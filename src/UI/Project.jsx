@@ -41,29 +41,9 @@ function Project(){
                 <br></br>
                 <div className=" relative w-full flex space-x-40"> 
                     <div className="absolute w-1/2 flex-row">
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
-                        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h1> <br></br>
+                        <h1>Underconstruction</h1> <br></br>
                     </div>
-                    <div className="absolute translate-x-1/2 translate-y-1/2 flex flex-col">
+                    <div className="absolute translate-x-1/2 flex flex-col">
                         <div className="-translate-x-14 ">
                         <ProjectPanel images={images} />
                         </div>

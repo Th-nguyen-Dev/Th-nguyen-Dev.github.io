@@ -39,9 +39,7 @@ function EarthCities() {
                         #include <dithering_fragment>
                         vec3 outgoingLightNoEmissive = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse;
                         float luminanceRe = luminanceCal(outgoingLightNoEmissive);
-                        if (luminanceRe > 0.035) {
-                            gl_FragColor.a *= 0.0;
-                        }`
+                        gl_FragColor.a *= clamp(1.0 - luminanceRe*2.2,0.0,1.0);`
                     }
                 }}
             />

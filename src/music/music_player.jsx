@@ -14,10 +14,10 @@ function MusicPlayer() {
         }
     }, [play]);
 return (
-    <>
+    <div className='absoulute flex items-center justify-center'>
         <button
             onClick={() => setPlay(!play)}
-            className='z-50 bottom-4 right-1/2 absolute select-none inline-flex items-center justify- whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-black'
+            className='z-50 bottom-4 absolute select-none inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-black'
         >
         Play
         </button>
@@ -29,7 +29,7 @@ return (
             volume={0.15}
             className='z-50 absolute hidden'
         />
-    </>
+    </div>
 );
 }
 
