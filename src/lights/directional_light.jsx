@@ -9,7 +9,7 @@ function DirectionalLights() {
     const directionalLightRef = useRef([]);
     const { addLight } = useContext(WebContext);
     const projectToggle = useSelector(state => state.projectToggle.value);
-    const lightPosition = new THREE.Vector3(5, 10, 7.5);
+    const lightPosition = new THREE.Vector3(7, 10, 10);
     useEffect(() => {
         if (directionalLightRef.current && directionalLightRef.current.length > 0){
             directionalLightRef.current.forEach(light => addLight(light));
@@ -23,7 +23,7 @@ function DirectionalLights() {
                 if (light) {
                     const newPosition = {
                         x: lightPosition.x*Math.cos(angle) - lightPosition.z*Math.sin(angle),
-                        y: lightPosition.y-4,
+                        y: lightPosition.y-6,
                         z: lightPosition.z*Math.cos(angle) + lightPosition.x*Math.sin(angle),
                     };
                     gsap.registerPlugin(PixiPlugin);

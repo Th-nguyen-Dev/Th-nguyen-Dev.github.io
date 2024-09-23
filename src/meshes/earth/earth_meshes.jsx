@@ -1,5 +1,6 @@
-import React, { useRef, useEffect, useMemo } from 'react';
+import React, { useRef, useEffect, useMemo, Suspense } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { Loader } from '@react-three/drei';
 import { useSelector } from 'react-redux';
 import * as THREE from 'three';
 
@@ -31,14 +32,14 @@ function EarthMeshes(props) {
         };
     }, [width, height]);
 
-    return ( useMemo(() => (
-        <group ref={meshRef} {...props}>
-        <group ref={earthRef} >
-            <EarthMeshesPhysical />
-        </group>
-        <EarthMeshesAtmosphere />
-        </group>
-    ),[props]))
+    return (
+            <group ref={meshRef} {...props}>
+            <group ref={earthRef} >
+                <EarthMeshesPhysical />
+            </group>
+            <EarthMeshesAtmosphere />
+            </group>
+    )
 }
 
 export default EarthMeshes;

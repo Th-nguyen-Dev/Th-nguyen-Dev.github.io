@@ -82,7 +82,7 @@ function OfficialCamera() {
         gsap.to(OfficialCameraRef.current.position,
             {
             x: destination.x,
-            y: destination.y + (3-destination.y),
+            y: destination.y + (2.9-destination.y),
             z: destination.z,
             ease: "sine.inOut",
             duration: 1,
