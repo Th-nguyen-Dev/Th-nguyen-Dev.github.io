@@ -11,7 +11,7 @@ export default function FakeLoadScreen() {
         const tl = gsap.timeline();
         tl.to(temp, {
             value: 100,
-            duration: 2.5,
+            duration: 3.0,
             onUpdate: () => {
                 setProgress(temp.value);
             }

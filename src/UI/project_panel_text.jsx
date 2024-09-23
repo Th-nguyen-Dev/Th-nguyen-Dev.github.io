@@ -24,8 +24,8 @@ function ProjectPanelText({ title, projectType, date, progress, description, pro
             gsap.to(descriptionRef.current, {
                 display: show ? "none" : "block",
                 opacity: show ? 0 : 1,
-                duration: 0.5,
-                ease: "sine.inOut",
+                duration: 0.4,
+                ease: "sine",
             });
         }
     };
@@ -53,7 +53,7 @@ function ProjectPanelText({ title, projectType, date, progress, description, pro
                 <Progress value={progressValue} className="w-full h-4" />
                 <br />
                 <div style={{display:"none", opacity:"0%"}} ref={descriptionRef}>
-                    <p>{description}</p>
+                    <p className="text-2xl">{description}</p>
                 </div>
             </div>
         </div>

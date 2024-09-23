@@ -43,7 +43,7 @@ function Project() {
                 <br />
                 <span className="text-7xl font-bold">Projects</span>
                 <br />
-                <div className="gap-10 lg:columns-2 md:columns-1 flex-nowrap break-inside-avoid transition-all">
+                <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
                     <div className="Portfolio Website">
                         <ProjectPanelText
                             title="Node-Based Material Creator For Three.js"
@@ -123,7 +123,6 @@ function Project() {
                         />
                     </div>
                 </div>
-
             </div>
         </>
     );
