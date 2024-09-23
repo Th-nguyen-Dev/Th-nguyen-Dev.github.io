@@ -9,22 +9,24 @@ import redux_store from './context/redux_store.jsx';
 import { Provider } from 'react-redux';
 import Header from './UI/Header.jsx';
 import './index.css';
-
+import { Loader } from '@react-three/drei';
+import FakeLoadScreen from './UI/FakeLoadScreen.jsx';
 const App = () => {
   return (
     <React.StrictMode>
-      <div className="absolute top-0 left-0  w-full h-full ">
-        <WebProvider>
-          <Provider store={redux_store}>
-            <Suspense fallback={null}>
-              <OfficialExport />
-              {/* <EditorExport /> */}
-            </Suspense>
-          <MusicPlayer />
-          <Header />
-          </Provider>
-        </WebProvider>
-      </div>
+        <div className="absolute top-0 left-0  w-full h-full ">
+          <WebProvider>
+            <Provider store={redux_store}>
+                <OfficialExport />
+                {/* <EditorExport /> */}
+            <MusicPlayer />
+            <Header />
+            <FakeLoadScreen />
+            </Provider>
+          </WebProvider>
+          
+        </div>
+        
     </React.StrictMode>
   );
 };
