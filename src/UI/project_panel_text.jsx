@@ -45,7 +45,9 @@ function ProjectPanelText({ title, projectType, date, progress, description, pro
                         <h2>{progress}</h2>
                     </div>
                     <div className="flex-grow"></div>
-                    <Button variant={"outline"} className="h-8 text-lg z-50" onClick={onClick}>More</Button>
+                    <Button variant={"outline"} className="h-8 text-lg z-50" onClick={onClick}>
+                        {show ? "Hide" : "Show"}
+                    </Button>
                 </div>
                 <br />
                 <Progress value={progressValue} className="w-full h-4" />
