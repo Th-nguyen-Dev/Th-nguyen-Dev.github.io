@@ -9,7 +9,7 @@ import PostProcessing from '../postprocesses/effect_composer';
 import EarthMeshes from '../meshes/earth/earth_meshes';
 import OfficialCamera from '../cameras/official_camera';
 import EarthClippingMask from '@/meshes/earth/earth_clipping_mask';
-import { Environment } from '@react-three/drei'
+// import { Environment } from '@react-three/drei'
 
 import Introduction from '@/UI/Introduction';
 import Timeline from '@/UI/Timeline';
@@ -17,7 +17,7 @@ import Project from '@/UI/Project';
 
 import { Provider } from 'react-redux';
 import redux_store from '@/context/redux_store.jsx';
-import background from '/textures/background_2.jpg';
+// import background from '/textures/background_2.jpg';
 import gsap from 'gsap';
 
 export function PerformanceConfig(){
@@ -60,7 +60,7 @@ function OfficialExport() {
                                     <div className='h-full'></div>
                                     <Project/>
                                 </Provider>
-                                    <Environment files={background} background /> 
+                                    {/* <Environment files={background} background />  */}
                                 </Scroll>
                             </ScrollControls>
                             <Preload all/>

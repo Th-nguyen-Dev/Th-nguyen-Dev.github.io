@@ -36,7 +36,7 @@ function ProjectPanelText({ title, projectType, date, progress, description, pro
         <br />
         <div className="break-inside-avoid" ref={panelRef}>
             <div style={{ width: "100%" }}>
-                <h1 className="font-semibold">{title}</h1>
+                <h1 className="font-bold underline-offset-auto">{title}</h1>
                 <br />
                 <div className="flex flex-row text-xl items-center flex-nowrap">
                     <div className="flex flex-row space-x-8 flex-nowrap">
