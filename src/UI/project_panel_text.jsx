@@ -24,8 +24,8 @@ function ProjectPanelText({ title, projectType, date, progress, description, pro
             gsap.to(descriptionRef.current, {
                 display: show ? "none" : "block",
                 opacity: show ? 0 : 1,
-                duration: 0.5,
-                ease: "sine.inOut",
+                duration: 0.4,
+                ease: "sine",
             });
         }
     };
