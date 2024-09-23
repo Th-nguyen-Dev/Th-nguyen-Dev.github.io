@@ -53,7 +53,7 @@ function ProjectPanelText({ title, projectType, date, progress, description, pro
                 <Progress value={progressValue} className="w-full h-4" />
                 <br />
                 <div style={{display:"none", opacity:"0%"}} ref={descriptionRef}>
-                    <p>{description}</p>
+                    <p className="text-2xl">{description}</p>
                 </div>
             </div>
         </div>
