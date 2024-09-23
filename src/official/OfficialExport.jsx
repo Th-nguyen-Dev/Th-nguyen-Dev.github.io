@@ -40,7 +40,11 @@ function OfficialExport() {
         <>
             <Canvas ref={canvasRef} className="canvas">
                 <color attach="background" args={['#000000']} /> 
-                            <ScrollControls pages={20} > 
+                            <ScrollControls
+                                damping={0.1}
+                                prepend={true}
+                                pages={30}
+                            > 
                                 <AmbientLights/>
                                 <DirectionalLights/>
                                 <EarthMeshes/>
