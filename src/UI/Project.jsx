@@ -11,7 +11,6 @@ const images = Object.values(import.meta.glob('/public/project_panels/New/*.jpg'
 
 function Project() {
     const projectRef = useRef();
-    const backgroundRef = useRef();
     const isVisible = useIsVisible(projectRef);
     const dispatch = useDispatch();
 
@@ -20,7 +19,6 @@ function Project() {
     }, [isVisible, dispatch]);
 
     return (
-        <>
             <div
                 className="relative ml-10 mr-10"
                 ref={projectRef}
@@ -128,7 +126,6 @@ function Project() {
                     </div>
                 </div>
             </div>
-        </>
     );
 }
 

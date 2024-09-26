@@ -6,15 +6,19 @@ import * as PIXI from 'gsap/src/PixiPlugin';
 import * as THREE from 'three';
 import { WebContext } from '../context/web_context';
 function DirectionalLights() {
+    gsap.registerPlugin(PixiPlugin);
+    PixiPlugin.registerPIXI(PIXI);
     const directionalLightRef = useRef([]);
     const { addLight } = useContext(WebContext);
     const projectToggle = useSelector(state => state.projectToggle.value);
+    const projectGraphicToggle = useSelector(state => state.projectGraphicToggle.value);
     const lightPosition = new THREE.Vector3(7, 10, 10);
     useEffect(() => {
         if (directionalLightRef.current && directionalLightRef.current.length > 0){
             directionalLightRef.current.forEach(light => addLight(light));
         }
     } , [directionalLightRef.current]);
+
 
     useEffect(() => {
         const angle = 2.35;
@@ -23,24 +27,23 @@ function DirectionalLights() {
                 if (light) {
                     const newPosition = {
                         x: lightPosition.x*Math.cos(angle) - lightPosition.z*Math.sin(angle),
-                        y: lightPosition.y-6,
+                        y: lightPosition.y,
                         z: lightPosition.z*Math.cos(angle) + lightPosition.x*Math.sin(angle),
                     };
-                    gsap.registerPlugin(PixiPlugin);
-                    PixiPlugin.registerPIXI(PIXI);
-                    let tl = gsap.timeline();
 
+                    let tl = gsap.timeline();
+                    const toggle = (projectToggle || projectGraphicToggle);
                     tl.to(light.position, {
-                        x: projectToggle ? newPosition.x : lightPosition.x,
-                        y: projectToggle ? newPosition.y : lightPosition.y,
-                        z: projectToggle ? newPosition.z : lightPosition.z,
+                        x: toggle? newPosition.x : lightPosition.x,
+                        y: toggle ? newPosition.y : lightPosition.y,
+                        z: toggle ? newPosition.z : lightPosition.z,
                         duration: 1,
                         ease: "sine.inOut"
                     });
                 }
             });
         }
-    }, [projectToggle]);
+    }, [projectToggle, projectGraphicToggle]);
     useEffect(() => {
         if (directionalLightRef.current && directionalLightRef.current.length > 0) {
             directionalLightRef.current.forEach(light => {
@@ -48,7 +51,6 @@ function DirectionalLights() {
                     let currentColor = light.color.getHSL({});
                     let currentColorToString = { value: `hsl(${currentColor.h * 360}, ${currentColor.s * 100}%, ${currentColor.l * 100}%)` };
                     let tl = gsap.timeline();
-
                     tl.to(currentColorToString, {
                         pixi: { value: projectToggle ? "hsl(35, 89%, 81%)" : "hsl(0, 0%, 100%)" },
                         duration: 1,

@@ -2,14 +2,19 @@ import React, { useState, useRef, useCallback, useEffect } from "react";
 import ProjectPanel from "./project_panel";
 import ProjectPanelText from "./project_panel_text";
 import { useDispatch } from "react-redux";
-import { setProjectToggle } from "@/context/reducer/project_toggle";
+import { setProjectGraphicToggle } from "@/context/reducer/project_graphic_toggle";
 import { useIsVisible } from "@/Hook/useIsVisible";
 import { Progress } from "@/components/ui/progress";
 import gsap from "gsap";
 
 function ProjectGraphic() {
     const projectRef = useRef();
-    const backgroundRef = useRef();
+    const isVisible = useIsVisible(projectRef);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(setProjectGraphicToggle(isVisible));
+    }, [isVisible, dispatch]);
 
     return (
         <>

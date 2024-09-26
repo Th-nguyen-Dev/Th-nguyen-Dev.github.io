@@ -11,13 +11,16 @@ import gsap from "gsap";
 
 function Background() {
     const backgroundRef = useRef();
-    const projectToggle = useSelector((state) => state.projectToggle);
-    const projectGraphicToggle = useSelector((state) => state.projectGraphicToggle);
-    console.log(projectToggle, projectGraphicToggle);   
+    const projectToggle = useSelector((state) => state.projectToggle.value);
+    const projectGraphicToggle = useSelector((state) => state.projectGraphicToggle.value);
+ 
 
     useEffect(() => {
+        const lowerHalf = projectToggle || projectGraphicToggle;
+        console.log(projectToggle, "and", projectGraphicToggle);  
+        console.log(lowerHalf);
         gsap.to(backgroundRef.current, {
-            opacity: (projectToggle || projectGraphicToggle) ? 0 : 0.65,
+            opacity: lowerHalf ? 0.6 : 0,
             ease: "sine.inOut",
             duration: 1.5
         });
