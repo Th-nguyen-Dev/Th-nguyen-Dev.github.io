@@ -39,15 +39,28 @@ function Project() {
                 ref={projectRef}
                 style={{ height: "90000rem" }}
             >
-                <br />
-                <br />
+                <br /><br />
                 <span className="text-7xl font-bold">Projects</span>
-                <br />
+                <br /><br /><br />
+                <div className="Portfolio Website">
+                        <ProjectPanelText
+                            title="Node-Based Material Creator For Three.js"
+                            projectType="Capstone Project"
+                            date="2024-2025"
+                            progress="Progress: Ideation"
+                            progressValue={5}
+                            description="This is the capstone project I will be doing for my senior year. The idea came when I was writing and testing
+                            the shader code for many custom materials used to create the earth you are seeing now. The process was extremely tedious
+                            and time-consuming, which can be shortened through modern material methods such as a node-based material creator like that
+                            of Blender and other 3D editors."
+                        />
+                </div>
+                <br/>    
                 <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
                     <div className="Portfolio Website">
                         <ProjectPanelText
                             title="Node-Based Material Creator For Three.js"
-                            projectType="Capstone Project"
+                            projectType="Personal Project"
                             date="2024-2025"
                             progress="Progress: Ideation"
                             progressValue={10}

@@ -46,7 +46,7 @@ function EarthMeshesPhysical() {
             onUpdate: () => {
                 returnToBase.current = false;
                 const quaternionStep = new THREE.Quaternion().slerpQuaternions(startQuaternion, quaternion, temp.value);
-                meshRef.current.quaternion.slerp(quaternionStep,1);
+                meshRef.current.quaternion.set(quaternionStep.x, quaternionStep.y, quaternionStep.z, quaternionStep.w);
             },
             onComplete: () => {
                 if (!toggleDes){
@@ -57,6 +57,9 @@ function EarthMeshesPhysical() {
     };
     useEffect(() => {
         if (toggleDes){
+            if (returnToBase.current){
+                lastQuaternion.current = meshRef.current.quaternion.clone();
+            }
             rotateEase(selectedQuaterion.current);
         }
         else{
@@ -66,7 +69,7 @@ function EarthMeshesPhysical() {
 
 
     const handleFrame = () => {
-        if (returnToBase.current){
+        if (returnToBase.current){    
             meshRef.current.quaternion.multiply(rotateEarth);
         }
     };

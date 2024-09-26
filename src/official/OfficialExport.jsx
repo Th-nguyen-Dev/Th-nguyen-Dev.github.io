@@ -61,6 +61,7 @@ function OfficialExport() {
                                     <Project/>
                                 </Provider>
                                     {/* <Environment files={background} background />  */}
+                                    <Stats/>    
                                 </Scroll>
                             </ScrollControls>
                             <Preload all/>

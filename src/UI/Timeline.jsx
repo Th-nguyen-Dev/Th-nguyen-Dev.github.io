@@ -65,7 +65,7 @@ return (
                     buttonText={"Houston, TX"}
                     mainText={" In late 2019, I traveled to Houston, Texas as an international student. The transition from a small city in Vietnam to Texas during the COVID-19 pandemic was a huge cultural and mental shock. I am grateful for the friends I made in Houston and online who helped me through this tough time."}
                     milestones={[
-                        {title: "High School", location: "The Village School", date: "2019-2021"},
+                        {title: "High School", location: "The Village School", date: "2019-2020"},
                         {title: "Second Camera Operator Volunteer", location: "Sky Studio", date: "2019-2021"}
                     ]}
                     />
