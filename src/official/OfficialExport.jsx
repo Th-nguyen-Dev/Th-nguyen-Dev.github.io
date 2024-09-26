@@ -14,6 +14,8 @@ import EarthClippingMask from '@/meshes/earth/earth_clipping_mask';
 import Introduction from '@/UI/Introduction';
 import Timeline from '@/UI/Timeline';
 import Project from '@/UI/Project';
+import ProjectGraphic from '@/UI/ProjectGraphic';
+import Background from '@/UI/Background';
 
 import { Provider } from 'react-redux';
 import redux_store from '@/context/redux_store.jsx';
@@ -58,10 +60,13 @@ function OfficialExport() {
                                     <div className='h-full'></div>
                                     <Timeline/>
                                     <div className='h-full'></div>
+                                    <Background/>
                                     <Project/>
+                                    <div className='h-full'></div>
+                                    <ProjectGraphic/>
                                 </Provider>
                                     {/* <Environment files={background} background />  */}
-                                    <Stats/>    
+                                    {/* <Stats/>     */}
                                 </Scroll>
                             </ScrollControls>
                             <Preload all/>

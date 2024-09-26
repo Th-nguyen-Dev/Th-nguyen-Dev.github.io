@@ -7,23 +7,16 @@ import { useIsVisible } from "@/Hook/useIsVisible";
 import { Progress } from "@/components/ui/progress";
 import gsap from "gsap";
 
-const images = Object.values(import.meta.glob('/public/project_panels/New/*.jpg', { eager: true })).map(mod => mod.default);
-
-function Project() {
+function ProjectGraphic() {
     const projectRef = useRef();
     const backgroundRef = useRef();
-    const isVisible = useIsVisible(projectRef);
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(setProjectToggle(isVisible));
-    }, [isVisible, dispatch]);
 
     return (
         <>
             <div
                 className="relative ml-10 mr-10"
                 ref={projectRef}
+                style={{ height: "90000rem" }}
             >
                 <br /><br />
                 <span className="text-7xl font-bold">Projects</span>
@@ -132,4 +125,4 @@ function Project() {
     );
 }
 
-export default Project;
+export default ProjectGraphic;
