@@ -56,10 +56,10 @@ function OfficialCamera() {
         }
     },[timelineIntroToggle]);
     useEffect(() => {
-        if (projectToggle || projectGraphicToggle) {
+        if (projectToggle) {
             const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
             gsap.to(currentFov, {
-                value: 120,
+                value: 130,
                 ease: "sine.inOut",
                 duration: 1,
                 onUpdate: () => {
@@ -68,7 +68,21 @@ function OfficialCamera() {
             });
         }
 
-    },[projectToggle,projectGraphicToggle]);
+    },[projectToggle]);
+    useEffect(() => {
+        if (projectGraphicToggle) {
+            const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
+            gsap.to(currentFov, {
+                value: 100,
+                ease: "sine.inOut",
+                duration: 1,
+                onUpdate: () => {
+                    OfficialCameraRef.current.setFocalLength(currentFov.value);
+                }
+            });
+        }
+
+    },[projectGraphicToggle]);
 
 
     const centerCamera = () => {
@@ -93,27 +107,24 @@ function OfficialCamera() {
         if (projectToggle) {
             gsap.to(OfficialCameraRef.current.position,
                 {
-                    y: position.clone().y + 2.9,
+                    y: position.clone().y + 3,
                     ease: "sine.inOut",
                     duration: 1,
                 }
             )
         }
     },[projectToggle]);
-    // useEffect(() => {
-    //     if (projectGraphicToggle) {
-    //         gsap.to(OfficialCameraRef.current.position,
-    //             {
-    //                 y: position.clone().y - 2.9,
-    //                 ease: "sine.inOut",
-    //                 duration: 1,
-    //             }
-    //         )
-    //     }
-    // },[projectGraphicToggle]);
     useEffect(() => {
-        
-    },[projectGraphicToggle]);  
+        if (projectGraphicToggle) {
+            gsap.to(OfficialCameraRef.current.position,
+                {
+                    y: position.clone().y,
+                    ease: "sine.inOut",
+                    duration: 1,
+                }
+            )
+        }
+    },[projectGraphicToggle]);
     // useEffect(() => {
     //     if (!projectToggle && !introToggle && !timelineIntroToggle) {
     //         const currentFov = {value : OfficialCameraRef.current.getFocalLength()};

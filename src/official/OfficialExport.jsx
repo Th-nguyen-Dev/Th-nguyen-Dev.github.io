@@ -44,8 +44,9 @@ function OfficialExport() {
                 <color attach="background" args={['#000000']} /> 
                             <ScrollControls
                                 damping={0.1}
-                                prepend={true}
+                                prepend={false}
                                 pages={30}
+                                enabled={true}
                             > 
                                 <AmbientLights/>
                                 <DirectionalLights/>
