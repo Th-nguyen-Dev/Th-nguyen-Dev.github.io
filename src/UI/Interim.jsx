@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from "react";
 import { useIsVisible } from "@/Hook/useIsVisible";
 import gsap from "gsap";
-function Interim({text},props){
+function Interim({text, helpText},props){
     const interimRef = useRef();
     const isVisible = useIsVisible(interimRef);
     useEffect(() => {
@@ -14,8 +14,9 @@ function Interim({text},props){
     }, [isVisible]);
     return(
     <div className='h-screen flex items-center justify-center select-none' {...props} >
-        <div className="h-2/3 items-center justify-center flex" ref={interimRef}>
-            <div className='text-center font-thin text-5xl'>{text}</div>
+        <div className="h-2/3 items-center justify-center flex flex-col" ref={interimRef}>
+            <div className='text-center font-thin text-5xl mb-4'>{text}</div>
+            <div className='text-center font-normal text-2xl'>{helpText}</div>
         </div>
     </div>
     )
