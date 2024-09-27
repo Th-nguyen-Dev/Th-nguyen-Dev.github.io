@@ -16,7 +16,7 @@ function EarthMeshes(props) {
     
     useFrame(() => {
         if (earthRef.current) {
-            earthRef.current.rotation.y = THREE.MathUtils.lerp(earthRef.current.rotation.y, mouse.current.x * 0.2, 0.1);
+            earthRef.current.rotation.y = THREE.MathUtils.lerp(earthRef.current.rotation.y, mouse.current.x * 0.1, 0.1);
         }
     });
 

@@ -18,7 +18,7 @@ function EarthCloud(){
     useFrame(() => {
 
         if (cloudRef.current) {
-            cloudRef.current.rotation.y += Math.PI / 3650 / 2;
+            cloudRef.current.rotation.y += Math.PI / 3650 / 3.5;
         }
     });
     const cloudTexture = new THREE.TextureLoader().load(cloud);

@@ -29,7 +29,7 @@ function EarthMeshesPhysical() {
     }, [toggleDes]);
 
     const lastQuaternion = useRef(new THREE.Quaternion());
-    const rotateEarth = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), 0.001);
+    const rotateEarth = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), 0.0004);
     const returnToBase = useRef(true);
     const startRotation = useRef(false);
 
