@@ -86,8 +86,7 @@ function EarthMeshesPhysical() {
             <group ref={meshRef}>
                 
                 <EarthCities />
-                {/* <EarthWeather /> */}
-                <Earth />
+                <EarthWeather />
                 <EarthCloud />
                 <TestCoordinate />
             </group>
