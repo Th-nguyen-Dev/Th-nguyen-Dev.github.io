@@ -10,7 +10,7 @@ function PlayMode(){
         dispatch(setPlaymodeToggle(isVisible));
     }, [isVisible]);
     return (
-        <div className='h-screen w-screen items-center justify-center flex select-none' ref={playModeRef}>
+        <div className=' items-center justify-center flex select-none' ref={playModeRef} style={{width:"200vh", height:"200vh"}}>
         </div>
     )
 } 
