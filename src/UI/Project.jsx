@@ -11,7 +11,6 @@ const images = Object.values(import.meta.glob('/public/project_panels/New/*.jpg'
 
 function Project() {
     const projectRef = useRef();
-    const backgroundRef = useRef();
     const isVisible = useIsVisible(projectRef);
     const dispatch = useDispatch();
 
@@ -19,35 +18,36 @@ function Project() {
         dispatch(setProjectToggle(isVisible));
     }, [isVisible, dispatch]);
 
-    useEffect(() => {
-        gsap.to(backgroundRef.current, {
-            opacity: isVisible ? 0.65 : 0,
-            ease: "sine.inOut",
-            duration: 1.5
-        });
-    }, [isVisible]);
-
     return (
-        <>
-            <div
-                className="absolute w-full bg-background -translate-y-2/3 opacity-70 mt-36 -z-50"
-                ref={backgroundRef}
-                style={{ height: "90000rem" }}
-            ></div>
             <div
                 className="relative ml-10 mr-10"
                 ref={projectRef}
-                style={{ height: "90000rem" }}
             >
-                <br />
-                <br />
+                <br /><br />
                 <span className="text-7xl font-bold">Projects</span>
-                <br />
+                <br /><br /><br />
+                <div className="Portfolio Website">
+                {/* <div className="w-full items-center justify-center flex">
+                    <div className="w-full">
+                        <ProjectPanelText
+                                title={<p>VR Smoke Simulation - <br></br> Collaboration with ARCortex</p>}
+                                projectType="Capstone Project"
+                                date="2024-2025"
+                                progress="Progress: Ideation"
+                                progressValue={5}
+                                description="This is the capstone project I will be doing for my senior year. While the details of project still needs
+                                to be discussed with the sponsoring companny, ARCortex, the project will involve creating a VR simulation of smoke for
+                                Androids and IOS devices. The project will be written in Unity and C# as a module for ARCortex's existing VR simulation."
+                            />
+                    </div>
+                </div> */}
+                </div>
+                <br/>    
                 <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
                     <div className="Portfolio Website">
                         <ProjectPanelText
                             title="Node-Based Material Creator For Three.js"
-                            projectType="Capstone Project"
+                            projectType="Personal Project"
                             date="2024-2025"
                             progress="Progress: Ideation"
                             progressValue={10}
@@ -124,7 +124,6 @@ function Project() {
                     </div>
                 </div>
             </div>
-        </>
     );
 }
 

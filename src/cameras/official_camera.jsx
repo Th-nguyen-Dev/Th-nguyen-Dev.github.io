@@ -10,8 +10,11 @@ function OfficialCamera() {
     const OfficialCameraRef = useRef();
     const introToggle = useSelector((state) => state.introToggle.value);
     const projectToggle = useSelector((state) => state.projectToggle.value);
+    const projectGraphicToggle = useSelector((state) => state.projectGraphicToggle.value);
     const timelineIntroToggle = useSelector((state) => state.timelineIntroToggle.value);
-    const position = new THREE.Vector3(32.00, 0, 11.50);
+    const playmodeToggle = useSelector((state) => state.playmodeToggle.value);  
+
+    const position = new THREE.Vector3(32.00, 0, 12.25);
     const rotation = new THREE.Euler(0, 1.36, 0);
     const lookDirection = useMemo(() => {
         if (OfficialCameraRef.current) {
@@ -27,48 +30,17 @@ function OfficialCamera() {
         return rightDirection.clone().cross(lookDirection).normalize();
     }, [rightDirection, lookDirection]);
 
-    useEffect(() => {
-        if (introToggle) {
-            const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
-            gsap.to(currentFov, {
-                value: 55,
-                ease: "sine.inOut",
-                duration: 1,
-                onUpdate: () => {
-                    OfficialCameraRef.current.setFocalLength(currentFov.value);
-                }
-            });
-        }
-    },[introToggle]);
-    useEffect(() => {
-        if (timelineIntroToggle) {
-            const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
-            gsap.to(currentFov, {
-                value: 90,
-                ease: "sine.inOut",
-                duration: 1,
-                onUpdate: () => {
-                    OfficialCameraRef.current.setFocalLength(currentFov.value);
-                }
-            });
-        }
-    },[timelineIntroToggle]);
-    useEffect(() => {
-        if (projectToggle) {
-            const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
-            gsap.to(currentFov, {
-                value: 120,
-                ease: "sine.inOut",
-                duration: 1,
-                onUpdate: () => {
-                    OfficialCameraRef.current.setFocalLength(currentFov.value);
-                }
-            });
-        }
-
-    },[projectToggle]);
-
-
+    const changeFov = (fov) => {
+        const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
+        gsap.to(currentFov, {
+            value: fov,
+            ease: "sine.inOut",
+            duration: 1,
+            onUpdate: () => {
+                OfficialCameraRef.current.setFocalLength(currentFov.value);
+            }
+        });
+    }
     const centerCamera = () => {
         let destination = position.clone();
         const distance = OfficialCameraRef.current.position.distanceTo(new THREE.Vector3(0,0,0));
@@ -82,43 +54,101 @@ function OfficialCamera() {
         gsap.to(OfficialCameraRef.current.position,
             {
             x: destination.x,
-            y: destination.y + (2.9-destination.y),
             z: destination.z,
             ease: "sine.inOut",
             duration: 1,
         });
     }
+    const returnCamera = () => {
+        gsap.to(OfficialCameraRef.current.position,
+            {
+            x: position.clone().x,
+            y: position.clone().y,
+            z: position.clone().z,
+            ease: "sine.inOut",
+            duration: 1,
+        });
+    }
+
     useEffect(() => {
-        if (!projectToggle && !introToggle && !timelineIntroToggle) {
-            const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
-            gsap.to(currentFov, {
-                value:50,
-                ease: "sine.inOut",
-                duration: 1,
-                onUpdate: () => {
-                    OfficialCameraRef.current.setFocalLength(currentFov.value);
-                }
-            });
+        if (introToggle) {
+            changeFov(50);
+        }
+    },[introToggle]);
+    useEffect(() => {
+        if (timelineIntroToggle) {
+            changeFov(90);
+        }
+    },[timelineIntroToggle]);
+    useEffect(() => {
+        if (projectToggle) {
+            changeFov(130);
         }
 
     },[projectToggle]);
+    useEffect(() => {
+        if (projectGraphicToggle) {
+            changeFov(100)
+        }
+
+    },[projectGraphicToggle]);
+    useEffect(() => {  
+        changeFov(50);
+    }, []);    
+    useEffect(() => {
+        if (playmodeToggle) {
+            changeFov(55);
+        }
+    }
+    ,[playmodeToggle]);
+
+
+
+    useEffect(() =>{
+        if (projectToggle) {
+            gsap.to(OfficialCameraRef.current.position,
+                {
+                    y: position.clone().y + 3,
+                    ease: "sine.inOut",
+                    duration: 1,
+                }
+            )
+        }
+    },[projectToggle]);
+    useEffect(() => {
+        if (projectGraphicToggle) {
+            gsap.to(OfficialCameraRef.current.position,
+                {
+                    y: position.clone().y,
+                    ease: "sine.inOut",
+                    duration: 1,
+                }
+            )
+        }
+    },[projectGraphicToggle]);
+    // useEffect(() => {
+    //     if (!projectToggle && !introToggle && !timelineIntroToggle) {
+    //         const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
+    //         gsap.to(currentFov, {
+    //             value:50,
+    //             ease: "sine.inOut",
+    //             duration: 1,
+    //             onUpdate: () => {
+    //                 OfficialCameraRef.current.setFocalLength(currentFov.value);
+    //             }
+    //         });
+    //     }
+
+    // },[projectToggle]);
 
     useEffect(() => {
-        if (projectToggle) {
+        if (projectToggle || projectGraphicToggle || playmodeToggle) {
             centerCamera();
         }
         else{
-            gsap.to(OfficialCameraRef.current.position,
-                {
-                x: position.clone().x,
-                y: position.clone().y,
-                z: position.clone().z,
-                ease: "sine.inOut",
-                duration: 1,
-            });
+            returnCamera();
         }
-
-    }, [projectToggle, rightDirection]);
+    }, [projectToggle, projectGraphicToggle, playmodeToggle]);
     return (
         useMemo(() =>(
             <PerspectiveCamera 

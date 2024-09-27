@@ -82,7 +82,7 @@ function EarthWeather(){
                 bumpMap={earthBumpTexture}
                 specularMap={earthSpecularTexture}
                 bumpScale={100}
-                shininess={20}
+                shininess={80}
                 reflectivity={-0.001}
                 polygonOffset
                 polygonOffsetFactor={1} 

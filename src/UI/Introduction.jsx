@@ -21,8 +21,8 @@ function Introduction() {
     
 return (
     <>
-        <div className='relative w-1/2 h-auto top-1/4' ref={introRef}>
-            <div className="relative w-fit text-white right-10 mr-20 ml-20">
+        <div className='relative w-1/2 max-sm:w-full h-fit' ref={introRef}>
+            <div className="relative text-white ml-10 mr-10">
                 <h1>
                     <p className="text-7xl mb-1">
                         <strong
@@ -37,7 +37,7 @@ return (
                     </p> 
                 </h1>
                 <br></br>
-                <h2 className="text-xl">
+                <h2 className="text-xl font-extralight">
                     I am a full stack developer with a passion for designs and all things interactive. 
                     <br/>
                     <br/>
@@ -46,8 +46,6 @@ return (
                     I grew up with computers and technology, and have always been fascinated with the use of technology to create interactive experiences.
                     From video games to tools that allows for these creative experiences, I have always wanted to be at every step of the process.
                 </h2>
-                <br></br>
-                <br></br>
             </div>
         </div>
     </> 

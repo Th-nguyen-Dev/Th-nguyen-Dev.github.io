@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useContext, useMemo } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Bvh } from '@react-three/drei';
+import { Bvh, PresentationControls } from '@react-three/drei';
 import * as THREE from 'three';
 import { useControls } from 'leva';
 
@@ -46,7 +46,7 @@ function EarthMeshesPhysical() {
             onUpdate: () => {
                 returnToBase.current = false;
                 const quaternionStep = new THREE.Quaternion().slerpQuaternions(startQuaternion, quaternion, temp.value);
-                meshRef.current.quaternion.slerp(quaternionStep,1);
+                meshRef.current.quaternion.set(quaternionStep.x, quaternionStep.y, quaternionStep.z, quaternionStep.w);
             },
             onComplete: () => {
                 if (!toggleDes){
@@ -57,6 +57,9 @@ function EarthMeshesPhysical() {
     };
     useEffect(() => {
         if (toggleDes){
+            if (returnToBase.current){
+                lastQuaternion.current = meshRef.current.quaternion.clone();
+            }
             rotateEase(selectedQuaterion.current);
         }
         else{
@@ -66,13 +69,18 @@ function EarthMeshesPhysical() {
 
 
     const handleFrame = () => {
-        if (returnToBase.current){
+        if (returnToBase.current){    
             meshRef.current.quaternion.multiply(rotateEarth);
         }
     };
 
     useFrame(handleFrame);
     return useMemo(() => (
+        <PresentationControls
+            rotation={[0, 0, 0]}
+            snap={true}
+            speed={1.5}
+        >
         <Bvh firstHitOnly>
             <group ref={meshRef}>
                 <EarthCities />
@@ -81,6 +89,7 @@ function EarthMeshesPhysical() {
                 <TestCoordinate />
             </group>
         </Bvh>
+        </PresentationControls>
     ), []);
 
 }
