@@ -43,11 +43,10 @@ const headerItemIconStyle = "w-12 max-md:w-10 max-sm:w-6 h-fit justify-center tr
             <div className='absolute w-full h-16 max-sm:h-10 bg-background '></div>
             <Provider store={redux_store}>
                 <NavigationMenu className="justify-start select-none border-b-2">
-                    <NavigationMenuList>
+                    {/* <NavigationMenuList>
                             <NavigationMenuItem>
                                 <NavigationMenuLink 
                                     className={navigationMenuTriggerStyle()}
-
                                     onFocus={onSelect}>
                                     <div className={headerItemStyle}>
                                         Home
@@ -70,24 +69,26 @@ const headerItemIconStyle = "w-12 max-md:w-10 max-sm:w-6 h-fit justify-center tr
                                     </div> 
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
-                    </NavigationMenuList>
-                    <div className="max-w-full min-w-0 w-full"></div>
-                    <NavigationMenuList>
-                        <NavigationMenuItem>
+                    </NavigationMenuList> */}
+                    {/* <div className="max-w-full min-w-0 w-full"></div> */}
+                    <NavigationMenuList className="flex-row flex w-screen">
+                        <NavigationMenuItem className="w-full">
                             <NavigationMenuLink 
-                                className={navigationMenuTriggerStyle()} 
+                                className={navigationMenuTriggerStyle() + " w-full"} 
                                 href="https://github.com/Th-nguyen-Dev" 
                                 target="_blank" 
                                 onFocus={onSelect}
                                 onPointerOver={onPointerOver(setGithubColor)}
                                 onPointerOut= {onPointerOut(setGithubColor)}
                                 >
+                                <div className=" h-fit justify-center">
                                     <GithubReact fill={githubColor} className={headerItemIconStyle}></GithubReact>
+                                </div>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
-                        <NavigationMenuItem>
+                        <NavigationMenuItem className="w-full">
                             <NavigationMenuLink 
-                                className={navigationMenuTriggerStyle()} 
+                                className={navigationMenuTriggerStyle()+ " w-full"} 
                                 href="https://www.linkedin.com/in/hung-nguyen-dev/" 
                                 target="_blank" 
                                 onFocus={onSelect}
@@ -98,9 +99,9 @@ const headerItemIconStyle = "w-12 max-md:w-10 max-sm:w-6 h-fit justify-center tr
                                 </div>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
-                        <NavigationMenuItem>
+                        <NavigationMenuItem className="w-full">
                             <NavigationMenuLink 
-                                className={navigationMenuTriggerStyle()} 
+                                className={navigationMenuTriggerStyle()+ " w-full"} 
                                 href="https://www.behance.net/ryannguyen35" 
                                 target="_blank" 
                                 onFocus={onSelect}
@@ -114,8 +115,8 @@ const headerItemIconStyle = "w-12 max-md:w-10 max-sm:w-6 h-fit justify-center tr
                     </NavigationMenuList>
                 </NavigationMenu>
             </Provider>
-            <div className="w-full items-center justify-center flex-col flex mt-5 select-none">
-                <img src={Triangle} className="w-7"></img>
+            <div className="w-full items-center justify-center flex-col flex mt-6 select-none">
+                <img src={Triangle} className="w-9"></img>
             </div>
         </header>
     );

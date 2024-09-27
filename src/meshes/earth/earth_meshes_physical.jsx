@@ -83,8 +83,7 @@ function EarthMeshesPhysical() {
             speed={1.5}
         >
         <Bvh firstHitOnly>
-            <group ref={meshRef}>
-                
+            <group ref={meshRef}>    
                 <EarthCities />
                 <EarthWeather />
                 <EarthCloud />
