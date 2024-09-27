@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useContext, useMemo } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Bvh } from '@react-three/drei';
+import { Bvh, PresentationControls } from '@react-three/drei';
 import * as THREE from 'three';
 import { useControls } from 'leva';
 
@@ -76,6 +76,11 @@ function EarthMeshesPhysical() {
 
     useFrame(handleFrame);
     return useMemo(() => (
+        <PresentationControls
+            rotation={[0, 0, 0]}
+            snap={true}
+            speed={1.5}
+        >
         <Bvh firstHitOnly>
             <group ref={meshRef}>
                 <EarthCities />
@@ -84,6 +89,7 @@ function EarthMeshesPhysical() {
                 <TestCoordinate />
             </group>
         </Bvh>
+        </PresentationControls>
     ), []);
 
 }

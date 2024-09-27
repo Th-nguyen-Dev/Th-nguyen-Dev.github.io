@@ -40,7 +40,7 @@ function ProjectPanelText({ title, projectType, date, progress, description, pro
     <>
             <div className="break-inside-avoid" ref={panelRef}>
                 <div className= "w-full h-fit">
-                <h1 className="font-bold h-38 max-xl:h-56 max-lg:h-32 max-md:h-44 max-sm:h-56 transition-resize">{title}</h1>
+                <h1 className="font-bold h-40 max-xl:h-56 max-lg:h-32 max-md:h-44 max-sm:h-56 transition-resize">{title}</h1>
                     <br />
                     <div className="flex flex-row text-xl items-center flex-nowrap">
                         <div className="flex flex-row space-x-8 flex-nowrap">
@@ -58,7 +58,7 @@ function ProjectPanelText({ title, projectType, date, progress, description, pro
                     <br />
                     <Accordion type="single" collapsible>
                         <AccordionItem value="item-1">
-                            <AccordionTrigger className = "items-center justify-center h-10 bg-transparent"></AccordionTrigger>
+                            <AccordionTrigger className = "items-center justify-center h-14 bg-transparent"></AccordionTrigger>
                             <AccordionContent className="text-2xl mt-6">
                             {description}
                             </AccordionContent>

@@ -21,7 +21,6 @@ function ProjectGraphic() {
             <div
                 className="relative ml-10 mr-10"
                 ref={projectRef}
-                style={{ height: "90000rem" }}
             >
                 <br /><br />
                 <span className="text-7xl font-bold">Graphic Design Projects</span>

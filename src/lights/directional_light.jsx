@@ -40,12 +40,6 @@ function DirectionalLights() {
                         x: newPosition.x,
                         y: newPosition.y,
                         z: newPosition.z,
-                        onStart: () => {
-                            console.log("start", light.position);
-                        },
-                        onComplete: () => {
-                            console.log("complete", light.position);
-                        },
                         duration: 1,
                         ease: "sine.inOut"
                     });
@@ -72,19 +66,15 @@ function DirectionalLights() {
     useEffect(() => {
         if (introToggle){
             rotateLight(0);
-            console.log("introToggle toggled");
         }
         if(timelineIntroToggle){
             rotateLight(0);
-            console.log("timelineIntroToggle toggled");
         } 
         if (projectToggle){
             rotateLight(2.35);
-            console.log("projectToggle toggled");
         }
         if (projectGraphicToggle){
             rotateLight(-0.66);
-            console.log("projectGraphicToggle toggled");
         }
     }, [introToggle, timelineIntroToggle, projectToggle, projectGraphicToggle]);
 
