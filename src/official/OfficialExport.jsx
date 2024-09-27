@@ -67,7 +67,7 @@ export function CanvasDOM(){
                 <div className='h-auto w-auto' ref={htmlRef} >
                     <div style={{height:"25vh"}}></div>
                     <Introduction/>
-                    <Interim text={"The Earth is 4.5 billion year old."}/>
+                    <Interim text={"The Earth is 4.5 billion year old."} helpText={"Hint: You can hover over the buttons to travel!"}/>
                     <Timeline/>
                     <Interim text={"Coral reefs are Earth's largest living structure."}/>
                     <Background/>
