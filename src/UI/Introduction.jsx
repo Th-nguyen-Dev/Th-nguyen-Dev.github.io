@@ -21,7 +21,7 @@ function Introduction() {
     
 return (
     <>
-        <div className='relative w-1/2 max-sm:w-full h-fit' ref={introRef}>
+        <div className='relative w-1/2 max-sm:w-full h-fit select-none' ref={introRef}>
             <div className="relative text-white ml-10 mr-10">
                 <h1>
                     <p className="text-7xl mb-1">
