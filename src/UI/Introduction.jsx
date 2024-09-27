@@ -21,8 +21,8 @@ function Introduction() {
     
 return (
     <>
-        <div className='relative w-1/2 h-fit' ref={introRef}>
-            <div className="relative text-white mr-20 ml-20">
+        <div className='relative w-1/2 max-sm:w-full h-fit' ref={introRef}>
+            <div className="relative text-white ml-10 mr-10">
                 <h1>
                     <p className="text-7xl mb-1">
                         <strong
@@ -37,7 +37,7 @@ return (
                     </p> 
                 </h1>
                 <br></br>
-                <h2 className="text-xl">
+                <h2 className="text-xl font-extralight">
                     I am a full stack developer with a passion for designs and all things interactive. 
                     <br/>
                     <br/>

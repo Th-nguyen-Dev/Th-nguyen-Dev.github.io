@@ -17,10 +17,8 @@ function Background() {
 
     useEffect(() => {
         const lowerHalf = projectToggle || projectGraphicToggle;
-        console.log(projectToggle, "and", projectGraphicToggle);  
-        console.log(lowerHalf);
         gsap.to(backgroundRef.current, {
-            opacity: lowerHalf ? 0.65 : 0,
+            opacity: lowerHalf ? 0.8 : 0,
             ease: "sine.inOut",
             duration: 1.5
         });

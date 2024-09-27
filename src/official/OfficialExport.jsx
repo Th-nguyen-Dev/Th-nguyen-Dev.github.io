@@ -16,11 +16,14 @@ import Timeline from '@/UI/Timeline';
 import Project from '@/UI/Project';
 import ProjectGraphic from '@/UI/ProjectGraphic';
 import Background from '@/UI/Background';
+import Interim from '@/UI/Interim';
+import PlayMode from '@/UI/Playmode';
 
 import { Provider } from 'react-redux';
 import redux_store from '@/context/redux_store.jsx';
 // import background from '/textures/background_2.jpg';
 import gsap from 'gsap';
+import { Play } from 'lucide-react';
 
 export function PerformanceConfig(){
     const {gl} = useThree();
@@ -37,22 +40,14 @@ export function Loading() {
     return (<div>{progress} % loaded</div>);
 }
 export function CanvasDOM(){
-    const [pages, setPages] = useState(0);
+    const [pages, setPages] = useState(30);
     const {size} = useThree(); 
+    const htmlRef = useRef();
     useEffect(() => {
-        if (size.width < 720){
-            setPages(16* (1080/size.height));
+        if (htmlRef.current) {
+            setPages(htmlRef.current.getBoundingClientRect().height / size.height);
         }
-        else if (size.width < 1020){
-            setPages(12* (1080/size.height));
-        }
-        else if (size.width < 1280){
-            setPages(10* (1080/size.height));
-        }
-        else{
-            setPages(10* (1080/size.height));
-        }
-    }, [size]);
+    }, [size, htmlRef.current]);
     return(
     <>
         <ScrollControls
@@ -67,27 +62,23 @@ export function CanvasDOM(){
             <PostProcessing/>
             <OfficialCamera makeDefault={true} />
             <PerformanceConfig/>    
-            <Scroll html style={{width: '100%', height: '100%'}} >
-            <Provider store={redux_store}>
-                <div className='h-1/4'></div>
-                <Introduction/>
-                <div className='h-full flex items-center justify-center mt-44'>
-                    <div className='text-center font-thin text-4xl'>Scroll Down</div>
+            <Scroll html style={{width: '100%', height: '100%'}}  >
+                <Provider store={redux_store}>
+                <div className='h-auto w-auto' ref={htmlRef} >
+                    <div style={{height:"25vh"}}></div>
+                    <Introduction/>
+                    <Interim text={"The Earth is 4.5 billion year old."}/>
+                    <Timeline/>
+                    <Interim text={"Coral reefs are Earth's largest living structure."}/>
+                    <Background/>
+                    <Project/>
+                    <Interim text={"The Moon is drifting away from Earth."}/>
+                    <ProjectGraphic/>
+                    <Interim text={"The Moon helps stabilize the Earth's wobble"}/>
+                    <PlayMode/>
+                    {/* <Interim /> */}
                 </div>
-                <Timeline/>
-                <div className='h-full flex items-center justify-center'>
-                    <div className='text-center font-thin text-4xl'>Scroll Down</div>
-                </div>
-                <Background/>
-                <Project/>
-                <div className='h-full flex items-center justify-center'>
-                    <div className='text-center font-thin text-4xl'>Scroll Down</div>
-                </div>
-                <ProjectGraphic/>
-                <div className='h-full flex items-center justify-center'>
-                    <div className='text-center font-thin text-4xl'>Scroll Down</div>
-                </div>
-            </Provider>
+                </Provider>
                 {/* <Environment files={background} background />  */}
                 {/* <Stats/>     */}
             </Scroll>

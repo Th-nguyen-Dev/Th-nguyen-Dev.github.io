@@ -27,7 +27,7 @@ function Project() {
                 <span className="text-7xl font-bold">Projects</span>
                 <br /><br /><br />
                 <div className="Portfolio Website">
-                <div className="w-full items-center justify-center flex">
+                {/* <div className="w-full items-center justify-center flex">
                     <div className="w-full">
                         <ProjectPanelText
                                 title={<p>VR Smoke Simulation - <br></br> Collaboration with ARCortex</p>}
@@ -40,9 +40,7 @@ function Project() {
                                 Androids and IOS devices. The project will be written in Unity and C# as a module for ARCortex's existing VR simulation."
                             />
                     </div>
-                </div>
-
-
+                </div> */}
                 </div>
                 <br/>    
                 <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">

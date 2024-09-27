@@ -42,11 +42,11 @@ function ProjectPanelText({ title, projectType, date, progress, description, pro
                 <div className= "w-full h-fit">
                 <h1 className="font-bold h-40 max-xl:h-56 max-lg:h-32 max-md:h-44 max-sm:h-56 transition-resize">{title}</h1>
                     <br />
-                    <div className="flex flex-row text-xl items-center flex-nowrap">
-                        <div className="flex flex-row space-x-8 flex-nowrap">
-                            <h2>{projectType}</h2>
-                            <h2>{date}</h2>
-                            <h2>{progress}</h2>
+                    <div className="flex flex-row text-xl max-xl:text-base items-center flex-nowrap">
+                        <div className="flex flex-row space-x-8 flex-nowrap overflow-hidden">
+                            <h2 className="whitespace-nowrap">{projectType}</h2>
+                            <h2 className="whitespace-nowrap">{date}</h2>
+                            <h2 className="whitespace-nowrap">{progress}</h2>
                         </div>
                         <div className="flex-grow"></div>
                         {/* <Button variant={"outline"} className="h-8 text-lg z-50" onClick={onClick}>
@@ -59,7 +59,7 @@ function ProjectPanelText({ title, projectType, date, progress, description, pro
                     <Accordion type="single" collapsible>
                         <AccordionItem value="item-1">
                             <AccordionTrigger className = "items-center justify-center h-14 bg-transparent"></AccordionTrigger>
-                            <AccordionContent className="text-2xl mt-6">
+                            <AccordionContent className="text-xl font-extralight mt-6">
                             {description}
                             </AccordionContent>
                         </AccordionItem>

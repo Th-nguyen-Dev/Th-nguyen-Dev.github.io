@@ -12,8 +12,9 @@ function OfficialCamera() {
     const projectToggle = useSelector((state) => state.projectToggle.value);
     const projectGraphicToggle = useSelector((state) => state.projectGraphicToggle.value);
     const timelineIntroToggle = useSelector((state) => state.timelineIntroToggle.value);
+    const playmodeToggle = useSelector((state) => state.playmodeToggle.value);  
 
-    const position = new THREE.Vector3(32.00, 0, 11.50);
+    const position = new THREE.Vector3(32.00, 0, 12.25);
     const rotation = new THREE.Euler(0, 1.36, 0);
     const lookDirection = useMemo(() => {
         if (OfficialCameraRef.current) {
@@ -29,62 +30,17 @@ function OfficialCamera() {
         return rightDirection.clone().cross(lookDirection).normalize();
     }, [rightDirection, lookDirection]);
 
-    useEffect(() => {
-        if (introToggle) {
-            const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
-            gsap.to(currentFov, {
-                value: 55,
-                ease: "sine.inOut",
-                duration: 1,
-                onUpdate: () => {
-                    OfficialCameraRef.current.setFocalLength(currentFov.value);
-                }
-            });
-        }
-    },[introToggle]);
-    useEffect(() => {
-        if (timelineIntroToggle) {
-            const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
-            gsap.to(currentFov, {
-                value: 90,
-                ease: "sine.inOut",
-                duration: 1,
-                onUpdate: () => {
-                    OfficialCameraRef.current.setFocalLength(currentFov.value);
-                }
-            });
-        }
-    },[timelineIntroToggle]);
-    useEffect(() => {
-        if (projectToggle) {
-            const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
-            gsap.to(currentFov, {
-                value: 130,
-                ease: "sine.inOut",
-                duration: 1,
-                onUpdate: () => {
-                    OfficialCameraRef.current.setFocalLength(currentFov.value);
-                }
-            });
-        }
-
-    },[projectToggle]);
-    useEffect(() => {
-        if (projectGraphicToggle) {
-            const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
-            gsap.to(currentFov, {
-                value: 100,
-                ease: "sine.inOut",
-                duration: 1,
-                onUpdate: () => {
-                    OfficialCameraRef.current.setFocalLength(currentFov.value);
-                }
-            });
-        }
-
-    },[projectGraphicToggle]);
-
-
+    const changeFov = (fov) => {
+        const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
+        gsap.to(currentFov, {
+            value: fov,
+            ease: "sine.inOut",
+            duration: 1,
+            onUpdate: () => {
+                OfficialCameraRef.current.setFocalLength(currentFov.value);
+            }
+        });
+    }
     const centerCamera = () => {
         let destination = position.clone();
         const distance = OfficialCameraRef.current.position.distanceTo(new THREE.Vector3(0,0,0));
@@ -103,6 +59,51 @@ function OfficialCamera() {
             duration: 1,
         });
     }
+    const returnCamera = () => {
+        gsap.to(OfficialCameraRef.current.position,
+            {
+            x: position.clone().x,
+            y: position.clone().y,
+            z: position.clone().z,
+            ease: "sine.inOut",
+            duration: 1,
+        });
+    }
+
+    useEffect(() => {
+        if (introToggle) {
+            changeFov(50);
+        }
+    },[introToggle]);
+    useEffect(() => {
+        if (timelineIntroToggle) {
+            changeFov(90);
+        }
+    },[timelineIntroToggle]);
+    useEffect(() => {
+        if (projectToggle) {
+            changeFov(130);
+        }
+
+    },[projectToggle]);
+    useEffect(() => {
+        if (projectGraphicToggle) {
+            changeFov(100)
+        }
+
+    },[projectGraphicToggle]);
+    useEffect(() => {  
+        changeFov(50);
+    }, []);    
+    useEffect(() => {
+        if (playmodeToggle) {
+            changeFov(55);
+        }
+    }
+    ,[playmodeToggle]);
+
+
+
     useEffect(() =>{
         if (projectToggle) {
             gsap.to(OfficialCameraRef.current.position,
@@ -141,21 +142,13 @@ function OfficialCamera() {
     // },[projectToggle]);
 
     useEffect(() => {
-        if (projectToggle || projectGraphicToggle) {
+        if (projectToggle || projectGraphicToggle || playmodeToggle) {
             centerCamera();
         }
         else{
-            gsap.to(OfficialCameraRef.current.position,
-                {
-                x: position.clone().x,
-                y: position.clone().y,
-                z: position.clone().z,
-                ease: "sine.inOut",
-                duration: 1,
-            });
+            returnCamera();
         }
-
-    }, [projectToggle, projectGraphicToggle, rightDirection]);
+    }, [projectToggle, projectGraphicToggle, playmodeToggle]);
     return (
         useMemo(() =>(
             <PerspectiveCamera 

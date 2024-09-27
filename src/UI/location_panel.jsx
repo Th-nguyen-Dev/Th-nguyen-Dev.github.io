@@ -82,7 +82,7 @@ function LocationPanel({location, buttonText, mainText, milestones}){
 
     },[mainTextVisible])
     return (
-        <div >
+        <div className='select-none' >
             <Button 
             variant="outline" 
             size={"lg"} 
@@ -93,7 +93,7 @@ function LocationPanel({location, buttonText, mainText, milestones}){
             </Button>
             <br></br>
             <br></br>
-            <span ref={mainTextRef}>
+            <span ref={mainTextRef} className='font-extralight'>
                 {mainText}
             </span>
             <br></br>
@@ -101,7 +101,7 @@ function LocationPanel({location, buttonText, mainText, milestones}){
                 {milestones && milestones.length > 0 && <MileStoneList milestones={milestones} />}
             <br></br>
             <br></br>
-            </div>
+        </div>
     )
 }
 export default LocationPanel;
