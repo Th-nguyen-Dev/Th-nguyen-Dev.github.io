@@ -8,6 +8,7 @@ import EarthCloud from './earth_cloud';
 import EarthWeather from './earth_weather';
 import EarthCities from './earth_cities';
 import TestCoordinate from './test_coordinate';
+import Earth from './earth';
 import { WebContext } from '../../context/web_context';
 import { useSelector, useDispatch } from 'react-redux';
 import { setTimelineToggle } from '@/context/reducer/timeline_toggle';
@@ -83,8 +84,10 @@ function EarthMeshesPhysical() {
         >
         <Bvh firstHitOnly>
             <group ref={meshRef}>
+                
                 <EarthCities />
-                <EarthWeather />
+                {/* <EarthWeather /> */}
+                <Earth />
                 <EarthCloud />
                 <TestCoordinate />
             </group>
