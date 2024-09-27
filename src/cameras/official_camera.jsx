@@ -13,6 +13,7 @@ function OfficialCamera() {
     const projectGraphicToggle = useSelector((state) => state.projectGraphicToggle.value);
     const timelineIntroToggle = useSelector((state) => state.timelineIntroToggle.value);
     const playmodeToggle = useSelector((state) => state.playmodeToggle.value);  
+    const {size} = useThree();
 
     const position = new THREE.Vector3(32.00, 0, 12.25);
     const rotation = new THREE.Euler(0, 1.36, 0);
@@ -22,6 +23,7 @@ function OfficialCamera() {
         }
         return new THREE.Vector3();
     }, [OfficialCameraRef.current]);
+
 
     const rightDirection = useMemo(() => {
         return lookDirection.clone().cross(new THREE.Vector3(0, 1, 0)).normalize();
@@ -70,14 +72,27 @@ function OfficialCamera() {
         });
     }
 
+    const returnY = () => {
+        gsap.to(OfficialCameraRef.current.position,
+            {
+            y: position.clone().y,
+            ease: "sine.inOut",
+            duration: 1,
+        });
+    }
+
     useEffect(() => {
         if (introToggle) {
             changeFov(50);
+            if(size.width < 720){ centerCamera(); returnY(); }
+            else{ returnCamera(); }
         }
     },[introToggle]);
     useEffect(() => {
         if (timelineIntroToggle) {
             changeFov(90);
+            if(size.width < 720){ centerCamera(); returnY(); }
+            else{ returnCamera(); }
         }
     },[timelineIntroToggle]);
     useEffect(() => {
@@ -94,6 +109,8 @@ function OfficialCamera() {
     },[projectGraphicToggle]);
     useEffect(() => {  
         changeFov(50);
+        if(size.width < 720){ centerCamera(); }
+        else{ returnCamera(); }
     }, []);    
     useEffect(() => {
         if (playmodeToggle) {
@@ -144,9 +161,6 @@ function OfficialCamera() {
     useEffect(() => {
         if (projectToggle || projectGraphicToggle || playmodeToggle) {
             centerCamera();
-        }
-        else{
-            returnCamera();
         }
     }, [projectToggle, projectGraphicToggle, playmodeToggle]);
     return (
