@@ -81,6 +81,8 @@ function EarthMeshesPhysical() {
             rotation={[0, 0, 0]}
             snap={true}
             speed={1.5}
+            polar={[-Infinity, Infinity]} // Vertical limits
+            azimuth={[-Infinity, Infinity]} // Horizontal limits
         >
         <Bvh firstHitOnly>
             <group ref={meshRef}>    
