@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.62 101.15">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121.99 131.8">
   <defs>
     <style>
       .cls-1 {
         fill: #fff;
       }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
     </style>
   </defs>
-  <circle class="cls-1" cx="46.81" cy="58.28" r="40.37"/>
+  <polygon class="cls-1" points="60.99 95.32 14.38 14.58 107.61 14.58 60.99 95.32"/>
+  <polygon class="cls-2" points="60.99 116.22 14.38 35.48 107.61 35.48 60.99 116.22"/>
 </svg>

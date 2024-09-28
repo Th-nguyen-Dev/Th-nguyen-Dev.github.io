@@ -1,7 +1,6 @@
 import earthBump from "/textures/earth_bump_map.png";
 import earthSpecular from "/textures/earth land ocean mask.png";
-import earthSpriteSheetH from "/textures_transition/earth_sprite_sheet_horizontal.png";
-import earthSpriteSheetG from "/textures_transition/earth_sprite_grid.png";
+import earthSpriteSheetG from "/textures_transition/earth_sprite_grid_small.png";
 
 import { useFrame } from '@react-three/fiber';
 import { useRef, useEffect, useMemo,useLayoutEffect } from 'react';
