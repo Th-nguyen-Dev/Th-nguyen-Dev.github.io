@@ -88,7 +88,7 @@ function OfficialExport() {
     const canvasRef = useRef();
     return (
         <>
-            <Canvas ref={canvasRef} className="canvas">
+            <Canvas ref={canvasRef} className="canvas" >
                 <PerformanceConfig/>  
                 <color attach="background" args={['#000000']} /> 
                 <CanvasDOM/>           
