@@ -22,7 +22,7 @@ function Background() {
         const lowerHalf = projectToggle || projectGraphicToggle;
         let trueValue = 0.8;
         let falseValue = 0;
-        if (size.width < 720){
+        if (!playmodeToggle && size.width < 720){
             falseValue = 0.8;
         }
         if (playmodeToggle){
