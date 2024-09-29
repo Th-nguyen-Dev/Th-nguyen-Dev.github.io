@@ -22,18 +22,19 @@ function Background() {
         const lowerHalf = projectToggle || projectGraphicToggle;
         let trueValue = 0.8;
         let falseValue = 0;
-        if (!playmodeToggle && size.width < 720){
+        if ( size.width < 720){
+            if (playmodeToggle){
+                falseValue = 0;
+            } else {
             falseValue = 0.8;
-        }
-        if (playmodeToggle){
-            falseValue = 0;
+            }
         }
         gsap.to(backgroundRef.current, {
             opacity: lowerHalf ? trueValue : falseValue,
             ease: "sine.inOut",
             duration: 1.5
         });
-    }, [projectToggle, projectGraphicToggle, ]);
+    }, [projectToggle, projectGraphicToggle, playmodeToggle]);
 
     return (
         <div
