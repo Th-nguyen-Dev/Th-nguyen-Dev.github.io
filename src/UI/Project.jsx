@@ -51,7 +51,7 @@ function Project() {
                             date="2024-2025"
                             progress="Progress: Ideation"
                             progressValue={10}
-                            description="This is the capstone project I will be doing for my senior year. The idea came when I was writing and testing
+                            description="This is the next project I will be doing. The idea came when I was writing and testing
                             the shader code for many custom materials used to create the earth you are seeing now. The process was extremely tedious
                             and time-consuming, which can be shortened through modern material methods such as a node-based material creator like that
                             of Blender and other 3D editors."
