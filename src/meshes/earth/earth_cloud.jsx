@@ -3,7 +3,7 @@ import { Canvas, useFrame} from '@react-three/fiber';
 import { WebContext } from '../../context/web_context';
 import * as THREE from 'three';
 
-import cloud from "/textures/earth clouds.jpg";
+import cloud from "/textures/earth clouds.png";
 
 function EarthCloud(){
     const cloudRef = useRef();

@@ -27,12 +27,8 @@ import { Play } from 'lucide-react';
 
 export function PerformanceConfig(){
     const {gl} = useThree();
-    useEffect(() => {
-        gl.powerPreference = "high-performance";
-        gl.precision = "highp";
-        gl.antialias = true;
-    },[]);
-
+    gl.powerPreference = "high-performance";
+    gl.antialias = true;
 }
 export function Loading() {
     const { progress, item } = useProgress();
@@ -61,7 +57,7 @@ export function CanvasDOM(){
             <EarthMeshes/>
             <PostProcessing/>
             <OfficialCamera makeDefault={true} />
-            <PerformanceConfig/>    
+              
             <Scroll html style={{width: '100%', height: '100%'}}  >
                 <Provider store={redux_store}>
                 <div className='h-auto w-auto' ref={htmlRef} >
@@ -90,18 +86,15 @@ export function CanvasDOM(){
 }
 function OfficialExport() {
     const canvasRef = useRef();
-
-    
     return (
         <>
-            <Canvas ref={canvasRef} className="canvas">
+            <Canvas ref={canvasRef} className="canvas" >
+                <PerformanceConfig/>  
                 <color attach="background" args={['#000000']} /> 
                 <CanvasDOM/>           
             </Canvas>  
         </>
  
     );
-
 }
-
 export default OfficialExport;
