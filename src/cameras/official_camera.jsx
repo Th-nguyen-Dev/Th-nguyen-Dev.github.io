@@ -72,10 +72,10 @@ function OfficialCamera() {
         });
     }
 
-    const returnY = () => {
+    const alterY = (y) => {
         gsap.to(OfficialCameraRef.current.position,
             {
-            y: position.clone().y,
+            y: position.clone().y +  y,
             ease: "sine.inOut",
             duration: 1,
         });
@@ -84,28 +84,30 @@ function OfficialCamera() {
     useEffect(() => {
         if (introToggle) {
             changeFov(50);
-            if(size.width < 720){ centerCamera(); returnY(); }
+            if(size.width < 720){ centerCamera(); alterY(0); }
             else{ returnCamera(); }
         }
     },[introToggle]);
     useEffect(() => {
         if (timelineIntroToggle) {
             changeFov(90);
-            if(size.width < 720){ centerCamera(); returnY(); }
+            if(size.width < 720){ centerCamera(); alterY(0); }
             else{ returnCamera(); }
         }
     },[timelineIntroToggle]);
     useEffect(() => {
         if (projectToggle) {
             changeFov(130);
+            centerCamera();
+            alterY(3);
         }
-
     },[projectToggle]);
     useEffect(() => {
         if (projectGraphicToggle) {
-            changeFov(100)
+            changeFov(130);
+            centerCamera();
+            alterY(0);
         }
-
     },[projectGraphicToggle]);
     useEffect(() => {  
         changeFov(50);
@@ -115,34 +117,12 @@ function OfficialCamera() {
     useEffect(() => {
         if (playmodeToggle) {
             changeFov(55);
+            centerCamera();
+            alterY(0);
         }
     }
     ,[playmodeToggle]);
 
-
-
-    useEffect(() =>{
-        if (projectToggle) {
-            gsap.to(OfficialCameraRef.current.position,
-                {
-                    y: position.clone().y + 3,
-                    ease: "sine.inOut",
-                    duration: 1,
-                }
-            )
-        }
-    },[projectToggle]);
-    useEffect(() => {
-        if (projectGraphicToggle) {
-            gsap.to(OfficialCameraRef.current.position,
-                {
-                    y: position.clone().y,
-                    ease: "sine.inOut",
-                    duration: 1,
-                }
-            )
-        }
-    },[projectGraphicToggle]);
     // useEffect(() => {
     //     if (!projectToggle && !introToggle && !timelineIntroToggle) {
     //         const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
@@ -157,12 +137,6 @@ function OfficialCamera() {
     //     }
 
     // },[projectToggle]);
-
-    useEffect(() => {
-        if (projectToggle || projectGraphicToggle || playmodeToggle) {
-            centerCamera();
-        }
-    }, [projectToggle, projectGraphicToggle, playmodeToggle]);
     return (
         useMemo(() =>(
             <PerspectiveCamera 
