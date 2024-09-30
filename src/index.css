@@ -82,8 +82,6 @@ button:focus-visible {
   left: 0;
   width: 100% !important;
   height: 100% !important;
-  pointer-events: none !important;
-  touch-action: none !important;
 }
 
 .canvas {
@@ -92,7 +90,6 @@ button:focus-visible {
   left: 0;
   width: 100% !important;
   height: 100% !important;
-  touch-action: none !important;
 }
 
 canvas {
@@ -101,7 +98,6 @@ canvas {
   left: 0;
   width: 100% !important;
   height: 100% !important;
-  touch-action: none !important;
 }
 
 @layer base {
