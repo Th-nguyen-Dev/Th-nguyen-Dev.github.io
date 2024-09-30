@@ -79,8 +79,10 @@ function EarthMeshesPhysical() {
     return useMemo(() => (
         <PresentationControls
             rotation={[0, 0, 0]}
+            global={false}
             snap={true}
-            speed={1.5}
+            speed={2}
+            cursor={true}
             polar={[-Infinity, Infinity]} // Vertical limits
             azimuth={[-Infinity, Infinity]} // Horizontal limits
         >
