@@ -50,10 +50,10 @@ return (
                 <br></br>
                 <br></br>
             <div className="text-xl columns-2 flex gap-10">                
-                <ProgressVert
+                {/* <ProgressVert
                 value={progressValue}
                 className='h-auto w-36 min-w-2 rotate-180'
-                />
+                /> */}
                 <div className='columns-1 flex-row '>
                     <LocationPanel 
                     location={"My Tho"}
