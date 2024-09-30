@@ -57,7 +57,6 @@ export function CanvasDOM(){
             <EarthMeshes/>
             <PostProcessing/>
             <OfficialCamera makeDefault={true} />
-              
             <Scroll html style={{width: '100%', height: '100%'}}  >
                 <Provider store={redux_store}>
                 <div className='h-auto w-auto' ref={htmlRef} >
@@ -88,7 +87,7 @@ function OfficialExport() {
     const canvasRef = useRef();
     return (
         <>
-            <Canvas ref={canvasRef} className="canvas" >
+            <Canvas ref={canvasRef} className="canvas">
                 <PerformanceConfig/>  
                 <color attach="background" args={['#000000']} /> 
                 <CanvasDOM/>           

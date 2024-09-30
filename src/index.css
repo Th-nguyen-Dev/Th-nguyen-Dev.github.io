@@ -17,15 +17,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-canvas {
-  pointer-events: none;
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-  touch-action: none;
-}
+
 body {
   margin: 0;
   display: flex;
@@ -90,17 +82,22 @@ button:focus-visible {
   left: 0;
   width: 100% !important;
   height: 100% !important;
-  touch-action: none;
 }
 
 .canvas {
-  pointer-events: none;
   position: absolute !important;
   top: 0;
   left: 0;
   width: 100% !important;
   height: 100% !important;
-  touch-action: none;
+}
+
+canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 @layer base {

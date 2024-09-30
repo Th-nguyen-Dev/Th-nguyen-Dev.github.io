@@ -17,6 +17,7 @@ function DirectionalLights() {
     const projectToggle = useSelector((state) => state.projectToggle.value);
     const projectGraphicToggle = useSelector((state) => state.projectGraphicToggle.value);
     const timelineIntroToggle = useSelector((state) => state.timelineIntroToggle.value);
+    const playmodeToggle = useSelector((state) => state.playmodeToggle.value);  
     const dispatch = useDispatch(); 
     const lightPosition = new THREE.Vector3(14, 15, 20); 
 
@@ -74,9 +75,12 @@ function DirectionalLights() {
             rotateLight(2.35);
         }
         if (projectGraphicToggle){
+            rotateLight(2.35);
+        }
+        if (playmodeToggle){
             rotateLight(-0.66);
         }
-    }, [introToggle, timelineIntroToggle, projectToggle, projectGraphicToggle]);
+    }, [introToggle, timelineIntroToggle, projectToggle, projectGraphicToggle, playmodeToggle]);
 
     useEffect(() => {
         if (directionalLightRef.current && directionalLightRef.current.length > 0) {
