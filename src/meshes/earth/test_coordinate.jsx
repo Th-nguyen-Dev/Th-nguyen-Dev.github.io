@@ -32,7 +32,7 @@ useEffect(() => {
             });
             gsap.fromTo(activeMatRefs.current.get(timelineToggle),
             {
-                opacity: 0.25,
+                opacity: 0.4,
             },
             {
                 opacity: 0,
@@ -48,7 +48,7 @@ useEffect(() => {
             });
             activeMatRefs.current.forEach((value) => {
                 gsap.killTweensOf(value);
-                value.opacity = 0;
+                value.opacity = 1;
             });
         }
     }
@@ -61,11 +61,11 @@ useEffect(() => {
                 <group key={key}  position={getCoordPosition(key)}>
                     <mesh>
                     <sphereGeometry args={[0.05, 10, 10]} />
-                    <meshStandardMaterial color="green" emissiveIntensity={20} emissive={"green"}/>
+                    <meshBasicMaterial color="#39ff14"/>
                     </mesh>
                     <mesh ref={ref => activeGeoRefs.current.set(key, ref)}>
-                    <sphereGeometry args={[0.04, 20, 20]} />
-                    <meshStandardMaterial color="green" emissiveIntensity={20} transparent={true} emissive={"green"} ref={ref => activeMatRefs.current.set(key, ref)}/>
+                    <sphereGeometry args={[0.05, 20, 20]} />
+                    <meshStandardMaterial color="green" emissiveIntensity={10} transparent={true} opacity={1} emissive={"green"} ref={ref => activeMatRefs.current.set(key, ref)}/>
                     </mesh>
                 </group>
 
