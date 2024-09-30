@@ -90,7 +90,7 @@ function OfficialCamera() {
     },[introToggle]);
     useEffect(() => {
         if (timelineIntroToggle) {
-            changeFov(90);
+            changeFov(72);
             if(size.width < 720){ centerCamera(); alterY(0); }
             else{ returnCamera(); }
         }

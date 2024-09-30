@@ -78,7 +78,7 @@ function DirectionalLights() {
             rotateLight(2.35);
         }
         if (playmodeToggle){
-            rotateLight(-0.66);
+            rotateLight(-0.7);
         }
     }, [introToggle, timelineIntroToggle, projectToggle, projectGraphicToggle, playmodeToggle]);
 
@@ -115,7 +115,7 @@ function DirectionalLights() {
                 ref={ref => directionalLightRef.current.push(ref)}
                 color={0xffffff}
                 position={lightPosition.clone()} 
-                intensity={5}
+                intensity={3.6}
                 target={new THREE.Object3D()}
                 />
                 {/* {isReady && (
