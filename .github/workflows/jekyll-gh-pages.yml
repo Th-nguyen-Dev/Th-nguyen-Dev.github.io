@@ -35,11 +35,15 @@ jobs:
         with:
           source: ./
           destination: ./dist
+      - name: List dist contents
+        run: ls -la ./dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           name: production-files
           path: ./dist
+      - name: List dist contents
+        run: ls -la ./dist
 
   # Deployment job
   deploy:
