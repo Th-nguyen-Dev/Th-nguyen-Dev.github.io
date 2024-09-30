@@ -25,7 +25,7 @@ useEffect(() => {
             {
                 x: 12,
                 y: 12,
-                z: 12,
+                z: 12 ,
                 duration: 1,
                 ease: "sine.inOut",
                 repeat: -1,     
