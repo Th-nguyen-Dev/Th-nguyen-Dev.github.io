@@ -33,7 +33,7 @@ jobs:
 
   deploy:
     environment:
-      name: github-pages
+      name: gh-pages
       url: ${{ steps.deployment.outputs.page_url }}
     name: Deploy
     needs: build
