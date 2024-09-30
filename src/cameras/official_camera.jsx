@@ -97,14 +97,14 @@ function OfficialCamera() {
     },[timelineIntroToggle]);
     useEffect(() => {
         if (projectToggle) {
-            changeFov(130);
+            changeFov(120);
             centerCamera();
             alterY(3);
         }
     },[projectToggle]);
     useEffect(() => {
         if (projectGraphicToggle) {
-            changeFov(130);
+            changeFov(120);
             centerCamera();
             alterY(0);
         }
