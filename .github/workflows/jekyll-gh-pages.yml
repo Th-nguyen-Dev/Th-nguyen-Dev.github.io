@@ -58,5 +58,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: dist
+          artifact_name: ./dist
         
