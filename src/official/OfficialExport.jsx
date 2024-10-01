@@ -1,6 +1,6 @@
 import React, { useMemo, useRef, useEffect, useState, Suspense } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Html, Scroll, ScrollControls, Stats, MeshReflectorMaterial, Loader, Preload, useProgress, PresentationControls } from '@react-three/drei';
+import { Html, Scroll, ScrollControls, Stats, MeshReflectorMaterial, Loader, Preload, useProgress, PresentationControls, Environment } from '@react-three/drei';
 import { useSelector } from 'react-redux';
 
 import AmbientLights from '../lights/ambient_lights';
@@ -21,7 +21,7 @@ import PlayMode from '@/UI/Playmode';
 
 import { Provider } from 'react-redux';
 import redux_store from '@/context/redux_store.jsx';
-// import background from '/textures/background_2.jpg';
+import background from '/textures/background_2.jpg';
 import gsap from 'gsap';
 import { Play } from 'lucide-react';
 
