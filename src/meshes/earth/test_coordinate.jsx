@@ -32,7 +32,7 @@ useEffect(() => {
             });
             gsap.fromTo(activeMatRefs.current.get(timelineToggle),
             {
-                opacity: 0.4,
+                opacity: 0.35,
             },
             {
                 opacity: 0,
@@ -64,7 +64,7 @@ useEffect(() => {
                     <meshBasicMaterial color="#39ff14"/>
                     </mesh>
                     <mesh ref={ref => activeGeoRefs.current.set(key, ref)}>
-                    <sphereGeometry args={[0.05, 20, 20]} />
+                    <sphereGeometry args={[0.06, 20, 20]} />
                     <meshStandardMaterial color="green" emissiveIntensity={10} transparent={true} opacity={1} emissive={"green"} ref={ref => activeMatRefs.current.set(key, ref)}/>
                     </mesh>
                 </group>
