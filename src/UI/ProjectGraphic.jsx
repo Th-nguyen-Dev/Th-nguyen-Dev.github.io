@@ -3,6 +3,7 @@ import ProjectPanel from "./project_panel";
 import ProjectPanelText from "./project_panel_text";
 import { useDispatch } from "react-redux";
 import { setCameraToggle } from "@/context/reducer/camera_toggle";
+import { setBackgroundToggle } from "@/context/reducer/background_toggle";
 import { useIsVisible } from "@/Hook/useIsVisible";
 import { Progress } from "@/components/ui/progress";
 import gsap from "gsap";
@@ -15,6 +16,7 @@ function ProjectGraphic() {
     useEffect(() => {
         if(isVisible){
             dispatch(setCameraToggle({ key: "zoom_in_middle", value: true }));
+            dispatch(setBackgroundToggle(true));
         }
     }, [isVisible]);
 

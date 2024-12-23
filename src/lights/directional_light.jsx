@@ -13,20 +13,9 @@ function DirectionalLights() {
     PixiPlugin.registerPIXI(PIXI);
     const directionalLightRef = useRef([]);
     const { addLight } = useContext(WebContext);
-    const introToggle = useSelector((state) => state.introToggle.value);
-    const projectToggle = useSelector((state) => state.projectToggle.value);
-    const projectGraphicToggle = useSelector((state) => state.projectGraphicToggle.value);
-    const timelineIntroToggle = useSelector((state) => state.timelineIntroToggle.value);
-    const playmodeToggle = useSelector((state) => state.playmodeToggle.value);  
-    const dispatch = useDispatch(); 
+    const lightRotationValue = useSelector((state) => state.lightRotationValue.value);
     const lightPosition = new THREE.Vector3(14, 15, 20); 
 
-    useEffect(() => {
-        if (directionalLightRef.current && directionalLightRef.current.length > 0){
-            directionalLightRef.current.forEach(light => addLight(light));
-        }
-    } , [directionalLightRef.current]);
- 
     const rotateLight = (angle) => {
         if (directionalLightRef.current && directionalLightRef.current.length > 0) {
             directionalLightRef.current.forEach(light => {
@@ -41,13 +30,29 @@ function DirectionalLights() {
                         x: newPosition.x,
                         y: newPosition.y,
                         z: newPosition.z,
-                        duration: 1,
+                        duration: 0.1,
                         ease: "sine.inOut"
                     });
                 }
             });
         }
     };
+
+    useEffect(() => {
+        if (directionalLightRef.current && directionalLightRef.current.length > 0){
+            directionalLightRef.current.forEach(light => addLight(light));
+        }
+    } , [directionalLightRef.current]);
+
+    useEffect(() => {
+        if (lightRotationValue) {
+            rotateLight(lightRotationValue);
+        }
+    }, [lightRotationValue]);
+
+    
+ 
+
 
     // useEffect(() => {
     //     if (isReady) {
@@ -64,49 +69,31 @@ function DirectionalLights() {
 
     // }, [isReady]);
 
-    useEffect(() => {
-        if (introToggle){
-            rotateLight(0);
-        }
-        if(timelineIntroToggle){
-            rotateLight(0);
-        } 
-        if (projectToggle){
-            rotateLight(2.35);
-        }
-        if (projectGraphicToggle){
-            rotateLight(2.35);
-        }
-        if (playmodeToggle){
-            rotateLight(-0.7);
-        }
-    }, [introToggle, timelineIntroToggle, projectToggle, projectGraphicToggle, playmodeToggle]);
-
-    useEffect(() => {
-        if (directionalLightRef.current && directionalLightRef.current.length > 0) {
-            directionalLightRef.current.forEach(light => {
-                if (light) {
-                    let currentColor = light.color.getHSL({});
-                    let currentColorToString = { value: `hsl(${currentColor.h * 360}, ${currentColor.s * 100}%, ${currentColor.l * 100}%)` };
-                    let tl = gsap.timeline();
-                    tl.to(currentColorToString, {
-                        pixi: { value: projectToggle ? "hsl(35, 89%, 81%)" : "hsl(0, 0%, 100%)" },
-                        duration: 1,
-                        onUpdate: () => {
-                            const hslValue = { h: 0, s: 0, l: 0 };
-                            currentColorToString.value.replace(/hsla?\(([^,]+),([^,]+)%,([^,]+)%[^)]*\)/, (_, h, s, l) => {
-                                hslValue.h = parseFloat(h) / 360;
-                                hslValue.s = parseFloat(s) / 100;
-                                hslValue.l = parseFloat(l) / 100;
-                            });
-                            light.color.setHSL(hslValue.h, hslValue.s, hslValue.l);
-                        },
-                        ease: "sine.inOut"
-                    });
-                }
-            });
-        }
-    }, [projectToggle]);
+    // useEffect(() => {
+    //     if (directionalLightRef.current && directionalLightRef.current.length > 0) {
+    //         directionalLightRef.current.forEach(light => {
+    //             if (light) {
+    //                 let currentColor = light.color.getHSL({});
+    //                 let currentColorToString = { value: `hsl(${currentColor.h * 360}, ${currentColor.s * 100}%, ${currentColor.l * 100}%)` };
+    //                 let tl = gsap.timeline();
+    //                 tl.to(currentColorToString, {
+    //                     pixi: { value: projectToggle ? "hsl(35, 89%, 81%)" : "hsl(0, 0%, 100%)" },
+    //                     duration: 1,
+    //                     onUpdate: () => {
+    //                         const hslValue = { h: 0, s: 0, l: 0 };
+    //                         currentColorToString.value.replace(/hsla?\(([^,]+),([^,]+)%,([^,]+)%[^)]*\)/, (_, h, s, l) => {
+    //                             hslValue.h = parseFloat(h) / 360;
+    //                             hslValue.s = parseFloat(s) / 100;
+    //                             hslValue.l = parseFloat(l) / 100;
+    //                         });
+    //                         light.color.setHSL(hslValue.h, hslValue.s, hslValue.l);
+    //                     },
+    //                     ease: "sine.inOut"
+    //                 });
+    //             }
+    //         });
+    //     }
+    // }, [projectToggle]);
     
     return (
         useMemo(() => (

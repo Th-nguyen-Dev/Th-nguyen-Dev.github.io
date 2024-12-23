@@ -16,7 +16,7 @@ function AmbientLights() {
     useEffect(() => {
         if (ambientlightRef.current) {
             gsap.to(ambientlightRef.current, {
-                intensity: projectToggle ? 0 : 0.05,
+                intensity: projectToggle ? 0 : 0.02,
                 duration: 1,
                 ease: "sine.inOut"
             });

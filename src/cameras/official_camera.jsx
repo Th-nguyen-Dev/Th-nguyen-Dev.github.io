@@ -120,9 +120,9 @@ function OfficialCamera() {
 
     useEffect(() => {
         if (cameraToggle.zoom_out_middle) {
-            changeFov(55);
+            changeFov(50);
             centerCamera();
-            alterY(0);
+            alterY(-0.25);
         }
     }
     ,[cameraToggle.zoom_out_middle]);

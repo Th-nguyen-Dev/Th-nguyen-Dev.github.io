@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { setIntroToggle } from '@/context/reducer/introduction_toggle';
 import { useIsVisible } from '@/Hook/useIsVisible';
 import { setCameraToggle } from '@/context/reducer/camera_toggle';
+import { setBackgroundToggle } from '@/context/reducer/background_toggle';
 
 function Introduction() {
     const introRef = useRef();
@@ -15,6 +16,7 @@ function Introduction() {
     useEffect(() => {
         if(isVisibile){
             dispatch(setCameraToggle({key: "zoom_out_right", value: true}));
+            dispatch(setBackgroundToggle(false));
         }
     }, [isVisibile]);
     

@@ -6,6 +6,8 @@ import  timelineIntroToggle  from './reducer/timelineIntro_toggle'
 import projectGraphicToggle from './reducer/project_graphic_toggle'
 import playmodeToggle from './reducer/playmode_toggle'
 import  cameraToggle  from './reducer/camera_toggle'
+import backgroundToggle from './reducer/background_toggle'
+import lightRotationValue  from './reducer/lightrotation_value'
 export default configureStore({
   reducer: {
     playmodeToggle: playmodeToggle,
@@ -15,5 +17,7 @@ export default configureStore({
     timelineIntroToggle: timelineIntroToggle,
     projectGraphicToggle: projectGraphicToggle,
     cameraToggle: cameraToggle,
+    backgroundToggle: backgroundToggle,
+    lightRotationValue: lightRotationValue,
   },
 })
