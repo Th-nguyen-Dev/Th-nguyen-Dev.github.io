@@ -1,15 +1,13 @@
-import React, { useMemo, useRef, useEffect, useState, Suspense } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Html, Scroll, ScrollControls, Stats, MeshReflectorMaterial, Loader, Preload, useProgress, PresentationControls, Environment } from '@react-three/drei';
-import { useSelector } from 'react-redux';
+import React, { useMemo, useRef, useEffect, useState } from 'react';
+import { Canvas, useThree } from '@react-three/fiber';
+import { Scroll, ScrollControls, Preload, useProgress } from '@react-three/drei';
+import { useSelector, Provider } from 'react-redux';
 
 import AmbientLights from '../lights/ambient_lights';
 import DirectionalLights from '../lights/directional_light';
 import PostProcessing from '../postprocesses/effect_composer';
 import EarthMeshes from '../meshes/earth/earth_meshes';
 import OfficialCamera from '../cameras/official_camera';
-import EarthClippingMask from '@/meshes/earth/earth_clipping_mask';
-// import { Environment } from '@react-three/drei'
 
 import Introduction from '@/UI/Introduction';
 import Timeline from '@/UI/Timeline';
@@ -17,24 +15,21 @@ import Project from '@/UI/Project';
 import ProjectGraphic from '@/UI/ProjectGraphic';
 import Background from '@/UI/Background';
 import Interim from '@/UI/Interim';
-import PlayMode from '@/UI/Playmode';
 
-import { Provider } from 'react-redux';
 import redux_store from '@/context/redux_store.jsx';
-import background from '/textures/background_2.jpg';
-import gsap from 'gsap';
-import { Play } from 'lucide-react';
+import PlayMode from '@/UI/Playmode';
 
 export function PerformanceConfig(){
     const {gl} = useThree();
     gl.powerPreference = "high-performance";
     gl.antialias = true;
 }
+
 export function Loading() {
-    const { progress, item } = useProgress();
-    console.log(item, progress);
+    const { progress } = useProgress();
     return (<div>{progress} % loaded</div>);
 }
+
 export function CanvasDOM(){
     const [pages, setPages] = useState(30);
     const {size} = useThree(); 
@@ -71,11 +66,8 @@ export function CanvasDOM(){
                         <ProjectGraphic/>
                         <Interim text={"The Moon helps stabilize the Earth's wobble"}/>
                         <PlayMode/>
-                        {/* <Interim /> */}
                     </div>
                 </Provider>
-                {/* <Environment files={background} background />  */}
-                {/* <Stats/>     */}
             </Scroll>
         </ScrollControls>
         <Preload all/>
@@ -83,6 +75,7 @@ export function CanvasDOM(){
 
     );
 }
+
 function OfficialExport() {
     const canvasRef = useRef();
     return (
@@ -96,4 +89,5 @@ function OfficialExport() {
  
     );
 }
+
 export default OfficialExport;
