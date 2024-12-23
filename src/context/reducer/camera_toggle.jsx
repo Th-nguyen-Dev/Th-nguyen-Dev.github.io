@@ -11,6 +11,9 @@ export const cameraToggle = createSlice({
     reducers: {
         setCameraToggle: (state, action) => {
             const { key, value } = action.payload;
+            Object.keys(state).forEach(k => {
+                state[k] = false;
+            });
             state[key] = value;
         },
     },

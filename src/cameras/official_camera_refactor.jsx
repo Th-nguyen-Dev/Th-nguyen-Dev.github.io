@@ -8,15 +8,13 @@ import * as THREE from 'three';
 
 function OfficialCamera() {
     const OfficialCameraRef = useRef();
-    const introToggle = useSelector((state) => state.introToggle.value);
-    const projectToggle = useSelector((state) => state.projectToggle.value);
-    const projectGraphicToggle = useSelector((state) => state.projectGraphicToggle.value);
-    const timelineIntroToggle = useSelector((state) => state.timelineIntroToggle.value);
-    const playmodeToggle = useSelector((state) => state.playmodeToggle.value);  
+
+    const cameraToggle = useSelector((state) => state.cameraToggle.value);
     const {size} = useThree();
 
     const position = new THREE.Vector3(32.00, 0, 12.25);
     const rotation = new THREE.Euler(0, 1.36, 0);
+
     const lookDirection = useMemo(() => {
         if (OfficialCameraRef.current) {
             return OfficialCameraRef.current.getWorldDirection(new THREE.Vector3());
@@ -28,6 +26,7 @@ function OfficialCamera() {
     const rightDirection = useMemo(() => {
         return lookDirection.clone().cross(new THREE.Vector3(0, 1, 0)).normalize();
     }, [lookDirection]);
+
     const upDirection = useMemo(() => {
         return rightDirection.clone().cross(lookDirection).normalize();
     }, [rightDirection, lookDirection]);
@@ -82,61 +81,52 @@ function OfficialCamera() {
     }
 
     useEffect(() => {
-        if (introToggle) {
+        if (cameraToggle.zoom_out_right) {
             changeFov(50);
             if(size.width < 720){ centerCamera(); alterY(0); }
             else{ returnCamera(); }
         }
-    },[introToggle]);
+    },[cameraToggle.zoom_out_right]);
+
     useEffect(() => {
-        if (timelineIntroToggle) {
+        if (cameraToggle.zoom_in_right) {
             changeFov(72);
             if(size.width < 720){ centerCamera(); alterY(0); }
             else{ returnCamera(); }
         }
-    },[timelineIntroToggle]);
+    },[cameraToggle.zoom_in_right]);
+
     useEffect(() => {
-        if (projectToggle) {
+        if (cameraToggle.zoom_in_middle_down) {
             changeFov(120);
             centerCamera();
             alterY(3);
         }
-    },[projectToggle]);
+    },[cameraToggle.zoom_in_middle_down]);
+
     useEffect(() => {
-        if (projectGraphicToggle) {
+        if (cameraToggle.zoom_in_middle) {
             changeFov(120);
             centerCamera();
             alterY(0);
         }
-    },[projectGraphicToggle]);
+    },[cameraToggle.zoom_in_middle]);
+
     useEffect(() => {  
         changeFov(50);
         if(size.width < 720){ centerCamera(); }
         else{ returnCamera(); }
     }, []);    
+
     useEffect(() => {
-        if (playmodeToggle) {
+        if (cameraToggle.zoom_out_middle) {
             changeFov(55);
             centerCamera();
             alterY(0);
         }
     }
-    ,[playmodeToggle]);
+    ,[cameraToggle.zoom_out_middle]);
 
-    // useEffect(() => {
-    //     if (!projectToggle && !introToggle && !timelineIntroToggle) {
-    //         const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
-    //         gsap.to(currentFov, {
-    //             value:50,
-    //             ease: "sine.inOut",
-    //             duration: 1,
-    //             onUpdate: () => {
-    //                 OfficialCameraRef.current.setFocalLength(currentFov.value);
-    //             }
-    //         });
-    //     }
-
-    // },[projectToggle]);
     return (
         useMemo(() =>(
             <PerspectiveCamera 
