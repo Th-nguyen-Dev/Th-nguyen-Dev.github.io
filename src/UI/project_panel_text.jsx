@@ -49,9 +49,6 @@ function ProjectPanelText({ title, projectType, date, progress, description, pro
                             <h2 className="whitespace-nowrap">{progress}</h2>
                         </div>
                         <div className="flex-grow"></div>
-                        {/* <Button variant={"outline"} className="h-8 text-lg z-50" onClick={onClick}>
-                            {show ? "Hide" : "Show"}
-                        </Button> */}
                     </div>
                     <br />
                     <Progress value={progressValue} className="w-full h-4" />
@@ -64,10 +61,6 @@ function ProjectPanelText({ title, projectType, date, progress, description, pro
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
-                    {/* <div style={{display:"none", opacity:"0%"}} ref={descriptionRef}>
-
-                        <p className="text-2xl">{description}</p>
-                    </div> */}
                 </div>
             </div>
     </>

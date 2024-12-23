@@ -12,14 +12,10 @@ import gsap from "gsap";
 
 function Background() {
     const backgroundRef = useRef();
-    const projectToggle = useSelector((state) => state.projectToggle.value);
-    const projectGraphicToggle = useSelector((state) => state.projectGraphicToggle.value);
-    const playmodeToggle = useSelector((state) => state.playmodeToggle.value);
+    const backgroundToggle = useSelector((state) => state.backgroundToggle.value);
     const {size} = useThree();
  
-
     useEffect(() => {
-        const lowerHalf = projectToggle || projectGraphicToggle;
         let trueValue = 0.8;
         let falseValue = 0;
         if ( size.width < 720){
@@ -30,11 +26,11 @@ function Background() {
             }
         }
         gsap.to(backgroundRef.current, {
-            opacity: lowerHalf ? trueValue : falseValue,
+            opacity: backgroundToggle ? trueValue : falseValue,
             ease: "sine.inOut",
             duration: 1.5
         });
-    }, [projectToggle, projectGraphicToggle, playmodeToggle]);
+    }, [backgroundToggle]);
 
     return (
         <div

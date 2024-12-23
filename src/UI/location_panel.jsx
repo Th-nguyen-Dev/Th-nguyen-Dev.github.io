@@ -36,6 +36,7 @@ export function MileStonePanel({title,location,date,link}){
         </div>
     );
 }
+
 export function MileStoneList({milestones}){
     return(
         <ul className='ml-10 list-disc'>

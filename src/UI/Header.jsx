@@ -43,34 +43,6 @@ const headerItemIconStyle = "w-12 max-md:w-10 max-sm:w-6 h-fit justify-center tr
             <div className='absolute w-full h-16 max-sm:h-10 bg-background '></div>
             <Provider store={redux_store}>
                 <NavigationMenu className="justify-start select-none border-b-2">
-                    {/* <NavigationMenuList>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink 
-                                    className={navigationMenuTriggerStyle()}
-                                    onFocus={onSelect}>
-                                    <div className={headerItemStyle}>
-                                        Home
-                                    </div> 
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink 
-                                    className={navigationMenuTriggerStyle()} onFocus={onSelect}>
-                                    <div className={headerItemStyle}>
-                                        Timeline
-                                    </div> 
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink 
-                                    className={navigationMenuTriggerStyle()} onFocus={onSelect}>
-                                    <div className={headerItemStyle}>
-                                        Projects
-                                    </div> 
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-                    </NavigationMenuList> */}
-                    {/* <div className="max-w-full min-w-0 w-full"></div> */}
                     <NavigationMenuList className="flex-row flex w-screen">
                         <NavigationMenuItem className="w-full">
                             <NavigationMenuLink 
