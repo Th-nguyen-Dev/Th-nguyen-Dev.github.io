@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const backgroundToggle = createSlice({
     name: 'backgroundToggle',
     initialState: {
-        value: true
+        value: false
     },
     reducers: {
         setBackgroundToggle: (state, action) => {
