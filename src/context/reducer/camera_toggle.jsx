@@ -2,11 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 export const cameraToggle = createSlice({
     name: 'cameraToggle',
     initialState: {
-        zoom_out_right: false,
-        zoom_in_right: false,
-        zoom_in_middle: false,
-        zoom_out_middle: false,
-        zoom_in_middle_down: false,
+        'zoom_out_right': false,
+        'zoom_in_right': false,
+        'zoom_in_middle': false,
+        'zoom_out_middle': false,
+        'zoom_in_middle_down': false,
     },
     reducers: {
         setCameraToggle: (state, action) => {
@@ -14,7 +14,9 @@ export const cameraToggle = createSlice({
             Object.keys(state).forEach(k => {
                 state[k] = false;
             });
-            state[key] = value;
+            if (state[key] !== undefined){
+                state[key] = value;
+            } 
         },
     },
 })
