@@ -88,10 +88,10 @@ function EarthMeshesPhysical() {
         >
         <Bvh firstHitOnly>
             <group ref={meshRef}>    
-                <EarthCities />
+                {/* <EarthCities /> */}
                 <EarthWeather />
-                <EarthCloud />
-                <TestCoordinate />
+                {/* <EarthCloud />
+                <TestCoordinate /> */}
             </group>
         </Bvh>
         </PresentationControls>

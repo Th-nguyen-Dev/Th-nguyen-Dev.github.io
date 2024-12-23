@@ -7,6 +7,7 @@ import * as THREE from 'three';
 import EarthMeshesPhysical from './earth_meshes_physical';
 import EarthMeshesAtmosphere from './earth_meshes_atmosphere';
 import gsap from 'gsap';
+import Earth from './earth';
 
 function EarthMeshes(props) {
     const meshRef = useRef();
@@ -35,9 +36,10 @@ function EarthMeshes(props) {
     return (
             <group ref={meshRef} {...props}>
             <group ref={earthRef} >
-                <EarthMeshesPhysical />
+                {/* <EarthMeshesPhysical /> */}
+                <Earth />
             </group>
-            <EarthMeshesAtmosphere />
+            {/* <EarthMeshesAtmosphere /> */}
             </group>
     )
 }
