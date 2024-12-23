@@ -11,7 +11,7 @@ import { Chrome, Wheel, ShadeSlider } from '@uiw/react-color';
 import { hsvaToHsla } from '@uiw/color-convert';
 
 const SketchPickerRender = () => {
-    const [hsva, setHsva] = useState({ h: 214, s: 43, v: 90, a: 1 });
+    const [hsva, setHsva] = useState({ h: 0, s: 0, v: 100, a: 1 });
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(setLightColorValue(hsvaToHsla(hsva)));
