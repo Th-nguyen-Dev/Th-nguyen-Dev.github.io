@@ -42,7 +42,7 @@ const headerItemIconStyle = "w-12 max-md:w-10 max-sm:w-6 h-fit justify-center tr
          <header className='sticky w-full top-0 h-36 hover:translate-y-0 focus:translate-x-0 -translate-y-20 transition-transform'>
             <div className='absolute w-full h-16 max-sm:h-10 bg-background '></div>
             <Provider store={redux_store}>
-                <NavigationMenu className="justify-start select-none border-b-2">
+                <NavigationMenu className="justify-start select-none ring-1 ring-foreground">
                     <NavigationMenuList className="flex-row flex w-screen">
                         <NavigationMenuItem className="w-full">
                             <NavigationMenuLink 

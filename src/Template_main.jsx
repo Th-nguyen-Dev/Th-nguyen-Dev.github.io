@@ -11,16 +11,18 @@ import Header from './UI/Header.jsx';
 import './index.css';
 import { Loader } from '@react-three/drei';
 import FakeLoadScreen from './UI/FakeLoadScreen.jsx';
+import VisualizerConfig from './UI/VisualizerConfig.jsx';
 const App = () => {
   return (
     <React.StrictMode>
-        <div className="absolute top-0 left-0  w-full h-full ">
+        <div className="absolute top-0 left-0 w-full h-full flex ">
           <WebProvider>
             <Provider store={redux_store}>
                 <OfficialExport />
                 {/* <EditorExport /> */}
             {/* <MusicPlayer /> */}
             <Header />
+            <VisualizerConfig/>
             <FakeLoadScreen />
             </Provider>
           </WebProvider>

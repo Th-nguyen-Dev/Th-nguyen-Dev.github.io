@@ -6,14 +6,13 @@ import { PixiPlugin } from "gsap/PixiPlugin";
 import * as PIXI from 'gsap/src/PixiPlugin';
 import * as THREE from 'three';
 import { WebContext } from '../context/web_context';
-import { setProjectToggle } from '@/context/reducer/project_toggle';
-import { useDispatch } from 'react-redux';
 function DirectionalLights() {
     gsap.registerPlugin(PixiPlugin);
     PixiPlugin.registerPIXI(PIXI);
     const directionalLightRef = useRef([]);
     const { addLight } = useContext(WebContext);
     const lightRotationValue = useSelector((state) => state.lightRotationValue.value);
+    const lightColorValue = useSelector((state) => state.lightColorValue);
     const lightPosition = new THREE.Vector3(14, 15, 20); 
 
     const rotateLight = (angle) => {
@@ -50,50 +49,31 @@ function DirectionalLights() {
         }
     }, [lightRotationValue]);
 
-    
- 
 
-
-    // useEffect(() => {
-    //     if (isReady) {
-    //         const temp  = {value: 0};
-    //         gsap.to(temp, {
-    //             value: 10*Math.PI,
-    //             duration: 50,
-    //             onUpdate: () => {
-    //                 rotateLight(temp.value);
-    //             },
-    //             ease: "sine.inOut"
-    //         });
-    //     }
-
-    // }, [isReady]);
-
-    // useEffect(() => {
-    //     if (directionalLightRef.current && directionalLightRef.current.length > 0) {
-    //         directionalLightRef.current.forEach(light => {
-    //             if (light) {
-    //                 let currentColor = light.color.getHSL({});
-    //                 let currentColorToString = { value: `hsl(${currentColor.h * 360}, ${currentColor.s * 100}%, ${currentColor.l * 100}%)` };
-    //                 let tl = gsap.timeline();
-    //                 tl.to(currentColorToString, {
-    //                     pixi: { value: projectToggle ? "hsl(35, 89%, 81%)" : "hsl(0, 0%, 100%)" },
-    //                     duration: 1,
-    //                     onUpdate: () => {
-    //                         const hslValue = { h: 0, s: 0, l: 0 };
-    //                         currentColorToString.value.replace(/hsla?\(([^,]+),([^,]+)%,([^,]+)%[^)]*\)/, (_, h, s, l) => {
-    //                             hslValue.h = parseFloat(h) / 360;
-    //                             hslValue.s = parseFloat(s) / 100;
-    //                             hslValue.l = parseFloat(l) / 100;
-    //                         });
-    //                         light.color.setHSL(hslValue.h, hslValue.s, hslValue.l);
-    //                     },
-    //                     ease: "sine.inOut"
-    //                 });
-    //             }
-    //         });
-    //     }
-    // }, [projectToggle]);
+    useEffect(() => {
+        if (directionalLightRef.current && directionalLightRef.current.length > 0) {
+            directionalLightRef.current.forEach(light => {
+                if (light) {
+                    let nextColorToString = { value: `hsl(${lightColorValue.h}, ${lightColorValue.s}%, ${lightColorValue.l}%)` };
+                    let tl = gsap.timeline();
+                    tl.to(nextColorToString, {
+                        pixi: { value: nextColorToString.value },
+                        duration: 1,
+                        onUpdate: () => {
+                            const hslValue = { h: 0, s: 0, l: 0 };
+                            nextColorToString.value.replace(/hsla?\(([^,]+),([^,]+)%,([^,]+)%[^)]*\)/, (_, h, s, l) => {
+                                hslValue.h = parseFloat(h) / 360;
+                                hslValue.s = parseFloat(s) / 100;
+                                hslValue.l = parseFloat(l) / 100;
+                            });
+                            light.color.setHSL(hslValue.h, hslValue.s, hslValue.l);
+                        },
+                        ease: "sine.inOut"
+                    });
+                }
+            });
+        }
+    }, [lightColorValue]);
     
     return (
         useMemo(() => (

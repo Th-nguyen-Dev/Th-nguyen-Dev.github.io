@@ -8,6 +8,7 @@ import playmodeToggle from './reducer/playmode_toggle'
 import  cameraToggle  from './reducer/camera_toggle'
 import backgroundToggle from './reducer/background_toggle'
 import lightRotationValue  from './reducer/lightrotation_value'
+import lightColorValue from './reducer/lightcolor_value'
 export default configureStore({
   reducer: {
     playmodeToggle: playmodeToggle,
@@ -19,5 +20,6 @@ export default configureStore({
     cameraToggle: cameraToggle,
     backgroundToggle: backgroundToggle,
     lightRotationValue: lightRotationValue,
+    lightColorValue: lightColorValue,
   },
 })
