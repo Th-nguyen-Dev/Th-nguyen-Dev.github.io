@@ -7,21 +7,34 @@ import gsap from 'gsap';
 function AmbientLights() {
     const ambientlightRef = useRef();
     const { addLight } = useContext(WebContext);
-    const projectToggle = useSelector(state => state.projectToggle.value);
+    const lightColorValue = useSelector((state) => state.lightColorValue);
+
     useEffect(() => {  
         if (ambientlightRef.current){
             addLight(ambientlightRef.current);
         }
     } , [ambientlightRef.current]);
+
     useEffect(() => {
         if (ambientlightRef.current) {
-            gsap.to(ambientlightRef.current, {
-                intensity: projectToggle ? 0 : 0.02,
+            let nextColorToString = { value: `hsl(${lightColorValue.h}, ${lightColorValue.s}%, ${lightColorValue.l}%)` };
+            let tl = gsap.timeline();
+            tl.to(nextColorToString, {
+                pixi: { value: nextColorToString.value },
                 duration: 1,
+                onUpdate: () => {
+                    const hslValue = { h: 0, s: 0, l: 0 };
+                    nextColorToString.value.replace(/hsla?\(([^,]+),([^,]+)%,([^,]+)%[^)]*\)/, (_, h, s, l) => {
+                        hslValue.h = parseFloat(h) / 360;
+                        hslValue.s = parseFloat(s) / 100;
+                        hslValue.l = parseFloat(l) / 100;
+                    });
+                    ambientlightRef.current.color.setHSL(hslValue.h, hslValue.s, hslValue.l);
+                },
                 ease: "sine.inOut"
             });
         }
-    }, [projectToggle,ambientlightRef.current]);
+    }, [lightColorValue]);
 
 
     return (
