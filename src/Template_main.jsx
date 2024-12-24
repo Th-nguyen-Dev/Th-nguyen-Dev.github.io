@@ -20,7 +20,7 @@ const App = () => {
             <Provider store={redux_store}>
                 <OfficialExport />
                 {/* <EditorExport /> */}
-            {/* <MusicPlayer /> */}
+                {/* <MusicPlayer /> */}
             <Header />
             <VisualizerConfig/>
             <FakeLoadScreen />

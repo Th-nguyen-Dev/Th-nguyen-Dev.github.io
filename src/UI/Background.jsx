@@ -13,24 +13,30 @@ import gsap from "gsap";
 function Background() {
     const backgroundRef = useRef();
     const backgroundToggle = useSelector((state) => state.backgroundToggle.value);
+    const playModeToggle = useSelector((state) => state.playmodeToggle.value);
     const {size} = useThree();
- 
-    useEffect(() => {
-        let trueValue = 0.8;
-        let falseValue = 0;
-        if ( size.width < 720){
-            if (playmodeToggle){
-                falseValue = 0;
-            } else {
-            falseValue = 0.8;
-            }
+
+    const updateBackgroundOpacity = () => {
+        let opacityValue = 0;
+        if (backgroundToggle) {
+            opacityValue = 0.8;
         }
+        if (size.width < 768) {
+            opacityValue = 0.8;
+        }
+        if (playModeToggle) {
+            opacityValue = 0;
+        }
+
         gsap.to(backgroundRef.current, {
-            opacity: backgroundToggle ? trueValue : falseValue,
-            ease: "sine.inOut",
-            duration: 1.5
+            duration: 0.5,
+            opacity: opacityValue,
         });
-    }, [backgroundToggle]);
+    };
+
+    useEffect(() => {
+        updateBackgroundOpacity();
+    }, [backgroundToggle, size.width]);
 
     return (
         <div

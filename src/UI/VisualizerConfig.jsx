@@ -1,5 +1,5 @@
 import React, {useState, Fragment, useEffect} from 'react';
-import { useDispatch } from 'react-redux';    
+import { useDispatch, useSelector } from 'react-redux';    
 import { setLightRotationValue } from '@/context/reducer/lightrotation_value';
 import { Slider } from '@/components/ui/slider';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
@@ -8,10 +8,11 @@ import { SketchPicker } from 'react-color';
 import { setLightColorValue } from '@/context/reducer/lightcolor_value';
 import ColorPicker from 'react-pick-color';
 import { Chrome, Wheel, ShadeSlider } from '@uiw/react-color';
-import { hsvaToHsla } from '@uiw/color-convert';
+import { hsvaToHsla, hslaToHsva } from '@uiw/color-convert';
 
 const SketchPickerRender = () => {
-    const [hsva, setHsva] = useState({ h: 0, s: 0, v: 100, a: 1 });
+    const lightColorValue = useSelector((state) => state.lightColorValue);
+    const [hsva, setHsva] = useState(hslaToHsva(lightColorValue));
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(setLightColorValue(hsvaToHsla(hsva)));
@@ -38,7 +39,7 @@ const SketchPickerRender = () => {
 
 const VisualizerConfig = () => {
     const dispatch = useDispatch(); 
-
+    const lightRotationValue = useSelector((state) => state.lightRotationValue.value) * 10;
     const handleSliderChange = (value) => {   
         dispatch(setLightRotationValue(value / 10));
     }
@@ -53,7 +54,7 @@ const VisualizerConfig = () => {
                     <PopoverContent className='my-4 z-50 h-fit w-64'>
                         <div className='relative w-full flex flex-col gap-y-8'>
                             <span className='text-lg font-normal'>Light Rotation</span>
-                            <Slider onValueChange={handleSliderChange} />
+                            <Slider onValueChange={handleSliderChange} value={[lightRotationValue]} />
                             <span className='text-lg font-normal'>Light Color</span>
                             <SketchPickerRender />
                         </div>
