@@ -3,7 +3,7 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { useEffect, useState } from 'react';
 import { OrbitControls, Preload } from '@react-three/drei';
 
-import AmbientLights from '../lights/ambient_lights';
+import AmbientLight from '../lights/ambient_light';
 import DirectionalLights from '../lights/directional_light';
 
 import OfficialCamera from '../cameras/official_camera';
@@ -37,7 +37,7 @@ function TestExport() {
             <PerformanceConfig/>
             {/* <MainCamera /> */}
             <color attach="background" args={['#000000']} />
-            <AmbientLights addLight={addLight}/>
+            <AmbientLight addLight={addLight}/>
             <TestMesh />
             <DirectionalLights addLight={addLight}/>
             <OfficialCamera makeDefault={true} />

@@ -7,8 +7,10 @@ import projectGraphicToggle from './reducer/project_graphic_toggle'
 import playmodeToggle from './reducer/playmode_toggle'
 import  cameraToggle  from './reducer/camera_toggle'
 import backgroundToggle from './reducer/background_toggle'
-import lightRotationValue  from './reducer/lightrotation_value'
-import lightColorValue from './reducer/lightcolor_value'
+import lightRotationValue  from './reducer/directional_light/light_rotation_value'
+import lightColorValue from './reducer/directional_light/light_color_value'
+import  ambientColorValue  from './reducer/ambient_light/ambient_color_value'
+import ambientIntensityValue from './reducer/ambient_light/ambient_intensity_value'
 export default configureStore({
   reducer: {
     playmodeToggle: playmodeToggle,
@@ -21,5 +23,7 @@ export default configureStore({
     backgroundToggle: backgroundToggle,
     lightRotationValue: lightRotationValue,
     lightColorValue: lightColorValue,
+    ambientColorValue: ambientColorValue,
+    ambientIntensityValue: ambientIntensityValue,
   },
 })
