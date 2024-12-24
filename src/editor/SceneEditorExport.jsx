@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Stats, Grid } from '@react-three/drei';
 import { useControls } from 'leva';
 
-import AmbientLights from '../lights/ambient_lights';
+import AmbientLight from '../lights/ambient_light';
 import DirectionalLights from '../lights/directional_light';
 import PostProcessing from '../postprocesses/effect_composer';
 import EarthMeshes from '../meshes/earth/earth_meshes';
@@ -42,7 +42,7 @@ function SceneEditorExport({addMesh, addLight}) {
                     metalness={0.1}
                 ></MeshReflectorMaterial>
             </mesh>
-            <AmbientLights addLight={addLight}/>
+            <AmbientLight addLight={addLight}/>
             <DirectionalLights addLight={addLight}/>
             <EarthMeshes addMesh={addMesh}/>
             <Grid position={[0, 0, 0]} args={gridSize} {...gridConfig} />

@@ -79,16 +79,12 @@ function DirectionalLights() {
         useMemo(() => (
             <>
                 <directionalLight 
-                ref={ref => directionalLightRef.current.push(ref)}
-                color={0xffffff}
-                position={lightPosition.clone()} 
-                intensity={3.6}
-                target={new THREE.Object3D()}
+                    ref={ref => directionalLightRef.current.push(ref)}
+                    color={0xffffff}
+                    position={lightPosition.clone()} 
+                    intensity={3.6}
+                    target={new THREE.Object3D()}
                 />
-                {/* {isReady && (
-                    <directionalLightHelper args = {[directionalLightRef.current[0], 100]}
-                    />
-                )} */}
             </>
         ), [])
     );

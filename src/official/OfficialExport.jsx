@@ -3,7 +3,7 @@ import { Canvas, useThree } from '@react-three/fiber';
 import { Scroll, ScrollControls, Preload, useProgress } from '@react-three/drei';
 import { useSelector, Provider } from 'react-redux';
 
-import AmbientLights from '../lights/ambient_lights';
+import AmbientLight from '../lights/ambient_light';
 import DirectionalLights from '../lights/directional_light';
 import PostProcessing from '../postprocesses/effect_composer';
 import EarthMeshes from '../meshes/earth/earth_meshes';
@@ -47,7 +47,7 @@ export function CanvasDOM(){
             pages={pages}
             enabled={true}
         > 
-            <AmbientLights/>
+            <AmbientLight/>
             <DirectionalLights/>
             <EarthMeshes/>
             <PostProcessing/>
