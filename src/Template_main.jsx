@@ -7,11 +7,11 @@ import TestExport from './test/TestExport.jsx';
 import { WebProvider } from './context/web_context';
 import redux_store from './context/redux_store.jsx';
 import { Provider } from 'react-redux';
-import Header from './UI/Header.jsx';
+import Header from './UI/header/Header.jsx';
 import './index.css';
 import { Loader } from '@react-three/drei';
-import FakeLoadScreen from './UI/FakeLoadScreen.jsx';
-import VisualizerConfig from './UI/VisualizerConfig.jsx';
+import FakeLoadScreen from './UI/background_buffer/FakeLoadScreen.jsx';
+import VisualizerConfig from './UI/visualizer_config/VisualizerConfig.jsx';
 const App = () => {
   return (
     <React.StrictMode>

@@ -1,6 +1,6 @@
 import React from 'react';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const Tabs = TabsPrimitive.Root;
 const TabsList = TabsPrimitive.List;
@@ -12,7 +12,7 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm focus:outline-none hover:bg-foreground hover:text-background hover:shadow-sm",
+      "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 duration-0 text-sm font-medium ring-1 ring-foreground bg-transparent transition-all disabled:pointer-events-none disabled:opacity-50 data-[state=active]:ring-0 data-[state=active]:bg-background data-[state=active]:text-foreground focus:outline-none hover:bg-foreground hover:text-background",
       className
     )}
     {...props}
@@ -27,9 +27,8 @@ const TabsContent = React.forwardRef<
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      "transition-opacity duration-500 opacity-0 data-[state=active]:opacity-100 data-[state=active]:block hidden",
-      "transition-transform transform translate-y-4 data-[state=active]:translate-y-0 ease-in-out",
-      "p-2 data-[state=inactive]:p-0",
+      "overflow-hidden max-h-0 opacity-0 translate-y-5 flex flex-col transform transition-all ease-in-out duration-700",
+      "data-[state=active]:max-h-screen data-[state=active]:opacity-100 data-[state=active]:translate-y-0",
       "ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
       className
     )}

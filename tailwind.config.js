@@ -21,7 +21,8 @@ export default {
         height: 'height',
         width: 'width',
         resize: 'width, height, font-size',
-        spacing: 'margin, padding'
+        spacing: 'margin, padding',
+        maxHeight: 'max-height',
       },
       borderRadius: {
         lg: 'var(--radius)',

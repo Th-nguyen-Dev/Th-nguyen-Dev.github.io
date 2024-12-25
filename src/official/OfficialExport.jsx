@@ -9,15 +9,15 @@ import PostProcessing from '../postprocesses/effect_composer';
 import EarthMeshes from '../meshes/earth/earth_meshes';
 import OfficialCamera from '../cameras/official_camera';
 
-import Introduction from '@/UI/Introduction';
-import Timeline from '@/UI/Timeline';
-import Project from '@/UI/Project';
-import ProjectGraphic from '@/UI/ProjectGraphic';
-import Background from '@/UI/Background';
-import Interim from '@/UI/Interim';
+import Introduction from '@/UI/introduction/Introduction';
+import Timeline from '@/UI/timeline/Timeline';
+import Project from '@/UI/projects/Project';
+import ProjectGraphic from '@/UI/projects/ProjectGraphic';
+import Background from '@/UI/background_buffer/Background';
+import Interim from '@/UI/background_buffer/Interim';
 
 import redux_store from '@/context/redux_store.jsx';
-import PlayMode from '@/UI/Playmode';
+import PlayMode from '@/UI/playmode/Playmode';
 
 export function PerformanceConfig(){
     const {gl} = useThree();
