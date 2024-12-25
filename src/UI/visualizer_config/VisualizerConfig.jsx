@@ -9,13 +9,13 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 
 const VisualizerConfig = () => {
     return (
-        <header className='sticky w-screen h-full p-4 flex justify-end items-end'>
-            <div >
+        <header className='sticky w-screen h-full px-8 py-4 flex justify-end items-end'>
+            <div>
                 <Popover>
-                    <PopoverTrigger className='w-16 h-10 rounded-full items-center bg-background ring-1 ring-foreground justify-center flex'>
-                        <GrMenu size={28} />
+                    <PopoverTrigger className='w-16 h-10 rounded-full items-center bg-transparent hover:bg-foreground ring-1 ring-foreground justify-center flex hover:text-background focus:outline-none'>
+                        <GrMenu size={28} color='' />
                     </PopoverTrigger>
-                    <PopoverContent className='my-10 z-50 w-full transition-all'>
+                    <PopoverContent className='my-5 z-50 w-full transition-all bg-background '>
                         <ScrollArea className='h-full overflow-hidden'>
                             <Accordion type="multiple" collapsible className='flex flex-col gap-y-4 mx-6'>
                                 <AccordionItem>
