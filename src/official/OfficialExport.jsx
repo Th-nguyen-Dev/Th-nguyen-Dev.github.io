@@ -37,14 +37,29 @@ export function Loading() {
 }
 
 export function CanvasDOM(){
+    const [pages, setPages] = useState(30);
+    const {size} = useThree(); 
+    const htmlRef = useRef();
+    useEffect(() => {
+        if (htmlRef.current) {
+            setPages(htmlRef.current.getBoundingClientRect().height / size.height);
+        }
+    }, [size, htmlRef.current]);
     return(
     <>
-        <AmbientLight/>
-        <DirectionalLights/>
-        <EarthMeshes/>
-        <PostProcessing/>
-        <OfficialCamera makeDefault={true} />
-        <Preload all/>
+        <ScrollControls damping={0.1} offset={1} pages={pages} >
+            <AmbientLight/>
+            <DirectionalLights/>
+            <EarthMeshes/>
+            <PostProcessing/>
+            <OfficialCamera makeDefault={true} />
+            <Preload all/>
+            <Scroll html style={{height: '100%', width: '100%'}} >
+                <div className="w-auto h-auto" ref={htmlRef}>
+                    <OfficialHTML/>
+                </div>
+            </Scroll>
+        </ScrollControls>
     </>
     );
 }
@@ -53,21 +68,15 @@ function OfficialExport() {
     const canvasRef = useRef();
     return (
         <div className='w-screen h-screen relative'>
-            <Canvas ref={canvasRef} className="canvas">
+            <Canvas ref={canvasRef} className="canvas pointer-events-auto z-10">
                 <PerformanceConfig/>  
                 <color attach="background" args={['#000000']} /> 
                 <CanvasDOM/>           
             </Canvas>  
-            <div className='absolute h-screen w-screen inset-0'>
-                <ScrollArea className='w-full h-full'>
-                    <div className='h-56'/>
-                    <OfficialHTML/>
-                </ScrollArea>
-            </div>
-            <div className='abolute'>
+            <div className='absolute top-0 left-0 w-full pointer-events-auto z-30'>
                 <Header />
             </div>
-            <div className='absolute bottom-0 right-0 pointer-events-auto'>
+            <div className='absolute bottom-0 right-0 pointer-events-auto z-40'>
                 <VisualizerConfig/>
             </div>
         </div>

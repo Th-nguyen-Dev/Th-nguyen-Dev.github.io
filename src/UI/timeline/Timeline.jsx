@@ -56,7 +56,7 @@ function Timeline() {
     ), []);
 
     return (
-        <div className="w-1/2" ref={timelineRef}>
+        <div className="w-1/2 pointer-events-auto" ref={timelineRef}>
             <div className="relative text-white top-1/4 right-10 mr-20 ml-20">
                 <span className="text-7xl font-bold"> Timeline</span>
                 <br></br>

@@ -162,7 +162,7 @@ canvas {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-opacity-10;
+  @apply bg-background;
 }
 
 ::-webkit-scrollbar-thumb {

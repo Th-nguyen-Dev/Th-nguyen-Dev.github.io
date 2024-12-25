@@ -108,7 +108,7 @@ function Project() {
 
     return (
             <div
-                className="relative ml-10 mr-10"
+                className="relative ml-10 mr-10 pointer-events-auto"
                 ref={projectRef}
             >
                 <br /><br />

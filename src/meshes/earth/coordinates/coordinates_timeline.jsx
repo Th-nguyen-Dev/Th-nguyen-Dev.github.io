@@ -10,8 +10,7 @@ const CoordinatesTimeline = () => {
     const color = new THREE.Color(0x00ff00);
     const emissiveColor = new THREE.Color(0x00ff00);
     const emissiveIntensity = 0.5;
-    const dispatch = useDispatch();
-    console.log(coordinates3D);
+    const dispatch = useDispatch(); 
     return (
         <CoordinateMeshesGeneration 
             coordinates={coordinates3D}

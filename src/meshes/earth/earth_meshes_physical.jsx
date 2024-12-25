@@ -19,7 +19,6 @@ function EarthMeshesPhysical() {
     const meshRef = useRef();
     const {quaternions} = useContext(WebContext);
     const movementQuaternions = useSelector((state) => state.locationsTLDictionary.movementQuaternions);
-    console.log(movementQuaternions);
     const localQuaternions = useRef(quaternions);
     const toggleDes = useSelector((state) => state.timelineToggle.value);
 

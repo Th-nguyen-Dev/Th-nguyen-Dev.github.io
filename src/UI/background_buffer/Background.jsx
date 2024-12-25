@@ -35,7 +35,7 @@ function Background() {
 
     return (
         <div
-            className="fixed inset-0 bg-background opacity-0 -z-1 pointer-events-none"
+            className={'fixed inset-0 bg-background opacity-0 -z-1 pointer-events-none'}
             ref={backgroundRef}
             style={{height: "10000vh"}}
         ></div>

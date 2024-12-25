@@ -21,7 +21,7 @@ function PlayMode(){
     }, [isVisible]);
 
     return (
-            <div className='flex w-screen h-screen items-end justify-end' ref={playModeRef}></div>
+            <div className='flex w-screen h-screen items-end justify-end pointer-events-none' ref={playModeRef}></div>
     )
 } 
 export default PlayMode;

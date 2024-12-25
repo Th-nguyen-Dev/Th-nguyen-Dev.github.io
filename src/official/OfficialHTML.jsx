@@ -14,16 +14,20 @@ export default function OfficialHTML({ htmlRef }) {
     return (
         <Provider store={redux_store}>
             <div className='h-auto w-auto' ref={htmlRef}>
-                <Introduction/>
-                <Interim text={"The Earth is 4.5 billion year old."} helpText={"Hint: You can hover over the buttons to travel."}/>
-                <Timeline/>
-                <Interim text={"Coral reefs are Earth's largest living structure."}/>
-                <Background/>
-                <Project/>
-                <Interim text={"The Moon is drifting away from Earth."}/>
-                <ProjectGraphic/>
-                <Interim text={"The Moon helps stabilize the Earth's wobble"}/>
-                <PlayMode/>
+                <div className='pointer-events-auto'>
+                    <Introduction/>
+                    <Interim text={"The Earth is 4.5 billion year old."} helpText={"Hint: You can hover over the buttons to travel."}/>
+                    <Timeline/>
+                    <Interim text={"Coral reefs are Earth's largest living structure."}/>
+                    <Background/>
+                    <Project/>
+                    <Interim text={"The Moon is drifting away from Earth."}/>
+                    <ProjectGraphic/>
+                    <Interim text={"The Moon helps stabilize the Earth's wobble"}/>
+                </div>
+                <div className='pointer-events-none'>
+                    <PlayMode/>
+                </div>
             </div>
         </Provider>
     );
