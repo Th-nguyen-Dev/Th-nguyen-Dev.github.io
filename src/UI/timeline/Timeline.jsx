@@ -2,18 +2,11 @@ import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { setCameraToggle } from '@/context/reducer/camera_toggle';
 import { setBackgroundToggle } from '@/context/reducer/background_toggle';
-import { useScroll } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useIsVisible } from '@/Hook/useIsVisible';
 import LocationPanel from './location_panel';
 
 function Timeline() {
-    const [progressValue, setProgressValue] = useState(0);
-    const progressData = useScroll();
-    useFrame(() => {
-        setProgressValue(Math.floor(progressData.range(0, 1/2) * 100));
-    });
-
     const dispatch = useDispatch();
     const timelineRef = useRef();
     const isVisible = useIsVisible(timelineRef);

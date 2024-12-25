@@ -1,16 +1,16 @@
-
 import React from 'react';
-import { TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion_visualizer';
 import { SliderAmbientLightIntensity } from '../sliders';
 import { AmbientColorPicker } from '../color_picker';
 import TabsSubContent from './TabsSubContent';
 
 const AmbientLightTab = () => {
     return (
-        <div>
-            <TabsTrigger className='w-full rounded-full text-lg font-bold' value='ambient_light'>Ambient Light</TabsTrigger>
-            <TabsContent value='ambient_light'>
-                <hr className='w-full mb-4'/>
+        <AccordionItem value="ambient_light">
+            <AccordionTrigger>
+                Ambient Light
+            </AccordionTrigger>
+            <AccordionContent>
                 <div className='gap-y-4'>
                     <TabsSubContent label='Intensity'>
                         <SliderAmbientLightIntensity />
@@ -19,8 +19,8 @@ const AmbientLightTab = () => {
                         <AmbientColorPicker />
                     </TabsSubContent>
                 </div>
-            </TabsContent>
-        </div>
+            </AccordionContent>
+        </AccordionItem>
     );
 };
 

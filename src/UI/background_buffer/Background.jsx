@@ -7,8 +7,10 @@ function Background() {
     const backgroundRef = useRef();
     const backgroundToggle = useSelector((state) => state.backgroundToggle.value);
     const playModeToggle = useSelector((state) => state.playmodeToggle.value);
-    const { size } = useThree();
-
+    const size = {
+        width: window.innerWidth,
+        height: window.innerHeight
+    };
     const updateBackgroundOpacity = () => {
         let opacityValue = 0;
         if (backgroundToggle) {
@@ -29,13 +31,13 @@ function Background() {
 
     useEffect(() => {
         updateBackgroundOpacity();
-    }, [backgroundToggle, size.width]);
+    }, [backgroundToggle]);
 
     return (
         <div
-            className="absolute w-full bg-background -translate-y-2/3 opacity-0 -z-50"
+            className="fixed inset-0 bg-background opacity-0 -z-1 pointer-events-none"
             ref={backgroundRef}
-            style={{ height: "90000rem" }}
+            style={{height: "10000vh"}}
         ></div>
     );
 }

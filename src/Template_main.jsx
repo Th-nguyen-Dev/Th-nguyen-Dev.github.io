@@ -21,9 +21,7 @@ const App = () => {
                 <OfficialExport />
                 {/* <EditorExport /> */}
                 {/* <MusicPlayer /> */}
-            <Header />
-            <VisualizerConfig/>
-            <FakeLoadScreen />
+              <FakeLoadScreen />
             </Provider>
           </WebProvider>
           

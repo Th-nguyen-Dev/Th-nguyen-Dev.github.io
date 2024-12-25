@@ -15,9 +15,15 @@ import Project from '@/UI/projects/Project';
 import ProjectGraphic from '@/UI/projects/ProjectGraphic';
 import Background from '@/UI/background_buffer/Background';
 import Interim from '@/UI/background_buffer/Interim';
-
 import redux_store from '@/context/redux_store.jsx';
 import PlayMode from '@/UI/playmode/Playmode';
+import Header from '@/UI/header/Header';
+import VisualizerConfig from '@/UI/visualizer_config/VisualizerConfig';
+
+import OfficialHTML from './OfficialHTML';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import FakeLoadScreen from '@/UI/background_buffer/FakeLoadScreen';
+
 
 export function PerformanceConfig(){
     const {gl} = useThree();
@@ -31,62 +37,40 @@ export function Loading() {
 }
 
 export function CanvasDOM(){
-    const [pages, setPages] = useState(30);
-    const {size} = useThree(); 
-    const htmlRef = useRef();
-    useEffect(() => {
-        if (htmlRef.current) {
-            setPages(htmlRef.current.getBoundingClientRect().height / size.height);
-        }
-    }, [size, htmlRef.current]);
     return(
     <>
-        <ScrollControls
-            damping={0.1}
-            prepend={false}
-            pages={pages}
-            enabled={true}
-        > 
-            <AmbientLight/>
-            <DirectionalLights/>
-            <EarthMeshes/>
-            <PostProcessing/>
-            <OfficialCamera makeDefault={true} />
-            <Scroll html style={{width: '100%', height: '100%'}}  >
-                <Provider store={redux_store}>
-                    <div className='h-auto w-auto' ref={htmlRef} >
-                        <div style={{height:"25vh"}}></div>
-                        <Introduction/>
-                        <Interim text={"The Earth is 4.5 billion year old."} helpText={"Hint: You can hover over the buttons to travel."}/>
-                        <Timeline/>
-                        <Interim text={"Coral reefs are Earth's largest living structure."}/>
-                        <Background/>
-                        <Project/>
-                        <Interim text={"The Moon is drifting away from Earth."}/>
-                        <ProjectGraphic/>
-                        <Interim text={"The Moon helps stabilize the Earth's wobble"}/>
-                        <PlayMode/>
-                    </div>
-                </Provider>
-            </Scroll>
-        </ScrollControls>
+        <AmbientLight/>
+        <DirectionalLights/>
+        <EarthMeshes/>
+        <PostProcessing/>
+        <OfficialCamera makeDefault={true} />
         <Preload all/>
     </>
-
     );
 }
 
 function OfficialExport() {
     const canvasRef = useRef();
     return (
-        <>
+        <div className='w-screen h-screen relative'>
             <Canvas ref={canvasRef} className="canvas">
                 <PerformanceConfig/>  
                 <color attach="background" args={['#000000']} /> 
                 <CanvasDOM/>           
             </Canvas>  
-        </>
- 
+            <div className='absolute h-screen w-screen inset-0'>
+                <ScrollArea className='w-full h-full'>
+                    <div className='h-56'/>
+                    <OfficialHTML/>
+                </ScrollArea>
+            </div>
+            <div className='abolute'>
+                <Header />
+            </div>
+            <div className='absolute bottom-0 right-0 pointer-events-auto'>
+                <VisualizerConfig/>
+            </div>
+        </div>
     );
 }
 

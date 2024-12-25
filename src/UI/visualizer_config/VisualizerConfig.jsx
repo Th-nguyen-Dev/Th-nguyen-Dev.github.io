@@ -1,45 +1,38 @@
 import React from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { GrMenu } from "react-icons/gr";
-import { Tabs, TabsList } from "@/components/ui/tabs"
+import { Accordion, AccordionItem } from '@/components/ui/accordion_visualizer';
 import DirectionalLightTab from './tabs/DirectionalLightTab';
 import AmbientLightTab from './tabs/AmbientLightTab';
 import CameraTab from './tabs/CameraTab';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
-const TabsSubContent = ({ label, children }) => {
-    return (
-        <div className='w-full gap-y-4 flex flex-col'>
-            <span className='text-base font-normal'>{label}</span>
-            <div className='w-full flex justify-center items-center'>
-                <div className='w-10/12'>
-                    {children}
-                </div>
-            </div>
-            <div className='h-4'></div> 
-        </div>
-    );
-};
 const VisualizerConfig = () => {
     return (
-        <div className='flex sticky w-full h-full items-end justify-end'>
-            <div className='absolute py-6 px-10'>
+        <header className='sticky w-screen h-full p-4 flex justify-end items-end'>
+            <div >
                 <Popover>
                     <PopoverTrigger className='w-16 h-10 rounded-full items-center bg-background ring-1 ring-foreground justify-center flex'>
                         <GrMenu size={28} />
                     </PopoverTrigger>
-                    <PopoverContent className='my-4 z-50 w-full transition-all'>
-                        <Tabs className='w-full h-fit' defaultValue='directional_light'>
-                            <TabsList className='flex-col flex gap-y-4 bg-transparent'>
-                                <DirectionalLightTab />
-                                <AmbientLightTab />
-                                <CameraTab />
-                            </TabsList>
-                            <div className='h-4'></div>
-                        </Tabs>
+                    <PopoverContent className='my-10 z-50 w-full transition-all'>
+                        <ScrollArea className='h-full overflow-hidden'>
+                            <Accordion type="multiple" collapsible className='flex flex-col gap-y-4 mx-6'>
+                                <AccordionItem>
+                                    <DirectionalLightTab />
+                                </AccordionItem>
+                                <AccordionItem>
+                                    <AmbientLightTab />
+                                </AccordionItem>
+                                <AccordionItem>
+                                    <CameraTab />
+                                </AccordionItem>
+                            </Accordion>
+                        </ScrollArea>
                     </PopoverContent>
                 </Popover>
             </div>
-        </div>
+        </header>
     );
 };
 

@@ -27,9 +27,11 @@ const TabsContent = React.forwardRef<
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      "overflow-hidden max-h-0 opacity-0 translate-y-5 flex flex-col transform transition-all ease-in-out duration-700",
+      "overflow-hidden opacity-0 translate-y-5 flex flex-col transform transition-all ease-in-out duration-700 ",
       "data-[state=active]:max-h-screen data-[state=active]:opacity-100 data-[state=active]:translate-y-0",
+      "data-[state=inactive]:max-h-0 data-[state=inactive]:opacity-0 data-[state=inactive]:translate-y-5",
       "ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+      "important",
       className
     )}
     {...props}

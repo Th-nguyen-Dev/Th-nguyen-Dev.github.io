@@ -17,12 +17,12 @@ const PopoverContent = React.forwardRef<
       align={align}
       sideOffset={sideOffset}
       className={cn(
-        "z-50 ring-1 ring-foreground bg-background p-5 *:text-secondary outline-none transition-all duration-500 ease-in-out",
+        "z-50 ring-1 ring-foreground bg-background px-2 py-6 *:text-secondary outline-none transition-all duration-500 ease-in-out",
         "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
         "data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-6",
         className,
       )}
-      style={{ borderRadius: "2rem", height: "80vh", width: "30vh" }}
+      style={{ borderRadius: "2rem", height: "80vh", width: "35vh" }}
       {...props}
     />
   </PopoverPrimitive.Portal>
