@@ -38,38 +38,40 @@ const locationsTimeline = {
     "Renton": { latitude: 47.482878, longitude: -122.217066 }
 };
 
-const get3DCoordinate = ({earthCoordinate, radius}) => {
-    const lat = earthCoordinate.latitude * Math.PI / 180;
-    const lon = earthCoordinate.longitude * Math.PI / 180;
-    return new THREE.Vector3(
-        radius * Math.sin(lat) * Math.cos(lon),
-        radius * Math.cos(lat),
-        radius * Math.sin(lat) * Math.sin(lon)
-    );
-}
+const get3DCoordinate = ({ earthCoordinate, radius }) => {
+    const lat = (90 - earthCoordinate.latitude) * Math.PI / 180;
+    const lon = -earthCoordinate.longitude * Math.PI / 180;
+    return {
+        x: radius * Math.sin(lat) * Math.cos(lon),
+        y: radius * Math.cos(lat),
+        z: radius * Math.sin(lat) * Math.sin(lon)
+    };
+};
 
-const getMovementQuaternion = ({startCoordinate, endCoordinate}) =>{
-    const startVec = get3DCoordinate(startCoordinate).normalize();
-    const endVec = get3DCoordinate(endCoordinate).normalize();
-    return new THREE.Quaternion().setFromUnitVectors(startVec, endVec);
-}
+const getMovementQuaternion = ({ startVec, endVec }) => {
+    const startVec3 = new THREE.Vector3(startVec.x, startVec.y, startVec.z);
+    const endVec3 = new THREE.Vector3(endVec.x, endVec.y, endVec.z);
+    const startVecNorm = startVec3.normalize();
+    const endVecNorm = endVec3.normalize();
+    const quaternion = new THREE.Quaternion().setFromUnitVectors(startVecNorm, endVecNorm);
+    return { x: quaternion.x, y: quaternion.y, z: quaternion.z, w: quaternion.w };
+};
 
-const generate3DCoordinates = ({locations, radius}) => {
-    const radius = 5;
+const generate3DCoordinates = ({ locations, radius }) => {
     const coordinates = {};
     Object.keys(locations).forEach((key) => {
-        coordinates[key] = get3DCoordinate({earthCoordinate: locations[key], radius});
+        coordinates[key] = get3DCoordinate({ earthCoordinate: locations[key], radius });
     });
     return coordinates;
-}
+};
 
-const generateMovementQuaternions = ({locations, radius}) => {
+const generateMovementQuaternions = ({ locations, endVec, radius }) => {
     const quaternions = {};
     Object.keys(locations).forEach((key) => {
-        const currentStartCoordinate = get3DCoordinate({earthCoordinate: locations[key], radius});
-        quaternions[key] = getMovementQuaternion({startCoordinate: currentStartCoordinate , endCoordinate: locations[key]});
+        const currentStartVec = get3DCoordinate({ earthCoordinate: locations[key], radius });
+        quaternions[key] = getMovementQuaternion({ startVec: currentStartVec, endVec });
     });
     return quaternions;
-}
+};
 
-export default {locationsNeuralNetwork, locationsTimeline, generate3DCoordinates, generateMovementQuaternions};
+export { locationsNeuralNetwork, locationsTimeline, generate3DCoordinates, generateMovementQuaternions };

@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
 
-function CoordinateMeshesGeneration({coordinates, color, emissiveColor, emissiveIntensity}){
+function CoordinateMeshesGeneration({ coordinates, color, emissiveColor, emissiveIntensity }) {
     
     const generateMeshes = () => {
         const meshes = [];
-        coordinates.forEach((value, key) => {
+        Object.entries(coordinates).forEach(([key, value]) => {
             meshes.push(
-                <group key={key} position={value}>
+                <group key={key} position={[value.x, value.y, value.z]}>
                     <mesh>
                         <sphereGeometry args={[0.05, 10, 10]} />
                         <meshLambertMaterial 
@@ -21,10 +21,13 @@ function CoordinateMeshesGeneration({coordinates, color, emissiveColor, emissive
         return meshes;
     };
 
-    return useMemo(
+    const meshes = useMemo(() => generateMeshes(), [coordinates, color, emissiveColor, emissiveIntensity]);
+
+    return (
         <>
-            {generateMeshes()}
+            {meshes}
         </>
     );
 }
-export default CoordinateMeshesGeneration({coordinates, color, emissiveColor, emissiveIntensity});
+
+export default CoordinateMeshesGeneration;

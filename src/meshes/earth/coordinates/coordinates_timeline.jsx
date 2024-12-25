@@ -5,16 +5,16 @@ import CoordinateMeshesGeneration from './coordinates_lib';
 import { regenerateDictionary } from '@/context/reducer/locations/locations_timeline';
 
 const CoordinatesTimeline = () => {
-    const coordinates = useSelector((state) => state.locationsTLDictionary.coordinates3D);
+    const coordinates3D = useSelector((state) => state.locationsTLDictionary.coordinates3D);
     const radius = useSelector((state) => state.locationsTLDictionary.radius);
     const color = new THREE.Color(0x00ff00);
     const emissiveColor = new THREE.Color(0x00ff00);
     const emissiveIntensity = 0.5;
     const dispatch = useDispatch();
-
+    console.log(coordinates3D);
     return (
         <CoordinateMeshesGeneration 
-            coordinates={coordinates}
+            coordinates={coordinates3D}
             color={color}
             emissiveColor={emissiveColor}
             emissiveIntensity={emissiveIntensity}

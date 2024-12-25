@@ -8,6 +8,7 @@ import EarthCloud from './earth_cloud';
 import EarthWeather from './earth_weather';
 import EarthCities from './earth_cities';
 import TestCoordinate from './test_coordinate';
+import CoordinatesCoreControl from './coordinates/coordinates_core_control';
 import Earth from './earth';
 import { WebContext } from '../../context/web_context';
 import { useSelector, useDispatch } from 'react-redux';
@@ -17,6 +18,8 @@ import gsap from 'gsap';
 function EarthMeshesPhysical() {
     const meshRef = useRef();
     const {quaternions} = useContext(WebContext);
+    const movementQuaternions = useSelector((state) => state.locationsTLDictionary.movementQuaternions);
+    console.log(movementQuaternions);
     const localQuaternions = useRef(quaternions);
     const toggleDes = useSelector((state) => state.timelineToggle.value);
 
@@ -24,7 +27,8 @@ function EarthMeshesPhysical() {
 
     useEffect(() => {
         if (toggleDes) {
-            selectedQuaterion.current = localQuaternions.current.get(toggleDes);
+            const { x, y, z, w } = movementQuaternions[toggleDes];
+            selectedQuaterion.current = new THREE.Quaternion(x, y, z, w);
         }
     }, [toggleDes]);
 
@@ -91,7 +95,8 @@ function EarthMeshesPhysical() {
                 <EarthCities />
                 <EarthWeather />
                 <EarthCloud />
-                <TestCoordinate />
+                {/* <TestCoordinate /> */}
+                <CoordinatesCoreControl />
             </group>
         </Bvh>
         </PresentationControls>
