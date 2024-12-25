@@ -15,6 +15,7 @@ export default function OfficialHTML({ htmlRef }) {
         <Provider store={redux_store}>
             <div className='h-auto w-auto' ref={htmlRef}>
                 <div className='pointer-events-auto'>
+                    <div className='h-56'></div>
                     <Introduction/>
                     <Interim text={"The Earth is 4.5 billion year old."} helpText={"Hint: You can hover over the buttons to travel."}/>
                     <Timeline/>
