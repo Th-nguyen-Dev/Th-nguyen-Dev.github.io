@@ -9,7 +9,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 
 const VisualizerConfig = () => {
     return (
-        <header className='sticky w-screen h-full px-8 py-4 flex justify-end items-end'>
+        <header className='sticky w-screen h-full px-8 py-8 flex justify-end items-end'>
             <div>
                 <Popover>
                     <PopoverTrigger className='w-16 h-10 rounded-full items-center bg-transparent hover:bg-foreground ring-1 ring-foreground justify-center flex hover:text-background focus:outline-none'>
