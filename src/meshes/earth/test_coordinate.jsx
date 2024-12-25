@@ -11,6 +11,7 @@ const {coordinates} = useContext(WebContext);
 const activeGeoRefs = useRef(new Map());
 const activeMatRefs = useRef(new Map());
 const timelineToggle = useSelector((state) => state.timelineToggle.value);
+
 useEffect(() => {
     if (activeGeoRefs.current.size > 0 && activeMatRefs.current.size > 0) {
         console.log("activeGeoRefs", activeGeoRefs.current);
