@@ -1,11 +1,15 @@
 import earthBump from "/textures/earth_bump_map.png";
 import earthSpecular from "/textures/earth land ocean mask.png";
-import earthSpriteSheetG from "/textures_transition/earth_sprite_grid_lg.png";
+import earthSpriteSheetXl from "/textures_transition/earth_sprite_grid.png";
+import earthSpriteSheetLg from "/textures_transition/earth_sprite_grid_lg.png";
+import earthSpriteSheetMd from "/textures_transition/earth_sprite_grid_med.png";
+import earthSpriteSheetSm from "/textures_transition/earth_sprite_grid_tiny.png";
 
 import { useFrame } from '@react-three/fiber';
 import { useRef, useEffect, useMemo,useLayoutEffect } from 'react';
 import { useControls } from "leva";
 import { useState } from 'react';
+import { useLoader } from "@react-three/fiber";
 import CustomShaderMaterial from "three-custom-shader-material";
 
 import transitionMapFragment from "../../shaders/transition_map_fragment.glsl";
@@ -21,6 +25,8 @@ function EarthWeather(){
 
     const earthBumpTexture = new THREE.TextureLoader().load(earthBump);
     const earthSpecularTexture = new THREE.TextureLoader().load(earthSpecular);
+    const earthSurfaceTexture = useLoader(THREE.TextureLoader, earthSpriteSheetXl);
+    const baseTextureG = useRef(earthSurfaceTexture);
 
     const time = useRef(0);
     const prevTime = useRef(0); 
@@ -29,7 +35,6 @@ function EarthWeather(){
     const nextTileX = useRef(0);   
     const nextTileY = useRef(0); 
     
-    const baseTextureG = useRef(new THREE.TextureLoader().load(earthSpriteSheetG));
     const uniforms = useMemo(() => ({
         utime: { value: 0 },
         prevMonth: { value: 0 },
@@ -71,7 +76,6 @@ function EarthWeather(){
             <mesh ref={earthRef}>
             <sphereGeometry args={[5, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
             <CustomShaderMaterial
-                
                 ref = {materialRef}
                 baseMaterial={THREE.MeshPhongMaterial}
                 uniforms={uniforms}

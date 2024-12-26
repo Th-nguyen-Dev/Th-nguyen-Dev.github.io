@@ -80,25 +80,27 @@ function EarthMeshesPhysical() {
 
     useFrame(handleFrame);
     return useMemo(() => (
-        <PresentationControls
-            rotation={[0, 0, 0]}
-            global={false}
-            snap={true}
-            speed={2}
-            cursor={true}
-            polar={[-Infinity, Infinity]} // Vertical limits
-            azimuth={[-Infinity, Infinity]} // Horizontal limits
-        >
-        <Bvh firstHitOnly>
-            <group ref={meshRef}>    
-                <EarthCities />
-                <EarthWeather />
-                <EarthCloud />
-                {/* <TestCoordinate /> */}
-                <CoordinatesCoreControl />
-            </group>
-        </Bvh>
-        </PresentationControls>
+        <>
+            {/* <PresentationControls
+                    rotation={[0, 0, 0]}
+                    global={false}
+                    snap={true}
+                    speed={2}
+                    cursor={true}
+                    polar={[-Infinity, Infinity]} // Vertical limits
+                    azimuth={[-Infinity, Infinity]} // Horizontal limits
+                > */}
+                <Bvh firstHitOnly>
+                    <group ref={meshRef}>    
+                        <EarthCities />
+                        <EarthWeather />
+                        <EarthCloud />
+                        {/* <TestCoordinate /> */}
+                        <CoordinatesCoreControl />
+                    </group>
+                </Bvh>
+            {/* </PresentationControls> */}
+        </>
     ), []);
 
 }
