@@ -10,6 +10,7 @@ const OfficialCameraV2 = () => {
                 camera={camera}
                 makeDefault={true}
                 setOrbitPoint={[0, 0, 0]}
+                distance={20}
             />
     )
 }

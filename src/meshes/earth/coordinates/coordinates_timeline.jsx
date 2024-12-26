@@ -12,7 +12,7 @@ const CoordinatesTimeline = () => {
     const color = new THREE.Color(0x00ff00);
     const emissiveColor = new THREE.Color(0x00ff00);
     const emissiveIntensity = 0.5;
-    const size = 0.01;
+    const size = 0.005;
     const subdivide = 10;
     
 

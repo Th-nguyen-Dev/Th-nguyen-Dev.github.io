@@ -12,7 +12,7 @@ const CoordinatesNeuralNetwork = () => {
     const color = new THREE.Color(0xffa500);
     const emissiveColor = new THREE.Color(0xffa500);
     const emissiveIntensity = 10.0;
-    const size = 0.003;
+    const size = 0.01;
     const subdivide = 10;
 
     return (

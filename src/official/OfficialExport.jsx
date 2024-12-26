@@ -17,13 +17,6 @@ import OfficialHTML from './OfficialHTML';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import FakeLoadScreen from '@/UI/background_buffer/FakeLoadScreen';
 
-
-export function PerformanceConfig(){
-    const {gl} = useThree();
-    gl.powerPreference = "high-performance";
-    gl.antialias = true;
-}
-
 export function Loading() {
     const { progress } = useProgress();
     return (<div>{progress} % loaded</div>);
@@ -62,8 +55,15 @@ function OfficialExport() {
     const canvasRef = useRef();
     return (
         <div className='w-screen h-screen relative'>
-            <Canvas ref={canvasRef} className="canvas pointer-events-auto z-10">
-                <PerformanceConfig/>  
+            <Canvas ref={canvasRef} className="canvas pointer-events-auto z-10"
+                gl={
+                    {
+                        powerPreference: "high-performance",
+                        antialias: true,
+                        capabilities: {maxTextureSize: 43200}
+                    }
+                }
+            >
                 <color attach="background" args={['#000000']} /> 
                 <CanvasDOM/>           
             </Canvas>  
