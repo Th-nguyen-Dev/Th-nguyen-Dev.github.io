@@ -8,15 +8,8 @@ import DirectionalLights from '../lights/directional_light';
 import PostProcessing from '../postprocesses/effect_composer';
 import EarthMeshes from '../meshes/earth/earth_meshes';
 import OfficialCamera from '../cameras/official_camera';
+import OfficialCameraV2 from '@/cameras/official_camera_v2';
 
-import Introduction from '@/UI/introduction/Introduction';
-import Timeline from '@/UI/timeline/Timeline';
-import Project from '@/UI/projects/Project';
-import ProjectGraphic from '@/UI/projects/ProjectGraphic';
-import Background from '@/UI/background_buffer/Background';
-import Interim from '@/UI/background_buffer/Interim';
-import redux_store from '@/context/redux_store.jsx';
-import PlayMode from '@/UI/playmode/Playmode';
 import Header from '@/UI/header/Header';
 import VisualizerConfig from '@/UI/visualizer_config/VisualizerConfig';
 
@@ -52,7 +45,8 @@ export function CanvasDOM(){
             <DirectionalLights/>
             <EarthMeshes/>
             <PostProcessing/>
-            <OfficialCamera makeDefault={true} />
+            {/* <OfficialCamera makeDefault={true} /> */}
+            <OfficialCameraV2/>
             <Preload all/>
             <Scroll html style={{height: '100%', width: '100%'}} >
                 <div className="w-auto h-auto" ref={htmlRef}>
