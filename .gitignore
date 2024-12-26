@@ -7,17 +7,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist-ssr
-dist
-public-options
-texture_sequence_upscale
+node_modules/
+dist-ssr/
+dist/
+public_options/
+public/texture_sequence_upscale/
 *.local
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
