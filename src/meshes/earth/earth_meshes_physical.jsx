@@ -59,6 +59,7 @@ function EarthMeshesPhysical() {
             }
         })
     };
+
     useEffect(() => {
         if (toggleDes){
             if (returnToBase.current){
@@ -72,13 +73,12 @@ function EarthMeshesPhysical() {
     }, [toggleDes]);
 
 
-    const handleFrame = () => {
-        if (returnToBase.current){    
-            meshRef.current.quaternion.multiply(rotateEarth);
+    useFrame(() => {
+        if (returnToBase.current) {    
+            // meshRef.current.quaternion.multiply(rotateEarth);
         }
-    };
+    });
 
-    useFrame(handleFrame);
     return useMemo(() => (
         <>
             {/* <PresentationControls

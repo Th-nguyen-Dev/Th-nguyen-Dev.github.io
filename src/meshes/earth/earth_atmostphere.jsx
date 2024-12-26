@@ -2,7 +2,7 @@ import { React, useEffect, useMemo, useRef } from 'react';
 import atmosphere_vertex from '../../shaders/atmosphere_vertex.glsl';
 import atmosphere_fragment from '../../shaders/atmosphere_frag_patchMap.glsl';
 import { useFrame } from '@react-three/fiber';
-import CustomShaderMaterial from 'three-custom-shader-material'; 
+import CustomShaderMaterial from 'three-custom-shader-material'
 import * as THREE from 'three';
 
 import atmosphere_frag_parse from '../../shaders/atmosphere_frag_parse.glsl';

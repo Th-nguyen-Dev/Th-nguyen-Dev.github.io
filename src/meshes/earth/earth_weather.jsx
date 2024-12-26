@@ -1,9 +1,15 @@
-import earthBump from "/textures/earth_bump_map.png";
+// import earthBump from "/textures/earth_bump_map.png";
+// import earthBumpXl from "/textures/earth_bump_map_Xl.png";
+import earthBumpLg from "/textures/earth_bump_map_Lg.png";
+// import earthBumpMd from "/textures/earth_bump_map_Md.png";
+// import earthBumpSm from "/textures/earth_bump_map_Sm.png";
+
 import earthSpecular from "/textures/earth land ocean mask.png";
+
 import earthSpriteSheetXl from "/textures_transition/earth_sprite_grid.png";
-import earthSpriteSheetLg from "/textures_transition/earth_sprite_grid_lg.png";
-import earthSpriteSheetMd from "/textures_transition/earth_sprite_grid_med.png";
-import earthSpriteSheetSm from "/textures_transition/earth_sprite_grid_tiny.png";
+// import earthSpriteSheetLg from "/textures_transition/earth_sprite_grid_lg.png";
+// import earthSpriteSheetMd from "/textures_transition/earth_sprite_grid_med.png";
+// import earthSpriteSheetSm from "/textures_transition/earth_sprite_grid_tiny.png";
 
 import { useFrame } from '@react-three/fiber';
 import { useRef, useEffect, useMemo,useLayoutEffect } from 'react';
@@ -23,7 +29,7 @@ function EarthWeather(){
     const earthRef = useRef();
     const materialRef = useRef();
 
-    const earthBumpTexture = new THREE.TextureLoader().load(earthBump);
+    const earthBumpTexture = new THREE.TextureLoader().load(earthBumpLg);
     const earthSpecularTexture = new THREE.TextureLoader().load(earthSpecular);
     const earthSurfaceTexture = useLoader(THREE.TextureLoader, earthSpriteSheetXl);
     const baseTextureG = useRef(earthSurfaceTexture);
