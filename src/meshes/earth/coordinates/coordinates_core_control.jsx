@@ -7,8 +7,8 @@ const CoordinatesCoreControl = () => {
 
     return (
         <>
-            <CoordinatesTimeline />
-            <CoordinatesNeuralNetwork />
+            {/* <CoordinatesTimeline />
+            <CoordinatesNeuralNetwork /> */}
         </>
     );
 }

@@ -38,12 +38,12 @@ function EarthMeshes(props) {
     return (
             <group ref={meshRef} {...props}>
                 <group ref={earthRef} >
-                    {/* <EarthMeshesPhysical /> */}
+                    <EarthMeshesPhysical />
                     {/* <Earth /> */}
-                    <TestSplitSphere />
+                    {/* <TestSplitSphere /> */}
                     <CoordinatesCoreControl />
                 </group>
-                {/* <EarthMeshesAtmosphere /> */}
+                <EarthMeshesAtmosphere />
             </group>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext, useMemo } from 'react';
+import React, { useRef, useEffect, useContext, useMemo, Suspense } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Bvh, PresentationControls } from '@react-three/drei';
 import * as THREE from 'three';
@@ -14,6 +14,7 @@ import { WebContext } from '../../context/web_context';
 import { useSelector, useDispatch } from 'react-redux';
 import { setTimelineToggle } from '@/context/reducer/timeline_toggle';
 import gsap from 'gsap';
+import TestSplitSphere from './test_split_sphere';
 
 function EarthMeshesPhysical() {
     const meshRef = useRef();
@@ -39,11 +40,12 @@ function EarthMeshesPhysical() {
     const rotateEase = (quaternion) => {
         const tl = gsap.timeline();
         const temp = {value: 0};
-        const startQuaternion = meshRef.current.quaternion.clone();
-        tl.to(temp,{
-            value: 1, 
-            duration: 1, 
-            ease: "sine.inOut", 
+        if (meshRef.current) {
+            const startQuaternion = meshRef.current.quaternion.clone();
+            tl.to(temp, {
+            value: 1,
+            duration: 1,
+            ease: "sine.inOut",
             onStart: () => {
                 returnToBase.current = false;
             },
@@ -53,11 +55,12 @@ function EarthMeshesPhysical() {
                 meshRef.current.quaternion.set(quaternionStep.x, quaternionStep.y, quaternionStep.z, quaternionStep.w);
             },
             onComplete: () => {
-                if (!toggleDes){
-                    returnToBase.current = true;
+                if (!toggleDes) {
+                returnToBase.current = true;
                 }
             }
-        })
+            });
+        }
     };
 
     useEffect(() => {
@@ -90,15 +93,18 @@ function EarthMeshesPhysical() {
                     polar={[-Infinity, Infinity]} // Vertical limits
                     azimuth={[-Infinity, Infinity]} // Horizontal limits
                 > */}
-                <Bvh firstHitOnly>
-                    <group ref={meshRef}>    
-                        <EarthCities />
-                        <EarthWeather />
-                        <EarthCloud />
-                        {/* <TestCoordinate /> */}
-                        <CoordinatesCoreControl />
-                    </group>
-                </Bvh>
+                <Suspense fallback={null}>
+                    <Bvh firstHitOnly>
+                        <group ref={meshRef}>    
+                            <EarthCities />
+                            {/* <EarthWeather /> */}
+                            <TestSplitSphere />
+                            <EarthCloud />
+                            {/* <TestCoordinate /> */}
+                            <CoordinatesCoreControl />
+                        </group>
+                    </Bvh>
+                </Suspense>
             {/* </PresentationControls> */}
         </>
     ), []);

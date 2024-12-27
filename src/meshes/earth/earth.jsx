@@ -1,6 +1,6 @@
 import earthBumpLg from "/textures/earth_bump_map_Lg.png";
 import earthSpecular from "/textures/earth land ocean mask.png";
-import earthSurface from "/textures_sequence/earth_surface_06.jpg";
+import earthSurface from "/textures/earth albedo dec.png";
 
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef, useEffect } from 'react';
