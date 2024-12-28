@@ -6,4 +6,5 @@ vec4 secondMonthDC = texture2D(mapNext, vMapUv);
 
 vec4 sampledDiffuseColor = mix(firstMonthDC,secondMonthDC, blend);
 
-diffuseColor = sampledDiffuseColor;
+diffuseColor *= sampledDiffuseColor;
+csm_DiffuseColor *= sampledDiffuseColor;

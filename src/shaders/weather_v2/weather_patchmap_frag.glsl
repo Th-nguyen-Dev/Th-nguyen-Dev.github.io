@@ -1,5 +1,6 @@
 void main()
 {
-    float patchInit
-    float patchInject
+    float patchInit;
+    float patchInject;
+ 
 }

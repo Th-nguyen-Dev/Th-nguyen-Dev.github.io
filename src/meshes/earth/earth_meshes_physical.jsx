@@ -15,6 +15,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setTimelineToggle } from '@/context/reducer/timeline_toggle';
 import gsap from 'gsap';
 import TestSplitSphere from './test_split_sphere';
+import TestSplitSphereWeather from './test_split_sphere_weather';
 
 function EarthMeshesPhysical() {
     const meshRef = useRef();
@@ -98,7 +99,8 @@ function EarthMeshesPhysical() {
                         <group ref={meshRef}>    
                             <EarthCities />
                             {/* <EarthWeather /> */}
-                            <TestSplitSphere />
+                            {/* <TestSplitSphere /> */}
+                            <TestSplitSphereWeather />
                             <EarthCloud />
                             {/* <TestCoordinate /> */}
                             <CoordinatesCoreControl />

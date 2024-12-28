@@ -1,13 +1,13 @@
-import React, { useEffect, useMemo, Suspense, useRef } from 'react';
+import React, { useEffect, useMemo, Suspense, useRef, useState } from 'react';
 import * as THREE from 'three';
-import { useThree } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 import { KTX2Loader } from 'three/examples/jsm/loaders/KTX2Loader';
 import { splitGeometryByUV } from './mesh_lib/mesh_lib';
-import CustomShaderMaterial from "three-custom-shader-material";
+import CustomShaderMaterial from "three-custom-shader-material/vanilla";
 
-import weatherPatchmapFrag from '@/shaders/weather_v2/weather_patchmap_fragment.glsl'; 
-import weatherInitFrag from '@/shaders/weather_v2/weather_init_fragment.glsl';
-import weatherInjectFrag from '@/shaders/weather_v2/weather_inject_fragment.glsl';
+import weatherPatchmapFrag from '@/shaders/weather_v2/weather_patchmap_frag.glsl'; 
+import weatherInitFrag from '@/shaders/weather_v2/weather_init_frag.glsl';
+import weatherInjectFrag from '@/shaders/weather_v2/weather_inject_frag.glsl';
 
 const textureBasePath = '/textures_sequence/split_images_4x4/';
 const texturePaths2 = [
@@ -40,6 +40,7 @@ const texturePaths2 = [
 const texturePathGeneration = ({month}) => {
     const textureBasePath = '/textures_sequence/split_images_4x4/';
     const monthString = month.toString().padStart(2, '0');
+    console.log('Month string:', monthString);
     return [
         [
         `${textureBasePath}00/earth_surface_${monthString}_0.ktx2`,
@@ -75,6 +76,7 @@ textureLoader.setTranscoderPath('/basis/');
 const loadTextures = async ({renderer, month}) => {
     textureLoader.detectSupport(renderer);
     const texturePathsMonth = texturePathGeneration({month});
+    console.log('Texture paths:', texturePathsMonth);
     const texturePromises = texturePathsMonth.flat().map(path => {
         return new Promise((resolve, reject) => {
             fetch(path)
@@ -96,10 +98,13 @@ const loadTextures = async ({renderer, month}) => {
         
                     texture.minFilter = THREE.NearestMipMapNearestFilter;
                     texture.magFilter = THREE.NearestFilter;
+
+                    console.log('Loaded texture:', texture);
                     resolve(texture);
                 },
                 undefined,
                 (error) => {
+                    console.error('Error loading texture:', error);
                     reject(error);
                 }
             );
@@ -138,41 +143,34 @@ const createTextureSphereMaterials = async ({renderer, month}) => {
     }
 };
 
-const CreateSphereMaterials = ({ month, uniforms }) => {
-    const [materials, setMaterials] = useState([]);
+const CreateSphereMaterials = async ({ renderer, month, uniforms }) => {
+    try {
+        const textures = await loadTextures({ renderer, month });
+        const newMaterials = textures.map((texture, index) => {
+            uniforms[index].mapCurrent.value = texture;
+            console.log('Custom Shader in the making');
+            return new CustomShaderMaterial({
+                baseMaterial: THREE.MeshPhongMaterial,
+                map: texture,
+                uniforms: uniforms[index],
+                fragmentShader: weatherPatchmapFrag,
+                patchMap: {
+                    patchInit: { "#include <map_pars_fragment>": `${weatherInitFrag}` },
+                    pathInject: { "#include <map_fragment>": `${weatherInjectFrag}` }
+                }
+            });
+        });
 
-    useEffect(() => {
-        const createMaterials = async () => {
-            console.log("createTextureSphereMaterials called");
-            try {
-                const textures = await loadTextures({ renderer, month });
-                const newMaterials = textures.map((texture, index) => {
-                    uniforms[index].mapCurrent.value = texture;
-                    return <CustomShaderMaterial
-                        map={texture}
-                        uniforms={uniforms[index]}
-                        fragmentShader={weatherPatchmapFrag}
-                        patchMap={{
-                            patchInit:{"#include <map_pars_fragment>":`${weatherInitFrag}`}, 
-                            pathInject:{"#include <map_fragment>":`${weatherInjectFrag}`}
-                        }}
-                    />
-                });
-
-                setMaterials(newMaterials);
-            } catch (error) {
-                console.error('Error creating texture sphere materials:', error);
-                setMaterials([]);
-            }
-        };
-
-        createMaterials();
-    }, [renderer, month]);
-
-    return materials;
+        console.log('Weather Sphere materials:', newMaterials);
+        return newMaterials;
+    } catch (error) {
+        console.error('Error creating texture sphere materials:', error);
+        return [];
+    }
 };
 
-function TestSplitSphere() {
+function TestSplitSphereWeather() {
+    console.log("Debug: TestSplitSphereWeather is rendering.");
     const radius = 5;
     const subdivisions = 80;
     const splitDim = 4;
@@ -192,14 +190,19 @@ function TestSplitSphere() {
     }, []);
 
     const time = useRef(0);
-    [trigger, setTrigger] = useState(false);
+    const pastTime = useRef(0);
+    const [trigger, setTrigger] = useState(false);
+    const [init, setInit] = useState(false);
 
     useEffect(() => {
+        console.log("Debug: useEffect triggered with trigger =", trigger, "init =", init);
         const updateTexture = async () => {
-            if (trigger) {
+            if (trigger && init) {
                 const nextMonth = (Math.floor(time.current) % 12) + 1;
+                console.log("Debug: Calculated nextMonth =", nextMonth);
                 const nextTextures = await loadTextures({ renderer: gl, month: nextMonth });
                 nextTextures.forEach((texture, index) => {
+                    uniforms[index].utime.value = 0;
                     uniforms[index].mapNext.value = texture;
                 });
                 setTrigger(false);
@@ -207,10 +210,7 @@ function TestSplitSphere() {
         };
 
         updateTexture();
-    }, [trigger]);
-
-
-
+    }, [trigger, init]);
 
 
     useEffect(() => {
@@ -227,7 +227,10 @@ function TestSplitSphere() {
 
         const updateMaterials = async () => {
             if (memoizedSphereMesh.current) {
-                const sphereMaterials = await createTextureSphereMaterials({renderer: gl, month: 1});
+                // const sphereMaterials = await createTextureSphereMaterials({renderer: gl, month: 1});
+                const sphereMaterials = await CreateSphereMaterials({ renderer: gl, month: 1, uniforms : uniforms });
+                console.log('Sphere materials:', sphereMaterials);
+                setInit(true);
                 memoizedSphereMesh.current.material = sphereMaterials;
             }
         };
@@ -239,7 +242,7 @@ function TestSplitSphere() {
             disposeMaterials();
             textureLoader.dispose();
         };
-    }, [gl]);
+    }, []);
 
     useEffect(() => {
         const disposeGeometry = () => {
@@ -263,11 +266,31 @@ function TestSplitSphere() {
         };
     }, [radius, subdivisions, splitDim]);
 
+    useFrame(() => {
+        if (memoizedSphereMesh.current) {
+            time.current += 0.01;
+            memoizedSphereMesh.current.material.forEach((material, index) => {
+                material.uniforms.utime.value = time.current;
+            });
+
+            if (((time.current - pastTime.current) > 1) && !trigger) {
+                pastTime.current = Math.floor(time.current);
+                setTrigger(true);
+            }
+
+            if (time.current > 12) {
+                time.current = 0;
+            }
+        }
+    });
+
     const sphereMesh = useMemo(() => (
+        <Suspense fallback={null}>
             <mesh ref={memoizedSphereMesh} material={new THREE.MeshBasicMaterial({ color: 'blue'})} geometry={new THREE.SphereGeometry(radius, subdivisions, subdivisions)}/>
+        </Suspense>
     ), [radius, subdivisions, splitDim]);
 
     return sphereMesh;
 }
 
-export default TestSplitSphere;
+export default TestSplitSphereWeather
