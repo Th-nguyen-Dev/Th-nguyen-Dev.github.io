@@ -111,33 +111,6 @@ const loadTextures = async ({renderer, month}) => {
 };
 
 
-
-const createTextureSphereMaterials = async ({renderer, month}) => {
-    console.log("createTextureSphereMaterials called");
-    try {
-        const textures = await loadTextures({renderer, month});
-
-        const textureSphereMaterials = textures.map(texture => {
-            texture.wrapS = THREE.RepeatWrapping;
-            texture.wrapT = THREE.RepeatWrapping;
-            texture.repeat.set(4, 4);
-            texture.offset.set(0, 0); // Adjust the offset to start at the edge
-
-            texture.minFilter = THREE.NearestMipMapNearestFilter;
-            texture.magFilter = THREE.NearestFilter;
-
-            const material = new THREE.MeshPhongMaterial({ map: texture });
-            material.precision = 'highp';
-            return material;
-        });
-
-        return textureSphereMaterials;
-    } catch (error) {
-        console.error('Error creating texture sphere materials:', error);
-        return [];
-    }
-};
-
 const CreateSphereMaterials = async ({ renderer, month, uniforms }) => {
     try {
         const textures = await loadTextures({ renderer, month });
@@ -178,6 +151,7 @@ function TestSplitSphereWeather() {
         for (let i = 0; i < 16; i++) {
             uniformSet.push({
                 utime: { value: 0 },
+                lastMonth: { value: 0 },
                 mapCurrent: { value: new THREE.CompressedTexture() },
                 mapNext: { value: new THREE.CompressedTexture() },
                 mapBuffer : { value: new THREE.CompressedTexture() }
@@ -186,7 +160,8 @@ function TestSplitSphereWeather() {
         return uniformSet;
     }, []);
 
-    const time = useRef(0);
+    const [isInit, setIsInit] = useState(false);
+
 
     useEffect(() => {
 
@@ -205,6 +180,7 @@ function TestSplitSphereWeather() {
                 // const sphereMaterials = await createTextureSphereMaterials({renderer: gl, month: 1});
                 const sphereMaterials = await CreateSphereMaterials({ renderer: gl, month: 1, uniforms : uniforms });
                 memoizedSphereMesh.current.material = sphereMaterials;
+                setIsInit(true);
             }
         };
 
@@ -240,56 +216,57 @@ function TestSplitSphereWeather() {
     }, [radius, subdivisions, splitDim]);
 
     const [isUpdating, setIsUpdating] = useState(false);
-    const stall = useRef(0);
-    const lastMonth = useRef(1);
-    const textureQueue = useRef([]);
+    const timeRef = useRef(0);
+    const lastMonthRef = useRef(1);
+    const deltaTime = 0.01;
 
-    useFrame(() => {
-        if (!memoizedSphereMesh.current) return;
+    const updateTexture = async () => {
+        if (!memoizedSphereMesh.current || !isInit) return;
 
-        const updateTexture = async () => {
-            const currentMonth = Math.floor(time.current) % 12 + 1;
-            if (currentMonth === lastMonth.current) return;
-            
+        lastMonthRef.current = Math.floor(timeRef.current - deltaTime) % 12;
+        uniforms.forEach((uniform) => {
+            uniform.utime.value = timeRef.current;
+            uniform.lastMonth.value = lastMonthRef.current;
+        });
+
+        const currentMonth = Math.floor(timeRef.current) % 12;
+        if (Math.abs(timeRef.current - lastMonthRef.current) >= 1) {
             try {
                 setIsUpdating(true);
-                lastMonth.current = currentMonth;
 
                 // Pre-load next textures
-                const nextTextures = await loadTextures({ 
-                    renderer: gl, 
-                    month: currentMonth 
+                const nextTextures = await loadTextures({
+                    renderer: gl,
+                    month: currentMonth
                 });
 
                 // Ensure we're still on the same month when textures finish loading
-                if (currentMonth === Math.floor(time.current) % 12 + 1) {
-                    
-                    nextTextures.forEach((texture, index) => {
-                        uniforms[index].mapCurrent.value.dispose();
-                        uniforms[index].mapCurrent.value = uniforms[index].mapNext.value;
-                        uniforms[index].mapNext.value = texture;
-                    });
-                }
+                nextTextures.forEach((texture, index) => {
+                    uniforms[index].mapCurrent.value.dispose();
+                    uniforms[index].mapCurrent.value = uniforms[index].mapNext.value;
+                    uniforms[index].mapNext.value = texture;
+                });
+
             } catch (error) {
                 console.error('Error loading textures:', error);
             } finally {
+                memoizedSphereMesh.current.material.needsUpdate = true;
                 setIsUpdating(false);
             }
-        };
-
-        updateTexture();
-
-        if (isUpdating) {
-            return;
         }
 
-        time.current += 0.01;
-        memoizedSphereMesh.current.material.forEach((material) => {
-            time.current = time.current % 12;
-            material.uniforms.utime.value = time.current;
-        });
 
+    };
 
+    useFrame(() => {
+        if (!memoizedSphereMesh.current || !isInit) return;
+
+        if (isUpdating) return;
+
+        timeRef.current += 0.01;
+        timeRef.current = timeRef.current % 12;
+
+        updateTexture();
     });
 
     const sphereMesh = useMemo(() => (
