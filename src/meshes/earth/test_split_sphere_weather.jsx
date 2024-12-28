@@ -3,6 +3,11 @@ import * as THREE from 'three';
 import { useThree } from '@react-three/fiber';
 import { KTX2Loader } from 'three/examples/jsm/loaders/KTX2Loader';
 import { splitGeometryByUV } from './mesh_lib/mesh_lib';
+import CustomShaderMaterial from "three-custom-shader-material";
+
+import weatherPatchmapFrag from '@/shaders/weather_v2/weather_patchmap_fragment.glsl'; 
+import weatherInitFrag from '@/shaders/weather_v2/weather_init_fragment.glsl';
+import weatherInjectFrag from '@/shaders/weather_v2/weather_inject_fragment.glsl';
 
 const textureBasePath = '/textures_sequence/split_images_4x4/';
 const texturePaths2 = [
@@ -133,6 +138,40 @@ const createTextureSphereMaterials = async ({renderer, month}) => {
     }
 };
 
+const CreateSphereMaterials = ({ month, uniforms }) => {
+    const [materials, setMaterials] = useState([]);
+
+    useEffect(() => {
+        const createMaterials = async () => {
+            console.log("createTextureSphereMaterials called");
+            try {
+                const textures = await loadTextures({ renderer, month });
+                const newMaterials = textures.map((texture, index) => {
+                    uniforms[index].mapCurrent.value = texture;
+                    return <CustomShaderMaterial
+                        map={texture}
+                        uniforms={uniforms[index]}
+                        fragmentShader={weatherPatchmapFrag}
+                        patchMap={{
+                            patchParse:{"#include <map_pars_fragment>":`${weatherInitFrag}`}, 
+                            patchDiffuse:{"#include <map_fragment>":`${weatherInjectFrag}`}
+                        }}
+                    />
+                });
+
+                setMaterials(newMaterials);
+            } catch (error) {
+                console.error('Error creating texture sphere materials:', error);
+                setMaterials([]);
+            }
+        };
+
+        createMaterials();
+    }, [renderer, month]);
+
+    return materials;
+};
+
 function TestSplitSphere() {
     const radius = 5;
     const subdivisions = 80;
@@ -153,17 +192,24 @@ function TestSplitSphere() {
     }, []);
 
     const time = useRef(0);
-    const trigger = useRef(false);
+    [trigger, setTrigger] = useState(false);
 
-    const updateTexture = async () => {
-        if (trigger.current){
-            const nextMonth = (Math.floor(time.current) % 12) + 1;
-            const nextTextures = await loadTextures({renderer: gl, month: nextMonth});
-            nextTextures.forEach((texture, index) => {
-                uniforms[index].mapNext.value = texture;
-            });
-        }
-    }
+    useEffect(() => {
+        const updateTexture = async () => {
+            if (trigger) {
+                const nextMonth = (Math.floor(time.current) % 12) + 1;
+                const nextTextures = await loadTextures({ renderer: gl, month: nextMonth });
+                nextTextures.forEach((texture, index) => {
+                    uniforms[index].mapNext.value = texture;
+                });
+                setTrigger(false);
+            }
+        };
+
+        updateTexture();
+    }, [trigger]);
+
+
 
 
 
