@@ -11,7 +11,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "autopush": "git add . && git commit -m \"Auto-commit: Changes saved on $(date)\" && git push origin main"
+    "p": "git add . && git commit -m \"Auto-commit: Changes saved on $(date)\" && git push origin main"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.0",
