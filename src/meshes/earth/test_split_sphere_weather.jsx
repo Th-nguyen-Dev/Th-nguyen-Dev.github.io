@@ -153,8 +153,8 @@ const CreateSphereMaterials = ({ month, uniforms }) => {
                         uniforms={uniforms[index]}
                         fragmentShader={weatherPatchmapFrag}
                         patchMap={{
-                            patchParse:{"#include <map_pars_fragment>":`${weatherInitFrag}`}, 
-                            patchDiffuse:{"#include <map_fragment>":`${weatherInjectFrag}`}
+                            patchInit:{"#include <map_pars_fragment>":`${weatherInitFrag}`}, 
+                            pathInject:{"#include <map_fragment>":`${weatherInjectFrag}`}
                         }}
                     />
                 });
