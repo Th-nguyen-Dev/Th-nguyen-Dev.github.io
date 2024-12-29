@@ -1,5 +1,7 @@
-uniform float utime;
-uniform float lastMonth;
-uniform sampler2D mapCurrent;
-uniform sampler2D mapNext;
+uniform float blend;
+uniform int currentBuffer;
+uniform sampler2D mapCurrent_1;
+uniform sampler2D mapNext_1;
+uniform sampler2D mapCurrent_2;
+uniform sampler2D mapNext_2;
 uniform sampler2D map;

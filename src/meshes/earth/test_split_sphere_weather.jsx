@@ -9,7 +9,7 @@ import weatherPatchmapFrag from '@/shaders/weather_v2/weather_patchmap_frag.glsl
 import weatherInitFrag from '@/shaders/weather_v2/weather_init_frag.glsl';
 import weatherInjectFrag from '@/shaders/weather_v2/weather_inject_frag.glsl';
 
-const textureBasePath = '/textures_sequence/split_images_4x4/';
+const textureBasePath = 'textures_sequence/compressed_4x4_upscale/';
 const texturePaths2 = [
     [
       `${textureBasePath}00/earth_surface_01_0.ktx2`,
@@ -115,9 +115,12 @@ const CreateSphereMaterials = async ({ renderer, month, uniforms }) => {
     try {
         const textures = await loadTextures({ renderer, month });
         const texturesNext = await loadTextures({ renderer, month: month + 1 });
+        const texturesNext2 = await loadTextures({ renderer, month: month + 2 });
         const newMaterials = textures.map((texture, index) => {
-            uniforms[index].mapCurrent.value = texture;
-            uniforms[index].mapNext.value = texturesNext[index];
+            uniforms[index].mapCurrent_1.value = texture;
+            uniforms[index].mapNext_1.value = texturesNext[index];
+            uniforms[index].mapNext_2.value = texturesNext[index];
+            uniforms[index].mapCurrent_2.value = texturesNext2[index];
             const material = new CustomShaderMaterial({
                 baseMaterial: THREE.MeshPhongMaterial,
                 map: texture,
@@ -150,11 +153,12 @@ function TestSplitSphereWeather() {
         const uniformSet = [];
         for (let i = 0; i < 16; i++) {
             uniformSet.push({
-                utime: { value: 0 },
-                lastMonth: { value: 0 },
-                mapCurrent: { value: new THREE.CompressedTexture() },
-                mapNext: { value: new THREE.CompressedTexture() },
-                mapBuffer : { value: new THREE.CompressedTexture() }
+                blend: { value: 0 },
+                currentBuffer : { value: 1 },
+                mapCurrent_1: { value: new THREE.CompressedTexture() },
+                mapNext_1: { value: new THREE.CompressedTexture() },
+                mapCurrent_2 : { value: new THREE.CompressedTexture() },
+                mapNext_2 : { value: new THREE.CompressedTexture() }
             });
         }
         return uniformSet;
@@ -218,40 +222,52 @@ function TestSplitSphereWeather() {
     const [isUpdating, setIsUpdating] = useState(false);
     const timeRef = useRef(0);
     const lastMonthRef = useRef(1);
-    const deltaTime = 0.01;
+    const currentBuffer = useRef(1);
+    const deltaTime = 0.001;
 
     const updateTexture = async () => {
         if (!memoizedSphereMesh.current || !isInit) return;
 
-        lastMonthRef.current = Math.floor(timeRef.current - deltaTime) % 12;
+        lastMonthRef.current = Math.floor(timeRef.current - deltaTime);
         uniforms.forEach((uniform) => {
-            uniform.utime.value = timeRef.current;
-            uniform.lastMonth.value = lastMonthRef.current;
+            uniform.blend.value = timeRef.current - lastMonthRef.current;
         });
 
-        const currentMonth = Math.floor(timeRef.current) % 12;
         if (Math.abs(timeRef.current - lastMonthRef.current) >= 1) {
             try {
-                setIsUpdating(true);
+                const currentMonth = Math.floor(timeRef.current) % 12;
+                console.log('Next month:', currentMonth);
+                console.log('Current buffer:', currentBuffer.current);
+
+                if(currentBuffer.current === 1){
+                    currentBuffer.current = 2;
+                } else {
+                    currentBuffer.current = 1;
+                }
 
                 // Pre-load next textures
                 const nextTextures = await loadTextures({
                     renderer: gl,
-                    month: currentMonth
+                    month: currentMonth + 1
                 });
 
-                // Ensure we're still on the same month when textures finish loading
-                nextTextures.forEach((texture, index) => {
-                    uniforms[index].mapCurrent.value.dispose();
-                    uniforms[index].mapCurrent.value = uniforms[index].mapNext.value;
-                    uniforms[index].mapNext.value = texture;
-                });
+                if (currentBuffer.current === 1) {
+                    uniforms.forEach((uniform, index) => {
+                        uniform.mapCurrent_2.value.dispose();
+                        uniform.mapCurrent_2.value = uniform.mapNext_2.value;
+                        uniform.mapNext_2.value = nextTextures[index];
+                    })
+                } 
+                else {
+                    uniforms.forEach((uniform, index) => {
+                        uniform.mapCurrent_1.value.dispose();
+                        uniform.mapCurrent_1.value = uniform.mapNext_1.value;
+                        uniform.mapNext_1.value = nextTextures[index];
+                    })
+                }
 
             } catch (error) {
                 console.error('Error loading textures:', error);
-            } finally {
-                memoizedSphereMesh.current.material.needsUpdate = true;
-                setIsUpdating(false);
             }
         }
 
@@ -263,7 +279,7 @@ function TestSplitSphereWeather() {
 
         if (isUpdating) return;
 
-        timeRef.current += 0.01;
+        timeRef.current += deltaTime;
         timeRef.current = timeRef.current % 12;
 
         updateTexture();
