@@ -9,33 +9,6 @@ import weatherPatchmapFrag from '@/shaders/weather_v2/weather_patchmap_frag.glsl
 import weatherInitFrag from '@/shaders/weather_v2/weather_init_frag.glsl';
 import weatherInjectFrag from '@/shaders/weather_v2/weather_inject_frag.glsl';
 
-const textureBasePath = 'textures_sequence/compressed_4x4_upscale/';
-const texturePaths2 = [
-    [
-      `${textureBasePath}00/earth_surface_01_0.ktx2`,
-      `${textureBasePath}01/earth_surface_01_1.ktx2`,
-      `${textureBasePath}02/earth_surface_01_2.ktx2`,
-      `${textureBasePath}03/earth_surface_01_3.ktx2`,
-    ],
-    [
-      `${textureBasePath}04/earth_surface_01_4.ktx2`,
-      `${textureBasePath}05/earth_surface_01_5.ktx2`,
-      `${textureBasePath}06/earth_surface_01_6.ktx2`,
-      `${textureBasePath}07/earth_surface_01_7.ktx2`,
-    ],
-    [
-      `${textureBasePath}08/earth_surface_01_8.ktx2`,
-      `${textureBasePath}09/earth_surface_01_9.ktx2`,
-      `${textureBasePath}10/earth_surface_01_10.ktx2`,
-      `${textureBasePath}11/earth_surface_01_11.ktx2`,
-    ],
-    [
-      `${textureBasePath}12/earth_surface_01_12.ktx2`,
-      `${textureBasePath}13/earth_surface_01_13.ktx2`,
-      `${textureBasePath}14/earth_surface_01_14.ktx2`,
-      `${textureBasePath}15/earth_surface_01_15.ktx2`,
-    ],
-];
 
 const texturePathGeneration = ({month}) => {
     const textureBasePath = '/textures_sequence/compressed_4x4/';
