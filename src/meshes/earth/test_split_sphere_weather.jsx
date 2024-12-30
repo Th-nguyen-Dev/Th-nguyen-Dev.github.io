@@ -38,9 +38,8 @@ const texturePaths2 = [
 ];
 
 const texturePathGeneration = ({month}) => {
-    const textureBasePath = '/textures_sequence/split_images_4x4/';
+    const textureBasePath = '/textures_sequence/compressed_4x4/';
     const monthString = month.toString().padStart(2, '0');
-    console.log('Month string:', monthString);
     return [
         [
         `${textureBasePath}00/earth_surface_${monthString}_0.ktx2`,
@@ -106,7 +105,6 @@ const loadTextures = async ({renderer, month}) => {
             );
         });
     });
-
     return Promise.all(texturePromises);
 };
 
@@ -149,24 +147,11 @@ function TestSplitSphereWeather() {
     const memoizedSphereMesh = useRef(null);
     const { gl } = useThree();
 
-    const uniforms = useMemo(() => {
-        const uniformSet = [];
-        for (let i = 0; i < 16; i++) {
-            uniformSet.push({
-                blend: { value: 0 },
-                currentBuffer : { value: 1 },
-                mapCurrent_1: { value: new THREE.CompressedTexture() },
-                mapNext_1: { value: new THREE.CompressedTexture() },
-                mapCurrent_2 : { value: new THREE.CompressedTexture() },
-                mapNext_2 : { value: new THREE.CompressedTexture() }
-            });
-        }
-        return uniformSet;
-    }, []);
+
 
     const [isInit, setIsInit] = useState(false);
 
-
+    //Initialize the materials
     useEffect(() => {
 
         const disposeMaterials = () => {
@@ -182,8 +167,10 @@ function TestSplitSphereWeather() {
         const updateMaterials = async () => {
             if (memoizedSphereMesh.current) {
                 // const sphereMaterials = await createTextureSphereMaterials({renderer: gl, month: 1});
-                const sphereMaterials = await CreateSphereMaterials({ renderer: gl, month: 1, uniforms : uniforms });
+                // LoadAllTextures();
+                const sphereMaterials = await CreateSphereMaterials({ renderer: gl, month: 0, uniforms : uniforms });
                 memoizedSphereMesh.current.material = sphereMaterials;
+                console.log('Sphere materials loaded');
                 setIsInit(true);
             }
         };
@@ -197,6 +184,8 @@ function TestSplitSphereWeather() {
         };
     }, []);
 
+
+    //Initailize the geometry
     useEffect(() => {
         const disposeGeometry = () => {
             if (memoizedSphereMesh.current) {
@@ -219,70 +208,120 @@ function TestSplitSphereWeather() {
         };
     }, [radius, subdivisions, splitDim]);
 
-    const [isUpdating, setIsUpdating] = useState(false);
-    const timeRef = useRef(0);
+    const timeRef = useRef(1);
     const lastMonthRef = useRef(1);
-    const currentBuffer = useRef(1);
-    const deltaTime = 0.001;
+    const currentBufferRef = useRef(1);
+    const deltaTime = 0.005;
 
+    const uniforms = useMemo(() => {
+        const uniformSet = [];
+        for (let i = 0; i < 16; i++) {
+            uniformSet.push({
+                blend: { value: 0 },
+                currentBuffer : { value : currentBufferRef.current  },
+                mapCurrent_1: { value: new THREE.CompressedTexture() },
+                mapNext_1: { value: new THREE.CompressedTexture() },
+                mapCurrent_2 : { value: new THREE.CompressedTexture() },
+                mapNext_2 : { value: new THREE.CompressedTexture() }
+            });
+        }
+        return uniformSet;
+    }, []);
+
+    const updateBlend = () => {
+        uniforms.forEach((uniform) => {
+            uniform.blend.value = timeRef.current % 1;
+        })
+    }
+
+    const BATCH_SIZE = 1; // Process 4 uniforms at a time
+
+    const updateUniformBatch = (startIdx, nextTextures) => {
+        const endIdx = Math.min(startIdx + BATCH_SIZE, uniforms.length);
+        
+        for(let i = startIdx; i < endIdx; i++) {
+            if (currentBufferRef.current === 1) {
+                const temp = uniforms[i].mapCurrent_2.value;
+                uniforms[i].mapCurrent_2.value = uniforms[i].mapNext_1.value;
+                uniforms[i].mapNext_2.value = nextTextures[i];
+                temp?.dispose();
+            } else {
+                const temp = uniforms[i].mapCurrent_1.value;
+                uniforms[i].mapCurrent_1.value = uniforms[i].mapNext_2.value;
+                uniforms[i].mapNext_1.value = nextTextures[i];
+                temp?.dispose();
+            }
+        }
+        return endIdx;
+    };
+
+    const updateUniforms = async (nextTextures) => {
+        return new Promise((resolve) => {
+            let processedIdx = 0;
+            let frameId;
+
+            const processBatch = () => {
+                if (processedIdx < uniforms.length) {
+                    processedIdx = updateUniformBatch(processedIdx, nextTextures);
+                    frameId = requestAnimationFrame(processBatch);
+                } else {
+                    resolve();
+                }
+            };
+
+            processBatch();
+
+            return () => {
+                if (frameId) {
+                    cancelAnimationFrame(frameId);
+                }
+            };
+        });
+    };
+
+    //Update the texture to reflect the season
     const updateTexture = async () => {
         if (!memoizedSphereMesh.current || !isInit) return;
 
-        lastMonthRef.current = Math.floor(timeRef.current - deltaTime);
-        uniforms.forEach((uniform) => {
-            uniform.blend.value = timeRef.current - lastMonthRef.current;
-        });
 
-        if (Math.abs(timeRef.current - lastMonthRef.current) >= 1) {
-            try {
-                const currentMonth = Math.floor(timeRef.current) % 12;
-                console.log('Next month:', currentMonth);
-                console.log('Current buffer:', currentBuffer.current);
+            lastMonthRef.current = Math.floor(timeRef.current);
+            const bufferMonth = (lastMonthRef.current + 2) % 12;
 
-                if(currentBuffer.current === 1){
-                    currentBuffer.current = 2;
-                } else {
-                    currentBuffer.current = 1;
-                }
+            if(currentBufferRef.current === 1){
+                currentBufferRef.current = 2;
+            } else {
+                currentBufferRef.current = 1;
 
-                // Pre-load next textures
-                const nextTextures = await loadTextures({
-                    renderer: gl,
-                    month: currentMonth + 1
-                });
-
-                if (currentBuffer.current === 1) {
-                    uniforms.forEach((uniform, index) => {
-                        uniform.mapCurrent_2.value.dispose();
-                        uniform.mapCurrent_2.value = uniform.mapNext_2.value;
-                        uniform.mapNext_2.value = nextTextures[index];
-                    })
-                } 
-                else {
-                    uniforms.forEach((uniform, index) => {
-                        uniform.mapCurrent_1.value.dispose();
-                        uniform.mapCurrent_1.value = uniform.mapNext_1.value;
-                        uniform.mapNext_1.value = nextTextures[index];
-                    })
-                }
-
-            } catch (error) {
-                console.error('Error loading textures:', error);
             }
-        }
+            uniforms.forEach((uniform, index) => {
+                uniform.currentBuffer.value = currentBufferRef.current;
+            })
 
+            loadTextures({ renderer: gl, month: bufferMonth }).then(async nextTextures => {
+                try {
+                    await updateUniforms(nextTextures);
+                } catch (error) {
+                    console.error('Error updating uniforms:', error);
+            }
+            }).catch(error => {
+                console.error('Error loading textures:', error);
+            });
+
+            // const nextTextures = poolTextures.current[bufferMonth];
+            // updateUniforms(nextTextures);
 
     };
 
     useFrame(() => {
         if (!memoizedSphereMesh.current || !isInit) return;
 
-        if (isUpdating) return;
-
         timeRef.current += deltaTime;
-        timeRef.current = timeRef.current % 12;
+        timeRef.current = (timeRef.current % 12);
 
-        updateTexture();
+        updateBlend();
+        if (Math.abs(timeRef.current - lastMonthRef.current) >= 1) {
+            updateTexture();
+        }
     });
 
     const sphereMesh = useMemo(() => (
