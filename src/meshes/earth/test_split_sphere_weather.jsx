@@ -41,36 +41,6 @@ const texturePathGeneration = ({month}) => {
     ];
 };
 
-const texturePathGenerationTest = () => {
-    const textureBasePath = '/textures_sequence/compressed_albedo_4x4';
-    return [
-        [
-        `${textureBasePath}/earth_surface_01_0.ktx2`,
-        `${textureBasePath}/earth_surface_01_1.ktx2`,
-        `${textureBasePath}/earth_surface_01_2.ktx2`,
-        `${textureBasePath}/earth_surface_01_3.ktx2`,
-        ],
-        [
-        `${textureBasePath}/earth_surface_01_4.ktx2`,
-        `${textureBasePath}/earth_surface_01_5.ktx2`,
-        `${textureBasePath}/earth_surface_01_6.ktx2`,
-        `${textureBasePath}/earth_surface_01_7.ktx2`,
-        ],
-        [
-        `${textureBasePath}/earth_surface_01_8.ktx2`,
-        `${textureBasePath}/earth_surface_01_9.ktx2`,
-        `${textureBasePath}/earth_surface_01_10.ktx2`,
-        `${textureBasePath}/earth_surface_01_11.ktx2`,
-        ],
-        [
-        `${textureBasePath}/earth_surface_01_12.ktx2`,
-        `${textureBasePath}/earth_surface_01_13.ktx2`,
-        `${textureBasePath}/earth_surface_01_14.ktx2`,
-        `${textureBasePath}/earth_surface_01_15.ktx2`,
-        ],
-    ];
-};
-
 const bumpTexturePathGeneration = () => {
     const textureBasePath = '/textures_sequence/compressed_bump_4x4/';
     return [
@@ -101,35 +71,6 @@ const bumpTexturePathGeneration = () => {
     ];
 };
 
-const bumpTexturePathGenerationSanityCheck = () => {
-    const textureBasePath = '/textures_sequence/compressed_bump_4x4/';
-    return [
-        [
-        `${textureBasePath}earth_bump_xl_0.jpg`,
-        `${textureBasePath}earth_bump_xl_1.jpg`,
-        `${textureBasePath}earth_bump_xl_2.jpg`,
-        `${textureBasePath}earth_bump_xl_3.jpg`,
-        ],
-        [
-        `${textureBasePath}earth_bump_xl_4.jpg`,
-        `${textureBasePath}earth_bump_xl_5.jpg`,
-        `${textureBasePath}earth_bump_xl_6.jpg`,
-        `${textureBasePath}earth_bump_xl_7.jpg`,
-        ],
-        [
-        `${textureBasePath}earth_bump_xl_8.jpg`,
-        `${textureBasePath}earth_bump_xl_9.jpg`,
-        `${textureBasePath}earth_bump_xl_10.jpg`,
-        `${textureBasePath}earth_bump_xl_11.jpg`,
-        ],
-        [
-        `${textureBasePath}earth_bump_xl_12.jpg`,
-        `${textureBasePath}earth_bump_xl_13.jpg`,
-        `${textureBasePath}earth_bump_xl_14.jpg`,
-        `${textureBasePath}earth_bump_xl_15.jpg`,
-        ],
-    ];
-};
 
 // Create a single instance of KTX2Loader
 const textureLoader = new KTX2Loader();
@@ -138,9 +79,7 @@ textureLoader.setWorkerLimit(4);
 
 const loadTexturesBump = async ({renderer}) => {
     textureLoader.detectSupport(renderer);
-    const textureLoaderBase = new THREE.TextureLoader();
     const texturePaths = bumpTexturePathGeneration();
-    const texturesPathsSanityCheck = bumpTexturePathGenerationSanityCheck();
     const texturePromises = texturePaths.flat().map(path => {
         return new Promise((resolve, reject) => {
             fetch(path)
@@ -218,19 +157,9 @@ const loadTextures = async ({renderer, month}) => {
 const CreateSphereMaterials = async ({ renderer, month, uniforms }) => {
     try {
         // const textures = await loadTexturesTest({ renderer});
-        console.log('Starting to load textures...');
         const textures = await loadTextures({ renderer, month });
         console.log('Textures loaded:', textures.length);
-
-        console.log('Loading next month textures...');
-        const texturesNext = await loadTextures({ renderer, month: month + 1 });
-        console.log('Textures next loaded:', texturesNext.length);
-
-        console.log('Loading next 2 months textures...');
-        const texturesNext2 = await loadTextures({ renderer, month: month + 2 });
-        console.log('Textures next2 loaded:', texturesNext2.length);
-
-        console.log('Loading bump textures...');
+        
         const bumpTextures = await loadTexturesBump({ renderer });
         console.log('Bump Textures loaded:', bumpTextures.length);
 
