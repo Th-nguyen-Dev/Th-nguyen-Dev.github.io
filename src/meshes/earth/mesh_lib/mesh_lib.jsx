@@ -83,7 +83,7 @@ async function splitMeshGroups(mesh, n, radius) {
 }
 
 
-async function splitGeometryByUV(geometry, n = 4) {
+async function splitGeometryByUV(geometry, n = 4, normalizeUV = false) {
     const indices = geometry.index.array;
     const uvAttr = geometry.attributes.uv.array; // 2 floats per vertex: (u, v)
 
@@ -97,20 +97,37 @@ async function splitGeometryByUV(geometry, n = 4) {
         const c = indices[i + 2];
 
         // Get UVs
-        const aU = uvAttr[a * 2],   aV =  uvAttr[a * 2 + 1];
-        const bU = uvAttr[b * 2],   bV = uvAttr[b * 2 + 1];
-        const cU = uvAttr[c * 2],   cV =  uvAttr[c * 2 + 1];
+        const aU = uvAttr[a * 2], aV = uvAttr[a * 2 + 1];
+        const bU = uvAttr[b * 2], bV = uvAttr[b * 2 + 1];
+        const cU = uvAttr[c * 2], cV = uvAttr[c * 2 + 1];
 
         // Average UV (center of the triangle in UV space)
         const centerU = (aU + bU + cU) / 3;
-        const centerV = 1 -  (aV + bV + cV) / 3;
+        const centerV = 1 - (aV + bV + cV) / 3;
 
         // Determine sub-tile index
         const xIndex = Math.floor(centerU * n);
         const yIndex = Math.floor(centerV * n);
-        const segmentIndex = (yIndex * n + xIndex);
+        const segmentIndex = yIndex * n + xIndex;
 
         segments[segmentIndex].push(a, b, c);
+    }
+
+    if (normalizeUV) {
+        // const uvCount = uvAttr.length / 2;
+        // for (let i = 0; i < uvCount; i++) {
+        //     let u = uvAttr[i * 2];
+        //     let v = uvAttr[i * 2 + 1];
+
+        //     // Calculate the tile indices
+        //     const tileU = Math.floor(Math.fround(u * n));
+        //     const tileV = Math.floor(Math.fround(v * n));
+
+        //     // Normalize UVs within their respective tile with higher precision
+        //     uvAttr[i * 2] = Math.fround((u * n - tileU) % 1);
+        //     uvAttr[i * 2 + 1] = Math.fround((v * n - tileV) % 1);
+        // }
+        // geometry.attributes.uv.needsUpdate = true;
     }
 
     // Rebuild index buffer & groups

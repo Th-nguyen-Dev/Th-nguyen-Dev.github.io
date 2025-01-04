@@ -13,7 +13,7 @@ import PlayMode from '@/UI/playmode/Playmode';
 export default function OfficialHTML({ htmlRef }) {
     return (
         <Provider store={redux_store}>
-            {/* <div className='h-auto w-auto' ref={htmlRef}>
+            <div className='h-auto w-auto' ref={htmlRef}>
                 <div className='pointer-events-auto'>
                     <div className='h-56'></div>
                     <Introduction/>
@@ -29,7 +29,7 @@ export default function OfficialHTML({ htmlRef }) {
                 <div className='pointer-events-none'>
                     <PlayMode/>
                 </div>
-            </div> */}
+            </div>
         </Provider>
     );
 }
