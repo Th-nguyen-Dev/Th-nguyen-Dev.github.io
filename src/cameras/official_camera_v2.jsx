@@ -6,12 +6,12 @@ const OfficialCameraV2 = () => {
     const controls = useRef();
     return (
             <CameraControls
-                dollySpeed={0}
+                // dollySpeed={0}
                 ref={controls}
                 camera={camera}
                 makeDefault={true}
                 setOrbitPoint={[0, 0, 0]}
-                distance={15}
+                distance={10    }
                 // enabled={false} // Disable controls to prevent scrolling
             />
     )

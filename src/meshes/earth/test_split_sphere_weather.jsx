@@ -157,8 +157,6 @@ const loadTexturesBump = async ({renderer}) => {
                 (texture) => {
                     texture.wrapS = THREE.ClampToEdgeWrapping;
                     texture.wrapT = THREE.ClampToEdgeWrapping;
-                    texture.repeat.set(4, 4);
-                    texture.offset.set(0, 0); // Adjust the offset to start at the edge
                     texture.minFilter = THREE.LinearMipMapLinearFilter;
                     texture.magFilter = THREE.LinearFilter;
                     resolve(texture);
@@ -170,62 +168,7 @@ const loadTexturesBump = async ({renderer}) => {
             );
         });
     });
-    // const texturePromises = texturesPathsSanityCheck.flat().map(path => {
-    //     return new Promise((resolve, reject) => {
-    //         textureLoaderBase.load(
-    //             path,
-    //             (texture) => {
-    //                 texture.wrapS = THREE.RepeatWrapping;
-    //                 texture.wrapT = THREE.RepeatWrapping;
-    //                 texture.repeat.set(4, 4);
-    //                 texture.offset.set(0, 0); // Adjust the offset to start at the edge
-    //                 texture.generateMipmaps = true;
-                    
-    //                 texture.minFilter = THREE.LinearMipMapLinearFilter;
-    //                 texture.magFilter = THREE.LinearFilter;
-    //                 console.log('Texture loaded:', texture);
-    //                 resolve(texture);
-    //             },
-    //             undefined,
-    //             (error) => {
-    //                 reject(error);
-    //             }
-    //         );
-    //     });
-    // });
-    return Promise.all(texturePromises);
-};
 
-const loadTexturesTest = async ({renderer}) => {
-    textureLoader.detectSupport(renderer);
-    const texturePathsMonth = texturePathGenerationTest();
-    const texturePromises = texturePathsMonth.flat().map(path => {
-        return new Promise((resolve, reject) => {
-            fetch(path)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                })
-                .catch(error => {
-                    reject(error);
-                });
-            textureLoader.load(
-                path,
-                (texture) => {
-                    texture.wrapS = THREE.ClampToEdgeWrapping;
-                    texture.wrapT = THREE.ClampToEdgeWrapping;// Adjust the offset to start at the edge
-                    texture.minFilter = THREE.NearestFilter;
-                    texture.magFilter = THREE.NearestFilter;
-                    resolve(texture);
-                },
-                undefined,
-                (error) => {
-                    reject(error);
-                }
-            );
-        });
-    });
     return Promise.all(texturePromises);
 };
 
@@ -259,7 +202,16 @@ const loadTextures = async ({renderer, month}) => {
             );
         });
     });
-    return Promise.all(texturePromises);
+
+    const textures = await Promise.all(texturePromises);
+    textures.forEach((texture, index) => {
+        const tileU = index % 4;
+        const tileV = Math.floor(index / 4);
+        texture.offset.set(-tileU, tileV - 3);
+        texture.repeat.set(4.0, 4.0);
+    });
+
+    return textures;
 };
 
 
@@ -270,57 +222,45 @@ const CreateSphereMaterials = async ({ renderer, month, uniforms }) => {
         const textures = await loadTextures({ renderer, month });
         console.log('Textures loaded:', textures.length);
 
-        // console.log('Loading next month textures...');
-        // const texturesNext = await loadTextures({ renderer, month: month + 1 });
-        // console.log('Textures next loaded:', texturesNext.length);
+        console.log('Loading next month textures...');
+        const texturesNext = await loadTextures({ renderer, month: month + 1 });
+        console.log('Textures next loaded:', texturesNext.length);
 
-        // console.log('Loading next 2 months textures...');
-        // const texturesNext2 = await loadTextures({ renderer, month: month + 2 });
-        // console.log('Textures next2 loaded:', texturesNext2.length);
+        console.log('Loading next 2 months textures...');
+        const texturesNext2 = await loadTextures({ renderer, month: month + 2 });
+        console.log('Textures next2 loaded:', texturesNext2.length);
 
         console.log('Loading bump textures...');
         const bumpTextures = await loadTexturesBump({ renderer });
         console.log('Bump Textures loaded:', bumpTextures.length);
 
-        const textureLoader = new THREE.TextureLoader();
-        const debugTexture = textureLoader.load('textures_sequence/debug_test.webp');
-        debugTexture.wrapS = THREE.RepeatWrapping;
-        debugTexture.wrapT = THREE.RepeatWrapping;
-        debugTexture.offset.set(0, 0);
-        debugTexture.repeat.set(4, 4);
-        debugTexture.minFilter = THREE.LinearFilter;
-        debugTexture.magFilter = THREE.LinearMipmapLinearFilter;
+        // const textureLoader = new THREE.TextureLoader();
+        // const debugTexture = textureLoader.load('textures_sequence/debug_test.webp');
+        // debugTexture.wrapS = THREE.RepeatWrapping;
+        // debugTexture.wrapT = THREE.RepeatWrapping;
+        // debugTexture.offset.set(0, 0);
+        // debugTexture.repeat.set(4, 4);
+        // debugTexture.minFilter = THREE.LinearFilter;
+        // debugTexture.magFilter = THREE.LinearMipmapLinearFilter;
 
         const newMaterials = textures.map((texture, index) => {
             const bumpTexture = bumpTextures[index];
 
-            const albedoTexture = texture.clone();
+            // const albedoTexture = texture.clone();
             const tileU = index % 4;
             const tileV = Math.floor(index / 4);
-
-
-            // console.log('Albedo texture Before: ', index, " " , albedoTexture);
-            albedoTexture.offset.set( - tileU , tileV - 3);
-            albedoTexture.repeat.set(4.0, 4.0);
-
             bumpTexture.offset.set( - tileU , tileV - 3);
             bumpTexture.repeat.set(4.0, 4.0);
-            // console.log('Albedo texture After : ', index, " " , albedoTexture);
 
-            // console.log('Create material for index:', index);
-            // console.log(`Tile U: ${tileU}, Tile V: ${tileV}`);
-            // textureIndex.offset.set(1 / 4.0 * tileU, 1 / 4.0 * tileV);
-            // textureIndex.repeat.set(4, 4);
             // uniforms[index].mapCurrent_1.value = texture;
             // uniforms[index].mapNext_1.value = texturesNext[index];
             // uniforms[index].mapNext_2.value = texturesNext[index];
             // uniforms[index].mapCurrent_2.value = texturesNext2[index];
             // const material = new CustomShaderMaterial({
             //     baseMaterial: THREE.MeshPhongMaterial,
-            //     map: debugTexture,
-            //     // color: new THREE.Color(0xc0c0c0),
-            //     // bumpMap: bumpTexture,
-            //     bumpScale: 500,
+            //     map: texture,
+            //     bumpMap: bumpTexture,
+            //     bumpScale: 100,
             //     uniforms: uniforms[index],
             //     fragmentShader: weatherPatchmapFrag,
             //     patchMap: {
@@ -328,15 +268,14 @@ const CreateSphereMaterials = async ({ renderer, month, uniforms }) => {
             //         "patchInject": { "#include <map_fragment>": `${weatherInjectFrag}` }
             //     }
             // });
-            const material = new THREE.MeshPhongMaterial({ 
-                map: albedoTexture,
-                // color: '#' + Math.floor(Math.random() * 16777215).toString(16),
+            const material = new THREE.MeshPhongMaterial({
+                map: texture,
                 bumpMap: bumpTexture,
                 bumpScale: 100,
+                side: THREE.FrontSide,
                 precision: 'highp',
             });
-            
-            console.log(`Material created for index ${index}`);
+
             return material;
         });
 
@@ -405,7 +344,6 @@ function TestSplitSphereWeather() {
             const newGeometry = await splitGeometryByUV(new THREE.SphereGeometry(radius, subdivisions, subdivisions), 4, true);
             if (newGeometry && memoizedSphereMesh.current) {
                 memoizedSphereMesh.current.geometry = newGeometry;
-                console.log('Sphere geometry split: ', newGeometry);
             }
         };
 
@@ -521,17 +459,17 @@ function TestSplitSphereWeather() {
 
     };
 
-    useFrame(() => {
-        // if (!memoizedSphereMesh.current || !isInit) return;
+    // useFrame(() => {
+    //     if (!memoizedSphereMesh.current || !isInit) return;
 
-        // timeRef.current += deltaTime;
-        // timeRef.current = (timeRef.current % 12);
+    //     timeRef.current += deltaTime;
+    //     timeRef.current = (timeRef.current % 12);
 
-        // updateBlend();
-        // if (Math.abs(timeRef.current - lastMonthRef.current) >= 1) {
-        //     updateTexture();
-        // }
-    });
+    //     updateBlend();
+    //     if (Math.abs(timeRef.current - lastMonthRef.current) >= 1) {
+    //         updateTexture();
+    //     }
+    // });
 
     const sphereMesh = useMemo(() => (
         <Suspense fallback={null}>
