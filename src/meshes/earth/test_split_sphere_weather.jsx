@@ -9,34 +9,38 @@ import weatherPatchmapFrag from '@/shaders/weather_v2/weather_patchmap_frag.glsl
 import weatherInitFrag from '@/shaders/weather_v2/weather_init_frag.glsl';
 import weatherInjectFrag from '@/shaders/weather_v2/weather_inject_frag.glsl';
 
+import earthWhite from '/textures/earth_white_environment.png';
+import earthStars from '/textures/earth_environment.jpg';
+import { useSelector } from 'react-redux';
+
 
 const texturePathGeneration = ({month}) => {
-    const textureBasePath = '/textures_sequence/compressed_4x4/';
+    const textureBasePath = '/textures_sequence/compressed_earth_4x4/';
     const monthString = month.toString().padStart(2, '0');
     return [
         [
-        `${textureBasePath}00/earth_surface_${monthString}_0.ktx2`,
-        `${textureBasePath}01/earth_surface_${monthString}_1.ktx2`,
-        `${textureBasePath}02/earth_surface_${monthString}_2.ktx2`,
-        `${textureBasePath}03/earth_surface_${monthString}_3.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_0.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_1.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_2.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_3.ktx2`,
         ],
         [
-        `${textureBasePath}04/earth_surface_${monthString}_4.ktx2`,
-        `${textureBasePath}05/earth_surface_${monthString}_5.ktx2`,
-        `${textureBasePath}06/earth_surface_${monthString}_6.ktx2`,
-        `${textureBasePath}07/earth_surface_${monthString}_7.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_4.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_5.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_6.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_7.ktx2`,
         ],
         [
-        `${textureBasePath}08/earth_surface_${monthString}_8.ktx2`,
-        `${textureBasePath}09/earth_surface_${monthString}_9.ktx2`,
-        `${textureBasePath}10/earth_surface_${monthString}_10.ktx2`,
-        `${textureBasePath}11/earth_surface_${monthString}_11.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_8.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_9.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_10.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_11.ktx2`,
         ],
         [
-        `${textureBasePath}12/earth_surface_${monthString}_12.ktx2`,
-        `${textureBasePath}13/earth_surface_${monthString}_13.ktx2`,
-        `${textureBasePath}14/earth_surface_${monthString}_14.ktx2`,
-        `${textureBasePath}15/earth_surface_${monthString}_15.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_12.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_13.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_14.ktx2`,
+        `${textureBasePath}earth_surface_${monthString}_15.ktx2`,
         ],
     ];
 };
@@ -71,15 +75,45 @@ const bumpTexturePathGeneration = () => {
     ];
 };
 
+const RoughnessTexturePathGeneration = () => {
+    const textureBasePath = '/textures_sequence/compressed_roughness_4x4/';
+    return [
+        [
+        `${textureBasePath}earth_roughness_0.ktx2`,
+        `${textureBasePath}earth_roughness_1.ktx2`,
+        `${textureBasePath}earth_roughness_2.ktx2`,
+        `${textureBasePath}earth_roughness_3.ktx2`,
+        ],
+        [
+        `${textureBasePath}earth_roughness_4.ktx2`,
+        `${textureBasePath}earth_roughness_5.ktx2`,
+        `${textureBasePath}earth_roughness_6.ktx2`,
+        `${textureBasePath}earth_roughness_7.ktx2`,
+        ],
+        [
+        `${textureBasePath}earth_roughness_8.ktx2`,
+        `${textureBasePath}earth_roughness_9.ktx2`,
+        `${textureBasePath}earth_roughness_10.ktx2`,
+        `${textureBasePath}earth_roughness_11.ktx2`,
+        ],
+        [
+        `${textureBasePath}earth_roughness_12.ktx2`,
+        `${textureBasePath}earth_roughness_13.ktx2`,
+        `${textureBasePath}earth_roughness_14.ktx2`,
+        `${textureBasePath}earth_roughness_15.ktx2`,
+        ],
+    ];
+};
+
 
 // Create a single instance of KTX2Loader
 const textureLoader = new KTX2Loader();
 textureLoader.setTranscoderPath('/basis/');
 textureLoader.setWorkerLimit(4);
 
-const loadTexturesBump = async ({renderer}) => {
+const loadTexturesOther = async ({renderer, list}) => {
     textureLoader.detectSupport(renderer);
-    const texturePaths = bumpTexturePathGeneration();
+    const texturePaths = list;
     const texturePromises = texturePaths.flat().map(path => {
         return new Promise((resolve, reject) => {
             fetch(path)
@@ -98,6 +132,7 @@ const loadTexturesBump = async ({renderer}) => {
                     texture.wrapT = THREE.ClampToEdgeWrapping;
                     texture.minFilter = THREE.LinearMipMapLinearFilter;
                     texture.magFilter = THREE.LinearFilter;
+                    texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
                     resolve(texture);
                 },
                 undefined,
@@ -108,7 +143,15 @@ const loadTexturesBump = async ({renderer}) => {
         });
     });
 
-    return Promise.all(texturePromises);
+    const textures = await Promise.all(texturePromises);
+    textures.forEach((texture, index) => {
+        const tileU = index % 4;
+        const tileV = Math.floor(index / 4);
+        texture.offset.set(-tileU, tileV - 3);
+        texture.repeat.set(4.0, 4.0);
+    });
+
+    return textures;
 };
 
 const loadTextures = async ({renderer, month}) => {
@@ -132,10 +175,12 @@ const loadTextures = async ({renderer, month}) => {
                     texture.wrapT = THREE.ClampToEdgeWrapping;// Adjust the offset to start at the edge
                     texture.minFilter = THREE.LinearMipMapLinearFilter;
                     texture.magFilter = THREE.LinearFilter;
+                    texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
                     resolve(texture);
                 },
                 undefined,
                 (error) => {
+                    console.error('Error loading texture:', path);
                     reject(error);
                 }
             );
@@ -160,8 +205,11 @@ const CreateSphereMaterials = async ({ renderer, month, uniforms }) => {
         const textures = await loadTextures({ renderer, month });
         console.log('Textures loaded:', textures.length);
         
-        const bumpTextures = await loadTexturesBump({ renderer });
+        const bumpTextures = await loadTexturesOther({ renderer, list: bumpTexturePathGeneration() });
         console.log('Bump Textures loaded:', bumpTextures.length);
+
+        const roughnessTextures = await loadTexturesOther({ renderer, list: RoughnessTexturePathGeneration() });
+        console.log('Roughness Textures loaded:', roughnessTextures.length);
 
         // const textureLoader = new THREE.TextureLoader();
         // const debugTexture = textureLoader.load('textures_sequence/debug_test.webp');
@@ -172,15 +220,12 @@ const CreateSphereMaterials = async ({ renderer, month, uniforms }) => {
         // debugTexture.minFilter = THREE.LinearFilter;
         // debugTexture.magFilter = THREE.LinearMipmapLinearFilter;
 
+
         const newMaterials = textures.map((texture, index) => {
             const bumpTexture = bumpTextures[index];
+            const roughnessTexture = roughnessTextures[index];
 
             // const albedoTexture = texture.clone();
-            const tileU = index % 4;
-            const tileV = Math.floor(index / 4);
-            bumpTexture.offset.set( - tileU , tileV - 3);
-            bumpTexture.repeat.set(4.0, 4.0);
-
             // uniforms[index].mapCurrent_1.value = texture;
             // uniforms[index].mapNext_1.value = texturesNext[index];
             // uniforms[index].mapNext_2.value = texturesNext[index];
@@ -197,11 +242,26 @@ const CreateSphereMaterials = async ({ renderer, month, uniforms }) => {
             //         "patchInject": { "#include <map_fragment>": `${weatherInjectFrag}` }
             //     }
             // });
-            const material = new THREE.MeshPhongMaterial({
+            const materialtest = new THREE.MeshPhongMaterial({
                 map: texture,
                 bumpMap: bumpTexture,
-                bumpScale: 100,
+                bumpScale: 50,
                 side: THREE.FrontSide,
+                precision: 'highp',
+            });
+
+            const material = new CustomShaderMaterial({
+                baseMaterial: THREE.MeshPhysicalMaterial,
+                reflectivity: 0.01,
+                ior: 1.5,
+                roughness: 0.8,
+                roughnessMap: roughnessTexture,
+                metalness: 0.0,
+                map: texture,
+                bumpMap: bumpTexture,
+                bumpScale: 50,
+                envMap: uniforms.EnvMap.value,
+                envMapIntensity: 0.05,
                 precision: 'highp',
             });
 
@@ -221,11 +281,42 @@ function TestSplitSphereWeather() {
     const subdivisions = 320;
     const splitDim = 4;
     const memoizedSphereMesh = useRef(null);
+    const lightColorValue = useSelector(state => state.lightColorValue);
     const { gl } = useThree();
 
 
 
     const [isInit, setIsInit] = useState(false);
+
+    const uniforms = useMemo(() => {
+
+        const lightColorValueConverter = new THREE.Color()
+        lightColorValueConverter.setHSL(lightColorValue.h / 360, lightColorValue.s / 100, lightColorValue.l / 100);
+        const lightColorValueHex = `#${lightColorValueConverter.getHexString()}`;
+
+        const canvas = document.createElement('canvas');
+        canvas.width = 256;
+        canvas.height = 128;
+
+        const context = canvas.getContext('2d');
+        context.fillStyle = lightColorValueHex || '#ffffff'; // Ensure lightColorValue is a valid color
+        context.fillRect(0, 0, canvas.width, canvas.height);
+
+        const texture = new THREE.CanvasTexture(canvas);
+        texture.mapping = THREE.EquirectangularReflectionMapping;
+
+        return {
+            EnvMap: { value: texture },
+        };
+    }, [lightColorValue]);
+
+    useEffect(() => {
+        if (memoizedSphereMesh.current) {
+            if (Array.isArray(memoizedSphereMesh.current.material)) {
+                memoizedSphereMesh.current.material.forEach(material => {material.envMap = uniforms.EnvMap.value});
+            }
+        }
+    }, [uniforms.EnvMap.value]);
 
     //Initialize the materials
     useEffect(() => {
@@ -244,7 +335,7 @@ function TestSplitSphereWeather() {
             if (memoizedSphereMesh.current) {
                 // const sphereMaterials = await createTextureSphereMaterials({renderer: gl, month: 1});
                 // LoadAllTextures();
-                const sphereMaterials = await CreateSphereMaterials({ renderer: gl, month: 0, uniforms : uniforms });
+                const sphereMaterials = await CreateSphereMaterials({ renderer: gl, month: 1, uniforms : uniforms });
                 memoizedSphereMesh.current.material = sphereMaterials;
                 console.log('Sphere materials loaded');
                 setIsInit(true);
@@ -259,6 +350,8 @@ function TestSplitSphereWeather() {
             textureLoader.dispose();
         };
     }, []);
+
+
 
 
     //Initailize the geometry
@@ -289,20 +382,6 @@ function TestSplitSphereWeather() {
     const currentBufferRef = useRef(1);
     const deltaTime = 0.005;
 
-    const uniforms = useMemo(() => {
-        const uniformSet = [];
-        for (let i = 0; i < 16; i++) {
-            uniformSet.push({
-                blend: { value: 0 },
-                currentBuffer : { value : currentBufferRef.current  },
-                mapCurrent_1: { value: new THREE.CompressedTexture() },
-                mapNext_1: { value: new THREE.CompressedTexture() },
-                mapCurrent_2 : { value: new THREE.CompressedTexture() },
-                mapNext_2 : { value: new THREE.CompressedTexture() }
-            });
-        }
-        return uniformSet;
-    }, []);
 
     const updateBlend = () => {
         uniforms.forEach((uniform) => {

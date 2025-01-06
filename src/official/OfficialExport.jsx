@@ -1,6 +1,6 @@
 import React, { useMemo, useRef, useEffect, useState } from 'react';
 import { Canvas, useThree } from '@react-three/fiber';
-import { Scroll, ScrollControls, Preload, useProgress } from '@react-three/drei';
+import { Scroll, ScrollControls, Preload, useProgress, Environment } from '@react-three/drei';
 import { useSelector, Provider } from 'react-redux';
 
 import AmbientLight from '../lights/ambient_light';
@@ -16,6 +16,10 @@ import VisualizerConfig from '@/UI/visualizer_config/VisualizerConfig';
 import OfficialHTML from './OfficialHTML';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import FakeLoadScreen from '@/UI/background_buffer/FakeLoadScreen';
+import earthEnvironment from '/textures/earth_environment.jpg';
+import earthWhite from '/textures/earth_white_environment.png';
+
+import * as THREE from 'three';
 
 export function Loading() {
     const { progress } = useProgress();
@@ -25,6 +29,12 @@ export function Loading() {
 export function CanvasDOM(){
     const [pages, setPages] = useState(30);
     const {size} = useThree(); 
+    const {scene} = useThree();
+    useEffect(() => {
+        scene.background = new THREE.Color('#000000');
+        scene.environment = new THREE.TextureLoader().load(earthWhite);
+        scene.environmentIntensity = 10.0;
+    }, []);
     const htmlRef = useRef();
     useEffect(() => {
         if (htmlRef.current) {
@@ -34,18 +44,18 @@ export function CanvasDOM(){
     return(
     <>
         <ScrollControls damping={0.1} offset={1} pages={pages} >
-            <AmbientLight/>
-            <DirectionalLights/>
-            <EarthMeshes/>
-            <PostProcessing/>
-            {/* <OfficialCamera makeDefault={true} /> */}
-            <OfficialCameraV2/>
-            <Preload all/>
-            <Scroll html style={{height: '100%', width: '100%'}} >
-                <div className="w-auto h-auto" ref={htmlRef}>
-                    <OfficialHTML/>
-                </div>
-            </Scroll>
+                <AmbientLight/>
+                <DirectionalLights/>
+                <EarthMeshes/>
+                <PostProcessing/>
+                {/* <OfficialCamera makeDefault={true} /> */}
+                <OfficialCameraV2/>
+                <Preload all/>
+                <Scroll html style={{height: '100%', width: '100%'}} >
+                    <div className="w-auto h-auto" ref={htmlRef}>
+                        <OfficialHTML/>
+                    </div>
+                </Scroll>
         </ScrollControls>
     </>
     );
@@ -60,9 +70,10 @@ function OfficialExport() {
                     {
                         powerPreference: "high-performance",
                         antialias: true,
-                        capabilities: {maxTextureSize: 43200}
                     }
                 }
+                color='black'
+
             >
                 <color attach="background" args={['#000000']} /> 
                 <CanvasDOM/>           

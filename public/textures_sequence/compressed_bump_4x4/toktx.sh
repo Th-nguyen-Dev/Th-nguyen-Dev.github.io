@@ -15,7 +15,7 @@ convert_to_ktx2() {
     local input_file="$1"
     local output_file="./$(basename "${input_file%.*}.ktx2")"
     echo "Converting $input_file to $output_file"
-    ktx create --format R8_UNORM --encode basis-lz --clevel 5 --qlevel 255 --generate-mipmap --mipmap-wrap clamp --mipmap-filter kaiser --threads 4 "$input_file" "$output_file"
+    ktx create --format R8_SRGB --encode basis-lz --clevel 5 --qlevel 255 --generate-mipmap --mipmap-wrap clamp --mipmap-filter kaiser --threads 4 "$input_file" "$output_file"
 }
 
 export -f convert_to_ktx2

@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setLightRotationValue } from '@/context/reducer/directional_light/light_rotation_value';
 import { setAmbientIntensityValue } from '@/context/reducer/ambient_light/ambient_intensity_value';
+import { setDirectionalIntensityValue } from '@/context/reducer/directional_light/light_intensity_value';
 import { Slider } from '@/components/ui/slider';
 
 const SliderDirectionalLightRotation = () => {
@@ -26,4 +27,19 @@ const SliderAmbientLightIntensity = () => {
     )
 }
 
-export { SliderDirectionalLightRotation, SliderAmbientLightIntensity };
+const SliderDirectionalLightIntensity = () => {
+    const dispatch = useDispatch();
+    const intensity = useSelector((state) => state.directionalIntensityValue.value);
+    const handleSliderChange = (value) => {
+        dispatch(setDirectionalIntensityValue(value));
+    };
+    return (
+        <Slider onValueChange={handleSliderChange} value={[intensity]} />
+    );
+};
+
+export { 
+    SliderDirectionalLightRotation, 
+    SliderAmbientLightIntensity, 
+    SliderDirectionalLightIntensity 
+};

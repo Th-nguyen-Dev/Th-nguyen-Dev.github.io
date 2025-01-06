@@ -7,8 +7,8 @@ import EarthAtmosphere from './earth_atmostphere';
 function EarthMeshesAtmosphere() {
     return (
         <group>
-            <EarthAtmosphere  />
-            <Fresnel  />
+            {/* <EarthAtmosphere  /> */}
+            {/* <Fresnel  /> */}
         </group>
 
     );
