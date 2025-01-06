@@ -254,14 +254,14 @@ const CreateSphereMaterials = async ({ renderer, month, uniforms }) => {
                 baseMaterial: THREE.MeshPhysicalMaterial,
                 reflectivity: 0.01,
                 ior: 1.5,
-                roughness: 0.5,
-                roughnessMap: roughnessTexture,
+                roughness: 0.7,
+                // roughnessMap: roughnessTexture,
                 metalness: 0.0,
                 map: texture,
                 bumpMap: bumpTexture,
                 bumpScale: 30,
                 envMap: uniforms.envMap.value,
-                envMapIntensity: uniforms.envMapIntensity.value / 10000,
+                envMapIntensity: uniforms.envMapIntensity.value / 2000,
                 precision: 'highp',
             });
 
@@ -315,7 +315,10 @@ function TestSplitSphereWeather() {
     useEffect(() => {
         if (memoizedSphereMesh.current) {
             if (Array.isArray(memoizedSphereMesh.current.material)) {
-                memoizedSphereMesh.current.material.forEach(material => {material.envMap = uniforms.envMap.value});
+                memoizedSphereMesh.current.material.forEach(material => {
+                    if (material.envMap) material.envMap.dispose();
+                    material.envMap = uniforms.envMap.value;
+                });
 
             }
         }
@@ -324,7 +327,7 @@ function TestSplitSphereWeather() {
     useEffect(() => {
         if (memoizedSphereMesh.current) {
             if (Array.isArray(memoizedSphereMesh.current.material)) {
-                memoizedSphereMesh.current.material.forEach(material => {material.envMapIntensity = uniforms.envMapIntensity.value / 10000.0});
+                memoizedSphereMesh.current.material.forEach(material => {material.envMapIntensity = uniforms.envMapIntensity.value / 2000.0});
             }
         }
     }, [uniforms.envMapIntensity.value]);
@@ -335,8 +338,16 @@ function TestSplitSphereWeather() {
         const disposeMaterials = () => {
             if (memoizedSphereMesh.current) {
                 if (Array.isArray(memoizedSphereMesh.current.material)) {
-                    memoizedSphereMesh.current.material.forEach(material => material.dispose());
+                    memoizedSphereMesh.current.material.forEach(material => {
+                        if (material.map) material.map.dispose();
+                        if (material.bumpMap) material.bumpMap.dispose();
+                        if (material.roughnessMap) material.roughnessMap.dispose();
+                        material.dispose();
+                    });
                 } else {
+                    if (memoizedSphereMesh.current.material.map) memoizedSphereMesh.current.material.map.dispose();
+                    if (memoizedSphereMesh.current.material.bumpMap) memoizedSphereMesh.current.material.bumpMap.dispose();
+                    if (memoizedSphereMesh.current.material.roughnessMap) memoizedSphereMesh.current.material.roughnessMap.dispose();
                     memoizedSphereMesh.current.material.dispose();
                 }
             }
