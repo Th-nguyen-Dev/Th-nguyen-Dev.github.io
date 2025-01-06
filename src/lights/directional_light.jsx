@@ -80,7 +80,7 @@ function DirectionalLights() {
         if (directionalLightRef.current && directionalLightRef.current.length > 0) {
             directionalLightRef.current.forEach(light => {
                 if (light) {
-                    light.intensity = 0.01 + directionalIntensity / 100;
+                    light.intensity = 0.01 + directionalIntensity / 10;
                 }
             });
         }

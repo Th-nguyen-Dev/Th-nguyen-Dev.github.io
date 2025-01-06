@@ -254,14 +254,14 @@ const CreateSphereMaterials = async ({ renderer, month, uniforms }) => {
                 baseMaterial: THREE.MeshPhysicalMaterial,
                 reflectivity: 0.01,
                 ior: 1.5,
-                roughness: 0.8,
+                roughness: 0.5,
                 roughnessMap: roughnessTexture,
                 metalness: 0.0,
                 map: texture,
                 bumpMap: bumpTexture,
-                bumpScale: 50,
-                envMap: uniforms.EnvMap.value,
-                envMapIntensity: 0.05,
+                bumpScale: 30,
+                envMap: uniforms.envMap.value,
+                envMapIntensity: uniforms.envMapIntensity.value / 10000,
                 precision: 'highp',
             });
 
@@ -282,6 +282,7 @@ function TestSplitSphereWeather() {
     const splitDim = 4;
     const memoizedSphereMesh = useRef(null);
     const lightColorValue = useSelector(state => state.lightColorValue);
+    const directionalIntensity = useSelector((state) => state.directionalIntensityValue.value);
     const { gl } = useThree();
 
 
@@ -306,17 +307,27 @@ function TestSplitSphereWeather() {
         texture.mapping = THREE.EquirectangularReflectionMapping;
 
         return {
-            EnvMap: { value: texture },
+            envMap: { value: texture },
+            envMapIntensity: { value: directionalIntensity},
         };
-    }, [lightColorValue]);
+    }, [lightColorValue, directionalIntensity]);
 
     useEffect(() => {
         if (memoizedSphereMesh.current) {
             if (Array.isArray(memoizedSphereMesh.current.material)) {
-                memoizedSphereMesh.current.material.forEach(material => {material.envMap = uniforms.EnvMap.value});
+                memoizedSphereMesh.current.material.forEach(material => {material.envMap = uniforms.envMap.value});
+
             }
         }
-    }, [uniforms.EnvMap.value]);
+    }, [uniforms.envMap.value]);
+
+    useEffect(() => {
+        if (memoizedSphereMesh.current) {
+            if (Array.isArray(memoizedSphereMesh.current.material)) {
+                memoizedSphereMesh.current.material.forEach(material => {material.envMapIntensity = uniforms.envMapIntensity.value / 10000.0});
+            }
+        }
+    }, [uniforms.envMapIntensity.value]);
 
     //Initialize the materials
     useEffect(() => {
