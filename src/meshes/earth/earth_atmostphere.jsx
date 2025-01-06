@@ -14,7 +14,7 @@ const EarthAtmosphere = () => {
     const color = new THREE.Color('#001464');
     return (
         <mesh ref = {atmosphereRef}>
-            <sphereGeometry args={[5.33, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
+            <sphereGeometry args={[5.2, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
             <CustomShaderMaterial
                 color={color}
                 ref = {materialRef}

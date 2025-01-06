@@ -13,7 +13,7 @@ function Fresnel() {
 
     return (
             <mesh ref={fresnelRef}>
-                <sphereGeometry args={[5.03, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
+                <sphereGeometry args={[5.02, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
                 <CustomShaderMaterial
                 ref = {materialRef}
                 baseMaterial={THREE.MeshLambertMaterial}
