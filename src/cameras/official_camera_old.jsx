@@ -88,6 +88,7 @@ function OfficialCamera() {
             else{ returnCamera(); }
         }
     },[introToggle]);
+
     useEffect(() => {
         if (timelineIntroToggle) {
             changeFov(72);
@@ -95,6 +96,7 @@ function OfficialCamera() {
             else{ returnCamera(); }
         }
     },[timelineIntroToggle]);
+
     useEffect(() => {
         if (projectToggle) {
             changeFov(120);
@@ -102,6 +104,7 @@ function OfficialCamera() {
             alterY(3);
         }
     },[projectToggle]);
+
     useEffect(() => {
         if (projectGraphicToggle) {
             changeFov(120);
@@ -109,6 +112,7 @@ function OfficialCamera() {
             alterY(0);
         }
     },[projectGraphicToggle]);
+    
     useEffect(() => {  
         changeFov(50);
         if(size.width < 720){ centerCamera(); }

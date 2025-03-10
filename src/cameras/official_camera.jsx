@@ -112,12 +112,6 @@ function OfficialCamera() {
         }
     },[cameraToggle.zoom_in_middle]);
 
-    useEffect(() => {  
-        changeFov(50);
-        if(size.width < 720){ centerCamera(); }
-        else{ returnCamera(); }
-    }, []);    
-
     useEffect(() => {
         if (cameraToggle.zoom_out_middle) {
             changeFov(50);
@@ -126,6 +120,12 @@ function OfficialCamera() {
         }
     }
     ,[cameraToggle.zoom_out_middle]);
+
+    useEffect(() => {  
+        changeFov(50);
+        if(size.width < 720){ centerCamera(); }
+        else{ returnCamera(); }
+    }, [size]);  
 
     return (
         useMemo(() =>(

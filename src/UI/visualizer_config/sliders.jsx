@@ -20,7 +20,7 @@ const SliderAmbientLightIntensity = () => {
     const dispatch = useDispatch(); 
     const ambientIntensityValue = useSelector((state) => state.ambientIntensityValue.value);
     const handleSliderChange = (value) => {
-        dispatch(setAmbientIntensityValue(value));
+        dispatch(setAmbientIntensityValue(value / 10.0));
     }
     return (
         <Slider onValueChange={handleSliderChange} value={[ambientIntensityValue]} />
@@ -31,7 +31,8 @@ const SliderDirectionalLightIntensity = () => {
     const dispatch = useDispatch();
     const intensity = useSelector((state) => state.directionalIntensityValue.value);
     const handleSliderChange = (value) => {
-        dispatch(setDirectionalIntensityValue(value));
+        dispatch(setDirectionalIntensityValue(value / 10.0));
+        console.log(value);
     };
     return (
         <Slider onValueChange={handleSliderChange} value={[intensity]} />

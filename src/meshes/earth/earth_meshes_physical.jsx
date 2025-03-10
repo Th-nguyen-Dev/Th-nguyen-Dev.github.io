@@ -78,14 +78,14 @@ function EarthMeshesPhysical() {
 
 
     useFrame(() => {
-        if (returnToBase.current) {    
-            // meshRef.current.quaternion.multiply(rotateEarth);
+        if (returnToBase.current && meshRef.current) {    
+            meshRef.current.quaternion.multiply(rotateEarth);
         }
     });
 
     return useMemo(() => (
         <>
-            {/* <PresentationControls
+            <PresentationControls
                     rotation={[0, 0, 0]}
                     global={false}
                     snap={true}
@@ -93,21 +93,21 @@ function EarthMeshesPhysical() {
                     cursor={true}
                     polar={[-Infinity, Infinity]} // Vertical limits
                     azimuth={[-Infinity, Infinity]} // Horizontal limits
-                > */}
+                >
                 <Suspense fallback={null}>
                     <Bvh firstHitOnly>
                         <group ref={meshRef}>    
                             <EarthCities />
-                            {/* <EarthWeather /> */}
+                            <EarthWeather />
                             {/* <TestSplitSphere /> */}
-                            <TestSplitSphereWeather />
+                            {/* <TestSplitSphereWeather /> */}
                             <EarthCloud />
                             {/* <TestCoordinate /> */}
                             <CoordinatesCoreControl />
                         </group>
                     </Bvh>
                 </Suspense>
-            {/* </PresentationControls> */}
+            </PresentationControls>
         </>
     ), []);
 

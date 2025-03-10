@@ -96,8 +96,8 @@ function EarthWeather(){
                 polygonOffset
                 polygonOffsetFactor={1} 
                 patchMap={{
-                    patchParse:{"#include <map_pars_fragment>":`${transitionParse}`}, 
-                    patchDiffuse:{"#include <map_fragment>":`${transitionMapFragment}`}
+                    "patchParse":{"#include <map_pars_fragment>":`${transitionParse}`}, 
+                    "patchDiffuse":{"#include <map_fragment>":`${transitionMapFragment}`}
                 }}
                 
             >

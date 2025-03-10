@@ -42,7 +42,7 @@ function EarthMeshes(props) {
                     <EarthMeshesPhysical />
                     {/* <Earth /> */}
                     {/* <TestSplitSphere /> */}
-                    <CoordinatesCoreControl />
+                    {/* <CoordinatesCoreControl /> */}
                 </group>
                 <EarthMeshesAtmosphere />
             </group>

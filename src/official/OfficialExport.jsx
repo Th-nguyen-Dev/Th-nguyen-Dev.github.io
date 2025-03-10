@@ -48,8 +48,8 @@ export function CanvasDOM(){
                 <DirectionalLights/>
                 <EarthMeshes/>
                 <PostProcessing/>
-                {/* <OfficialCamera makeDefault={true} /> */}
-                <OfficialCameraV2/>
+                <OfficialCamera makeDefault={true} />
+                {/* <OfficialCameraV2/> */}
                 <Preload all/>
                 <Scroll html style={{height: '100%', width: '100%'}} >
                     <div className="w-auto h-auto" ref={htmlRef}>

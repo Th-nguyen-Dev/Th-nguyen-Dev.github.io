@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    value: 38,
+    value: 5.0,
 };
 
 export const directionalIntensityValue = createSlice({
