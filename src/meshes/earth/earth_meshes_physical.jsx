@@ -94,7 +94,6 @@ function EarthMeshesPhysical() {
                     polar={[-Infinity, Infinity]} // Vertical limits
                     azimuth={[-Infinity, Infinity]} // Horizontal limits
                 >
-                <Suspense fallback={null}>
                     <Bvh firstHitOnly>
                         <group ref={meshRef}>    
                             <EarthCities />
@@ -106,7 +105,6 @@ function EarthMeshesPhysical() {
                             <CoordinatesCoreControl />
                         </group>
                     </Bvh>
-                </Suspense>
             </PresentationControls>
         </>
     ), []);

@@ -18,12 +18,12 @@ function EarthCloud(){
         }
     }, [cloudRef.current]);
 
-    // useFrame(() => {
+    useFrame(() => {
 
-    //     if (cloudRef.current) {
-    //         cloudRef.current.rotation.y += Math.PI / 3650 / 3.5;
-    //     }
-    // });
+        if (cloudRef.current) {
+            cloudRef.current.rotation.y += Math.PI / 3650 / 3.5;
+        }
+    });
 
     return (
         <mesh ref={cloudRef}>
