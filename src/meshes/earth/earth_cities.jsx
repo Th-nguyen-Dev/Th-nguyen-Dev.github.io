@@ -1,9 +1,13 @@
-import cityLights from "/textures/earth night_lights_modified.png";
+// import cityLights from "/textures/earth night_lights_modified.png";
+// import cityLightsXl from "/textures/earth night_lights_Xl.png";
+// import cityLightsLg from "/textures/earth night_lights_Lg.png";
+// import cityLightsMd from "/textures/earth night_lights_Md.png";
+import cityLightsSm from "/textures/earth night_lights_Sm.png";    
 
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef, useEffect, useContext } from 'react';
 
-import CustomShaderMaterial from 'three-custom-shader-material';
+import CustomShaderMaterial from 'three-custom-shader-material'
 import fragmentShader from '../../shaders/city_fragment.glsl';
 import vertexShader from '../../shaders/city_vertex.glsl';
 
@@ -21,7 +25,7 @@ function EarthCities() {
         }
     }, [cityLightRef.current]);
     
-    const alphaMapTexture = new THREE.TextureLoader().load(cityLights);
+    const alphaMapTexture = new THREE.TextureLoader().load(cityLightsSm);
 
     return (
             <mesh ref = {cityLightRef}>

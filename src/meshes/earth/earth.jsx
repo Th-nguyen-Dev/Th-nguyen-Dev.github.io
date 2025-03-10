@@ -1,6 +1,6 @@
-import earthAlbedo from "/textures/earth albedo dec.png";
-import earthBump from "/textures/earth_bump_map.png";
+import earthBumpLg from "/textures/earth_bump_map_Lg.png";
 import earthSpecular from "/textures/earth land ocean mask.png";
+import earthSurface from "/textures/earth albedo dec.png";
 
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef, useEffect } from 'react';
@@ -11,14 +11,14 @@ import * as THREE from 'three';
 function Earth(){
     const earthRef = useRef();
 
-    useFrame(() => {
-        if (earthRef.current) {
-            earthRef.current.rotation.y += Math.PI / 3650;
-        }
-    }); 
+    // useFrame(() => {
+    //     if (earthRef.current) {
+    //         earthRef.current.rotation.y += Math.PI / 3650;
+    //     }
+    // }); 
 
-    const earthAlbedoTexture = new THREE.TextureLoader().load(earthAlbedo);
-    const earthBumpTexture = new THREE.TextureLoader().load(earthBump);
+    const earthAlbedoTexture = new THREE.TextureLoader().load(earthSurface);
+    const earthBumpTexture = new THREE.TextureLoader().load(earthBumpLg);
     const earthSpecularTexture = new THREE.TextureLoader().load(earthSpecular);
 
     return (

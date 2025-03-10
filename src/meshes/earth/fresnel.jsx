@@ -4,7 +4,7 @@ import * as THREE from 'three';
 
 import fragmentShader from "../../shaders/fragment_fresnel.glsl";
 import vertexShader from "../../shaders/vertex_fresnel.glsl";
-import CustomShaderMaterial from 'three-custom-shader-material';
+import CustomShaderMaterial from 'three-custom-shader-material'
 
 function Fresnel() {
 
@@ -13,7 +13,7 @@ function Fresnel() {
 
     return (
             <mesh ref={fresnelRef}>
-                <sphereGeometry args={[5.03, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
+                <sphereGeometry args={[5.02, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
                 <CustomShaderMaterial
                 ref = {materialRef}
                 baseMaterial={THREE.MeshLambertMaterial}

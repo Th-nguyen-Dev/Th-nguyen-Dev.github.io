@@ -16,11 +16,11 @@ export default function OfficialHTML({ htmlRef }) {
             <div className='h-auto w-auto' ref={htmlRef}>
                 <div className='pointer-events-auto'>
                     <div className='h-56'></div>
+                    <Background/>
                     <Introduction/>
                     <Interim text={"The Earth is 4.5 billion year old."} helpText={"Hint: You can hover over the buttons to travel."}/>
                     <Timeline/>
                     <Interim text={"Coral reefs are Earth's largest living structure."}/>
-                    <Background/>
                     <Project/>
                     <Interim text={"The Moon is drifting away from Earth."}/>
                     <ProjectGraphic/>

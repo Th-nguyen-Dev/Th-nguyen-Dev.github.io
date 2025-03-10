@@ -13,6 +13,7 @@ import  ambientColorValue  from './reducer/ambient_light/ambient_color_value'
 import ambientIntensityValue from './reducer/ambient_light/ambient_intensity_value'
 import  locationsTLDictionary  from './reducer/locations/locations_timeline'
 import  locationsNNDictionary  from './reducer/locations/locations_neural_network'
+import directionalIntensityValue from './reducer/directional_light/light_intensity_value'
 export default configureStore({
   reducer: {
     playmodeToggle: playmodeToggle,
@@ -29,5 +30,6 @@ export default configureStore({
     ambientIntensityValue: ambientIntensityValue,
     locationsTLDictionary: locationsTLDictionary,
     locationsNNDictionary: locationsNNDictionary,
+    directionalIntensityValue: directionalIntensityValue,
   },
 })

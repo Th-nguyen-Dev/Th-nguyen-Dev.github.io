@@ -1,6 +1,6 @@
 import React from 'react';
 import { AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion_visualizer';
-import { SliderDirectionalLightRotation } from '../sliders';
+import { SliderDirectionalLightRotation, SliderDirectionalLightIntensity } from '../sliders';
 import { DirectionalColorPicker } from '../color_picker';
 import TabsSubContent from './TabsSubContent';
 
@@ -14,6 +14,9 @@ const DirectionalLightTab = () => {
                 <div>
                     <TabsSubContent label='Rotation'>
                         <SliderDirectionalLightRotation />
+                    </TabsSubContent>
+                    <TabsSubContent label='Intensity'>
+                        <SliderDirectionalLightIntensity />
                     </TabsSubContent>
                     <TabsSubContent label='Color'>
                         <DirectionalColorPicker />

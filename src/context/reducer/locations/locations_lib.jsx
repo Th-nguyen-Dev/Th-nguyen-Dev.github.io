@@ -40,7 +40,7 @@ const locationsTimeline = {
 
 const get3DCoordinate = ({ earthCoordinate, radius }) => {
     const lat = (90 - earthCoordinate.latitude) * Math.PI / 180;
-    const lon = -earthCoordinate.longitude * Math.PI / 180;
+    const lon = -( earthCoordinate.longitude) * Math.PI / 180;
     return {
         x: radius * Math.sin(lat) * Math.cos(lon),
         y: radius * Math.cos(lat),

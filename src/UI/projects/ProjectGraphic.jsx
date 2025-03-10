@@ -1,6 +1,4 @@
 import React, { useState, useRef, useCallback, useEffect } from "react";
-import ProjectPanel from "./project_panel";
-import ProjectPanelText from "./project_panel_text";
 import { useDispatch } from "react-redux";
 import { setCameraToggle } from "@/context/reducer/camera_toggle";
 import { setBackgroundToggle } from "@/context/reducer/background_toggle";

@@ -3,11 +3,14 @@ import { Canvas, useFrame} from '@react-three/fiber';
 import { WebContext } from '../../context/web_context';
 import * as THREE from 'three';
 
-import cloud from "/textures/earth clouds.png";
+// import cloud from "/textures/earth clouds.png";
+// import cloudXl from "/textures/earth clouds_Xl.png";
+import cloudLg from "/textures/earth clouds_Lg.png";
 
 function EarthCloud(){
     const cloudRef = useRef();
     const { addMesh } = useContext(WebContext);
+    const cloudTexture = new THREE.TextureLoader().load(cloudLg);   
 
     useEffect(() => {
         if (cloudRef.current) {
@@ -15,16 +18,16 @@ function EarthCloud(){
         }
     }, [cloudRef.current]);
 
-    useFrame(() => {
+    // useFrame(() => {
 
-        if (cloudRef.current) {
-            cloudRef.current.rotation.y += Math.PI / 3650 / 3.5;
-        }
-    });
-    const cloudTexture = new THREE.TextureLoader().load(cloud);
+    //     if (cloudRef.current) {
+    //         cloudRef.current.rotation.y += Math.PI / 3650 / 3.5;
+    //     }
+    // });
+
     return (
         <mesh ref={cloudRef}>
-        <sphereGeometry args={[5.02, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
+        <sphereGeometry args={[5.02, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
         <meshStandardMaterial
             color="white"
             alphaMap={cloudTexture}

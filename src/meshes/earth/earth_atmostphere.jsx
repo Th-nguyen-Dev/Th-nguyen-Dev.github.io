@@ -2,7 +2,7 @@ import { React, useEffect, useMemo, useRef } from 'react';
 import atmosphere_vertex from '../../shaders/atmosphere_vertex.glsl';
 import atmosphere_fragment from '../../shaders/atmosphere_frag_patchMap.glsl';
 import { useFrame } from '@react-three/fiber';
-import CustomShaderMaterial from 'three-custom-shader-material'; 
+import CustomShaderMaterial from 'three-custom-shader-material'
 import * as THREE from 'three';
 
 import atmosphere_frag_parse from '../../shaders/atmosphere_frag_parse.glsl';
@@ -14,7 +14,7 @@ const EarthAtmosphere = () => {
     const color = new THREE.Color('#001464');
     return (
         <mesh ref = {atmosphereRef}>
-            <sphereGeometry args={[5.33, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
+            <sphereGeometry args={[5.2, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
             <CustomShaderMaterial
                 color={color}
                 ref = {materialRef}

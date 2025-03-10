@@ -13,6 +13,7 @@ function DirectionalLights() {
     const { addLight } = useContext(WebContext);
     const lightRotationValue = useSelector((state) => state.lightRotationValue.value);
     const lightColorValue = useSelector((state) => state.lightColorValue);
+    const directionalIntensity = useSelector((state) => state.directionalIntensityValue.value);
     const lightPosition = new THREE.Vector3(14, 15, 20); 
 
     const rotateLight = (angle) => {
@@ -74,6 +75,17 @@ function DirectionalLights() {
             });
         }
     }, [lightColorValue]);
+
+    useEffect(() => {
+        if (directionalLightRef.current && directionalLightRef.current.length > 0) {
+            directionalLightRef.current.forEach(light => {
+                if (light) {
+                    console.log("New directionalIntensity" + directionalIntensity * 1.0);
+                    light.intensity = 0.1 + directionalIntensity * 1.0;
+                }
+            });
+        }
+    }, [directionalIntensity]);
     
     return (
         useMemo(() => (

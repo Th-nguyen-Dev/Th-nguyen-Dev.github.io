@@ -8,6 +8,9 @@ import EarthMeshesPhysical from './earth_meshes_physical';
 import EarthMeshesAtmosphere from './earth_meshes_atmosphere';
 import gsap from 'gsap';
 import Earth from './earth';
+import TestSplitSphere from './test_split_sphere';
+
+import CoordinatesCoreControl from './coordinates/coordinates_core_control';
 
 function EarthMeshes(props) {
     const meshRef = useRef();
@@ -35,11 +38,13 @@ function EarthMeshes(props) {
 
     return (
             <group ref={meshRef} {...props}>
-            <group ref={earthRef} >
-                <EarthMeshesPhysical />
-                {/* <Earth /> */}
-            </group>
-            <EarthMeshesAtmosphere />
+                <group ref={earthRef} >
+                    <EarthMeshesPhysical />
+                    {/* <Earth /> */}
+                    {/* <TestSplitSphere /> */}
+                    {/* <CoordinatesCoreControl /> */}
+                </group>
+                <EarthMeshesAtmosphere />
             </group>
     )
 }
