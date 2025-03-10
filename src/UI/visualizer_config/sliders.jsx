@@ -9,7 +9,7 @@ const SliderDirectionalLightRotation = () => {
     const dispatch = useDispatch(); 
     const lightRotationValue = useSelector((state) => state.lightRotationValue.value) * 10;
     const handleSliderChange = (value) => {   
-        dispatch(setLightRotationValue(value));
+        dispatch(setLightRotationValue(value / 10));
     }
     return (
         <Slider onValueChange={handleSliderChange} value={[lightRotationValue]} />
