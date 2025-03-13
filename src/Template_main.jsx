@@ -9,6 +9,7 @@ import redux_store from './context/redux_store.jsx';
 import { Provider } from 'react-redux';
 import Header from './UI/header/Header.jsx';
 import './index.css';
+import './dot.css';
 import { Loader } from '@react-three/drei';
 import FakeLoadScreen from './UI/background_buffer/FakeLoadScreen.jsx';
 import VisualizerConfig from './UI/visualizer_config/VisualizerConfig.jsx';
@@ -21,7 +22,7 @@ const App = () => {
                 <OfficialExport />
                 {/* <EditorExport /> */}
                 {/* <MusicPlayer /> */}
-              <FakeLoadScreen />
+              {/* <FakeLoadScreen /> */}
             </Provider>
           </WebProvider>
           

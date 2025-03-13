@@ -29,8 +29,8 @@ function EarthWeather(){
     const earthRef = useRef();
     const materialRef = useRef();
 
-    const earthBumpTexture = new THREE.TextureLoader().load(earthBumpLg);
-    const earthSpecularTexture = new THREE.TextureLoader().load(earthSpecular);
+    const earthBumpTexture = useLoader(THREE.TextureLoader, earthBumpLg);
+    const earthSpecularTexture = useLoader(THREE.TextureLoader, earthSpecular);
     const earthSurfaceTexture = useLoader(THREE.TextureLoader, earthSpriteSheetXl);
     const baseTextureG = useRef(earthSurfaceTexture);
 

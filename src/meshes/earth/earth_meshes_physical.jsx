@@ -25,6 +25,9 @@ function EarthMeshesPhysical() {
     const toggleDes = useSelector((state) => state.timelineToggle.value);
 
     const selectedQuaterion = useRef(new THREE.Quaternion());
+    const startQuaterion = useRef(new THREE.Quaternion());
+    const lastQuaterion = useRef(new THREE.Quaternion());
+    const lastQuaterionBack = useRef(new THREE.Quaternion());
 
     useEffect(() => {
         if (toggleDes) {
@@ -33,58 +36,49 @@ function EarthMeshesPhysical() {
         }
     }, [toggleDes]);
 
-    const lastQuaternion = useRef(new THREE.Quaternion());
-    const rotateEarth = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), 0.0004);
-    const returnToBase = useRef(true);
-    const startRotation = useRef(false);
+    const rotateEarth = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), 0.001);
 
-    const rotateEase = (quaternion) => {
-        const tl = gsap.timeline();
-        const temp = {value: 0};
-        if (meshRef.current) {
-            const startQuaternion = meshRef.current.quaternion.clone();
-            tl.to(temp, {
-            value: 1,
-            duration: 1,
-            ease: "sine.inOut",
-            onStart: () => {
-                returnToBase.current = false;
-            },
-            onUpdate: () => {
-                returnToBase.current = false;
-                const quaternionStep = new THREE.Quaternion().slerpQuaternions(startQuaternion, quaternion, temp.value);
-                meshRef.current.quaternion.set(quaternionStep.x, quaternionStep.y, quaternionStep.z, quaternionStep.w);
-            },
-            onComplete: () => {
-                if (!toggleDes) {
-                returnToBase.current = true;
-                }
-            }
-            });
-        }
-    };
+    const rotateVal = useRef(0);
+    const rotateValBack = useRef(0);
+    const speed = useRef(0.01);
 
-    useEffect(() => {
-        if (toggleDes){
-            if (returnToBase.current){
-                lastQuaternion.current = meshRef.current.quaternion.clone();
-            }
-            rotateEase(selectedQuaterion.current);
-        }
-        else{
-            rotateEase(lastQuaternion.current);
-        }
-    }, [toggleDes]);
-
+    const rotateEase = (start, end, val) => {
+        const progress =  THREE.MathUtils.smootherstep(val, 0.0, 1.0);
+        console.log(val + " " + progress);
+        return new THREE.Quaternion().slerpQuaternions(start, end, progress);
+    }
+    
 
     useFrame(() => {
-        if (returnToBase.current && meshRef.current) {    
+        if (!meshRef.current) return;
+
+        if (toggleDes) {
+            rotateValBack.current = 0.0
+            lastQuaterionBack.current = meshRef.current.quaternion.clone();
+            rotateVal.current = THREE.MathUtils.clamp(rotateVal.current + speed.current, 0.0, 1.0);
+            meshRef.current.quaternion.copy(rotateEase(lastQuaterion.current, selectedQuaterion.current, rotateVal.current));
+        } 
+
+        else if (rotateValBack.current < 1.0) {
+            rotateVal.current = 0.0;
+            lastQuaterion.current = meshRef.current.quaternion.clone();
+            rotateValBack.current = THREE.MathUtils.clamp(rotateValBack.current + speed.current, 0.0, 1.0);
+            meshRef.current.quaternion.copy(rotateEase(lastQuaterionBack.current, startQuaterion.current, rotateValBack.current));
+
+        } 
+        
+        else {
+            startQuaterion.current = meshRef.current.quaternion.clone();
+            console.log("Update Start Quaterion");
+            lastQuaterion.current = meshRef.current.quaternion.clone();
+            console.log("Update Last Quaterion");
+            lastQuaterionBack.current = meshRef.current.quaternion.clone();
+            console.log("Update Last Quaterion Back");
             meshRef.current.quaternion.multiply(rotateEarth);
         }
     });
 
     return useMemo(() => (
-        <>
             <PresentationControls
                     rotation={[0, 0, 0]}
                     global={false}
@@ -98,16 +92,13 @@ function EarthMeshesPhysical() {
                         <group ref={meshRef}>    
                             <EarthCities />
                             <EarthWeather />
-                            {/* <TestSplitSphere /> */}
-                            {/* <TestSplitSphereWeather /> */}
                             <EarthCloud />
-                            {/* <TestCoordinate /> */}
                             <CoordinatesCoreControl />
                         </group>
                     </Bvh>
             </PresentationControls>
-        </>
     ), []);
+
 
 }
 export default EarthMeshesPhysical;

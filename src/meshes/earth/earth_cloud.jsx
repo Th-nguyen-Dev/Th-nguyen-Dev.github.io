@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useContext } from 'react';
 import { Canvas, useFrame} from '@react-three/fiber';
 import { WebContext } from '../../context/web_context';
+import { useLoader } from '@react-three/fiber';
 import * as THREE from 'three';
 
 // import cloud from "/textures/earth clouds.png";
@@ -10,7 +11,7 @@ import cloudLg from "/textures/earth clouds_Lg.png";
 function EarthCloud(){
     const cloudRef = useRef();
     const { addMesh } = useContext(WebContext);
-    const cloudTexture = new THREE.TextureLoader().load(cloudLg);   
+    const cloudTexture = useLoader(THREE.TextureLoader, cloudLg);
 
     useEffect(() => {
         if (cloudRef.current) {

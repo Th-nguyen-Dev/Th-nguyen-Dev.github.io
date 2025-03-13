@@ -2,6 +2,7 @@ import cloud from "/textures/earth clouds.jpg";
 
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef, useEffect } from 'react';
+import { useLoader } from "@react-three/fiber";
 
 import * as THREE from 'three';
 
@@ -18,7 +19,7 @@ function EarthCloudShadow(){
             cloudShadowRef.current.rotation.y += Math.PI / 3650 * 1.1;
         }
     }); 
-    const cloudTexture = new THREE.TextureLoader().load(cloud);
+    const cloudTexture = useLoader(THREE.TextureLoader, cloud);
 
     return (
             <mesh ref={cloudShadowRef}>

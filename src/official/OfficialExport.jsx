@@ -1,6 +1,6 @@
-import React, { useMemo, useRef, useEffect, useState } from 'react';
-import { Canvas, useThree } from '@react-three/fiber';
-import { Scroll, ScrollControls, Preload, useProgress, Environment } from '@react-three/drei';
+import React, { useMemo, useRef, useEffect, useState, Suspense } from 'react';
+import { Canvas, useLoader, useThree } from '@react-three/fiber';
+import { Scroll, ScrollControls, Preload, useProgress, Environment, Loader, Texture, Html } from '@react-three/drei';
 import { useSelector, Provider } from 'react-redux';
 
 import AmbientLight from '../lights/ambient_light';
@@ -30,9 +30,10 @@ export function CanvasDOM(){
     const [pages, setPages] = useState(30);
     const {size} = useThree(); 
     const {scene} = useThree();
+    const envTexture = useLoader(THREE.TextureLoader, earthEnvironment);
     useEffect(() => {
         scene.background = new THREE.Color('#000000');
-        scene.environment = new THREE.TextureLoader().load(earthWhite);
+        scene.environment = envTexture;
         scene.environmentIntensity = 10.0;
     }, []);
     const htmlRef = useRef();
@@ -61,23 +62,43 @@ export function CanvasDOM(){
     );
 }
 
+function PLoader() {
+    const { active, progress, errors, item, loaded, total } = useProgress();
+    return <Html center>
+        <div className='flex-col flex w-screen space-y-6 items-center justify-center'>
+            {/* <span>Loading Your Earth</span> */}
+            <div className='dot-spin'></div>
+            
+            {/* <span>Progress: {progress} % loaded</span>
+            <span>Item: {item}</span>
+            <span>Loaded: {loaded}</span>
+            <span>Total: {total}</span>
+            <span>Errors: {errors}</span>
+            <span>Active: {active}</span> */}
+        </div>
+        
+    </Html>;
+  }
 function OfficialExport() {
     const canvasRef = useRef();
     return (
         <div className='w-screen h-screen relative'>
-            <Canvas ref={canvasRef} className="canvas pointer-events-auto z-10"
-                gl={
-                    {
-                        powerPreference: "high-performance",
-                        antialias: true,
-                    }
-                }
-                color='black'
+                <Canvas ref={canvasRef} className="canvas pointer-events-auto z-10"
 
-            >
-                <color attach="background" args={['#000000']} /> 
-                <CanvasDOM/>           
-            </Canvas>  
+                    gl={
+                        {
+                            powerPreference: "high-performance",
+                            antialias: true,
+                        }
+                    }
+                    color='black'
+                >
+                    <Suspense fallback={PLoader()}>
+                        <color attach="background" args={['#000000']} /> 
+                        <CanvasDOM/>           
+                    </Suspense>
+                </Canvas>
+            
             <div className='absolute top-0 left-0 w-full pointer-events-auto z-30'>
                 <Header />
             </div>

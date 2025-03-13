@@ -8,6 +8,7 @@ import * as THREE from 'three';
 
 function OfficialCamera() {
     const OfficialCameraRef = useRef();
+    const activeAnimations = useRef([]);
 
     const cameraToggle = useSelector((state) => state.cameraToggle);
     const {size} = useThree();
@@ -31,15 +32,68 @@ function OfficialCamera() {
         return rightDirection.clone().cross(lookDirection).normalize();
     }, [rightDirection, lookDirection]);
 
+    const safeAnimate = (target, props) => {
+        if (!target) return null;
+
+        const targetRef = target;
+        // Clear any animations targeting the same object
+        gsap.killTweensOf(target);
+        
+        const animation = gsap.to(target, {
+            ...props,
+            onUpdate: () => {
+                try {
+                    if (props.onUpdate && targetRef) props.onUpdate();
+                } catch (error) {
+                    console.warn("Animation update failed, target may have been removed:", error);
+                }
+            }
+        });
+        return animation;
+    };
+
+    const safeAnimateTl = (start, target, props) => {
+        if (!target) return null;
+
+        const targetRef = target;
+        
+        // Clear any animations targeting the same object
+        gsap.killTweensOf(target);
+
+        const tl = gsap.timeline();
+        
+        const animation = tl.to(start, {
+            ...props,
+            onStart: () => {
+                if (props.onStart && targetRef) props.onStart();
+            },
+            onUpdate: () => {
+                try {
+                    if (props.onUpdate && targetRef) props.onUpdate();
+                } catch (error) {
+                    console.warn("Animation update failed, target may have been removed:", error);
+                    tl.kill(); // Kill the animation if the target is gone
+                }
+            },
+            onComplete: () => {
+                if (props.onComplete && targetRef) props.onComplete();
+            }
+        });
+        
+        return animation;
+        
+    };
+
     const changeFov = (fov) => {
         const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
-        gsap.to(currentFov, {
+        safeAnimateTl(currentFov, OfficialCameraRef.current, {
             value: fov,
             ease: "sine.inOut",
             duration: 1,
             onUpdate: () => {
+                if (!OfficialCameraRef.current) return;
                 OfficialCameraRef.current.setFocalLength(currentFov.value);
-            }
+            }   
         });
     }
     const centerCamera = () => {
@@ -52,7 +106,7 @@ function OfficialCamera() {
         currentposition.x + rightDirection.x*factor, 
         currentposition.y + rightDirection.y*factor, 
         currentposition.z + rightDirection.z*factor);
-        gsap.to(OfficialCameraRef.current.position,
+        safeAnimate(OfficialCameraRef.current.position,
             {
             x: destination.x,
             z: destination.z,
@@ -61,7 +115,7 @@ function OfficialCamera() {
         });
     }
     const returnCamera = () => {
-        gsap.to(OfficialCameraRef.current.position,
+        safeAnimate(OfficialCameraRef.current.position,
             {
             x: position.clone().x,
             y: position.clone().y,
@@ -72,7 +126,7 @@ function OfficialCamera() {
     }
 
     const alterY = (y) => {
-        gsap.to(OfficialCameraRef.current.position,
+        safeAnimate(OfficialCameraRef.current.position,
             {
             y: position.clone().y +  y,
             ease: "sine.inOut",

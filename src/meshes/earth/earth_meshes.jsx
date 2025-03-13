@@ -40,9 +40,6 @@ function EarthMeshes(props) {
             <group ref={meshRef} {...props}>
                 <group ref={earthRef} >
                     <EarthMeshesPhysical />
-                    {/* <Earth /> */}
-                    {/* <TestSplitSphere /> */}
-                    {/* <CoordinatesCoreControl /> */}
                 </group>
                 <EarthMeshesAtmosphere />
             </group>
