@@ -175,11 +175,14 @@ function OfficialCamera() {
     }
     ,[cameraToggle.zoom_out_middle]);
 
+    useEffect(() => {
+        if (size.width < 720) {
+            centerCamera();
+        }
+    });
     useEffect(() => {  
         changeFov(50);
-        if(size.width < 720){ centerCamera(); }
-        else{ returnCamera(); }
-    }, [size]);  
+    }, [size, cameraToggle]);  
 
     return (
         useMemo(() =>(
