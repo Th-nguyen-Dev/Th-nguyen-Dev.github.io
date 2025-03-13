@@ -2,7 +2,7 @@
 // import cityLightsXl from "/textures/earth night_lights_Xl.png";
 // import cityLightsLg from "/textures/earth night_lights_Lg.png";
 // import cityLightsMd from "/textures/earth night_lights_Md.png";
-import cityLightsSm from "/textures/earth night_lights_Sm.png";    
+import cityLightsSm from "/textures/earth night_lights_Sm.avif";    
 
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef, useEffect, useContext } from 'react';

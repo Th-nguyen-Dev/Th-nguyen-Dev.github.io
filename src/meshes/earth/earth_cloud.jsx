@@ -6,7 +6,7 @@ import * as THREE from 'three';
 
 // import cloud from "/textures/earth clouds.png";
 // import cloudXl from "/textures/earth clouds_Xl.png";
-import cloudLg from "/textures/earth clouds_Lg.png";
+import cloudLg from "/textures/earth clouds_Lg.avif";
 
 function EarthCloud(){
     const cloudRef = useRef();

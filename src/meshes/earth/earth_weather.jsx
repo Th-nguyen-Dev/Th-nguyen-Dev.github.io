@@ -1,12 +1,12 @@
 // import earthBump from "/textures/earth_bump_map.png";
 // import earthBumpXl from "/textures/earth_bump_map_Xl.png";
-import earthBumpLg from "/textures/earth_bump_map.png";
+import earthBumpLg from "/textures/earth_bump_map.avif";
 // import earthBumpMd from "/textures/earth_bump_map_Md.png";
 // import earthBumpSm from "/textures/earth_bump_map_Sm.png";
 
-import earthSpecular from "/textures/earth land ocean mask.png";
+import earthSpecular from "/textures/earth land ocean mask.avif";
 
-import earthSpriteSheetXl from "/textures_transition/earth_sprite_grid_md.png";
+import earthSpriteSheetXl from "/textures_transition/earth_sprite_grid_md.avif";
 // import earthSpriteSheetLg from "/textures_transition/earth_sprite_grid_lg.png";
 // import earthSpriteSheetMd from "/textures_transition/earth_sprite_grid_med.png";
 // import earthSpriteSheetSm from "/textures_transition/earth_sprite_grid_tiny.png";

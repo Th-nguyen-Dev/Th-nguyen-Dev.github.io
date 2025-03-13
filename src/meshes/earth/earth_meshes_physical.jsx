@@ -43,7 +43,7 @@ function EarthMeshesPhysical() {
     const speed = useRef(0.01);
 
     const rotateEase = (start, end, val) => {
-        const progress =  THREE.MathUtils.smootherstep(val, 0.0, 1.0);
+        const progress =  THREE.MathUtils.smoothstep(val, 0.0, 1.0);
         console.log(val + " " + progress);
         return new THREE.Quaternion().slerpQuaternions(start, end, progress);
     }
