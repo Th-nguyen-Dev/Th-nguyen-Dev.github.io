@@ -66,15 +66,7 @@ function PLoader() {
     const { active, progress, errors, item, loaded, total } = useProgress();
     return <Html center>
         <div className='flex-col flex w-screen space-y-6 items-center justify-center'>
-            {/* <span>Loading Your Earth</span> */}
             <div className='dot-spin'></div>
-            
-            {/* <span>Progress: {progress} % loaded</span>
-            <span>Item: {item}</span>
-            <span>Loaded: {loaded}</span>
-            <span>Total: {total}</span>
-            <span>Errors: {errors}</span>
-            <span>Active: {active}</span> */}
         </div>
         
     </Html>;
@@ -92,6 +84,7 @@ function OfficialExport() {
                         }
                     }
                     color='black'
+                    camera={{fov: 20,position: [0, 0, 2000]}}
                 >
                     <Suspense fallback={PLoader()}>
                         <color attach="background" args={['#000000']} /> 
