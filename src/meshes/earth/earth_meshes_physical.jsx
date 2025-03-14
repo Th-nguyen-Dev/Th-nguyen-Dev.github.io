@@ -44,7 +44,6 @@ function EarthMeshesPhysical() {
 
     const rotateEase = (start, end, val) => {
         const progress =  THREE.MathUtils.smoothstep(val, 0.0, 1.0);
-        console.log(val + " " + progress);
         return new THREE.Quaternion().slerpQuaternions(start, end, progress);
     }
     
@@ -69,11 +68,8 @@ function EarthMeshesPhysical() {
         
         else {
             startQuaterion.current = meshRef.current.quaternion.clone();
-            console.log("Update Start Quaterion");
             lastQuaterion.current = meshRef.current.quaternion.clone();
-            console.log("Update Last Quaterion");
             lastQuaterionBack.current = meshRef.current.quaternion.clone();
-            console.log("Update Last Quaterion Back");
             meshRef.current.quaternion.multiply(rotateEarth);
         }
     });

@@ -56,15 +56,13 @@ function Timeline() {
     ), []);
 
     return (
-        <div className="w-1/2 pointer-events-auto" ref={timelineRef}>
-            <div className="relative text-white top-1/4 right-10 mr-20 ml-20">
+        <div className="w-1/2 max-sm:w-full pointer-events-auto" ref={timelineRef}>
+            <div className="relative text-white top-1/4 mx-10">
                 <span className="text-7xl font-bold"> Timeline</span>
                 <br></br>
                 <br></br>
-                <div className="text-xl columns-2 flex gap-10">
-                    <div className='columns-1 flex-row '>
-                        {locationPanels}
-                    </div>
+                <div className="text-xl flex-col flex max-sm:w-full gap-10">
+                    {locationPanels}
                 </div>
             </div>
         </div>

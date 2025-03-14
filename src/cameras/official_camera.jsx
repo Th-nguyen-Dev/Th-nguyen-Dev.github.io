@@ -179,10 +179,14 @@ function OfficialCamera() {
         if (size.width < 720) {
             centerCamera();
         }
+        else {
+            returnCamera();
+        }
     });
+
     useEffect(() => {  
         changeFov(50);
-    }, [size, cameraToggle]);  
+    }, [size]);  
 
     return (
         useMemo(() =>(
