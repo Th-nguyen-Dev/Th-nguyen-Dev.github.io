@@ -12,7 +12,7 @@ function Timeline() {
     const isVisible = useIsVisible(timelineRef);
     useEffect(() => {
         if (isVisible) {
-            dispatch(setCameraToggle({ key: "zoom_in_right", value: true }));
+            dispatch(setCameraToggle("zoom_in_right"));
             dispatch(setBackgroundToggle(false));
         }
     }, [isVisible]);

@@ -49,7 +49,7 @@ export function CanvasDOM(){
                 <DirectionalLights/>
                 <EarthMeshes/>
                 <PostProcessing/>
-                <OfficialCamera makeDefault={true} />
+                <OfficialCamera/>
                 {/* <OfficialCameraV2/> */}
                 <Preload all/>
                 <Scroll html style={{height: '100%', width: '100%'}} >

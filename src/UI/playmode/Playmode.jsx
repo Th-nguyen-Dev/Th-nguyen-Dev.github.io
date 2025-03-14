@@ -12,7 +12,7 @@ function PlayMode(){
 
     useEffect(() => {
         if(isVisible){
-            dispatch(setCameraToggle({key: "zoom_out_middle", value: true}));
+            dispatch(setCameraToggle('zoom_out_middle'));
             dispatch(setBackgroundToggle(false));
             dispatch(setPlaymodeToggle(true));
         } else {

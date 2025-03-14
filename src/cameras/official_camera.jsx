@@ -1,204 +1,78 @@
-import React, { useRef, useEffect, useMemo } from 'react';
-import { PerspectiveCamera } from '@react-three/drei';
+import React, { useRef, useEffect } from 'react';
 import { useThree } from '@react-three/fiber';
 import { useSelector } from 'react-redux';
-import gsap from 'gsap';
-
+import { useSpring } from '@react-spring/three';
 import * as THREE from 'three';
 
 function OfficialCamera() {
-    const OfficialCameraRef = useRef();
-    const activeAnimations = useRef([]);
-
+    // Get the default camera from Three.js
+    const { camera } = useThree();
     const cameraToggle = useSelector((state) => state.cameraToggle);
-    const {size} = useThree();
+    const { size } = useThree();
 
-    const position = new THREE.Vector3(32.00, 0, 12.25);
-    const rotation = new THREE.Euler(0, 1.36, 0);
-    
-    const lookDirection = useMemo(() => {
-        if (OfficialCameraRef.current) {
-            return OfficialCameraRef.current.getWorldDirection(new THREE.Vector3());
+    // Create spring but don't render anything
+    const [cameraProps, api] = useSpring(() => ({
+        fov: 80,
+        position: [-4, 0, 35],
+        rotation: [0, 0, 0],
+        config: {
+            mass: 0.1, tension: 200, friction: 80, precision: 0.001
+        },
+        onChange: ({ value }) => {
+            camera.fov = value.fov;
+            camera.position.set(value.position[0], value.position[1], value.position[2]);
+            camera.rotation.set(value.rotation[0], value.rotation[1], value.rotation[2]);
+            // camera.aspect = size.width / size.height;
+            camera.updateProjectionMatrix();
         }
-        return new THREE.Vector3();
-    }, [OfficialCameraRef.current]);
+    }));
 
-
-    const rightDirection = useMemo(() => {
-        return lookDirection.clone().cross(new THREE.Vector3(0, 1, 0)).normalize();
-    }, [lookDirection]);
-
-    const upDirection = useMemo(() => {
-        return rightDirection.clone().cross(lookDirection).normalize();
-    }, [rightDirection, lookDirection]);
-
-    const safeAnimate = (target, props) => {
-        if (!target) return null;
-
-        const targetRef = target;
-        // Clear any animations targeting the same object
-        gsap.killTweensOf(target);
-        
-        const animation = gsap.to(target, {
-            ...props,
-            onUpdate: () => {
-                try {
-                    if (props.onUpdate && targetRef) props.onUpdate();
-                } catch (error) {
-                    console.warn("Animation update failed, target may have been removed:", error);
-                }
-            }
-        });
-        return animation;
-    };
-
-    const safeAnimateTl = (start, target, props) => {
-        if (!target) return null;
-
-        const targetRef = target;
-        
-        // Clear any animations targeting the same object
-        gsap.killTweensOf(target);
-
-        const tl = gsap.timeline();
-        
-        const animation = tl.to(start, {
-            ...props,
-            onStart: () => {
-                if (props.onStart && targetRef) props.onStart();
-            },
-            onUpdate: () => {
-                try {
-                    if (props.onUpdate && targetRef) props.onUpdate();
-                } catch (error) {
-                    console.warn("Animation update failed, target may have been removed:", error);
-                    tl.kill(); // Kill the animation if the target is gone
-                }
-            },
-            onComplete: () => {
-                if (props.onComplete && targetRef) props.onComplete();
-            }
-        });
-        
-        return animation;
-        
-    };
-
-    const changeFov = (fov) => {
-        const currentFov = {value : OfficialCameraRef.current.getFocalLength()};
-        safeAnimateTl(currentFov, OfficialCameraRef.current, {
-            value: fov,
-            ease: "sine.inOut",
-            duration: 1,
-            onUpdate: () => {
-                if (!OfficialCameraRef.current) return;
-                OfficialCameraRef.current.setFocalLength(currentFov.value);
-            }   
-        });
-    }
-    const centerCamera = () => {
-        let destination = position.clone();
-        const distance = OfficialCameraRef.current.position.distanceTo(new THREE.Vector3(0,0,0));
-        const currentposition = OfficialCameraRef.current.position;
-        const angle = OfficialCameraRef.current.position.clone().normalize().dot(rightDirection);
-        const factor = -(distance * angle);
-        destination = new THREE.Vector3( 
-        currentposition.x + rightDirection.x*factor, 
-        currentposition.y + rightDirection.y*factor, 
-        currentposition.z + rightDirection.z*factor);
-        safeAnimate(OfficialCameraRef.current.position,
-            {
-            x: destination.x,
-            z: destination.z,
-            ease: "sine.inOut",
-            duration: 1,
-        });
-    }
-    const returnCamera = () => {
-        safeAnimate(OfficialCameraRef.current.position,
-            {
-            x: position.clone().x,
-            y: position.clone().y,
-            z: position.clone().z,
-            ease: "sine.inOut",
-            duration: 1,
-        });
+    const cameraState = {
+        'zoom_in_right': {
+            fov: 15,
+            position: size.width < 789 ? [0,0,25] : [-5.25, 0, 35],
+            rotation: [0, 0, 0],
+        },
+        'zoom_out_right': {
+            fov: 20,
+            position: size.width < 789 ? [0,0,40] : [-5.25, 0, 35],
+            rotation: [0, 0, 0],
+        },
+        'zoom_in_middle': {
+            fov: 15,
+            position: [0, 3, 25],
+            rotation: [0, 0, 0],
+        },
+        'zoom_out_middle': {
+            fov: 20,
+            position: [0, 0, 40],
+            rotation: [0, 0, 0],
+        },
+        'zoom_in_middle_down': {
+            fov: 15,
+            position: [0, 0, 25],
+            rotation: [0, 0, 0],
+        },
+        'default': {
+            fov: 20,
+            position: size.width < 789 ? [0,0,25] : [-5.25, 0, 35],
+            rotation: [0, 0, 0],
+        },
     }
 
-    const alterY = (y) => {
-        safeAnimate(OfficialCameraRef.current.position,
-            {
-            y: position.clone().y +  y,
-            ease: "sine.inOut",
-            duration: 1,
-        });
-    }
+
 
     useEffect(() => {
-        if (cameraToggle.zoom_out_right) {
-            changeFov(50);
-            if(size.width < 720){ centerCamera(); alterY(0); }
-            else{ returnCamera(); }
+        const mode = cameraState[cameraToggle.cameraToggle];
+        if (mode) {
+            api.start({
+                ...mode,
+            });
         }
-    },[cameraToggle.zoom_out_right]);
+    }, [cameraToggle, size]);
 
-    useEffect(() => {
-        if (cameraToggle.zoom_in_right) {
-            changeFov(72);
-            if(size.width < 720){ centerCamera(); alterY(0); }
-            else{ returnCamera(); }
-        }
-    },[cameraToggle.zoom_in_right]);
-
-    useEffect(() => {
-        if (cameraToggle.zoom_in_middle_down) {
-            changeFov(120);
-            centerCamera();
-            alterY(3);
-        }
-    },[cameraToggle.zoom_in_middle_down]);
-
-    useEffect(() => {
-        if (cameraToggle.zoom_in_middle) {
-            changeFov(120);
-            centerCamera();
-            alterY(0);
-        }
-    },[cameraToggle.zoom_in_middle]);
-
-    useEffect(() => {
-        if (cameraToggle.zoom_out_middle) {
-            changeFov(50);
-            centerCamera();
-            alterY(-0.25);
-        }
-    }
-    ,[cameraToggle.zoom_out_middle]);
-
-    useEffect(() => {
-        if (size.width < 720) {
-            centerCamera();
-        }
-        else {
-            returnCamera();
-        }
-    });
-
-    useEffect(() => {  
-        changeFov(50);
-    }, [size]);  
-
-    return (
-        useMemo(() =>(
-            <PerspectiveCamera 
-                ref={OfficialCameraRef} 
-                makeDefault = {true}
-                position = {position.clone()}
-                rotation = {rotation.clone()}   
-                fov = {20}
-            />
-        ),[])
-        );
+    // No need to return an actual camera element
+    return null;
 }
 
 export default OfficialCamera;

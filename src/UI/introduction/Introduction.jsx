@@ -15,7 +15,7 @@ function Introduction() {
 
     useEffect(() => {
         if(isVisibile){
-            dispatch(setCameraToggle({key: "zoom_out_right", value: true}));
+            dispatch(setCameraToggle('zoom_out_right'));
             dispatch(setBackgroundToggle(false));
         }
     }, [isVisibile]);

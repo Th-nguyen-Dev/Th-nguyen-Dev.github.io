@@ -13,7 +13,7 @@ function ProjectGraphic() {
 
     useEffect(() => {
         if(isVisible){
-            dispatch(setCameraToggle({ key: "zoom_in_middle", value: true }));
+            dispatch(setCameraToggle("zoom_in_middle_down"));
             dispatch(setBackgroundToggle(true));
         }
     }, [isVisible]);

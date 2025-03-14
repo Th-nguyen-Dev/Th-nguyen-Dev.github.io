@@ -17,7 +17,7 @@ function Project() {
 
     useEffect(() => {
         if(isVisible){
-            dispatch(setCameraToggle({ key: "zoom_in_middle_down", value: true }));
+            dispatch(setCameraToggle("zoom_in_middle"));
             dispatch(setBackgroundToggle(true));
         }
     }, [isVisible]);
