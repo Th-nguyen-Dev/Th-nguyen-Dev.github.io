@@ -19,10 +19,6 @@ const CoordinatesTimeline = () => {
             (data.radius)
         );
     }, [data.radius]);
-
-    useEffect(() => {
-        console.log(data);
-    }, [data]);
     
 
     return (

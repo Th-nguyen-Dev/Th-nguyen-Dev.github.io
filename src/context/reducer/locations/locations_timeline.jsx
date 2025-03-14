@@ -1,14 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { locationsTimeline, generate3DCoordinates, generateMovementQuaternions } from './locations_lib';
 import * as THREE from 'three';
+
 export const locationsTLDictionary = createSlice({
   name: 'locationsTLDictionary',
   initialState: {
     radius: 5,
-    cameraVec: {x: 32.00, y: 0, z: 8.50},
+    cameraVec: {x: -5.25, y: 0,z: 35},
     coordinates: locationsTimeline,
     coordinates3D: generate3DCoordinates({locations: locationsTimeline, radius: 5}),
-    movementQuaternions: generateMovementQuaternions({locations: locationsTimeline, endVec: {x: 32.00, y: 0, z: 8.50}, radius: 5}),
+    movementQuaternions: generateMovementQuaternions({locations: locationsTimeline, endVec: {x: -5.25, y: 0,z: 35}, radius: 5}),
   },
   reducers: {
     regenerateDictionary: (state, action) => {

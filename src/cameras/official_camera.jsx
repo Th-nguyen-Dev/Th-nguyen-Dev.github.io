@@ -13,7 +13,7 @@ function OfficialCamera() {
     // Create spring but don't render anything
     const [cameraProps, api] = useSpring(() => ({
         fov: 80,
-        position: [-4, 0, 35],
+        position: [-5.25, 0, 35],
         rotation: [0, 0, 0],
         config: {
             mass: 0.1, tension: 200, friction: 80, precision: 0.001

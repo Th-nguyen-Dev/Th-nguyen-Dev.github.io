@@ -12,6 +12,7 @@ import CoordinatesCoreControl from './coordinates/coordinates_core_control';
 import Earth from './earth';
 import { WebContext } from '../../context/web_context';
 import { useSelector, useDispatch } from 'react-redux';
+import { regenerateDictionary } from '@/context/reducer/locations/locations_timeline';
 import { setTimelineToggle } from '@/context/reducer/timeline_toggle';
 import gsap from 'gsap';
 import TestSplitSphere from './test_split_sphere';
@@ -28,6 +29,8 @@ function EarthMeshesPhysical() {
     const startQuaterion = useRef(new THREE.Quaternion());
     const lastQuaterion = useRef(new THREE.Quaternion());
     const lastQuaterionBack = useRef(new THREE.Quaternion());
+
+
 
     useEffect(() => {
         if (toggleDes) {
