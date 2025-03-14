@@ -80,7 +80,7 @@ function OfficialExport() {
                     gl={
                         {
                             powerPreference: "high-performance",
-                            antialias: true,
+                            antialias: false,
                         }
                     }
                     color='black'

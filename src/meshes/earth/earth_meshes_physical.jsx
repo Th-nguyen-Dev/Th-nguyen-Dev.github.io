@@ -31,7 +31,6 @@ function EarthMeshesPhysical() {
     const lastQuaterionBack = useRef(new THREE.Quaternion());
 
 
-
     useEffect(() => {
         if (toggleDes) {
             const { x, y, z, w } = movementQuaternions[toggleDes];
