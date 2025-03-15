@@ -20,7 +20,7 @@ function EarthCloud() {
   return React.useMemo(
     () => (
       <mesh ref={cloudRef}>
-        <sphereGeometry args={[5.02, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
+        <sphereGeometry args={[5.02, 30, 30, 0, Math.PI * 2, 0, Math.PI]} />
         <meshStandardMaterial
           color="white"
           alphaMap={cloudTexture}

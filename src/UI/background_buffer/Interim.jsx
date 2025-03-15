@@ -16,11 +16,9 @@ function Interim({ text, helpText }, props) {
     <div
       className="h-screen flex items-center justify-center select-none"
       {...props}
+      ref={interimRef}
     >
-      <div
-        className="h-2/3 items-center justify-center flex flex-col mx-10"
-        ref={interimRef}
-      >
+      <div className="h-2/3 items-center justify-center flex flex-col mx-10">
         <div className="text-center font-thin text-5xl mb-4">{text}</div>
         <div className="text-center font-bold text-2xl">{helpText}</div>
       </div>

@@ -20,7 +20,7 @@ function EarthCities() {
   const cityLightsMesh = useMemo(() => {
     return (
       <mesh ref={cityLightRef}>
-        <sphereGeometry args={[5.02, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
+        <sphereGeometry args={[5.02, 30, 30, 0, Math.PI * 2, 0, Math.PI]} />
         <CustomShaderMaterial
           baseMaterial={THREE.MeshLambertMaterial}
           alphaMap={alphaMapTexture}
