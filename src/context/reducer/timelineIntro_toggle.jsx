@@ -1,6 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 export const timelineIntroToggle = createSlice({
-  name: 'timelineIntroToggle',
+  name: "timelineIntroToggle",
   initialState: {
     value: false,
   },
@@ -9,9 +9,9 @@ export const timelineIntroToggle = createSlice({
       state.value = action.payload;
     },
   },
-})
+});
 
 // Action creators are generated for each case reducer function
-export const { setTimelineIntroToggle } = timelineIntroToggle.actions
+export const { setTimelineIntroToggle } = timelineIntroToggle.actions;
 
-export default timelineIntroToggle.reducer
+export default timelineIntroToggle.reducer;

@@ -37,8 +37,6 @@
 //                 }
 //             }, 2000);
 
-
-
 //     }, [api]);
 
 //     const onPointerLeave = useCallback(() => {
@@ -64,15 +62,15 @@
 //             onPointerEnter={onPointerEnter}
 //             onPointerLeave={onPointerLeave}
 //             >
-                  
+
 //                 <CarouselContent>
 //                     {images.map((image, index) => (
 //                         <CarouselItem key={index}>
 //                             <img src={image} alt="Project" />
 //                         </CarouselItem>
 //                     ))}
-//                  </CarouselContent>  
-//                  <CarouselNext/> 
+//                  </CarouselContent>
+//                  <CarouselNext/>
 //                  <CarouselPrevious/>
 
 //             </Carousel>

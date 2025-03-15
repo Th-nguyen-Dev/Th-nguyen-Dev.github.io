@@ -1,35 +1,26 @@
-import React, { Suspense, useMemo, useState } from 'react';
-import ReactDOM from 'react-dom/client';
-import EditorExport from './editor/EditorExport.jsx';
-import OfficialExport from './official/OfficialExport.jsx';
-import MusicPlayer from './music/music_player.jsx';
-import TestExport from './test/TestExport.jsx';
-import { WebProvider } from './context/web_context';
-import redux_store from './context/redux_store.jsx';
-import { Provider } from 'react-redux';
-import Header from './UI/header/Header.jsx';
-import './index.css';
-import './dot.css';
-import { Loader } from '@react-three/drei';
-import FakeLoadScreen from './UI/background_buffer/FakeLoadScreen.jsx';
-import VisualizerConfig from './UI/visualizer_config/VisualizerConfig.jsx';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import OfficialExport from "./official/OfficialExport.jsx";
+import { WebProvider } from "./context/web_context";
+import redux_store from "./context/redux_store.jsx";
+import { Provider } from "react-redux";
+import "./index.css";
+import "./dot.css";
 const App = () => {
   return (
     <React.StrictMode>
-        <div className="absolute top-0 left-0 w-full h-full flex ">
-          <WebProvider>
-            <Provider store={redux_store}>
-                <OfficialExport />
-                {/* <EditorExport /> */}
-                {/* <MusicPlayer /> */}
-              {/* <FakeLoadScreen /> */}
-            </Provider>
-          </WebProvider>
-          
-        </div>
-        
+      <div className="absolute top-0 left-0 w-full h-full flex ">
+        <WebProvider>
+          <Provider store={redux_store}>
+            <OfficialExport />
+            {/* <EditorExport /> */}
+            {/* <MusicPlayer /> */}
+            {/* <FakeLoadScreen /> */}
+          </Provider>
+        </WebProvider>
+      </div>
     </React.StrictMode>
   );
 };
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);

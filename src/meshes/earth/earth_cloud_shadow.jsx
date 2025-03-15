@@ -1,37 +1,37 @@
 import cloud from "/textures/earth clouds.jpg";
 
-import { Canvas, useFrame } from '@react-three/fiber';
-import { useRef, useEffect } from 'react';
+import { useFrame } from "@react-three/fiber";
+import { useRef, useEffect } from "react";
 import { useLoader } from "@react-three/fiber";
 
-import * as THREE from 'three';
+import * as THREE from "three";
 
-function EarthCloudShadow(){
-    const cloudShadowRef = useRef();
-    useEffect(() => {
-        const cloudOffset = 0.001;
-        if (cloudShadowRef.current) {
-            cloudShadowRef.current.rotation.y += cloudOffset;
-        }
-    },[cloudShadowRef.current]);
-    useFrame(() => {
-        if (cloudShadowRef.current) {
-            cloudShadowRef.current.rotation.y += Math.PI / 3650 * 1.1;
-        }
-    }); 
-    const cloudTexture = useLoader(THREE.TextureLoader, cloud);
+function EarthCloudShadow() {
+  const cloudShadowRef = useRef();
+  useEffect(() => {
+    const cloudOffset = 0.001;
+    if (cloudShadowRef.current) {
+      cloudShadowRef.current.rotation.y += cloudOffset;
+    }
+  }, [cloudShadowRef.current]);
+  useFrame(() => {
+    if (cloudShadowRef.current) {
+      cloudShadowRef.current.rotation.y += (Math.PI / 3650) * 1.1;
+    }
+  });
+  const cloudTexture = useLoader(THREE.TextureLoader, cloud);
 
-    return (
-            <mesh ref={cloudShadowRef}>
-            <sphereGeometry args={[5.01, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
-            <meshStandardMaterial
-                color = "black"
-                alphaMap={cloudTexture}
-                blending = {THREE.NormalBlending}
-                transparent = {true}
-            />
-            </mesh>
-    );
+  return (
+    <mesh ref={cloudShadowRef}>
+      <sphereGeometry args={[5.01, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
+      <meshStandardMaterial
+        color="black"
+        alphaMap={cloudTexture}
+        blending={THREE.NormalBlending}
+        transparent={true}
+      />
+    </mesh>
+  );
 }
 
 export default EarthCloudShadow;

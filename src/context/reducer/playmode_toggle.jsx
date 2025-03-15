@@ -1,7 +1,7 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 export const playmodeToggle = createSlice({
-  name: 'playmodeToggle',
+  name: "playmodeToggle",
   initialState: {
     value: false,
   },
@@ -10,9 +10,9 @@ export const playmodeToggle = createSlice({
       state.value = action.payload;
     },
   },
-})
+});
 
 // Action creators are generated for each case reducer function
-export const { setPlaymodeToggle } = playmodeToggle.actions
+export const { setPlaymodeToggle } = playmodeToggle.actions;
 
-export default playmodeToggle.reducer
+export default playmodeToggle.reducer;
