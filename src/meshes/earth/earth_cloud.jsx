@@ -1,38 +1,34 @@
-import React, { useRef, useEffect, useContext } from 'react';
-import { Canvas, useFrame} from '@react-three/fiber';
-import { WebContext } from '../../context/web_context';
-import * as THREE from 'three';
+import React, { useRef } from "react";
+import { useFrame } from "@react-three/fiber";
+import { useLoader } from "@react-three/fiber";
+import * as THREE from "three";
 
 import cloud from "/textures/earth clouds.png";
 
-function EarthCloud(){
-    const cloudRef = useRef();
-    const { addMesh } = useContext(WebContext);
+function EarthCloud() {
+  const cloudRef = useRef();
+  const cloudTexture = useLoader(THREE.TextureLoader, cloudLg);
 
-    useEffect(() => {
-        if (cloudRef.current) {
-            addMesh(cloudRef.current);
-        }
-    }, [cloudRef.current]);
+  useFrame(() => {
+    if (cloudRef.current) {
+      cloudRef.current.rotation.y += Math.PI / 3650 / 3.5;
+    }
+  });
 
-    useFrame(() => {
-
-        if (cloudRef.current) {
-            cloudRef.current.rotation.y += Math.PI / 3650 / 3.5;
-        }
-    });
-    const cloudTexture = new THREE.TextureLoader().load(cloud);
-    return (
-        <mesh ref={cloudRef}>
-        <sphereGeometry args={[5.02, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
+  return React.useMemo(
+    () => (
+      <mesh ref={cloudRef}>
+        <sphereGeometry args={[5.02, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
         <meshStandardMaterial
-            color="white"
-            alphaMap={cloudTexture}
-            transparent = {true}
-            depthTest={false}
+          color="white"
+          alphaMap={cloudTexture}
+          transparent={true}
+          depthTest={false}
         />
-    </mesh>
-    );
+      </mesh>
+    ),
+    [cloudTexture],
+  );
 }
 
 export default EarthCloud;

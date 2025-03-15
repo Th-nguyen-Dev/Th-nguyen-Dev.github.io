@@ -35,16 +35,26 @@ export function Loading() {
     console.log(item, progress);
     return (<div>{progress} % loaded</div>);
 }
-export function CanvasDOM(){
-    const [pages, setPages] = useState(30);
-    const {size} = useThree(); 
-    const htmlRef = useRef();
-    useEffect(() => {
-        if (htmlRef.current) {
-            setPages(htmlRef.current.getBoundingClientRect().height / size.height);
-        }
-    }, [size, htmlRef.current]);
-    return(
+
+export function CanvasDOM() {
+  const [pages, setPages] = useState(30);
+  const { size } = useThree();
+  const { scene } = useThree();
+  const envTexture = useLoader(THREE.TextureLoader, earthEnvironment);
+
+  useEffect(() => {
+    scene.background = new THREE.Color("#000000");
+    scene.environment = envTexture;
+    scene.environmentIntensity = 10.0;
+  }, [scene, envTexture]);
+
+  const htmlRef = useRef();
+  useEffect(() => {
+    if (htmlRef.current) {
+      setPages(htmlRef.current.getBoundingClientRect().height / size.height);
+    }
+  }, [size]);
+  return (
     <>
         <ScrollControls
             damping={0.1}
@@ -81,7 +91,14 @@ export function CanvasDOM(){
         <Preload all/>
     </>
 
-    );
+function PLoader() {
+  return (
+    <Html center>
+      <div className="flex-col flex w-screen space-y-6 items-center justify-center">
+        <div className="dot-spin"></div>
+      </div>
+    </Html>
+  );
 }
 function OfficialExport() {
     const canvasRef = useRef();

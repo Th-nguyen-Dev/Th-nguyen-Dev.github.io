@@ -1,32 +1,30 @@
-import React, { useRef, useEffect, useContext, useMemo } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Bvh, PresentationControls } from '@react-three/drei';
-import * as THREE from 'three';
-import { useControls } from 'leva';
+import React, { useRef, useEffect, useMemo } from "react";
+import { useFrame } from "@react-three/fiber";
+import { Bvh, PresentationControls } from "@react-three/drei";
+import * as THREE from "three";
 
-import EarthCloud from './earth_cloud';
-import EarthWeather from './earth_weather';
-import EarthCities from './earth_cities';
-import TestCoordinate from './test_coordinate';
-import Earth from './earth';
-import { WebContext } from '../../context/web_context';
-import { useSelector, useDispatch } from 'react-redux';
-import { setTimelineToggle } from '@/context/reducer/timeline_toggle';
-import gsap from 'gsap';
+import EarthCloud from "./earth_cloud";
+import EarthWeather from "./earth_weather";
+import EarthCities from "./earth_cities";
+import CoordinatesCoreControl from "./coordinates/coordinates_core_control";
+import { useSelector } from "react-redux";
 
 function EarthMeshesPhysical() {
-    const meshRef = useRef();
-    const {quaternions} = useContext(WebContext);
-    const localQuaternions = useRef(quaternions);
-    const toggleDes = useSelector((state) => state.timelineToggle.value);
+  const meshRef = useRef();
+  const movementQuaternions = useSelector(
+    (state) => state.locationsTLDictionary.movementQuaternions,
+  );
+  const toggleDes = useSelector((state) => state.timelineToggle);
 
     const selectedQuaterion = useRef(new THREE.Quaternion());
 
-    useEffect(() => {
-        if (toggleDes) {
-            selectedQuaterion.current = localQuaternions.current.get(toggleDes);
-        }
-    }, [toggleDes]);
+  useEffect(() => {
+    if (toggleDes) {
+      console.log(toggleDes);
+      const { x, y, z, w } = movementQuaternions[toggleDes.value];
+      selectedQuaterion.current = new THREE.Quaternion(x, y, z, w);
+    }
+  }, [movementQuaternions, toggleDes]);
 
     const lastQuaternion = useRef(new THREE.Quaternion());
     const rotateEarth = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), 0.0004);

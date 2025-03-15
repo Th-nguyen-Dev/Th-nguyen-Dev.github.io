@@ -22,20 +22,11 @@ function EarthWeather(){
     const earthBumpTexture = new THREE.TextureLoader().load(earthBump);
     const earthSpecularTexture = new THREE.TextureLoader().load(earthSpecular);
 
-    const time = useRef(0);
-    const prevTime = useRef(0); 
-    const currentTileX = useRef(0);
-    const currentTileY = useRef(0);
-    const nextTileX = useRef(0);   
-    const nextTileY = useRef(0); 
-    
-    const baseTextureG = useRef(new THREE.TextureLoader().load(earthSpriteSheetG));
-    const uniforms = useMemo(() => ({
-        utime: { value: 0 },
-        prevMonth: { value: 0 },
-        map1Transform: { value: new THREE.Matrix3() },
-        map2Transform: { value: new THREE.Matrix3() },
-    }), []);
+  const time = useRef(0);
+  const currentTileX = useRef(0);
+  const currentTileY = useRef(0);
+  const nextTileX = useRef(0);
+  const nextTileY = useRef(0);
 
     function updateTexture(){
         currentTileX.current = Math.floor(time.current % 3);
