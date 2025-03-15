@@ -40,7 +40,6 @@ const SliderDirectionalLightIntensity = () => {
   );
   const handleSliderChange = (value) => {
     dispatch(setDirectionalIntensityValue(value));
-    console.log(value);
   };
   return <Slider onValueChange={handleSliderChange} value={[intensity]} />;
 };

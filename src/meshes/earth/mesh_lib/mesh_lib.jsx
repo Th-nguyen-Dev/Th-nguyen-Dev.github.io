@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-async function splitMeshGroups(mesh, n, radius) {
+async function splitMeshGroups(mesh, n) {
   const geometry = mesh.geometry.clone();
 
   const indices = geometry.index.array;

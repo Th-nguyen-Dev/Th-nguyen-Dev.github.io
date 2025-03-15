@@ -73,6 +73,13 @@ function LocationPanel({ location, buttonText, mainText, milestones }) {
       duration: 0.75,
     });
   }, [mainTextVisible]);
+
+  const MemoizedMileStoneList = React.useMemo(() => {
+    return milestones && milestones.length > 0 ? (
+      <MileStoneList milestones={milestones} />
+    ) : null;
+  }, [milestones]);
+
   return (
     <div className="select-none">
       <Button
@@ -91,9 +98,7 @@ function LocationPanel({ location, buttonText, mainText, milestones }) {
       </span>
       <br></br>
       <br></br>
-      {milestones && milestones.length > 0 && (
-        <MileStoneList milestones={milestones} />
-      )}
+      {MemoizedMileStoneList}
       <br></br>
       <br></br>
     </div>

@@ -6,7 +6,7 @@ import { setAmbientColorValue } from "@/context/reducer/ambient_light/ambient_co
 import { setLightColorValue } from "@/context/reducer/directional_light/light_color_value";
 
 const ColorPicker = ({ color, onChange }) => {
-  const wheelContainerRef = useRef();
+  const wheelContainerRef = useRef(null);
   const [{ width, height }, setDimensions] = useState({ width: 0, height: 0 });
   const [hsva, setHsva] = useState(hslaToHsva(color));
 
@@ -27,15 +27,16 @@ const ColorPicker = ({ color, onChange }) => {
     window.addEventListener("resize", updateDimensions);
     window.addEventListener("zoom", updateDimensions);
     const observer = new ResizeObserver(updateDimensions);
-    if (wheelContainerRef.current) {
-      observer.observe(wheelContainerRef.current);
+    const wheelElement = wheelContainerRef.current;
+    if (wheelElement) {
+      observer.observe(wheelElement);
     }
 
     return () => {
       window.removeEventListener("resize", updateDimensions);
       window.removeEventListener("zoom", updateDimensions);
-      if (wheelContainerRef.current) {
-        observer.unobserve(wheelContainerRef.current);
+      if (wheelElement) {
+        observer.unobserve(wheelElement);
       }
     };
   }, []);

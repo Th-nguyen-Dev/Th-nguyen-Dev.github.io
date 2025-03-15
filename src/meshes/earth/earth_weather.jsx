@@ -36,7 +36,6 @@ function EarthWeather() {
   const baseTextureG = useRef(earthSurfaceTexture);
 
   const time = useRef(0);
-  const prevTime = useRef(0);
   const currentTileX = useRef(0);
   const currentTileY = useRef(0);
   const nextTileX = useRef(0);

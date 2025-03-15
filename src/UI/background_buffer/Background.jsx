@@ -4,8 +4,8 @@ import gsap from "gsap";
 
 function Background() {
   const backgroundRef = useRef();
-  const backgroundToggle = useSelector((state) => state.backgroundToggle.value);
-  const playModeToggle = useSelector((state) => state.playmodeToggle.value);
+  const backgroundToggle = useSelector((state) => state.backgroundToggle);
+  const playModeToggle = useSelector((state) => state.playmodeToggle);
   const [size, setSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -28,25 +28,24 @@ function Background() {
     };
   }, []);
 
-  const updateBackgroundOpacity = () => {
-    let opacityValue = 0;
-    if (backgroundToggle) {
-      opacityValue = 0.8;
-    }
-    if (size.width < 768) {
-      opacityValue = 0.8;
-    }
-    if (playModeToggle) {
-      opacityValue = 0;
-    }
-
-    gsap.to(backgroundRef.current, {
-      duration: 0.5,
-      opacity: opacityValue,
-    });
-  };
-
   useEffect(() => {
+    const updateBackgroundOpacity = () => {
+      let opacityValue = 0;
+      if (backgroundToggle.value) {
+        opacityValue = 0.8;
+      }
+      if (size.width < 768) {
+        opacityValue = 0.8;
+      }
+      if (playModeToggle.value) {
+        opacityValue = 0;
+      }
+
+      gsap.to(backgroundRef.current, {
+        duration: 0.5,
+        opacity: opacityValue,
+      });
+    };
     updateBackgroundOpacity();
   }, [backgroundToggle, size, playModeToggle]);
 

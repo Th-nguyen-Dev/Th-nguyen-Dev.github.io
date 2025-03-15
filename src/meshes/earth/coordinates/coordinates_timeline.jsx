@@ -16,7 +16,7 @@ const CoordinatesTimeline = () => {
 
   useEffect(() => {
     dispatch(regenerateDictionary(data.radius));
-  }, [data.radius]);
+  }, [data.radius, dispatch]);
 
   return (
     <CoordinateMeshesGeneration

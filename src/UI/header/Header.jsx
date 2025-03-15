@@ -22,14 +22,11 @@ function Header() {
   const [githubColor, setGithubColor] = useState("white");
   const [linkedInColor, setLinkedInColor] = useState("white");
   const [behanceColor, setBehanceColor] = useState("white");
-  const onPointerOver = (func) => (event) => {
+  const onPointerOver = (func) => () => {
     func("black");
   };
-  const onPointerOut = (func) => (event) => {
+  const onPointerOut = (func) => () => {
     func("white");
-  };
-  const onInput = (event) => {
-    console.log(event.target.value);
   };
   const headerItemIconStyle =
     "w-12 max-md:w-10 max-sm:w-6 h-fit justify-center transition-resize";
