@@ -14,7 +14,6 @@ function Introduction() {
   const isVisible = useIsVisible(introRef);
 
   useEffect(() => {
-    console.log("Introduction.jsx: isVisible", isVisible);
     if (isVisible) {
       dispatch(setCameraToggle("zoom_out_right"));
       dispatch(setBackgroundToggle(false));
@@ -45,7 +44,7 @@ function Introduction() {
     <animated.div
       style={spring}
       className="relative w-1/2 max-sm:w-full h-fit pointer-events-auto"
-      ref={introRef} 
+      ref={introRef}
     >
       <div className="relative text-white ml-10 mr-10">
         <h1>

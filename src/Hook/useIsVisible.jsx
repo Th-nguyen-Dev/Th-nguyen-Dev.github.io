@@ -18,10 +18,8 @@ export function useIsVisible(ref) {
 
   useEffect(() => {
     const current = ref.current;
-    console.log("useIsVisible.jsx: current", current);
     if (current) {
       observer.observe(current);
-      console.log("useIsVisible.jsx: observer", observer);
     }
 
     return () => {
