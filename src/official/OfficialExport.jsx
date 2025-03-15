@@ -32,17 +32,19 @@ export function CanvasDOM() {
   const { size } = useThree();
   const { scene } = useThree();
   const envTexture = useLoader(THREE.TextureLoader, earthEnvironment);
+
   useEffect(() => {
     scene.background = new THREE.Color("#000000");
     scene.environment = envTexture;
     scene.environmentIntensity = 10.0;
-  }, []);
+  }, [scene, envTexture]);
+
   const htmlRef = useRef();
   useEffect(() => {
     if (htmlRef.current) {
       setPages(htmlRef.current.getBoundingClientRect().height / size.height);
     }
-  }, [size, htmlRef.current]);
+  }, [size]);
   return (
     <>
       <ScrollControls damping={0.1} offset={1} pages={pages}>
@@ -64,7 +66,6 @@ export function CanvasDOM() {
 }
 
 function PLoader() {
-  const { active, progress, errors, item, loaded, total } = useProgress();
   return (
     <Html center>
       <div className="flex-col flex w-screen space-y-6 items-center justify-center">

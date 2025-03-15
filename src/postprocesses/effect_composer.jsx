@@ -1,9 +1,6 @@
-import React, { useRef, useContext } from "react";
+import React from "react";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
-import { WebContext } from "../context/web_context";
 function PostProcessing() {
-  const bloomPassRef = useRef();
-  const { meshes, lights } = useContext(WebContext);
   return (
     <EffectComposer multisampling={0}>
       {/* <SMAA /> */}

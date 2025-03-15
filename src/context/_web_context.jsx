@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import React from "react";
 import { createContext, useState, useMemo } from "react";
 import * as THREE from "three";
@@ -5,22 +6,6 @@ import * as THREE from "three";
 export const WebContext = createContext();
 
 export const WebProvider = ({ children }) => {
-  const getCoordPosition = (name) => {
-    const coord = coordinates.get(name);
-    const lat = ((90 - coord[0]) * Math.PI) / 180;
-    const lon = (-coord[1] * Math.PI) / 180;
-    return new THREE.Vector3(
-      radius * Math.sin(lat) * Math.cos(lon),
-      radius * Math.cos(lat),
-      radius * Math.sin(lat) * Math.sin(lon),
-    );
-  };
-  const getQuaternions = (name) => {
-    const desVec = getCoordPosition(name).normalize();
-    const cameraVec = new THREE.Vector3(32.0, 0, 8.5).normalize();
-    return new THREE.Quaternion().setFromUnitVectors(desVec, cameraVec);
-  };
-
   const addMesh = (mesh) => {
     setMeshes([...meshes, mesh]);
   };
@@ -45,13 +30,29 @@ export const WebProvider = ({ children }) => {
   );
 
   const quaternions = useMemo(() => {
+    const getCoordPosition = (name) => {
+      const coord = coordinates.get(name);
+      const lat = ((90 - coord[0]) * Math.PI) / 180;
+      const lon = (-coord[1] * Math.PI) / 180;
+      return new THREE.Vector3(
+        radius * Math.sin(lat) * Math.cos(lon),
+        radius * Math.cos(lat),
+        radius * Math.sin(lat) * Math.sin(lon),
+      );
+    };
+    const getQuaternions = (name) => {
+      const desVec = getCoordPosition(name).normalize();
+      const cameraVec = new THREE.Vector3(32.0, 0, 8.5).normalize();
+      return new THREE.Quaternion().setFromUnitVectors(desVec, cameraVec);
+    };
+
     const newQuaternions = new Map();
     coordinates.forEach((_, key) => {
       newQuaternions.set(key, getQuaternions(key));
     });
     console.log(newQuaternions);
     return newQuaternions;
-  }, [coordinates]);
+  }, [coordinates, radius]);
 
   return (
     <WebContext.Provider
@@ -61,7 +62,6 @@ export const WebProvider = ({ children }) => {
         lights,
         addLight,
         coordinates,
-        getCoordPosition,
         toggleDes,
         setToggleDes,
         quaternions,

@@ -27,15 +27,16 @@ const ColorPicker = ({ color, onChange }) => {
     window.addEventListener("resize", updateDimensions);
     window.addEventListener("zoom", updateDimensions);
     const observer = new ResizeObserver(updateDimensions);
-    if (wheelContainerRef.current) {
-      observer.observe(wheelContainerRef.current);
+    const wheelContainerRef = wheelContainerRef.current;
+    if (wheelContainerRef) {
+      observer.observe(wheelContainerRef);
     }
 
     return () => {
       window.removeEventListener("resize", updateDimensions);
       window.removeEventListener("zoom", updateDimensions);
-      if (wheelContainerRef.current) {
-        observer.unobserve(wheelContainerRef.current);
+      if (wheelContainerRef) {
+        observer.unobserve(wheelContainerRef);
       }
     };
   }, []);

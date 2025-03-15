@@ -17,7 +17,7 @@ Object.entries(globals.browser).forEach(([key, value]) => {
 });
 
 export default tseslint.config(
-  { ignores: ["dist", "public", "node_modules"] },
+  { ignores: ["dist", "public", "node_modules", "src/**/_*.jsx"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx,js,jsx}"],

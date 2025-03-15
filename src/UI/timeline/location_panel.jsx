@@ -73,6 +73,7 @@ function LocationPanel({ location, buttonText, mainText, milestones }) {
       duration: 0.75,
     });
   }, [mainTextVisible]);
+
   return (
     <div className="select-none">
       <Button

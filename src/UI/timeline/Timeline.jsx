@@ -14,7 +14,7 @@ function Timeline() {
       dispatch(setCameraToggle("zoom_in_right"));
       dispatch(setBackgroundToggle(false));
     }
-  }, [isVisible]);
+  }, [dispatch, isVisible]);
 
   const locationPanels = useMemo(
     () => (

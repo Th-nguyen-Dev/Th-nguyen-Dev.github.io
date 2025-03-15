@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls, View, Bounds } from "@react-three/drei";
 
-import SceneEditorExport from "./SceneEditorExport.jsx";
-import MainCamera from "../cameras/main_camera.jsx";
+import SceneEditorExport from "./_SceneEditorExport.jsx";
+import MainCamera from "../cameras/_main_camera.jsx";
 import PostProcessing from "../postprocesses/effect_composer.jsx";
 export function PerformanceConfig() {
   const { gl } = useThree();

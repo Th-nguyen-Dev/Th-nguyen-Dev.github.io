@@ -14,7 +14,7 @@ function ProjectGraphic() {
       dispatch(setCameraToggle("zoom_in_middle_down"));
       dispatch(setBackgroundToggle(true));
     }
-  }, [isVisible]);
+  }, [dispatch, isVisible]);
 
   return (
     <>

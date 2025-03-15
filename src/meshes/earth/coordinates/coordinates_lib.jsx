@@ -8,7 +8,7 @@ function CoordinateMeshesGeneration({
   size,
   subdivide,
 }) {
-  const generateMeshes = () => {
+  const meshes = useMemo(() => {
     const meshes = [];
     Object.entries(coordinates).forEach(([key, value]) => {
       meshes.push(
@@ -25,12 +25,7 @@ function CoordinateMeshesGeneration({
       );
     });
     return meshes;
-  };
-
-  const meshes = useMemo(
-    () => generateMeshes(),
-    [coordinates, color, emissiveColor, emissiveIntensity, size, subdivide],
-  );
+  }, [coordinates, color, emissiveColor, emissiveIntensity, size, subdivide]);
 
   return <>{meshes}</>;
 }

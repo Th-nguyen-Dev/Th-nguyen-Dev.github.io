@@ -1,6 +1,5 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { WebContext } from "../../context/web_context";
 import { useLoader } from "@react-three/fiber";
 import * as THREE from "three";
 
@@ -10,14 +9,7 @@ import cloudLg from "/textures/earth clouds_Lg.avif";
 
 function EarthCloud() {
   const cloudRef = useRef();
-  const { addMesh } = useContext(WebContext);
   const cloudTexture = useLoader(THREE.TextureLoader, cloudLg);
-
-  useEffect(() => {
-    if (cloudRef.current) {
-      addMesh(cloudRef.current);
-    }
-  }, [cloudRef.current]);
 
   useFrame(() => {
     if (cloudRef.current) {
@@ -25,16 +17,19 @@ function EarthCloud() {
     }
   });
 
-  return (
-    <mesh ref={cloudRef}>
-      <sphereGeometry args={[5.02, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
-      <meshStandardMaterial
-        color="white"
-        alphaMap={cloudTexture}
-        transparent={true}
-        depthTest={false}
-      />
-    </mesh>
+  return React.useMemo(
+    () => (
+      <mesh ref={cloudRef}>
+        <sphereGeometry args={[5.02, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
+        <meshStandardMaterial
+          color="white"
+          alphaMap={cloudTexture}
+          transparent={true}
+          depthTest={false}
+        />
+      </mesh>
+    ),
+    [cloudTexture],
   );
 }
 

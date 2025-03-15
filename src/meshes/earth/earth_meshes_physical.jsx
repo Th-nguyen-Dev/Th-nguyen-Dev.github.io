@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext, useMemo } from "react";
+import React, { useRef, useEffect, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Bvh, PresentationControls } from "@react-three/drei";
 import * as THREE from "three";
@@ -7,17 +7,14 @@ import EarthCloud from "./earth_cloud";
 import EarthWeather from "./earth_weather";
 import EarthCities from "./earth_cities";
 import CoordinatesCoreControl from "./coordinates/coordinates_core_control";
-import { WebContext } from "../../context/web_context";
 import { useSelector } from "react-redux";
 
 function EarthMeshesPhysical() {
   const meshRef = useRef();
-  const { quaternions } = useContext(WebContext);
   const movementQuaternions = useSelector(
     (state) => state.locationsTLDictionary.movementQuaternions,
   );
-  const localQuaternions = useRef(quaternions);
-  const toggleDes = useSelector((state) => state.timelineToggle.value);
+  const toggleDes = useSelector((state) => state.timelineToggle);
 
   const selectedQuaterion = useRef(new THREE.Quaternion());
   const startQuaterion = useRef(new THREE.Quaternion());
@@ -26,10 +23,11 @@ function EarthMeshesPhysical() {
 
   useEffect(() => {
     if (toggleDes) {
-      const { x, y, z, w } = movementQuaternions[toggleDes];
+      console.log(toggleDes);
+      const { x, y, z, w } = movementQuaternions[toggleDes.value];
       selectedQuaterion.current = new THREE.Quaternion(x, y, z, w);
     }
-  }, [toggleDes]);
+  }, [movementQuaternions, toggleDes]);
 
   const rotateEarth = new THREE.Quaternion().setFromAxisAngle(
     new THREE.Vector3(0, 1, 0),

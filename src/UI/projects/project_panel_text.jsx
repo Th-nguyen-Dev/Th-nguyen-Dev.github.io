@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { useIsVisible } from "@/Hook/useIsVisible";
 import { Progress } from "@/components/ui/progress";
 import {
@@ -10,14 +10,16 @@ import {
 
 import gsap from "gsap";
 
-function ProjectPanelText(
-  { title, projectType, date, progress, description, progressValue },
-  props,
-) {
+function ProjectPanelText({
+  title,
+  projectType,
+  date,
+  progress,
+  description,
+  progressValue,
+}) {
   const panelRef = useRef();
-  const descriptionRef = useRef();
   const isVisible = useIsVisible(panelRef);
-  const [show, setShow] = useState(false);
 
   useEffect(() => {
     gsap.to(panelRef.current, {
@@ -27,17 +29,6 @@ function ProjectPanelText(
     });
   }, [isVisible]);
 
-  const onClick = () => {
-    setShow(!show);
-    if (descriptionRef.current) {
-      gsap.to(descriptionRef.current, {
-        display: show ? "none" : "block",
-        opacity: show ? 0 : 1,
-        duration: 0.4,
-        ease: "sine",
-      });
-    }
-  };
   return (
     <>
       <div className="break-inside-avoid" ref={panelRef}>
