@@ -9,7 +9,8 @@
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "preview": "vite preview",
     "p": "git add . && git commit -m \"Auto-commit: Changes saved on $(date)\" && git push origin main"
   },
