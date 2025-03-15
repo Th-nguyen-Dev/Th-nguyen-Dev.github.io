@@ -14,7 +14,7 @@ function EarthMeshesPhysical() {
   const movementQuaternions = useSelector(
     (state) => state.locationsTLDictionary.movementQuaternions,
   );
-  const toggleDes = useSelector((state) => state.timelineToggle);
+  const toggleDes = useSelector((state) => state.timelineToggle.value);
 
   const selectedQuaterion = useRef(new THREE.Quaternion());
   const startQuaterion = useRef(new THREE.Quaternion());
@@ -23,8 +23,7 @@ function EarthMeshesPhysical() {
 
   useEffect(() => {
     if (toggleDes) {
-      console.log(toggleDes);
-      const { x, y, z, w } = movementQuaternions[toggleDes.value];
+      const { x, y, z, w } = movementQuaternions[toggleDes];
       selectedQuaterion.current = new THREE.Quaternion(x, y, z, w);
     }
   }, [movementQuaternions, toggleDes]);

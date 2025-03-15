@@ -9,9 +9,11 @@ import locationsTLDictionary from "./reducer/locations/locations_timeline";
 import locationsNNDictionary from "./reducer/locations/locations_neural_network";
 import directionalIntensityValue from "./reducer/directional_light/light_intensity_value";
 import playmodeToggle from "./reducer/playmode_toggle";
+import timelineToggle from "./reducer/timeline_toggle";
 const store = configureStore({
   reducer: {
     cameraToggle: cameraToggle,
+    timelineToggle: timelineToggle,
     playmodeToggle: playmodeToggle,
     backgroundToggle: backgroundToggle,
     lightRotationValue: lightRotationValue,

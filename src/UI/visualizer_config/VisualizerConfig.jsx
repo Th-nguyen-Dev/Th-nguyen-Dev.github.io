@@ -8,7 +8,6 @@ import { GrMenu } from "react-icons/gr";
 import { Accordion, AccordionItem } from "@/components/ui/accordion_visualizer";
 import DirectionalLightTab from "./tabs/DirectionalLightTab";
 import AmbientLightTab from "./tabs/AmbientLightTab";
-import CameraTab from "./tabs/CameraTab";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 const VisualizerConfig = () => {
@@ -31,9 +30,6 @@ const VisualizerConfig = () => {
                 </AccordionItem>
                 <AccordionItem>
                   <AmbientLightTab />
-                </AccordionItem>
-                <AccordionItem>
-                  <CameraTab />
                 </AccordionItem>
               </Accordion>
             </ScrollArea>
