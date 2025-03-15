@@ -4,29 +4,47 @@ import { setTimelineToggle } from "@/context/reducer/timeline_toggle";
 
 import { Button } from "@/components/ui/button";
 import { useIsVisible } from "@/Hook/useIsVisible";
-import gsap from "gsap";
+import { useSpring, animated } from "@react-spring/web";
 
 export function MileStonePanel({ title, location, date, link }) {
   const milestonePanelRef = useRef();
-  const milestonePanelVisibile = useIsVisible(milestonePanelRef);
+  const isVisible = useIsVisible(milestonePanelRef);
+
+  const [spring, api] = useSpring(
+    () => ({
+      opacity: 0,
+      x: 0,
+      config: {
+        mass: 1,
+        tension: 100,
+        friction: 50,
+      },
+    }),
+    [],
+  );
+
   useEffect(() => {
-    gsap.to(milestonePanelRef.current, {
-      x: milestonePanelVisibile ? 0 : 100,
-      opacity: milestonePanelVisibile ? 1 : 0,
-      duration: 0.5,
+    api.start({
+      opacity: isVisible ? 1 : 0,
+      x: isVisible ? 0 : 100,
     });
-  }, [milestonePanelVisibile]);
+  }, [api, isVisible]);
+
   const listItemHeaderStyle = "text-3xl font-bold mb-2";
   const listItemStyle = "text-xl font-normal ml-2";
   return (
-    <div className="flex-col flex" ref={milestonePanelRef}>
+    <animated.div
+      style={spring}
+      className="flex-col flex"
+      ref={milestonePanelRef}
+    >
       <span className={listItemHeaderStyle}>{title}</span>
       <a href={link} className={listItemStyle}>
         {location}
       </a>
       <span className={listItemStyle}>{date}</span>
       <br></br>
-    </div>
+    </animated.div>
   );
 }
 
@@ -66,13 +84,26 @@ function LocationPanel({ location, buttonText, mainText, milestones }) {
   };
 
   const mainTextRef = useRef();
-  const mainTextVisible = useIsVisible(mainTextRef);
+  const isVisible = useIsVisible(mainTextRef);
+  const [spring, api] = useSpring(
+    () => ({
+      opacity: 0,
+      y: 0,
+      config: {
+        mass: 1,
+        tension: 100,
+        friction: 50,
+      },
+    }),
+    [],
+  );
+
   useEffect(() => {
-    gsap.to(mainTextRef.current, {
-      opacity: mainTextVisible ? 1 : 0,
-      duration: 0.75,
+    api.start({
+      opacity: isVisible ? 1 : 0,
+      y: isVisible ? 0 : 100,
     });
-  }, [mainTextVisible]);
+  }, [api, isVisible]);
 
   const MemoizedMileStoneList = React.useMemo(() => {
     return milestones && milestones.length > 0 ? (
@@ -93,9 +124,13 @@ function LocationPanel({ location, buttonText, mainText, milestones }) {
       </Button>
       <br></br>
       <br></br>
-      <span ref={mainTextRef} className="font-extralight">
+      <animated.span
+        style={spring}
+        ref={mainTextRef}
+        className="font-extralight"
+      >
         {mainText}
-      </span>
+      </animated.span>
       <br></br>
       <br></br>
       {MemoizedMileStoneList}

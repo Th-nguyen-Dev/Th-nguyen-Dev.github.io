@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useIsVisible } from "@/Hook/useIsVisible";
 import { setCameraToggle } from "@/context/reducer/camera_toggle";
 import { setBackgroundToggle } from "@/context/reducer/background_toggle";
+import { useSpring, animated } from "@react-spring/web";
 
 function Introduction() {
   const introRef = useRef();
@@ -10,18 +11,39 @@ function Introduction() {
     event.target.style.color = color;
   };
   const dispatch = useDispatch();
-  const isVisibile = useIsVisible(introRef);
+  const isVisible = useIsVisible(introRef);
 
   useEffect(() => {
-    if (isVisibile) {
+    if (isVisible) {
       dispatch(setCameraToggle("zoom_out_right"));
       dispatch(setBackgroundToggle(false));
     }
-  }, [dispatch, isVisibile]);
+  }, [dispatch, isVisible]);
+
+  const [spring, api] = useSpring(
+    () => ({
+      opacity: 0,
+      y: 0,
+      config: {
+        mass: 1,
+        tension: 100,
+        friction: 50,
+      },
+    }),
+    [],
+  );
+
+  useEffect(() => {
+    api.start({
+      opacity: isVisible ? 1 : 0,
+      y: isVisible ? 0 : 100,
+    });
+  }, [api, isVisible]);
 
   return (
     <>
-      <div
+      <animated.div
+        style={spring}
         className="relative w-1/2 max-sm:w-full h-fit pointer-events-auto"
         ref={introRef}
       >
@@ -53,7 +75,7 @@ function Introduction() {
             the process.
           </h2>
         </div>
-      </div>
+      </animated.div>
     </>
   );
 }

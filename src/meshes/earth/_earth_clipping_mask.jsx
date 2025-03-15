@@ -5,7 +5,7 @@ function EarthClippingMask(props) {
 
   return (
     <mesh ref={earthRef} {...props}>
-      <sphereGeometry args={[5, 50, 50, 0, Math.PI * 2, 0, Math.PI]} />
+      <sphereGeometry args={[5, 30, 30, 0, Math.PI * 2, 0, Math.PI]} />
       <meshBasicMaterial color="white"></meshBasicMaterial>
     </mesh>
   );
