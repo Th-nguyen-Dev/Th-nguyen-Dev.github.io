@@ -1,4 +1,10 @@
-import React, { useRef, useEffect, useState, Suspense } from "react";
+import React, {
+  useRef,
+  useEffect,
+  useState,
+  Suspense,
+  useCallback,
+} from "react";
 import { Canvas, useLoader, useThree } from "@react-three/fiber";
 import { Scroll, ScrollControls, useProgress, Html } from "@react-three/drei";
 
@@ -33,19 +39,29 @@ export function CanvasDOM() {
     scene.environmentIntensity = 10.0;
   }, [scene, envTexture]);
 
-  const htmlRef = useRef();
-  useEffect(() => {
-    if (htmlRef.current) {
-      const resizeObserver = new ResizeObserver((entries) => {
-        for (const entry of entries) {
-          setPages(entry.contentRect.height / size.height);
-        }
-      });
+  // Callback ref instead of useRef
+  const setContentRef = useCallback(
+    (node) => {
+      if (node) {
+        // This runs when the element is mounted
+        const calculatePages = () => {
+          setPages(node.getBoundingClientRect().height / size.height);
+        };
 
-      resizeObserver.observe(htmlRef.current);
-      return () => resizeObserver.disconnect();
-    }
-  }, [size]);
+        // Initial calculation
+        calculatePages();
+
+        // Setup observer for changes
+        const resizeObserver = new ResizeObserver(calculatePages);
+        resizeObserver.observe(node);
+
+        // Store cleanup function
+        node._cleanup = () => resizeObserver.disconnect();
+      }
+    },
+    [size],
+  );
+
   return (
     <ScrollControls damping={0.1} offset={1} pages={pages}>
       <AmbientLight />
@@ -55,7 +71,7 @@ export function CanvasDOM() {
       <OfficialCamera />
       {/* <OfficialCameraV2/> */}
       <Scroll html style={{ height: "100%", width: "100%" }}>
-        <div className="w-auto h-auto" ref={htmlRef}>
+        <div className="w-auto h-auto" ref={setContentRef}>
           <OfficialHTML />
         </div>
       </Scroll>
