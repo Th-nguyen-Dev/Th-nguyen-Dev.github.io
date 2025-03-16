@@ -8,16 +8,14 @@ import "./index.css";
 import "./dot.css";
 const App = () => {
   return (
-    <React.StrictMode>
-      <div className="absolute top-0 left-0 w-full h-full flex ">
-        <Provider store={redux_store}>
-          <OfficialExport />
-          {/* <EditorExport /> */}
-          {/* <MusicPlayer /> */}
-          {/* <FakeLoadScreen /> */}
-        </Provider>
-      </div>
-    </React.StrictMode>
+    <div className="absolute top-0 left-0 w-full h-full flex ">
+      <Provider store={redux_store}>
+        <OfficialExport />
+        {/* <EditorExport /> */}
+        {/* <MusicPlayer /> */}
+        {/* <FakeLoadScreen /> */}
+      </Provider>
+    </div>
   );
 };
 
