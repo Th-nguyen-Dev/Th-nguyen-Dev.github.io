@@ -36,9 +36,11 @@ export function CanvasDOM() {
   const htmlRef = useRef();
   useEffect(() => {
     if (htmlRef.current) {
+      // console.log("Height: ", htmlRef.current.getBoundingClientRect().height);
+      // console.log("Size: ", size.height);
       setPages(htmlRef.current.getBoundingClientRect().height / size.height);
     }
-  }, [size]);
+  }, [size, htmlRef]);
   return (
     <ScrollControls damping={0.1} offset={1} pages={pages}>
       <AmbientLight />
