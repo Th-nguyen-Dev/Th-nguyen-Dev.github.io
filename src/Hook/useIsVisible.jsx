@@ -1,33 +1,39 @@
 import { useEffect, useState, useMemo } from "react";
-export function useIsVisible(ref) {
-  const [isIntersecting, setIntersecting] = useState(true);
+
+export function useIsVisible(ref, options = {}) {
+  const [isIntersecting, setIntersecting] = useState(false); // Start with false
 
   const observer = useMemo(
     () =>
       new IntersectionObserver(
         ([entry]) => setIntersecting(entry.isIntersecting),
         {
-          // Add threshold to detect partial visibility
+          rootMargin: "0px",
           threshold: 0.1,
-          // Add root margin to detect elements slightly outside viewport
-          rootMargin: "50px",
+          ...options,
         },
       ),
-    [],
+    [options],
   );
 
   useEffect(() => {
     const current = ref.current;
-    console.log("useIsVisible.jsx: current", current);
+
     if (current) {
       observer.observe(current);
-      console.log("useIsVisible.jsx: observer", observer);
+
+      // Check initial visibility immediately
+      const entries = observer.takeRecords();
+      if (entries.length > 0) {
+        setIntersecting(entries[0].isIntersecting);
+      }
     }
 
     return () => {
       if (current) {
-        observer.disconnect();
+        observer.unobserve(current);
       }
+      observer.disconnect();
     };
   }, [observer, ref]);
 
