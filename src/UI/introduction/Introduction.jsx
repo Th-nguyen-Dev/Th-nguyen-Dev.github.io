@@ -14,8 +14,8 @@ function Introduction() {
   const isVisible = useIsVisible(introRef);
 
   useEffect(() => {
-    console.log("Introduction is visible: ", isVisible);
-    console.log("Introduction ref: ", introRef.current);
+    // console.log("Introduction is visible: ", isVisible);
+    // console.log("Introduction ref: ", introRef.current);
     if (isVisible) {
       dispatch(setCameraToggle("zoom_out_right"));
       dispatch(setBackgroundToggle(false));
