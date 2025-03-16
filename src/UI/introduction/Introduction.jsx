@@ -7,15 +7,11 @@ import { useSpring, animated } from "@react-spring/web";
 
 function Introduction() {
   const introRef = useRef();
-  const changeTextColor = (color) => (event) => {
-    event.target.style.color = color;
-  };
+
   const dispatch = useDispatch();
   const isVisible = useIsVisible(introRef);
 
   useEffect(() => {
-    console.log("Introduction is visible: ", isVisible);
-    console.log("Introduction ref: ", introRef.current);
     if (isVisible) {
       dispatch(setCameraToggle("zoom_out_right"));
       dispatch(setBackgroundToggle(false));
@@ -43,6 +39,10 @@ function Introduction() {
   }, [api, isVisible]);
 
   return React.useMemo(() => {
+    const changeTextColor = (color) => (event) => {
+      event.target.style.color = color;
+    };
+
     return (
       <div ref={introRef}>
         <animated.div
@@ -80,7 +80,7 @@ function Introduction() {
         </animated.div>
       </div>
     );
-  }, [spring, changeTextColor, introRef]);
+  }, [spring, introRef]);
 }
 
 export default Introduction;
