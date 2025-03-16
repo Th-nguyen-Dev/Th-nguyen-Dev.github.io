@@ -1,12 +1,6 @@
 import React, { useRef, useEffect, useState, Suspense } from "react";
 import { Canvas, useLoader, useThree } from "@react-three/fiber";
-import {
-  Scroll,
-  ScrollControls,
-  Preload,
-  useProgress,
-  Html,
-} from "@react-three/drei";
+import { Scroll, ScrollControls, useProgress, Html } from "@react-three/drei";
 
 import AmbientLight from "../lights/ambient_light";
 import DirectionalLights from "../lights/directional_light";
@@ -46,22 +40,19 @@ export function CanvasDOM() {
     }
   }, [size]);
   return (
-    <>
-      <ScrollControls damping={0.1} offset={1} pages={pages}>
-        <AmbientLight />
-        <DirectionalLights />
-        <EarthMeshes />
-        <PostProcessing />
-        <OfficialCamera />
-        {/* <OfficialCameraV2/> */}
-        <Preload all />
-        <Scroll html style={{ height: "100%", width: "100%" }}>
-          <div className="w-auto h-auto" ref={htmlRef}>
-            <OfficialHTML />
-          </div>
-        </Scroll>
-      </ScrollControls>
-    </>
+    <ScrollControls damping={0.1} offset={1} pages={pages}>
+      <AmbientLight />
+      <DirectionalLights />
+      <EarthMeshes />
+      <PostProcessing />
+      <OfficialCamera />
+      {/* <OfficialCameraV2/> */}
+      <Scroll html style={{ height: "100%", width: "100%" }}>
+        <div className="w-auto h-auto" ref={htmlRef}>
+          <OfficialHTML />
+        </div>
+      </Scroll>
+    </ScrollControls>
   );
 }
 
