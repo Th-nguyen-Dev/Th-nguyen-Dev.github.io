@@ -32,31 +32,26 @@ export function CanvasDOM() {
   const { size } = useThree();
   const { scene } = useThree();
   const envTexture = useLoader(THREE.TextureLoader, earthEnvironment);
+  const [nodeRef, setNodeRef] = useState(null);
 
+  // Set up environment
   useEffect(() => {
     scene.background = new THREE.Color("#000000");
     scene.environment = envTexture;
     scene.environmentIntensity = 10.0;
   }, [scene, envTexture]);
 
-  // Callback ref instead of useRef
-  const setContentRef = useCallback(
+  const refCallback = useCallback(
     (node) => {
-      if (node) {
-        // This runs when the element is mounted
-        const calculatePages = () => {
-          setPages(node.getBoundingClientRect().height / size.height);
-        };
-
-        // Initial calculation
-        calculatePages();
-
-        // Setup observer for changes
-        const resizeObserver = new ResizeObserver(calculatePages);
-        resizeObserver.observe(node);
-
-        // Store cleanup function
-        node._cleanup = () => resizeObserver.disconnect();
+      // Replace the state-based approach entirely
+      if (node !== null) {
+        // Calculate directly in the callback after DOM is ready
+        requestAnimationFrame(() => {
+          setPages(
+            Math.floor(node.getBoundingClientRect().height / size.height) + 1,
+          );
+          console.log("Resize occured");
+        });
       }
     },
     [size],
@@ -69,9 +64,8 @@ export function CanvasDOM() {
       <EarthMeshes />
       <PostProcessing />
       <OfficialCamera />
-      {/* <OfficialCameraV2/> */}
       <Scroll html style={{ height: "100%", width: "100%" }}>
-        <div className="w-auto h-auto" ref={setContentRef}>
+        <div className="w-auto h-auto" ref={refCallback}>
           <OfficialHTML />
         </div>
       </Scroll>
