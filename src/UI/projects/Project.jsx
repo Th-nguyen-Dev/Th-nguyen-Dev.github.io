@@ -48,7 +48,7 @@ function Project() {
                 a turn-based combat system in Unity, with an emphasis on learning about the software development cycle. Overall, I think this is one of 
                 the most memorable and difficult projects I have ever worked on. This is purely because of the nuanced team dynamics, the scope of 
                 the project, and the tool learning curve of Unity and C#. The project is currently on hiatus due to the quarter ending, but it is number 
-                one on my list to finish."
+                one on my list to finish. "
           />
         </div>
         <div className="Reverse Calculator">
