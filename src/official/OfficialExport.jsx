@@ -43,16 +43,29 @@ export function CanvasDOM() {
 
   const refCallback = useCallback(
     (node) => {
-      // Replace the state-based approach entirely
       if (node !== null) {
-        // Calculate directly in the callback after DOM is ready
-        requestAnimationFrame(() => {
-          setPages(
-            Math.floor(node.getBoundingClientRect().height / size.height) + 1,
-          );
-          console.log("Resize occured");
+        // Set up a ResizeObserver to catch ALL size changes including accordion
+        const resizeObserver = new ResizeObserver(() => {
+          const height = node.getBoundingClientRect().height;
+          const pageCount = Math.ceil(height / size.height); // Always round up to integer
+          setPages(pageCount);
         });
+
+        resizeObserver.observe(node);
+
+        // Initial calculation
+        const initialHeight = node.getBoundingClientRect().height;
+        const initialPageCount = Math.ceil(initialHeight / size.height);
+        setPages(initialPageCount);
       }
+
+      return () => {
+        if (node?._cleanup) {
+          // Keep track of the observer for cleanup
+          node._cleanup = () => resizeObserver.disconnect();
+          node._cleanup();
+        }
+      };
     },
     [size],
   );
