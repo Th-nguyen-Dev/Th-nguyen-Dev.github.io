@@ -44,35 +44,13 @@ export function CanvasDOM() {
   const refCallback = useCallback(
     (node) => {
       if (node !== null) {
-        // Set up a ResizeObserver to catch ALL size changes including accordion
-        let resizeTimeout;
-        const resizeObserver = new ResizeObserver(() => {
-          // Clear previous timeout if it exists
-          if (resizeTimeout) {
-            clearTimeout(resizeTimeout);
-          }
-
-          // Set new timeout that will execute after 1 second
-          resizeTimeout = setTimeout(() => {
-            const height = node.getBoundingClientRect().height;
-            const pageCount = Math.ceil(height / size.height); // Always round up to integer
-            setPages(pageCount);
-          }, 1000); // 1 second debounce
-        });
-
-        resizeObserver.observe(node);
-
-        // Store timeout for cleanup
-        node._cleanup = () => {
-          if (resizeTimeout) clearTimeout(resizeTimeout);
-          resizeObserver.disconnect();
-        };
+        console.log("Tis change time to resize");
+        const height = node.getBoundingClientRect().height;
+        const pageCount = Math.ceil(height / size.height); // Always round up to integer
+        setPages(pageCount);
       }
-
       return () => {
         if (node?._cleanup) {
-          // Keep track of the observer for cleanup
-          node._cleanup = () => resizeObserver.disconnect();
           node._cleanup();
         }
       };
@@ -82,20 +60,22 @@ export function CanvasDOM() {
 
   return (
     <ScrollControls damping={0.1} offset={1} pages={pages}>
-      <AmbientLight />
-      <DirectionalLights />
-      <EarthMeshes />
-      {/* <mesh>
+      <Suspense>
+        <AmbientLight />
+        <DirectionalLights />
+        <EarthMeshes />
+        {/* <mesh>
         <sphereGeometry args={[5.2, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
         <meshBasicMaterial color={"#ffffff"} />
       </mesh> */}
-      <PostProcessing />
-      <OfficialCamera />
-      <Scroll html style={{ height: "100%", width: "100%" }}>
-        <div className="w-auto h-auto" ref={refCallback}>
-          <OfficialHTML />
-        </div>
-      </Scroll>
+        <PostProcessing />
+        <OfficialCamera />
+        <Scroll html style={{ height: "100%", width: "100%" }}>
+          <div className="w-auto h-auto" ref={refCallback}>
+            <OfficialHTML />
+          </div>
+        </Scroll>
+      </Suspense>
     </ScrollControls>
   );
 }
