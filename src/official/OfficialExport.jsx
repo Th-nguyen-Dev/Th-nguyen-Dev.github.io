@@ -56,8 +56,10 @@ export function CanvasDOM() {
           resizeTimeout = setTimeout(() => {
             const height = node.getBoundingClientRect().height;
             const pageCount = Math.ceil(height / size.height); // Always round up to integer
-            setPages(pageCount);
-          }, 1000); // 1 second debounce
+            if (Math.abs(pageCount - pages) > 3) {
+              setPages(pageCount);
+            }
+          }, 500); // 1 second debounce
         });
 
         resizeObserver.observe(node);
