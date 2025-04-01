@@ -11,8 +11,8 @@ import { Scroll, ScrollControls, useProgress, Html } from "@react-three/drei";
 import AmbientLight from "../lights/ambient_light";
 import DirectionalLights from "../lights/directional_light";
 import PostProcessing from "../postprocesses/effect_composer";
-import EarthMeshes from "../meshes/earth/earth_meshes";
 import OfficialCamera from "../cameras/official_camera";
+import EarthMeshes from "@/meshes/earth/earth_meshes";
 
 import Header from "@/UI/header/Header";
 import VisualizerConfig from "@/UI/visualizer_config/VisualizerConfig";
@@ -45,18 +45,28 @@ export function CanvasDOM() {
     (node) => {
       if (node !== null) {
         // Set up a ResizeObserver to catch ALL size changes including accordion
+        let resizeTimeout;
         const resizeObserver = new ResizeObserver(() => {
-          const height = node.getBoundingClientRect().height;
-          const pageCount = Math.ceil(height / size.height); // Always round up to integer
-          setPages(pageCount);
+          // Clear previous timeout if it exists
+          if (resizeTimeout) {
+            clearTimeout(resizeTimeout);
+          }
+
+          // Set new timeout that will execute after 1 second
+          resizeTimeout = setTimeout(() => {
+            const height = node.getBoundingClientRect().height;
+            const pageCount = Math.ceil(height / size.height); // Always round up to integer
+            setPages(pageCount);
+          }, 1000); // 1 second debounce
         });
 
         resizeObserver.observe(node);
 
-        // Initial calculation
-        const initialHeight = node.getBoundingClientRect().height;
-        const initialPageCount = Math.ceil(initialHeight / size.height);
-        setPages(initialPageCount);
+        // Store timeout for cleanup
+        node._cleanup = () => {
+          if (resizeTimeout) clearTimeout(resizeTimeout);
+          resizeObserver.disconnect();
+        };
       }
 
       return () => {
@@ -75,6 +85,10 @@ export function CanvasDOM() {
       <AmbientLight />
       <DirectionalLights />
       <EarthMeshes />
+      {/* <mesh>
+        <sphereGeometry args={[5.2, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
+        <meshBasicMaterial color={"#ffffff"} />
+      </mesh> */}
       <PostProcessing />
       <OfficialCamera />
       <Scroll html style={{ height: "100%", width: "100%" }}>
