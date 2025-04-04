@@ -1,7 +1,12 @@
 // varying vec2 vMapUv;
+uniform float utimeCloud;
 uniform float utime;
 uniform float prevMonth;
 uniform sampler2D map;
+uniform sampler2D cloudTexture;
 varying vec2 firstMonthUv;
 varying vec2 secondMonthUv;
+varying vec2 vertexUV;
+varying vec3 vertexNormal;
+varying vec3 vertexPosition;
 // varying vec2 vMapUv;
