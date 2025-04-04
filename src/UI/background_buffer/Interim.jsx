@@ -14,7 +14,7 @@ function Interim({ text, helpText }, props) {
   }, [isVisible]);
   return (
     <div
-      className="h-screen flex items-center justify-center select-none"
+      className="h-[40rem] flex items-center justify-center select-none"
       {...props}
       ref={interimRef}
     >
