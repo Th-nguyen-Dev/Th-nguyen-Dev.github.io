@@ -3,10 +3,8 @@ import { useFrame } from "@react-three/fiber";
 import { Bvh, PresentationControls } from "@react-three/drei";
 import * as THREE from "three";
 
-import EarthWeather from "./earth_weather";
-import EarthCities from "./earth_cities";
-import CoordinatesCoreControl from "./coordinates/coordinates_core_control";
 import { useSelector } from "react-redux";
+import Terra from "./terra";
 
 function EarthMeshesPhysical() {
   const meshRef = useRef();
@@ -95,10 +93,11 @@ function EarthMeshesPhysical() {
       >
         <Bvh firstHitOnly>
           <group ref={meshRef}>
-            <EarthCities />
-            <EarthWeather />
+            <Terra />
+            {/* <EarthCities /> */}
+            {/* <EarthWeather /> */}
             {/* <EarthCloud /> */}
-            <CoordinatesCoreControl />
+            {/* `<CoordinatesCoreControl />` */}
           </group>
         </Bvh>
       </PresentationControls>
