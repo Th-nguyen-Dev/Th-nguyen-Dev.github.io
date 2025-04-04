@@ -3,7 +3,6 @@ import { useFrame } from "@react-three/fiber";
 import { Bvh, PresentationControls } from "@react-three/drei";
 import * as THREE from "three";
 
-import EarthCloud from "./earth_cloud";
 import EarthWeather from "./earth_weather";
 import EarthCities from "./earth_cities";
 import CoordinatesCoreControl from "./coordinates/coordinates_core_control";
@@ -98,7 +97,7 @@ function EarthMeshesPhysical() {
           <group ref={meshRef}>
             <EarthCities />
             <EarthWeather />
-            <EarthCloud />
+            {/* <EarthCloud /> */}
             <CoordinatesCoreControl />
           </group>
         </Bvh>

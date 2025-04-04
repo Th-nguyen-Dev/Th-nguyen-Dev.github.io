@@ -5,14 +5,15 @@ import earthBumpLg from "/textures/earth_bump_map.avif";
 // import earthBumpSm from "/textures/earth_bump_map_Sm.png";
 
 import earthSpecular from "/textures/earth land ocean mask.avif";
-
+import cloudLg from "/textures/earth clouds_Lg.avif";
+import cityLightsSm from "/textures/earth night_lights_Sm.avif";
 import earthSpriteSheetXl from "/textures_transition/earth_sprite_grid_md.avif";
 // import earthSpriteSheetLg from "/textures_transition/earth_sprite_grid_lg.png";
 // import earthSpriteSheetMd from "/textures_transition/earth_sprite_grid_med.png";
 // import earthSpriteSheetSm from "/textures_transition/earth_sprite_grid_tiny.png";
 
 import { useFrame } from "@react-three/fiber";
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useEffect } from "react";
 import { useLoader } from "@react-three/fiber";
 import CustomShaderMaterial from "three-custom-shader-material";
 
@@ -29,13 +30,23 @@ function EarthWeather() {
 
   const earthBumpTexture = useLoader(THREE.TextureLoader, earthBumpLg);
   const earthSpecularTexture = useLoader(THREE.TextureLoader, earthSpecular);
+  const earthCloudTexture = useLoader(THREE.TextureLoader, cloudLg);
+  const cititesLightTexture = useLoader(THREE.TextureLoader, cityLightsSm);
   const earthSurfaceTexture = useLoader(
     THREE.TextureLoader,
     earthSpriteSheetXl,
   );
   const baseTextureG = useRef(earthSurfaceTexture);
 
+  useEffect(() => {
+    if (earthCloudTexture) {
+      earthCloudTexture.wrapS = THREE.RepeatWrapping;
+      earthCloudTexture.wrapT = THREE.RepeatWrapping;
+    }
+  }, [earthCloudTexture]);
+
   const time = useRef(0);
+  const timeCloud = useRef(0);
   const currentTileX = useRef(0);
   const currentTileY = useRef(0);
   const nextTileX = useRef(0);
@@ -43,12 +54,15 @@ function EarthWeather() {
 
   const uniforms = useMemo(
     () => ({
+      utimeCloud: { value: 0 },
       utime: { value: 0 },
       prevMonth: { value: 0 },
+      cloudTexture: { value: earthCloudTexture },
+      cityLightTexture: { value: cititesLightTexture },
       map1Transform: { value: new THREE.Matrix3() },
       map2Transform: { value: new THREE.Matrix3() },
     }),
-    [],
+    [cititesLightTexture, earthCloudTexture],
   );
 
   function updateTexture() {
@@ -59,6 +73,7 @@ function EarthWeather() {
     nextTileY.current = Math.floor((time.current + 1) / 3) % 4;
 
     if (materialRef.current) {
+      uniforms.utimeCloud.value = timeCloud.current;
       uniforms.utime.value = time.current;
       uniforms.prevMonth.value =
         currentTileX.current + currentTileY.current * 3;
@@ -89,13 +104,9 @@ function EarthWeather() {
   }
 
   useFrame(() => {
-    time.current += 0.02;
-    if (time.current > 12) {
-      time.current = 0;
-    }
-    if (time.current) {
-      updateTexture();
-    }
+    timeCloud.current = (timeCloud.current - 0.0003) % 1;
+    time.current = (time.current + 0.02) % 12;
+    updateTexture();
   });
   return (
     <>
@@ -122,6 +133,9 @@ function EarthWeather() {
             patchDiffuse: {
               "#include <map_fragment>": `${transitionMapFragment}`,
             },
+            // patchEnd: {
+            //   "#include <dithering_fragment>": `${transitionEndFragment}`,
+            // },
           }}
         ></CustomShaderMaterial>
       </mesh>
