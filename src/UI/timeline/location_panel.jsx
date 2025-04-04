@@ -71,16 +71,41 @@ function LocationPanel({ location, buttonText, mainText, milestones }) {
   const buttonStyle =
     "font-bold max-w-full min-w-6 w-full max-h-28 min-h-20 h-auto text-5xl max-sm:text-2xl transition-resize select-none rounded-full";
   const dispatch = useDispatch();
+  const newButton = useRef();
   const changeTextColor = (color) => (event) => {
     event.target.style.color = color;
   };
+  const timeoutRef = useRef(null);
+
+  const onClick = (event) => {
+    // Clear any existing timeout
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    dispatch(setTimelineToggle(location));
+    changeTextColor("black")(event);
+    if (newButton.current) {
+      newButton.current.style.display = "none";
+    }
+
+    timeoutRef.current = setTimeout(() => {
+      dispatch(setTimelineToggle(null));
+      timeoutRef.current = null;
+    }, 3000);
+  };
+
   const onPointerEnter = (name) => (event) => {
     dispatch(setTimelineToggle(name));
     changeTextColor("black")(event);
   };
+
   const onPointerLeave = (event) => {
-    dispatch(setTimelineToggle(null));
     changeTextColor("white")(event);
+    // Only dispatch if no timeout is active from a click
+    if (!timeoutRef.current) {
+      dispatch(setTimelineToggle(null));
+    }
   };
 
   const mainTextRef = useRef();
@@ -113,15 +138,22 @@ function LocationPanel({ location, buttonText, mainText, milestones }) {
 
   return (
     <div className="select-none">
-      <Button
-        variant="outline"
-        size={"lg"}
-        className={buttonStyle}
-        onPointerOver={onPointerEnter(location)}
-        onPointerOut={onPointerLeave}
-      >
-        {buttonText}
-      </Button>
+      <div className="relative flex flex-col items-center justify-center">
+        <div ref={newButton}>
+          <div className="absolute top-0 right-0 h-6 w-6 rounded-full bg-green-500"></div>
+          <div className="absolute top-0 right-0 h-6 w-6 rounded-full bg-slate-100 animate-ping"></div>
+        </div>
+        <Button
+          variant="outline"
+          size={"lg"}
+          className={buttonStyle + "animate-ping"}
+          onPointerOver={onPointerEnter(location)}
+          onPointerOut={onPointerLeave}
+          onClick={onClick}
+        >
+          {buttonText}
+        </Button>
+      </div>
       <br></br>
       <br></br>
       <animated.span

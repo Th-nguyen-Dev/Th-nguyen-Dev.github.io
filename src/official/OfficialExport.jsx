@@ -1,11 +1,5 @@
-import React, {
-  useRef,
-  useEffect,
-  useState,
-  Suspense,
-  useCallback,
-} from "react";
-import { Canvas, useLoader, useThree } from "@react-three/fiber";
+import React, { useRef, useState, Suspense, useCallback } from "react";
+import { Canvas, useThree } from "@react-three/fiber";
 import { Scroll, ScrollControls, useProgress, Html } from "@react-three/drei";
 
 import AmbientLight from "../lights/ambient_light";
@@ -18,9 +12,6 @@ import Header from "@/UI/header/Header";
 import VisualizerConfig from "@/UI/visualizer_config/VisualizerConfig";
 
 import OfficialHTML from "./OfficialHTML";
-import earthEnvironment from "/textures/earth_environment.jpg";
-
-import * as THREE from "three";
 
 export function Loading() {
   const { progress } = useProgress();
@@ -30,49 +21,31 @@ export function Loading() {
 export function CanvasDOM() {
   const [pages, setPages] = useState(30);
   const { size } = useThree();
-  const { scene } = useThree();
-  const envTexture = useLoader(THREE.TextureLoader, earthEnvironment);
-  const [nodeRef, setNodeRef] = useState(null);
-
-  // Set up environment
-  useEffect(() => {
-    scene.background = new THREE.Color("#000000");
-    scene.environment = envTexture;
-    scene.environmentIntensity = 10.0;
-  }, [scene, envTexture]);
 
   const refCallback = useCallback(
     (node) => {
       if (node !== null) {
-        console.log("Tis change time to resize");
         const height = node.getBoundingClientRect().height;
         const pageCount = Math.ceil(height / size.height); // Always round up to integer
         setPages(pageCount);
       }
-      return () => {
-        if (node?._cleanup) {
-          node._cleanup();
-        }
-      };
     },
     [size],
   );
 
   return (
     <ScrollControls damping={0.1} offset={1} pages={pages}>
-      <Suspense>
+      <Suspense fallback={PLoader()}>
         <AmbientLight />
         <DirectionalLights />
         <EarthMeshes />
-        {/* <mesh>
-        <sphereGeometry args={[5.2, 80, 80, 0, Math.PI * 2, 0, Math.PI]} />
-        <meshBasicMaterial color={"#ffffff"} />
-      </mesh> */}
         <PostProcessing />
         <OfficialCamera />
         <Scroll html style={{ height: "100%", width: "100%" }}>
           <div className="w-auto h-auto" ref={refCallback}>
-            <OfficialHTML />
+            <Suspense fallback={PLoader()}>
+              <OfficialHTML />
+            </Suspense>
           </div>
         </Scroll>
       </Suspense>
