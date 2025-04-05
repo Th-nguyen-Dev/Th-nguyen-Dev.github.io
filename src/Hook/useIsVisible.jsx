@@ -9,7 +9,7 @@ export function useIsVisible(ref, options = {}) {
         ([entry]) => setIntersecting(entry.isIntersecting),
         {
           rootMargin: "0px",
-          threshold: 0.1,
+          threshold: 0.01,
           ...options,
         },
       ),

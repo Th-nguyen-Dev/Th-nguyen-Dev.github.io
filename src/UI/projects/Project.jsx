@@ -1,10 +1,11 @@
-import React, { useRef, useEffect, useMemo } from "react";
+import React, { useRef, useEffect, useMemo, Suspense } from "react";
 import ProjectPanelText from "./project_panel_text";
 import { useDispatch } from "react-redux";
 import { setCameraToggle } from "@/context/reducer/camera_toggle";
 import { setBackgroundToggle } from "@/context/reducer/background_toggle";
 import { useIsVisible } from "@/Hook/useIsVisible";
-
+import Milestone from "@/UI/projects/milestone";
+import milestoneData from "@/data/projects.json";
 const _images = Object.values(
   import.meta.glob("/public/project_panels/New/*.jpg", { eager: true }),
 ).map((mod) => mod.default);
@@ -16,6 +17,7 @@ function Project() {
 
   useEffect(() => {
     if (isVisible) {
+      console.log("Project is visible");
       dispatch(setCameraToggle("zoom_in_middle"));
       dispatch(setBackgroundToggle(true));
     }
@@ -108,15 +110,23 @@ function Project() {
   );
 
   return (
-    <div className="relative ml-10 mr-10 pointer-events-auto" ref={projectRef}>
-      <br />
-      <br />
+    <div
+      className="relative h-fit ml-10 mr-10 pointer-events-auto"
+      ref={projectRef}
+    >
       <span className="text-7xl font-bold">Projects</span>
       <br />
       <br />
       <br />
       <div className="Portfolio Website" />
       {projectPanels}
+      <Suspense>
+        <div className="flex flex-col space-y-6 p-6 relative z-10">
+          {milestoneData.map((milestone, index) => (
+            <Milestone key={index} content={milestone} />
+          ))}
+        </div>
+      </Suspense>
     </div>
   );
 }

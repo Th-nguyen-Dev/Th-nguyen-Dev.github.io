@@ -1,0 +1,94 @@
+[
+  {
+    "total": 82,
+    "weeks": [
+      {
+        "w": 1737244800,
+        "a": 6111,
+        "d": 103,
+        "c": 6
+      },
+      {
+        "w": 1737849600,
+        "a": 544,
+        "d": 127,
+        "c": 24
+      },
+      {
+        "w": 1738454400,
+        "a": 30,
+        "d": 19,
+        "c": 4
+      },
+      {
+        "w": 1739059200,
+        "a": 847,
+        "d": 332,
+        "c": 5
+      },
+      {
+        "w": 1739664000,
+        "a": 33,
+        "d": 22,
+        "c": 2
+      },
+      {
+        "w": 1740268800,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1740873600,
+        "a": 611,
+        "d": 110,
+        "c": 3
+      },
+      {
+        "w": 1741478400,
+        "a": 763,
+        "d": 190,
+        "c": 6
+      },
+      {
+        "w": 1742083200,
+        "a": 211,
+        "d": 33,
+        "c": 1
+      },
+      {
+        "w": 1742688000,
+        "a": 1339,
+        "d": 1149,
+        "c": 23
+      },
+      {
+        "w": 1743292800,
+        "a": 932,
+        "d": 447,
+        "c": 8
+      }
+    ],
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    }
+  }
+]

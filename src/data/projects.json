@@ -1,0 +1,169 @@
+[
+    {
+      "owner": "Bellevue-College-ProfWentao",
+      "repo": "RRLM-Frontend",
+      "branch": "Ryan-Dev",
+      
+      "tittle": "RRLM-Frontend",
+      "subtittle": "Frontend repository for the website",
+      
+      "description": [
+        "Developed a frontend framework with CI/CD for the frontend engineer team",
+        "Implemented ready-to-use interactive chat feature ported from the prototype",
+        "Created abstraction layer for RESTFUL API communication with the backend",
+        "Built CI/CD pipeline using GitHub Actions for deployment to AWS S3"
+      ]
+    },
+    {
+      "owner": "Bellevue-College-ProfWentao",
+      "repo": "PlaceholderTeam-Prototype",
+      "branch": "Ryan-Dev-Intergration",
+      
+      "tittle": "PlaceholderTeam-Prototype",
+      "subtittle": "Prototype for the chatbot application",
+      
+      "description": [
+        "Developed a prototype website with chatbot functionality in a simple Python HTTP server",
+        "Upgraded to a full-fledged Go web server for serving the website",
+        "Implemented communication handling between frontend, database, and chatbot",
+        "Built backend capable of handling multiple users, conversations, and user data management",
+        "Created documentation for the prototype and its API interface",
+        "Pair programmed with frontend teamates to explain the inner working of the backend, and how to use its API"
+      ]
+    },
+    {
+      "owner": "Bellevue-College-ProfWentao",
+      "repo": "2024-2025-senior-capstone-project-placeholder-team",
+      "branch": "Ryan-Dev",
+      
+      "tittle": "2024-2025-senior-capstone-project-placeholder-team",
+      "subtittle": "Intermidiate backend repository for project RRLM",
+      
+      "description": [
+        "Ported prototype backend to official codebase with revised API interface",
+        "Enhanced database interaction with proper transaction handling",
+        "Implemented more robust chatbot with proper memory management",
+        "Planning to split monolith codebase into microservices for AWS Lambda deployment"
+      ]
+    },
+    {
+      "owner": "Th-nguyen-Dev",
+      "repo": "Project-RRLM-Timeline",
+      "branch": "main",
+      
+      "tittle": "Project-RRLM-Timeline",
+      "subtittle": "Interactive timeline visualization for the RRLM project",
+      
+      "description": [
+        "Built an interactive timeline visualization using TypeScript (84%) and CSS (13.6%)",
+        "Implemented dynamic timeline components to display project milestones and progress",
+        "Created responsive design for cross-device compatibility",
+        "Integrated with project management data to provide real-time updates"
+      ]
+    },
+    {
+      "owner": "Th-nguyen-Dev",
+      "repo": "Th-nguyen-Dev.github.io",
+      "branch": "main",
+      
+      "tittle": "Portfolio Website",
+      "subtittle": "Personal portfolio with 3D integration",
+      
+      "description": [
+        "Designed and implemented a modern portfolio website with JavaScript (65.3%) and TypeScript (11.9%)",
+        "Integrated 3D elements and visualizations using WebGL and GLSL shaders",
+        "Created responsive layouts with custom CSS (14.4%) for optimal viewing on all devices",
+        "Implemented automated deployment using shell scripts (4.8%) for seamless updates"
+      ]
+    },
+    {
+      "owner": "Th-nguyen-Dev",
+      "repo": "Weather-Predition-Project",
+      "branch": "main",
+      
+      "tittle": "Weather Prediction Project",
+      "subtittle": "Advanced weather forecasting using hybrid neural networks",
+      
+      "description": [
+        "Developed a hybrid neural network model combining Graph Neural Networks and Transformers",
+        "Implemented data processing and model training using Jupyter Notebooks (99.8%)",
+        "Created visualizations to analyze prediction accuracy and model performance",
+        "Integrated geographic and temporal data to enhance prediction capabilities"
+      ]
+    },
+    {
+      "owner": "Th-nguyen-Dev",
+      "repo": "2D-Pandemic-Simulator-with-Inheritance-and-Pollymorphsm",
+      "branch": "main",
+      
+      "tittle": "2D Pandemic Simulator",
+      "subtittle": "Object-oriented disease spread simulation",
+      
+      "description": [
+        "Designed and implemented a simulation model using C++ (98.7%) with object-oriented principles",
+        "Created a hierarchical class structure using inheritance and polymorphism",
+        "Modeled population dynamics with various attributes and roles to simulate disease spread",
+        "Implemented visualization components to display simulation progress and statistics"
+      ]
+    },
+    {
+      "owner": "Th-nguyen-Dev",
+      "repo": "Depth_First_Search_Sudoku_Generator",
+      "branch": "main",
+      
+      "tittle": "Sudoku Generator",
+      "subtittle": "Performance-optimized Sudoku puzzle creator",
+      
+      "description": [
+        "Developed a highly efficient Sudoku puzzle generator in C++ (100%)",
+        "Implemented depth-first search algorithm for puzzle generation",
+        "Optimized performance for generating 9x9 grid puzzles quickly",
+        "Created difficulty rating system for generated puzzles"
+      ]
+    },
+    {
+      "owner": "Th-nguyen-Dev",
+      "repo": "Reverse-Polish-Calculator-ANTLR",
+      "branch": "main",
+      
+      "tittle": "Reverse Polish Calculator",
+      "subtittle": "Parser-based calculator using ANTLR",
+      
+      "description": [
+        "Built a Reverse Polish Notation calculator using Java (98.9%) and ANTLR (1.1%)",
+        "Implemented custom grammar rules for parsing mathematical expressions",
+        "Created an expression evaluator to process parsed equations",
+        "Designed error handling for invalid expressions and input validation"
+      ]
+    },
+    {
+      "owner": "Th-nguyen-Dev",
+      "repo": "Visualization_Dijkstra_algorithm",
+      "branch": "main",
+      
+      "tittle": "Dijkstra Algorithm Visualizer",
+      "subtittle": "Interactive pathfinding visualization tool",
+      
+      "description": [
+        "Created a visual representation of Dijkstra's shortest path algorithm using C++ (98.9%)",
+        "Implemented user-generated map creation with custom obstacles and terrain",
+        "Developed step-by-step visualization of the algorithm's execution",
+        "Built efficient data storage implementation for graph representation"
+      ]
+    },
+    {
+      "owner": "caibear",
+      "repo": "ballguys",
+      "branch": "main",
+      
+      "tittle": "Ballguys",
+      "subtittle": "Online multiplayer bubble game",
+      
+      "description": [
+        "Contributed to an online multiplayer game built with Rust (60.7%)",
+        "Implemented graphics rendering using GLSL shaders (36.7%)",
+        "Developed game mechanics and physics for bubble interactions",
+        "Created multiplayer networking code for real-time gameplay"
+      ]
+    }
+]

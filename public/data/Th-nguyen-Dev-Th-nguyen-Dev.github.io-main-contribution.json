@@ -1,0 +1,256 @@
+[
+  {
+    "total": 327,
+    "weeks": [
+      {
+        "w": 1720915200,
+        "a": 11412,
+        "d": 423,
+        "c": 40
+      },
+      {
+        "w": 1721520000,
+        "a": 5204,
+        "d": 296,
+        "c": 8
+      },
+      {
+        "w": 1722124800,
+        "a": 144,
+        "d": 23,
+        "c": 1
+      },
+      {
+        "w": 1722729600,
+        "a": 415,
+        "d": 156,
+        "c": 6
+      },
+      {
+        "w": 1723334400,
+        "a": 184721,
+        "d": 894,
+        "c": 16
+      },
+      {
+        "w": 1723939200,
+        "a": 200,
+        "d": 105,
+        "c": 4
+      },
+      {
+        "w": 1724544000,
+        "a": 114,
+        "d": 97,
+        "c": 1
+      },
+      {
+        "w": 1725148800,
+        "a": 2020,
+        "d": 183208,
+        "c": 19
+      },
+      {
+        "w": 1725753600,
+        "a": 1453,
+        "d": 607,
+        "c": 30
+      },
+      {
+        "w": 1726358400,
+        "a": 11672,
+        "d": 9849,
+        "c": 51
+      },
+      {
+        "w": 1726963200,
+        "a": 14964,
+        "d": 14162,
+        "c": 45
+      },
+      {
+        "w": 1727568000,
+        "a": 4804,
+        "d": 4747,
+        "c": 24
+      },
+      {
+        "w": 1728172800,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1728777600,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1729382400,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1729987200,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1730592000,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1731196800,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1731801600,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1732406400,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1733011200,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1733616000,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1734220800,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1734825600,
+        "a": 8250,
+        "d": 7631,
+        "c": 37
+      },
+      {
+        "w": 1735430400,
+        "a": 827,
+        "d": 525,
+        "c": 6
+      },
+      {
+        "w": 1736035200,
+        "a": 365,
+        "d": 95,
+        "c": 4
+      },
+      {
+        "w": 1736640000,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1737244800,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1737849600,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1738454400,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1739059200,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1739664000,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1740268800,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1740873600,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1741478400,
+        "a": 13388,
+        "d": 11236,
+        "c": 21
+      },
+      {
+        "w": 1742083200,
+        "a": 188,
+        "d": 155,
+        "c": 8
+      },
+      {
+        "w": 1742688000,
+        "a": 0,
+        "d": 0,
+        "c": 0
+      },
+      {
+        "w": 1743292800,
+        "a": 182,
+        "d": 130,
+        "c": 6
+      }
+    ],
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    }
+  }
+]

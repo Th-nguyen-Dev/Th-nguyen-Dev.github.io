@@ -1,0 +1,2456 @@
+[
+  {
+    "sha": "a6feaeb886917f18f1291b47a355fa002f41de75",
+    "node_id": "C_kwDONJnh99oAKGE2ZmVhZWI4ODY5MTdmMThmMTI5MWI0N2EzNTVmYTAwMmY0MWRlNzU",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-10T05:53:37Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-10T05:53:37Z"
+      },
+      "message": "Add initial implementation of various algorithms and models",
+      "tree": {
+        "sha": "506502570ecf7c3b38bf6b97f2ebb1eabdb9b5bf",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/506502570ecf7c3b38bf6b97f2ebb1eabdb9b5bf"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/a6feaeb886917f18f1291b47a355fa002f41de75",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/a6feaeb886917f18f1291b47a355fa002f41de75",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/a6feaeb886917f18f1291b47a355fa002f41de75",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/a6feaeb886917f18f1291b47a355fa002f41de75/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e61b1722bf30ea046f15466057a12d6901a8832e",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/e61b1722bf30ea046f15466057a12d6901a8832e",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/e61b1722bf30ea046f15466057a12d6901a8832e"
+      }
+    ]
+  },
+  {
+    "sha": "e61b1722bf30ea046f15466057a12d6901a8832e",
+    "node_id": "C_kwDONJnh99oAKGU2MWIxNzIyYmYzMGVhMDQ2ZjE1NDY2MDU3YTEyZDY5MDFhODgzMmU",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-15T04:20:33Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-15T04:20:33Z"
+      },
+      "message": "Addd code_documentation",
+      "tree": {
+        "sha": "d5fd97c73bd6fc5a5b0f65f2fcf01ee4691c5bdf",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/d5fd97c73bd6fc5a5b0f65f2fcf01ee4691c5bdf"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/e61b1722bf30ea046f15466057a12d6901a8832e",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/e61b1722bf30ea046f15466057a12d6901a8832e",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/e61b1722bf30ea046f15466057a12d6901a8832e",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/e61b1722bf30ea046f15466057a12d6901a8832e/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "52fc8dab9ff6525f15e77b3abebb54a7fa3a251d",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/52fc8dab9ff6525f15e77b3abebb54a7fa3a251d",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/52fc8dab9ff6525f15e77b3abebb54a7fa3a251d"
+      }
+    ]
+  },
+  {
+    "sha": "52fc8dab9ff6525f15e77b3abebb54a7fa3a251d",
+    "node_id": "C_kwDONJnh99oAKDUyZmM4ZGFiOWZmNjUyNWYxNWU3N2IzYWJlYmI1NGE3ZmEzYTI1MWQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-14T19:13:01Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-14T19:13:01Z"
+      },
+      "message": "Correct Unit Twest Typo",
+      "tree": {
+        "sha": "86dfd9da9b53473aefe0298fa6a19328a951edac",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/86dfd9da9b53473aefe0298fa6a19328a951edac"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/52fc8dab9ff6525f15e77b3abebb54a7fa3a251d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/52fc8dab9ff6525f15e77b3abebb54a7fa3a251d",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/52fc8dab9ff6525f15e77b3abebb54a7fa3a251d",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/52fc8dab9ff6525f15e77b3abebb54a7fa3a251d/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ed13f68e99d66a6b7d8c53f386567fc54549266a",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/ed13f68e99d66a6b7d8c53f386567fc54549266a",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/ed13f68e99d66a6b7d8c53f386567fc54549266a"
+      }
+    ]
+  },
+  {
+    "sha": "ed13f68e99d66a6b7d8c53f386567fc54549266a",
+    "node_id": "C_kwDONJnh99oAKGVkMTNmNjhlOTlkNjZhNmI3ZDhjNTNmMzg2NTY3ZmM1NDU0OTI2NmE",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-13T20:15:50Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-13T20:15:50Z"
+      },
+      "message": "create_edges_tensor_2D return a 2D tensor of all possible edges",
+      "tree": {
+        "sha": "cc067fa2efd77bbc55e65224402b4061902be48f",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/cc067fa2efd77bbc55e65224402b4061902be48f"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/ed13f68e99d66a6b7d8c53f386567fc54549266a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/ed13f68e99d66a6b7d8c53f386567fc54549266a",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/ed13f68e99d66a6b7d8c53f386567fc54549266a",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/ed13f68e99d66a6b7d8c53f386567fc54549266a/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c9ec4374ff57b2034fb0b4f575306237e0999e99",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/c9ec4374ff57b2034fb0b4f575306237e0999e99",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/c9ec4374ff57b2034fb0b4f575306237e0999e99"
+      }
+    ]
+  },
+  {
+    "sha": "c9ec4374ff57b2034fb0b4f575306237e0999e99",
+    "node_id": "C_kwDONJnh99oAKGM5ZWM0Mzc0ZmY1N2IyMDM0ZmIwYjRmNTc1MzA2MjM3ZTA5OTllOTk",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-13T07:53:05Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-13T07:53:05Z"
+      },
+      "message": "create_node_features_tensor now return empty tensor if datagrame_dict is empty",
+      "tree": {
+        "sha": "384981117506228a53db7127a3bf590b75ae8dce",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/384981117506228a53db7127a3bf590b75ae8dce"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/c9ec4374ff57b2034fb0b4f575306237e0999e99",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/c9ec4374ff57b2034fb0b4f575306237e0999e99",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/c9ec4374ff57b2034fb0b4f575306237e0999e99",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/c9ec4374ff57b2034fb0b4f575306237e0999e99/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "72453a056beef573a9baf1a76ccff1770427116a",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/72453a056beef573a9baf1a76ccff1770427116a",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/72453a056beef573a9baf1a76ccff1770427116a"
+      }
+    ]
+  },
+  {
+    "sha": "72453a056beef573a9baf1a76ccff1770427116a",
+    "node_id": "C_kwDONJnh99oAKDcyNDUzYTA1NmJlZWY1NzNhOWJhZjFhNzZjY2ZmMTc3MDQyNzExNmE",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-13T07:49:46Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-13T07:49:46Z"
+      },
+      "message": "Additional test for the offset feature",
+      "tree": {
+        "sha": "89e8d6ae5d6a1267554a4b1b217d729b89c5888d",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/89e8d6ae5d6a1267554a4b1b217d729b89c5888d"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/72453a056beef573a9baf1a76ccff1770427116a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/72453a056beef573a9baf1a76ccff1770427116a",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/72453a056beef573a9baf1a76ccff1770427116a",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/72453a056beef573a9baf1a76ccff1770427116a/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "3b3f1d860b4613db1e60fc2568c9d9af915b06c3",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/3b3f1d860b4613db1e60fc2568c9d9af915b06c3",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/3b3f1d860b4613db1e60fc2568c9d9af915b06c3"
+      }
+    ]
+  },
+  {
+    "sha": "3b3f1d860b4613db1e60fc2568c9d9af915b06c3",
+    "node_id": "C_kwDONJnh99oAKDNiM2YxZDg2MGI0NjEzZGIxZTYwZmMyNTY4YzlkOWFmOTE1YjA2YzM",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-13T07:48:37Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-13T07:48:37Z"
+      },
+      "message": "create_node_feature_tensor with an offset paramter would return a tensor offset rows ahead",
+      "tree": {
+        "sha": "1f5a06c306be638fdb898b95da5ea4d215205d51",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/1f5a06c306be638fdb898b95da5ea4d215205d51"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/3b3f1d860b4613db1e60fc2568c9d9af915b06c3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/3b3f1d860b4613db1e60fc2568c9d9af915b06c3",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/3b3f1d860b4613db1e60fc2568c9d9af915b06c3",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/3b3f1d860b4613db1e60fc2568c9d9af915b06c3/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "9d4c9515a521ce5599dc196b4baf12915f3050f2",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/9d4c9515a521ce5599dc196b4baf12915f3050f2",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/9d4c9515a521ce5599dc196b4baf12915f3050f2"
+      }
+    ]
+  },
+  {
+    "sha": "9d4c9515a521ce5599dc196b4baf12915f3050f2",
+    "node_id": "C_kwDONJnh99oAKDlkNGM5NTE1YTUyMWNlNTU5OWRjMTk2YjRiYWYxMjkxNWYzMDUwZjI",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-13T07:40:30Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-13T07:40:30Z"
+      },
+      "message": "create_node_feature_tensor retutn a tensore of shape [rows, nodes, feature]",
+      "tree": {
+        "sha": "eaa75de6b22535d953f44d49d08b4f9668581892",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/eaa75de6b22535d953f44d49d08b4f9668581892"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/9d4c9515a521ce5599dc196b4baf12915f3050f2",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/9d4c9515a521ce5599dc196b4baf12915f3050f2",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/9d4c9515a521ce5599dc196b4baf12915f3050f2",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/9d4c9515a521ce5599dc196b4baf12915f3050f2/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "17dcf0354a90a357303aa0e5ba6997dbfdc194bd",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/17dcf0354a90a357303aa0e5ba6997dbfdc194bd",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/17dcf0354a90a357303aa0e5ba6997dbfdc194bd"
+      }
+    ]
+  },
+  {
+    "sha": "17dcf0354a90a357303aa0e5ba6997dbfdc194bd",
+    "node_id": "C_kwDONJnh99oAKDE3ZGNmMDM1NGE5MGEzNTczMDNhYTBlNWJhNjk5N2RiZmRjMTk0YmQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-13T06:08:05Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-13T06:08:05Z"
+      },
+      "message": "streamline dataprocessing and predefine training data",
+      "tree": {
+        "sha": "c6d52de9ad7e3853bec4760e1ed009fa7505cc0b",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/c6d52de9ad7e3853bec4760e1ed009fa7505cc0b"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/17dcf0354a90a357303aa0e5ba6997dbfdc194bd",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/17dcf0354a90a357303aa0e5ba6997dbfdc194bd",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/17dcf0354a90a357303aa0e5ba6997dbfdc194bd",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/17dcf0354a90a357303aa0e5ba6997dbfdc194bd/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0125fdf52a2ae8a106b46c0e4914382ab7def535",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/0125fdf52a2ae8a106b46c0e4914382ab7def535",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/0125fdf52a2ae8a106b46c0e4914382ab7def535"
+      }
+    ]
+  },
+  {
+    "sha": "0125fdf52a2ae8a106b46c0e4914382ab7def535",
+    "node_id": "C_kwDONJnh99oAKDAxMjVmZGY1MmEyYWU4YTEwNmI0NmMwZTQ5MTQzODJhYjdkZWY1MzU",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-12T18:28:26Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-12T20:52:29Z"
+      },
+      "message": "Added pictures\n\nprevent .venv from uploading\n\nAdd a new model save\n\nAdd LFS\n\nDelete runs folder\n\nadd to git ignore\n\nDelete temp folders",
+      "tree": {
+        "sha": "6c5af475d612c8edfe30e97b768217e9675ea129",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/6c5af475d612c8edfe30e97b768217e9675ea129"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/0125fdf52a2ae8a106b46c0e4914382ab7def535",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/0125fdf52a2ae8a106b46c0e4914382ab7def535",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/0125fdf52a2ae8a106b46c0e4914382ab7def535",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/0125fdf52a2ae8a106b46c0e4914382ab7def535/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6b49ce23f9b02151c9bb66a05959d69aa0c5d07c",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/6b49ce23f9b02151c9bb66a05959d69aa0c5d07c",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/6b49ce23f9b02151c9bb66a05959d69aa0c5d07c"
+      }
+    ]
+  },
+  {
+    "sha": "6b49ce23f9b02151c9bb66a05959d69aa0c5d07c",
+    "node_id": "C_kwDONJnh99oAKDZiNDljZTIzZjliMDIxNTFjOWJiNjZhMDU5NTlkNjlhYTBjNWQwN2M",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-12T06:34:34Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-12T06:34:34Z"
+      },
+      "message": "Return test result and graph",
+      "tree": {
+        "sha": "7ece611757813e5d8e1ebc4942835c1c5b72aa8b",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/7ece611757813e5d8e1ebc4942835c1c5b72aa8b"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/6b49ce23f9b02151c9bb66a05959d69aa0c5d07c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/6b49ce23f9b02151c9bb66a05959d69aa0c5d07c",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/6b49ce23f9b02151c9bb66a05959d69aa0c5d07c",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/6b49ce23f9b02151c9bb66a05959d69aa0c5d07c/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e3133cff246f9f491943620168f82fb16a706a54",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/e3133cff246f9f491943620168f82fb16a706a54",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/e3133cff246f9f491943620168f82fb16a706a54"
+      }
+    ]
+  },
+  {
+    "sha": "e3133cff246f9f491943620168f82fb16a706a54",
+    "node_id": "C_kwDONJnh99oAKGUzMTMzY2ZmMjQ2ZjlmNDkxOTQzNjIwMTY4ZjgyZmIxNmE3MDZhNTQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-12T04:07:43Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-12T04:07:43Z"
+      },
+      "message": "New Training data",
+      "tree": {
+        "sha": "bec59c87f2721d9ae5c3b0957610fb0a0e49f621",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/bec59c87f2721d9ae5c3b0957610fb0a0e49f621"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/e3133cff246f9f491943620168f82fb16a706a54",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/e3133cff246f9f491943620168f82fb16a706a54",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/e3133cff246f9f491943620168f82fb16a706a54",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/e3133cff246f9f491943620168f82fb16a706a54/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5882efb7e202502b14435ef60247862433fdcbb0",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/5882efb7e202502b14435ef60247862433fdcbb0",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/5882efb7e202502b14435ef60247862433fdcbb0"
+      }
+    ]
+  },
+  {
+    "sha": "5882efb7e202502b14435ef60247862433fdcbb0",
+    "node_id": "C_kwDONJnh99oAKDU4ODJlZmI3ZTIwMjUwMmIxNDQzNWVmNjAyNDc4NjI0MzNmZGNiYjA",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-11T20:43:15Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-11T20:43:15Z"
+      },
+      "message": "Create new models",
+      "tree": {
+        "sha": "5c6f2e5cdf293a0f292d2a80e3435cc1f660f090",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/5c6f2e5cdf293a0f292d2a80e3435cc1f660f090"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/5882efb7e202502b14435ef60247862433fdcbb0",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/5882efb7e202502b14435ef60247862433fdcbb0",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/5882efb7e202502b14435ef60247862433fdcbb0",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/5882efb7e202502b14435ef60247862433fdcbb0/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "270fefdfd196de0dab4cb399ed8475b2fd25e64e",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/270fefdfd196de0dab4cb399ed8475b2fd25e64e",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/270fefdfd196de0dab4cb399ed8475b2fd25e64e"
+      }
+    ]
+  },
+  {
+    "sha": "270fefdfd196de0dab4cb399ed8475b2fd25e64e",
+    "node_id": "C_kwDONJnh99oAKDI3MGZlZmRmZDE5NmRlMGRhYjRjYjM5OWVkODQ3NWIyZmQyNWU2NGU",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-11T15:28:24Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-11T15:28:24Z"
+      },
+      "message": "Add functionality to save models and epochs loss and mae",
+      "tree": {
+        "sha": "09f87cb223251c043578e163d87a77e930bdcc99",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/09f87cb223251c043578e163d87a77e930bdcc99"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/270fefdfd196de0dab4cb399ed8475b2fd25e64e",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/270fefdfd196de0dab4cb399ed8475b2fd25e64e",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/270fefdfd196de0dab4cb399ed8475b2fd25e64e",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/270fefdfd196de0dab4cb399ed8475b2fd25e64e/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1ac439210e48bc0da6634000843f3ab2da39c09c",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/1ac439210e48bc0da6634000843f3ab2da39c09c",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/1ac439210e48bc0da6634000843f3ab2da39c09c"
+      }
+    ]
+  },
+  {
+    "sha": "1ac439210e48bc0da6634000843f3ab2da39c09c",
+    "node_id": "C_kwDONJnh99oAKDFhYzQzOTIxMGU0OGJjMGRhNjYzNDAwMDg0M2YzYWIyZGEzOWMwOWM",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-10T22:29:20Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-10T22:29:20Z"
+      },
+      "message": "Add date feature and remove null feature, refactor for modular multi model running",
+      "tree": {
+        "sha": "31a5b4d285e7c5885f80e5f82bd3f1da321cb123",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/31a5b4d285e7c5885f80e5f82bd3f1da321cb123"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/1ac439210e48bc0da6634000843f3ab2da39c09c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/1ac439210e48bc0da6634000843f3ab2da39c09c",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/1ac439210e48bc0da6634000843f3ab2da39c09c",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/1ac439210e48bc0da6634000843f3ab2da39c09c/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d36dcd78491602f0387799d9fb1a5b1816c18929",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/d36dcd78491602f0387799d9fb1a5b1816c18929",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/d36dcd78491602f0387799d9fb1a5b1816c18929"
+      }
+    ]
+  },
+  {
+    "sha": "d36dcd78491602f0387799d9fb1a5b1816c18929",
+    "node_id": "C_kwDONJnh99oAKGQzNmRjZDc4NDkxNjAyZjAzODc3OTlkOWZiMWE1YjE4MTZjMTg5Mjk",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-09T19:11:15Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-09T19:11:15Z"
+      },
+      "message": "New Data Input, Backup to fix model input",
+      "tree": {
+        "sha": "c32678cb6ff9cec93f969bb2289125d2933f4aaf",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/c32678cb6ff9cec93f969bb2289125d2933f4aaf"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/d36dcd78491602f0387799d9fb1a5b1816c18929",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/d36dcd78491602f0387799d9fb1a5b1816c18929",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/d36dcd78491602f0387799d9fb1a5b1816c18929",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/d36dcd78491602f0387799d9fb1a5b1816c18929/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "af35115efa063ebb1432bd8dfc6be5c29a9c942e",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/af35115efa063ebb1432bd8dfc6be5c29a9c942e",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/af35115efa063ebb1432bd8dfc6be5c29a9c942e"
+      }
+    ]
+  },
+  {
+    "sha": "af35115efa063ebb1432bd8dfc6be5c29a9c942e",
+    "node_id": "C_kwDONJnh99oAKGFmMzUxMTVlZmEwNjNlYmIxNDMyYmQ4ZGZjNmJlNWMyOWE5Yzk0MmU",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-09T10:39:40Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-09T10:39:40Z"
+      },
+      "message": "Refactor and new data entries",
+      "tree": {
+        "sha": "26155504149e288bd54fe8fe4dc378fb8561be0d",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/26155504149e288bd54fe8fe4dc378fb8561be0d"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/af35115efa063ebb1432bd8dfc6be5c29a9c942e",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/af35115efa063ebb1432bd8dfc6be5c29a9c942e",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/af35115efa063ebb1432bd8dfc6be5c29a9c942e",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/af35115efa063ebb1432bd8dfc6be5c29a9c942e/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "edead6cf01a22528cb4f509d1307c84b66e432bc",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/edead6cf01a22528cb4f509d1307c84b66e432bc",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/edead6cf01a22528cb4f509d1307c84b66e432bc"
+      }
+    ]
+  },
+  {
+    "sha": "edead6cf01a22528cb4f509d1307c84b66e432bc",
+    "node_id": "C_kwDONJnh99oAKGVkZWFkNmNmMDFhMjI1MjhjYjRmNTA5ZDEzMDdjODRiNjZlNDMyYmM",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-09T09:16:10Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-09T09:16:10Z"
+      },
+      "message": "Add new data",
+      "tree": {
+        "sha": "86c01cd473c6283516b7ef4a240c8dcca3a9fed3",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/86c01cd473c6283516b7ef4a240c8dcca3a9fed3"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/edead6cf01a22528cb4f509d1307c84b66e432bc",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/edead6cf01a22528cb4f509d1307c84b66e432bc",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/edead6cf01a22528cb4f509d1307c84b66e432bc",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/edead6cf01a22528cb4f509d1307c84b66e432bc/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "57c057ac6410c5a84c3340f58324cbe64bd5093e",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/57c057ac6410c5a84c3340f58324cbe64bd5093e",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/57c057ac6410c5a84c3340f58324cbe64bd5093e"
+      }
+    ]
+  },
+  {
+    "sha": "57c057ac6410c5a84c3340f58324cbe64bd5093e",
+    "node_id": "C_kwDONJnh99oAKDU3YzA1N2FjNjQxMGM1YTg0YzMzNDBmNTgzMjRjYmU2NGJkNTA5M2U",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-09T09:13:46Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-09T09:13:46Z"
+      },
+      "message": "Add back lstm layers",
+      "tree": {
+        "sha": "92731e43afaaed75e5eb9a7abe5d465ea84b87a6",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/92731e43afaaed75e5eb9a7abe5d465ea84b87a6"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/57c057ac6410c5a84c3340f58324cbe64bd5093e",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/57c057ac6410c5a84c3340f58324cbe64bd5093e",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/57c057ac6410c5a84c3340f58324cbe64bd5093e",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/57c057ac6410c5a84c3340f58324cbe64bd5093e/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "17109b7bde3076b972b149d3f6c18f3fff7683a5",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/17109b7bde3076b972b149d3f6c18f3fff7683a5",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/17109b7bde3076b972b149d3f6c18f3fff7683a5"
+      }
+    ]
+  },
+  {
+    "sha": "17109b7bde3076b972b149d3f6c18f3fff7683a5",
+    "node_id": "C_kwDONJnh99oAKDE3MTA5YjdiZGUzMDc2Yjk3MmIxNDlkM2Y2YzE4ZjNmZmY3NjgzYTU",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-09T01:40:42Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-09T01:40:42Z"
+      },
+      "message": "First stable neural network",
+      "tree": {
+        "sha": "63a2317afb59ba5216b00fe69b1e1f0ce31f3bf7",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/63a2317afb59ba5216b00fe69b1e1f0ce31f3bf7"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/17109b7bde3076b972b149d3f6c18f3fff7683a5",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/17109b7bde3076b972b149d3f6c18f3fff7683a5",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/17109b7bde3076b972b149d3f6c18f3fff7683a5",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/17109b7bde3076b972b149d3f6c18f3fff7683a5/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7712cce9686e58c26eaacd21f0ce6a7633cb4285",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/7712cce9686e58c26eaacd21f0ce6a7633cb4285",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/7712cce9686e58c26eaacd21f0ce6a7633cb4285"
+      }
+    ]
+  },
+  {
+    "sha": "7712cce9686e58c26eaacd21f0ce6a7633cb4285",
+    "node_id": "C_kwDONJnh99oAKDc3MTJjY2U5Njg2ZTU4YzI2ZWFhY2QyMWYwY2U2YTc2MzNjYjQyODU",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-08T07:33:08Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-08T07:33:08Z"
+      },
+      "message": "Implement batch processing and GNN, GATConv and LSTM layers",
+      "tree": {
+        "sha": "894c08c7a70bf4981f6c649b2bee580bdd8df722",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/894c08c7a70bf4981f6c649b2bee580bdd8df722"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/7712cce9686e58c26eaacd21f0ce6a7633cb4285",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/7712cce9686e58c26eaacd21f0ce6a7633cb4285",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/7712cce9686e58c26eaacd21f0ce6a7633cb4285",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/7712cce9686e58c26eaacd21f0ce6a7633cb4285/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "768b8dc33a3be780b15e8a10edbc07109870ca2d",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/768b8dc33a3be780b15e8a10edbc07109870ca2d",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/768b8dc33a3be780b15e8a10edbc07109870ca2d"
+      }
+    ]
+  },
+  {
+    "sha": "768b8dc33a3be780b15e8a10edbc07109870ca2d",
+    "node_id": "C_kwDONJnh99oAKDc2OGI4ZGMzM2EzYmU3ODBiMTVlOGExMGVkYmMwNzEwOTg3MGNhMmQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-06T22:02:31Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-06T22:02:31Z"
+      },
+      "message": "compile a new dataset",
+      "tree": {
+        "sha": "aaf0a99e84aaa33a4ff5b1fea0faa1996df930c6",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/aaf0a99e84aaa33a4ff5b1fea0faa1996df930c6"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/768b8dc33a3be780b15e8a10edbc07109870ca2d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/768b8dc33a3be780b15e8a10edbc07109870ca2d",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/768b8dc33a3be780b15e8a10edbc07109870ca2d",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/768b8dc33a3be780b15e8a10edbc07109870ca2d/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1a3f1974169f2aad69ea585e7f2d5add8f9f2d37",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/1a3f1974169f2aad69ea585e7f2d5add8f9f2d37",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/1a3f1974169f2aad69ea585e7f2d5add8f9f2d37"
+      }
+    ]
+  },
+  {
+    "sha": "1a3f1974169f2aad69ea585e7f2d5add8f9f2d37",
+    "node_id": "C_kwDONJnh99oAKDFhM2YxOTc0MTY5ZjJhYWQ2OWVhNTg1ZTdmMmQ1YWRkOGY5ZjJkMzc",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-06T21:37:33Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-06T21:37:33Z"
+      },
+      "message": "updatwe current progress",
+      "tree": {
+        "sha": "e268d2726a35ddd53f33a600faf2032cc53c9904",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/e268d2726a35ddd53f33a600faf2032cc53c9904"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/1a3f1974169f2aad69ea585e7f2d5add8f9f2d37",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/1a3f1974169f2aad69ea585e7f2d5add8f9f2d37",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/1a3f1974169f2aad69ea585e7f2d5add8f9f2d37",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/1a3f1974169f2aad69ea585e7f2d5add8f9f2d37/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5d25178e6719de8e8a869f4f66b31e413acc5390",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/5d25178e6719de8e8a869f4f66b31e413acc5390",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/5d25178e6719de8e8a869f4f66b31e413acc5390"
+      }
+    ]
+  },
+  {
+    "sha": "5d25178e6719de8e8a869f4f66b31e413acc5390",
+    "node_id": "C_kwDONJnh99oAKDVkMjUxNzhlNjcxOWRlOGU4YTg2OWY0ZjY2YjMxZTQxM2FjYzUzOTA",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-06T17:21:52Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-06T17:21:52Z"
+      },
+      "message": "start making the neural network model",
+      "tree": {
+        "sha": "f2ac1a7e189e5c629a61fa53aa5017bfa0e0418a",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/f2ac1a7e189e5c629a61fa53aa5017bfa0e0418a"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/5d25178e6719de8e8a869f4f66b31e413acc5390",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/5d25178e6719de8e8a869f4f66b31e413acc5390",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/5d25178e6719de8e8a869f4f66b31e413acc5390",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/5d25178e6719de8e8a869f4f66b31e413acc5390/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a1e2ed09d033375b7b8ed5743584c0ec4ff6365d",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/a1e2ed09d033375b7b8ed5743584c0ec4ff6365d",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/a1e2ed09d033375b7b8ed5743584c0ec4ff6365d"
+      }
+    ]
+  },
+  {
+    "sha": "a1e2ed09d033375b7b8ed5743584c0ec4ff6365d",
+    "node_id": "C_kwDONJnh99oAKGExZTJlZDA5ZDAzMzM3NWI3YjhlZDU3NDM1ODRjMGVjNGZmNjM2NWQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-26T19:54:02Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-26T19:54:02Z"
+      },
+      "message": "Compose location data",
+      "tree": {
+        "sha": "d1991e77e740db64a3a08b613430d0e89e79ca4e",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/d1991e77e740db64a3a08b613430d0e89e79ca4e"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/a1e2ed09d033375b7b8ed5743584c0ec4ff6365d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/a1e2ed09d033375b7b8ed5743584c0ec4ff6365d",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/a1e2ed09d033375b7b8ed5743584c0ec4ff6365d",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/a1e2ed09d033375b7b8ed5743584c0ec4ff6365d/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "25366ec9de21b549dab79b72e95736553978336a",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/25366ec9de21b549dab79b72e95736553978336a",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/25366ec9de21b549dab79b72e95736553978336a"
+      }
+    ]
+  },
+  {
+    "sha": "25366ec9de21b549dab79b72e95736553978336a",
+    "node_id": "C_kwDONJnh99oAKDI1MzY2ZWM5ZGUyMWI1NDlkYWI3OWI3MmU5NTczNjU1Mzk3ODMzNmE",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-26T07:49:03Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-26T07:49:03Z"
+      },
+      "message": "Draft the first final dataset",
+      "tree": {
+        "sha": "5d719086df43c93f9919e89a3287eaf920576efe",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/5d719086df43c93f9919e89a3287eaf920576efe"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/25366ec9de21b549dab79b72e95736553978336a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/25366ec9de21b549dab79b72e95736553978336a",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/25366ec9de21b549dab79b72e95736553978336a",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/25366ec9de21b549dab79b72e95736553978336a/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b766294a01d082e13d0bc55a8ab5092d36bf0839",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/b766294a01d082e13d0bc55a8ab5092d36bf0839",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/b766294a01d082e13d0bc55a8ab5092d36bf0839"
+      }
+    ]
+  },
+  {
+    "sha": "b766294a01d082e13d0bc55a8ab5092d36bf0839",
+    "node_id": "C_kwDONJnh99oAKGI3NjYyOTRhMDFkMDgyZTEzZDBiYzU1YThhYjUwOTJkMzZiZjA4Mzk",
+    "commit": {
+      "author": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-04T21:22:57Z"
+      },
+      "committer": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-04T21:22:57Z"
+      },
+      "message": "Attempt to sort data by station",
+      "tree": {
+        "sha": "98e6f8c3d2bcdec7dd448564ebc06e005243a6cd",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/98e6f8c3d2bcdec7dd448564ebc06e005243a6cd"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/b766294a01d082e13d0bc55a8ab5092d36bf0839",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/b766294a01d082e13d0bc55a8ab5092d36bf0839",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/b766294a01d082e13d0bc55a8ab5092d36bf0839",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/b766294a01d082e13d0bc55a8ab5092d36bf0839/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "353003be1ce2d12cad2c418555bedc0f857263d3",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/353003be1ce2d12cad2c418555bedc0f857263d3",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/353003be1ce2d12cad2c418555bedc0f857263d3"
+      }
+    ]
+  },
+  {
+    "sha": "353003be1ce2d12cad2c418555bedc0f857263d3",
+    "node_id": "C_kwDONJnh99oAKDM1MzAwM2JlMWNlMmQxMmNhZDJjNDE4NTU1YmVkYzBmODU3MjYzZDM",
+    "commit": {
+      "author": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-03T18:27:44Z"
+      },
+      "committer": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-03T18:27:44Z"
+      },
+      "message": "Attempt 1 at Processing data",
+      "tree": {
+        "sha": "051cbbfb23a206ddda559a826cc30c88eed1c641",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/051cbbfb23a206ddda559a826cc30c88eed1c641"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/353003be1ce2d12cad2c418555bedc0f857263d3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/353003be1ce2d12cad2c418555bedc0f857263d3",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/353003be1ce2d12cad2c418555bedc0f857263d3",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/353003be1ce2d12cad2c418555bedc0f857263d3/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f623acf27de177441d867dc5bd581601e66c370c",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/f623acf27de177441d867dc5bd581601e66c370c",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/f623acf27de177441d867dc5bd581601e66c370c"
+      }
+    ]
+  },
+  {
+    "sha": "f623acf27de177441d867dc5bd581601e66c370c",
+    "node_id": "C_kwDONJnh99oAKGY2MjNhY2YyN2RlMTc3NDQxZDg2N2RjNWJkNTgxNjAxZTY2YzM3MGM",
+    "commit": {
+      "author": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-02T23:58:54Z"
+      },
+      "committer": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-02T23:58:54Z"
+      },
+      "message": "Raw Data Commited",
+      "tree": {
+        "sha": "703258f5300d2f1bbc7c6bfa1402201bb10bf113",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/703258f5300d2f1bbc7c6bfa1402201bb10bf113"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/f623acf27de177441d867dc5bd581601e66c370c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/f623acf27de177441d867dc5bd581601e66c370c",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/f623acf27de177441d867dc5bd581601e66c370c",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/f623acf27de177441d867dc5bd581601e66c370c/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c12e323f43285e4b7b6427e7f7380e1a0b127181",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/c12e323f43285e4b7b6427e7f7380e1a0b127181",
+        "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/c12e323f43285e4b7b6427e7f7380e1a0b127181"
+      }
+    ]
+  },
+  {
+    "sha": "c12e323f43285e4b7b6427e7f7380e1a0b127181",
+    "node_id": "C_kwDONJnh99oAKGMxMmUzMjNmNDMyODVlNGI3YjY0MjdlN2Y3MzgwZTFhMGIxMjcxODE",
+    "commit": {
+      "author": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-02T23:57:50Z"
+      },
+      "committer": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-02T23:57:50Z"
+      },
+      "message": "Initial commit",
+      "tree": {
+        "sha": "6f9509c88bed7080d496fc5e1d87a9315e30549d",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/trees/6f9509c88bed7080d496fc5e1d87a9315e30549d"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/git/commits/c12e323f43285e4b7b6427e7f7380e1a0b127181",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/c12e323f43285e4b7b6427e7f7380e1a0b127181",
+    "html_url": "https://github.com/Th-nguyen-Dev/Weather-Predition-Project/commit/c12e323f43285e4b7b6427e7f7380e1a0b127181",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Weather-Predition-Project/commits/c12e323f43285e4b7b6427e7f7380e1a0b127181/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": []
+  }
+]

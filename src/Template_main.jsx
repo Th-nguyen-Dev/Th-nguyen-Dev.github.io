@@ -8,8 +8,10 @@ import { Provider } from "react-redux";
 import "./index.css";
 import "./dot.css";
 
+document.documentElement.classList.add('dark');
+
 ReactDOM.createRoot(document.getElementById("root")).render(
-<div className="absolute top-0 left-0 w-full h-full flex ">
+<div className="h-screen w-screen">
   <Provider store={redux_store}>
     <OfficialExport />
   </Provider>

@@ -1,4 +1,4 @@
-import React, { useRef, useState, Suspense, useCallback } from "react";
+import React, { useState, Suspense, useCallback } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
 import { Scroll, ScrollControls, useProgress, Html } from "@react-three/drei";
 
@@ -35,20 +35,18 @@ export function CanvasDOM() {
 
   return (
     <ScrollControls damping={0.1} offset={1} pages={pages}>
-      <Suspense fallback={PLoader()}>
-        <AmbientLight />
-        <DirectionalLights />
-        <EarthMeshes />
-        <PostProcessing />
-        <OfficialCamera />
-        <Scroll html style={{ height: "100%", width: "100%" }}>
-          <div className="w-auto h-auto" ref={refCallback}>
-            <Suspense fallback={PLoader()}>
-              <OfficialHTML />
-            </Suspense>
-          </div>
-        </Scroll>
-      </Suspense>
+      <AmbientLight />
+      <DirectionalLights />
+      <EarthMeshes />
+      <PostProcessing />
+      <OfficialCamera />
+      <Scroll html style={{ height: "100%", width: "100%" }}>
+        <div className="w-auto h-auto" ref={refCallback}>
+          <Suspense fallback={PLoader()}>
+            <OfficialHTML />
+          </Suspense>
+        </div>
+      </Scroll>
     </ScrollControls>
   );
 }
@@ -63,11 +61,9 @@ function PLoader() {
   );
 }
 function OfficialExport() {
-  const canvasRef = useRef();
   return (
-    <div className="w-screen h-screen relative">
+    <div className="relative w-full h-full overflow-hidden">
       <Canvas
-        ref={canvasRef}
         className="canvas pointer-events-auto z-10"
         gl={{
           powerPreference: "high-performance",

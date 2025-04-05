@@ -1,0 +1,2713 @@
+[
+  {
+    "sha": "2a4d820ccffdba07987e759724826379f1757891",
+    "node_id": "C_kwDOOBHeMNoAKDJhNGQ4MjBjY2ZmZGJhMDc5ODdlNzU5NzI0ODI2Mzc5ZjE3NTc4OTE",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-25T06:49:24Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-25T06:49:24Z"
+      },
+      "message": "fix: update conversation selection logic and improve sidebar dropdown formatting",
+      "tree": {
+        "sha": "556194990b75685fede8f7016d3f378685ca59b1",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/556194990b75685fede8f7016d3f378685ca59b1"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/2a4d820ccffdba07987e759724826379f1757891",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/2a4d820ccffdba07987e759724826379f1757891",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/2a4d820ccffdba07987e759724826379f1757891",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/2a4d820ccffdba07987e759724826379f1757891/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "73ac0b0d813f52f6fcea8f2e42951237bc1624df",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/73ac0b0d813f52f6fcea8f2e42951237bc1624df",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/73ac0b0d813f52f6fcea8f2e42951237bc1624df"
+      }
+    ]
+  },
+  {
+    "sha": "73ac0b0d813f52f6fcea8f2e42951237bc1624df",
+    "node_id": "C_kwDOOBHeMNoAKDczYWMwYjBkODEzZjUyZjZmY2VhOGYyZTQyOTUxMjM3YmMxNjI0ZGY",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-25T06:47:04Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-25T06:47:04Z"
+      },
+      "message": "Merge remote-tracking branch 'refs/remotes/origin/Ryan-Dev' into Ryan-Dev",
+      "tree": {
+        "sha": "b529d1ec9770f75571ce2381f34ca0b7b280ce81",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/b529d1ec9770f75571ce2381f34ca0b7b280ce81"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/73ac0b0d813f52f6fcea8f2e42951237bc1624df",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/73ac0b0d813f52f6fcea8f2e42951237bc1624df",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/73ac0b0d813f52f6fcea8f2e42951237bc1624df",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/73ac0b0d813f52f6fcea8f2e42951237bc1624df/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ca66827617f3b458808ceb6affec0781afa59ad6",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/ca66827617f3b458808ceb6affec0781afa59ad6",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/ca66827617f3b458808ceb6affec0781afa59ad6"
+      },
+      {
+        "sha": "ebad90060bee72fa985905025102c2d95afcdb02",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/ebad90060bee72fa985905025102c2d95afcdb02",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/ebad90060bee72fa985905025102c2d95afcdb02"
+      }
+    ]
+  },
+  {
+    "sha": "ca66827617f3b458808ceb6affec0781afa59ad6",
+    "node_id": "C_kwDOOBHeMNoAKGNhNjY4Mjc2MTdmM2I0NTg4MDhjZWI2YWZmZWMwNzgxYWZhNTlhZDY",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-25T06:45:34Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-25T06:45:34Z"
+      },
+      "message": "feat: introduce ConversationPackage interface and update chat state management for improved conversation handling",
+      "tree": {
+        "sha": "56957893aaba93aae5cd45eed6e4122f259218a3",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/56957893aaba93aae5cd45eed6e4122f259218a3"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/ca66827617f3b458808ceb6affec0781afa59ad6",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/ca66827617f3b458808ceb6affec0781afa59ad6",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/ca66827617f3b458808ceb6affec0781afa59ad6",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/ca66827617f3b458808ceb6affec0781afa59ad6/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6033d7a2a3c5987909a91720dc327c40caa2c01e",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/6033d7a2a3c5987909a91720dc327c40caa2c01e",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/6033d7a2a3c5987909a91720dc327c40caa2c01e"
+      }
+    ]
+  },
+  {
+    "sha": "6033d7a2a3c5987909a91720dc327c40caa2c01e",
+    "node_id": "C_kwDOOBHeMNoAKDYwMzNkN2EyYTNjNTk4NzkwOWE5MTcyMGRjMzI3YzQwY2FhMmMwMWU",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-11T18:36:08Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-11T18:36:08Z"
+      },
+      "message": "feat: enhance chat input component with improved layout and autosize textarea functionality",
+      "tree": {
+        "sha": "baa190fafc7df415f62b94efc7c02572ccbea49d",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/baa190fafc7df415f62b94efc7c02572ccbea49d"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/6033d7a2a3c5987909a91720dc327c40caa2c01e",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/6033d7a2a3c5987909a91720dc327c40caa2c01e",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/6033d7a2a3c5987909a91720dc327c40caa2c01e",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/6033d7a2a3c5987909a91720dc327c40caa2c01e/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "73ddc1fced1a12cea0e8172028e0876adeca6f7d",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/73ddc1fced1a12cea0e8172028e0876adeca6f7d",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/73ddc1fced1a12cea0e8172028e0876adeca6f7d"
+      }
+    ]
+  },
+  {
+    "sha": "73ddc1fced1a12cea0e8172028e0876adeca6f7d",
+    "node_id": "C_kwDOOBHeMNoAKDczZGRjMWZjZWQxYTEyY2VhMGU4MTcyMDI4ZTA4NzZhZGVjYTZmN2Q",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-11T18:09:51Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-11T18:09:51Z"
+      },
+      "message": "feat: enhance chat input and display components for improved message handling and logging",
+      "tree": {
+        "sha": "839fc5d1502a2cd8ecea82bf7380e68e1f6636ad",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/839fc5d1502a2cd8ecea82bf7380e68e1f6636ad"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/73ddc1fced1a12cea0e8172028e0876adeca6f7d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/73ddc1fced1a12cea0e8172028e0876adeca6f7d",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/73ddc1fced1a12cea0e8172028e0876adeca6f7d",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/73ddc1fced1a12cea0e8172028e0876adeca6f7d/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "934691f37c070a1fff707a9aee66f61121781fed",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/934691f37c070a1fff707a9aee66f61121781fed",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/934691f37c070a1fff707a9aee66f61121781fed"
+      }
+    ]
+  },
+  {
+    "sha": "934691f37c070a1fff707a9aee66f61121781fed",
+    "node_id": "C_kwDOOBHeMNoAKDkzNDY5MWYzN2MwNzBhMWZmZjcwN2E5YWVlNjZmNjExMjE3ODFmZWQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-06T02:34:53Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-06T02:34:53Z"
+      },
+      "message": "feat: refactor chat components to improve state management and logging",
+      "tree": {
+        "sha": "da29829868039988bbea770f1208c46c2681bdbf",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/da29829868039988bbea770f1208c46c2681bdbf"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/934691f37c070a1fff707a9aee66f61121781fed",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/934691f37c070a1fff707a9aee66f61121781fed",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/934691f37c070a1fff707a9aee66f61121781fed",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/934691f37c070a1fff707a9aee66f61121781fed/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b1ce42a29a4b3ca76d4fe0709e3be0b393b269a4",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/b1ce42a29a4b3ca76d4fe0709e3be0b393b269a4",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/b1ce42a29a4b3ca76d4fe0709e3be0b393b269a4"
+      }
+    ]
+  },
+  {
+    "sha": "b1ce42a29a4b3ca76d4fe0709e3be0b393b269a4",
+    "node_id": "C_kwDOOBHeMNoAKGIxY2U0MmEyOWE0YjNjYTc2ZDRmZTA3MDllM2JlMGIzOTNiMjY5YTQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T21:31:44Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T21:31:44Z"
+      },
+      "message": "feat: improve logging in Dashboard component for enhanced conversation list visualization",
+      "tree": {
+        "sha": "04aba58b91baa2c2d944d64a5ab1393b20ae21eb",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/04aba58b91baa2c2d944d64a5ab1393b20ae21eb"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/b1ce42a29a4b3ca76d4fe0709e3be0b393b269a4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/b1ce42a29a4b3ca76d4fe0709e3be0b393b269a4",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/b1ce42a29a4b3ca76d4fe0709e3be0b393b269a4",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/b1ce42a29a4b3ca76d4fe0709e3be0b393b269a4/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6a109885a1eb951aeea123491eee88382817b217",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/6a109885a1eb951aeea123491eee88382817b217",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/6a109885a1eb951aeea123491eee88382817b217"
+      }
+    ]
+  },
+  {
+    "sha": "6a109885a1eb951aeea123491eee88382817b217",
+    "node_id": "C_kwDOOBHeMNoAKDZhMTA5ODg1YTFlYjk1MWFlZWExMjM0OTFlZWU4ODM4MjgxN2IyMTc",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T21:28:28Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T21:28:28Z"
+      },
+      "message": "feat: enhance logging in dashboard and chat state management for better debugging",
+      "tree": {
+        "sha": "7b4476ecf935b6c041468f7ecee49d112c1c20f0",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/7b4476ecf935b6c041468f7ecee49d112c1c20f0"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/6a109885a1eb951aeea123491eee88382817b217",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/6a109885a1eb951aeea123491eee88382817b217",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/6a109885a1eb951aeea123491eee88382817b217",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/6a109885a1eb951aeea123491eee88382817b217/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1ded566cad45426776736354439e56e92ce299f1",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/1ded566cad45426776736354439e56e92ce299f1",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/1ded566cad45426776736354439e56e92ce299f1"
+      }
+    ]
+  },
+  {
+    "sha": "1ded566cad45426776736354439e56e92ce299f1",
+    "node_id": "C_kwDOOBHeMNoAKDFkZWQ1NjZjYWQ0NTQyNjc3NjczNjM1NDQzOWU1NmU5MmNlMjk5ZjE",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T21:10:05Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T21:10:05Z"
+      },
+      "message": "feat: enhance dashboard with chat component integration and sidebar functionality",
+      "tree": {
+        "sha": "48194041b616809f9b8ef7305b3d646527ebfee0",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/48194041b616809f9b8ef7305b3d646527ebfee0"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/1ded566cad45426776736354439e56e92ce299f1",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/1ded566cad45426776736354439e56e92ce299f1",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/1ded566cad45426776736354439e56e92ce299f1",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/1ded566cad45426776736354439e56e92ce299f1/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a57aa2ccefda4845042d62f0b716311b2e356776",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/a57aa2ccefda4845042d62f0b716311b2e356776",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/a57aa2ccefda4845042d62f0b716311b2e356776"
+      }
+    ]
+  },
+  {
+    "sha": "a57aa2ccefda4845042d62f0b716311b2e356776",
+    "node_id": "C_kwDOOBHeMNoAKGE1N2FhMmNjZWZkYTQ4NDUwNDJkNjJmMGI3MTYzMTFiMmUzNTY3NzY",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T20:02:47Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T20:02:47Z"
+      },
+      "message": "feat: add utility functions and components for chat UI, including Textarea and Avatar",
+      "tree": {
+        "sha": "2f729b420f1b92f887959fdf1b672f17eef13aaf",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/2f729b420f1b92f887959fdf1b672f17eef13aaf"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/a57aa2ccefda4845042d62f0b716311b2e356776",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/a57aa2ccefda4845042d62f0b716311b2e356776",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/a57aa2ccefda4845042d62f0b716311b2e356776",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/a57aa2ccefda4845042d62f0b716311b2e356776/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e8377013a35b5d060b7f76dd66caa5ae8dee645b",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/e8377013a35b5d060b7f76dd66caa5ae8dee645b",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/e8377013a35b5d060b7f76dd66caa5ae8dee645b"
+      }
+    ]
+  },
+  {
+    "sha": "e8377013a35b5d060b7f76dd66caa5ae8dee645b",
+    "node_id": "C_kwDOOBHeMNoAKGU4Mzc3MDEzYTM1YjVkMDYwYjdmNzZkZDY2Y2FhNWFlOGRlZTY0NWI",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T19:41:56Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T19:41:56Z"
+      },
+      "message": "feat: implement chat functionality with Redux integration and UI components",
+      "tree": {
+        "sha": "d2f80c3dc922ff58644d99219a178690a781377b",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/d2f80c3dc922ff58644d99219a178690a781377b"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/e8377013a35b5d060b7f76dd66caa5ae8dee645b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/e8377013a35b5d060b7f76dd66caa5ae8dee645b",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/e8377013a35b5d060b7f76dd66caa5ae8dee645b",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/e8377013a35b5d060b7f76dd66caa5ae8dee645b/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "231ebef1fc6c95caf2337e764d19f5dba8e8211a",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/231ebef1fc6c95caf2337e764d19f5dba8e8211a",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/231ebef1fc6c95caf2337e764d19f5dba8e8211a"
+      }
+    ]
+  },
+  {
+    "sha": "231ebef1fc6c95caf2337e764d19f5dba8e8211a",
+    "node_id": "C_kwDOOBHeMNoAKDIzMWViZWYxZmM2Yzk1Y2FmMjMzN2U3NjRkMTlmNWRiYThlODIxMWE",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T03:33:27Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T03:33:27Z"
+      },
+      "message": "fix: remove push trigger for Ryan-Dev branch in CI/CD workflow",
+      "tree": {
+        "sha": "1191a42c6838ece27f75290ae66fdfb6449e27d5",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/1191a42c6838ece27f75290ae66fdfb6449e27d5"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/231ebef1fc6c95caf2337e764d19f5dba8e8211a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/231ebef1fc6c95caf2337e764d19f5dba8e8211a",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/231ebef1fc6c95caf2337e764d19f5dba8e8211a",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/231ebef1fc6c95caf2337e764d19f5dba8e8211a/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e01acf7eb0a0f7681994f1811c06e7d3dffdda50",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/e01acf7eb0a0f7681994f1811c06e7d3dffdda50",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/e01acf7eb0a0f7681994f1811c06e7d3dffdda50"
+      }
+    ]
+  },
+  {
+    "sha": "e01acf7eb0a0f7681994f1811c06e7d3dffdda50",
+    "node_id": "C_kwDOOBHeMNoAKGUwMWFjZjdlYjBhMGY3NjgxOTk0ZjE4MTFjMDZlN2QzZGZmZGRhNTA",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T03:25:58Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T03:25:58Z"
+      },
+      "message": "feat: implement dashboard and login functionality with Tailwind CSS integration",
+      "tree": {
+        "sha": "8c45f783250386756f2d6f0f901b505c03f1e3c3",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/8c45f783250386756f2d6f0f901b505c03f1e3c3"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/e01acf7eb0a0f7681994f1811c06e7d3dffdda50",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/e01acf7eb0a0f7681994f1811c06e7d3dffdda50",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/e01acf7eb0a0f7681994f1811c06e7d3dffdda50",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/e01acf7eb0a0f7681994f1811c06e7d3dffdda50/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "721610d5b330e4da162b7958b6bcc8994aaf33db",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/721610d5b330e4da162b7958b6bcc8994aaf33db",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/721610d5b330e4da162b7958b6bcc8994aaf33db"
+      }
+    ]
+  },
+  {
+    "sha": "721610d5b330e4da162b7958b6bcc8994aaf33db",
+    "node_id": "C_kwDOOBHeMNoAKDcyMTYxMGQ1YjMzMGU0ZGExNjJiNzk1OGI2YmNjODk5NGFhZjMzZGI",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T02:21:35Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T02:21:35Z"
+      },
+      "message": "fix: streamline AWS CLI authentication and simplify CloudFront cache invalidation command",
+      "tree": {
+        "sha": "a005ef5dab26972d722eee70321ee8f800bac43a",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/a005ef5dab26972d722eee70321ee8f800bac43a"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/721610d5b330e4da162b7958b6bcc8994aaf33db",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/721610d5b330e4da162b7958b6bcc8994aaf33db",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/721610d5b330e4da162b7958b6bcc8994aaf33db",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/721610d5b330e4da162b7958b6bcc8994aaf33db/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "cb70f3f4d98c121e7fd5b07e6cf671c50cfdaaf6",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/cb70f3f4d98c121e7fd5b07e6cf671c50cfdaaf6",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/cb70f3f4d98c121e7fd5b07e6cf671c50cfdaaf6"
+      }
+    ]
+  },
+  {
+    "sha": "cb70f3f4d98c121e7fd5b07e6cf671c50cfdaaf6",
+    "node_id": "C_kwDOOBHeMNoAKGNiNzBmM2Y0ZDk4YzEyMWU3ZmQ1YjA3ZTZjZjY3MWM1MGNmZGFhZjY",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T02:13:09Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T02:13:09Z"
+      },
+      "message": "fix: add debug and version flags to CloudFront cache invalidation command in CI/CD workflow",
+      "tree": {
+        "sha": "151d5aac38565b7add22d83f597da6d3b5b7cb31",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/151d5aac38565b7add22d83f597da6d3b5b7cb31"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/cb70f3f4d98c121e7fd5b07e6cf671c50cfdaaf6",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/cb70f3f4d98c121e7fd5b07e6cf671c50cfdaaf6",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/cb70f3f4d98c121e7fd5b07e6cf671c50cfdaaf6",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/cb70f3f4d98c121e7fd5b07e6cf671c50cfdaaf6/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "09f571e06c41426f34e044929888eb1f8fd449e4",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/09f571e06c41426f34e044929888eb1f8fd449e4",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/09f571e06c41426f34e044929888eb1f8fd449e4"
+      }
+    ]
+  },
+  {
+    "sha": "09f571e06c41426f34e044929888eb1f8fd449e4",
+    "node_id": "C_kwDOOBHeMNoAKDA5ZjU3MWUwNmM0MTQyNmYzNGUwNDQ5Mjk4ODhlYjFmOGZkNDQ5ZTQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T02:11:23Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T02:11:23Z"
+      },
+      "message": "fix: update CloudFront cache invalidation command to use structured input with CallerReference",
+      "tree": {
+        "sha": "5c15717858efdf26e7efbc795c4bf5233fe0983d",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/5c15717858efdf26e7efbc795c4bf5233fe0983d"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/09f571e06c41426f34e044929888eb1f8fd449e4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/09f571e06c41426f34e044929888eb1f8fd449e4",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/09f571e06c41426f34e044929888eb1f8fd449e4",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/09f571e06c41426f34e044929888eb1f8fd449e4/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8544e0ae7edd0f0a888045bfce048620d259c876",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/8544e0ae7edd0f0a888045bfce048620d259c876",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/8544e0ae7edd0f0a888045bfce048620d259c876"
+      }
+    ]
+  },
+  {
+    "sha": "8544e0ae7edd0f0a888045bfce048620d259c876",
+    "node_id": "C_kwDOOBHeMNoAKDg1NDRlMGFlN2VkZDBmMGE4ODgwNDViZmNlMDQ4NjIwZDI1OWM4NzY",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T02:06:55Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T02:06:55Z"
+      },
+      "message": "fix: add AWS CLI installation step in CI/CD workflow",
+      "tree": {
+        "sha": "8fab77c8b58ee6211bddf56e1b47b7cb98e7dfb4",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/8fab77c8b58ee6211bddf56e1b47b7cb98e7dfb4"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/8544e0ae7edd0f0a888045bfce048620d259c876",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/8544e0ae7edd0f0a888045bfce048620d259c876",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/8544e0ae7edd0f0a888045bfce048620d259c876",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/8544e0ae7edd0f0a888045bfce048620d259c876/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b930060162ee90414fe19dad205745729ad01e49",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/b930060162ee90414fe19dad205745729ad01e49",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/b930060162ee90414fe19dad205745729ad01e49"
+      }
+    ]
+  },
+  {
+    "sha": "b930060162ee90414fe19dad205745729ad01e49",
+    "node_id": "C_kwDOOBHeMNoAKGI5MzAwNjAxNjJlZTkwNDE0ZmUxOWRhZDIwNTc0NTcyOWFkMDFlNDk",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T02:00:28Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T02:00:28Z"
+      },
+      "message": "fix: simplify CloudFront cache invalidation command by using --paths option",
+      "tree": {
+        "sha": "a3dbd2df032a764888355df7252c202dd01f2d1b",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/a3dbd2df032a764888355df7252c202dd01f2d1b"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/b930060162ee90414fe19dad205745729ad01e49",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/b930060162ee90414fe19dad205745729ad01e49",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/b930060162ee90414fe19dad205745729ad01e49",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/b930060162ee90414fe19dad205745729ad01e49/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7e5d1575a94b4036f23accd8343f1f0c40b46f7a",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/7e5d1575a94b4036f23accd8343f1f0c40b46f7a",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/7e5d1575a94b4036f23accd8343f1f0c40b46f7a"
+      }
+    ]
+  },
+  {
+    "sha": "7e5d1575a94b4036f23accd8343f1f0c40b46f7a",
+    "node_id": "C_kwDOOBHeMNoAKDdlNWQxNTc1YTk0YjQwMzZmMjNhY2NkODM0M2YxZjBjNDBiNDZmN2E",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T01:57:03Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T01:57:03Z"
+      },
+      "message": "fix: update CloudFront cache invalidation command to use a static caller reference",
+      "tree": {
+        "sha": "d0239ffd29251aef6af975318383bb42066241ea",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/d0239ffd29251aef6af975318383bb42066241ea"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/7e5d1575a94b4036f23accd8343f1f0c40b46f7a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/7e5d1575a94b4036f23accd8343f1f0c40b46f7a",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/7e5d1575a94b4036f23accd8343f1f0c40b46f7a",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/7e5d1575a94b4036f23accd8343f1f0c40b46f7a/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "71cb7ea590f7f4a79b1384085e280c7765b7921b",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/71cb7ea590f7f4a79b1384085e280c7765b7921b",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/71cb7ea590f7f4a79b1384085e280c7765b7921b"
+      }
+    ]
+  },
+  {
+    "sha": "71cb7ea590f7f4a79b1384085e280c7765b7921b",
+    "node_id": "C_kwDOOBHeMNoAKDcxY2I3ZWE1OTBmN2Y0YTc5YjEzODQwODVlMjgwYzc3NjViNzkyMWI",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T01:54:00Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T01:54:00Z"
+      },
+      "message": "fix: correct syntax for CloudFront cache invalidation command in CI/CD workflow",
+      "tree": {
+        "sha": "df45f945882f504f2009724d6e10f8f044dfc204",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/df45f945882f504f2009724d6e10f8f044dfc204"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/71cb7ea590f7f4a79b1384085e280c7765b7921b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/71cb7ea590f7f4a79b1384085e280c7765b7921b",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/71cb7ea590f7f4a79b1384085e280c7765b7921b",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/71cb7ea590f7f4a79b1384085e280c7765b7921b/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "3445fc6365695f77a4336a68363236b902a5f68f",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/3445fc6365695f77a4336a68363236b902a5f68f",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/3445fc6365695f77a4336a68363236b902a5f68f"
+      }
+    ]
+  },
+  {
+    "sha": "3445fc6365695f77a4336a68363236b902a5f68f",
+    "node_id": "C_kwDOOBHeMNoAKDM0NDVmYzYzNjU2OTVmNzdhNDMzNmE2ODM2MzIzNmI5MDJhNWY2OGY",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T00:05:06Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T00:05:06Z"
+      },
+      "message": "fix: update CloudFront cache invalidation command to use structured input",
+      "tree": {
+        "sha": "575b881a82d7727e90241b3410ced556d431b4f0",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/575b881a82d7727e90241b3410ced556d431b4f0"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/3445fc6365695f77a4336a68363236b902a5f68f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/3445fc6365695f77a4336a68363236b902a5f68f",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/3445fc6365695f77a4336a68363236b902a5f68f",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/3445fc6365695f77a4336a68363236b902a5f68f/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4b193e73e873045813c43db0789a005fc9a0e773",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/4b193e73e873045813c43db0789a005fc9a0e773",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/4b193e73e873045813c43db0789a005fc9a0e773"
+      }
+    ]
+  },
+  {
+    "sha": "4b193e73e873045813c43db0789a005fc9a0e773",
+    "node_id": "C_kwDOOBHeMNoAKDRiMTkzZTczZTg3MzA0NTgxM2M0M2RiMDc4OWEwMDVmYzlhMGU3NzM",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T00:01:08Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T00:01:08Z"
+      },
+      "message": "fix: update CloudFront distribution ID reference in CI/CD workflow",
+      "tree": {
+        "sha": "4db3cca527a49a8f9d6daeb429c0df0cd1a84483",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/4db3cca527a49a8f9d6daeb429c0df0cd1a84483"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/4b193e73e873045813c43db0789a005fc9a0e773",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/4b193e73e873045813c43db0789a005fc9a0e773",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/4b193e73e873045813c43db0789a005fc9a0e773",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/4b193e73e873045813c43db0789a005fc9a0e773/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8ac266d7611b7477af7bd6d9f064bacf65b68d30",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/8ac266d7611b7477af7bd6d9f064bacf65b68d30",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/8ac266d7611b7477af7bd6d9f064bacf65b68d30"
+      }
+    ]
+  },
+  {
+    "sha": "8ac266d7611b7477af7bd6d9f064bacf65b68d30",
+    "node_id": "C_kwDOOBHeMNoAKDhhYzI2NmQ3NjExYjc0NzdhZjdiZDZkOWYwNjRiYWNmNjViNjhkMzA",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T23:56:47Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T23:56:47Z"
+      },
+      "message": "```\nNo code changes detected; skipping commit.\n```",
+      "tree": {
+        "sha": "70e1cabcc36d3c6949f17eb9b543c580bed0883b",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/70e1cabcc36d3c6949f17eb9b543c580bed0883b"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/8ac266d7611b7477af7bd6d9f064bacf65b68d30",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/8ac266d7611b7477af7bd6d9f064bacf65b68d30",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/8ac266d7611b7477af7bd6d9f064bacf65b68d30",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/8ac266d7611b7477af7bd6d9f064bacf65b68d30/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0b87df5bc0d29a1d3885998539d658d0d1525ec8",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/0b87df5bc0d29a1d3885998539d658d0d1525ec8",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/0b87df5bc0d29a1d3885998539d658d0d1525ec8"
+      }
+    ]
+  },
+  {
+    "sha": "0b87df5bc0d29a1d3885998539d658d0d1525ec8",
+    "node_id": "C_kwDOOBHeMNoAKDBiODdkZjViYzBkMjlhMWQzODg1OTk4NTM5ZDY1OGQwZDE1MjVlYzg",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T23:46:18Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T23:46:18Z"
+      },
+      "message": "refactor CI/CD workflow to streamline job definitions and add deployment steps for S3 and CloudFront",
+      "tree": {
+        "sha": "4db3cca527a49a8f9d6daeb429c0df0cd1a84483",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/4db3cca527a49a8f9d6daeb429c0df0cd1a84483"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/0b87df5bc0d29a1d3885998539d658d0d1525ec8",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/0b87df5bc0d29a1d3885998539d658d0d1525ec8",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/0b87df5bc0d29a1d3885998539d658d0d1525ec8",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/0b87df5bc0d29a1d3885998539d658d0d1525ec8/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "835a98fa8e306bfae54e04b19105b784e2960b79",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/835a98fa8e306bfae54e04b19105b784e2960b79",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/835a98fa8e306bfae54e04b19105b784e2960b79"
+      }
+    ]
+  },
+  {
+    "sha": "835a98fa8e306bfae54e04b19105b784e2960b79",
+    "node_id": "C_kwDOOBHeMNoAKDgzNWE5OGZhOGUzMDZiZmFlNTRlMDRiMTkxMDViNzg0ZTI5NjBiNzk",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-03T20:43:24Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-03T20:43:24Z"
+      },
+      "message": "enhance CI/CD workflow by adding lint, type-check, and test jobs; restructure build process",
+      "tree": {
+        "sha": "7c980ed216057f981dd713a77a410ef31268b7df",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/7c980ed216057f981dd713a77a410ef31268b7df"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/835a98fa8e306bfae54e04b19105b784e2960b79",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/835a98fa8e306bfae54e04b19105b784e2960b79",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/835a98fa8e306bfae54e04b19105b784e2960b79",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/835a98fa8e306bfae54e04b19105b784e2960b79/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2816e502ca7c3694a877fe3108f97f586cacbce4",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/2816e502ca7c3694a877fe3108f97f586cacbce4",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/2816e502ca7c3694a877fe3108f97f586cacbce4"
+      }
+    ]
+  },
+  {
+    "sha": "2816e502ca7c3694a877fe3108f97f586cacbce4",
+    "node_id": "C_kwDOOBHeMNoAKDI4MTZlNTAyY2E3YzM2OTRhODc3ZmUzMTA4Zjk3ZjU4NmNhY2JjZTQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-03T20:12:17Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-03T20:12:17Z"
+      },
+      "message": "disable noUnusedLocals rule in TypeScript configuration",
+      "tree": {
+        "sha": "58eecaecd871070686ed1cd6940921e0dbb60e80",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/58eecaecd871070686ed1cd6940921e0dbb60e80"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/2816e502ca7c3694a877fe3108f97f586cacbce4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/2816e502ca7c3694a877fe3108f97f586cacbce4",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/2816e502ca7c3694a877fe3108f97f586cacbce4",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/2816e502ca7c3694a877fe3108f97f586cacbce4/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "76c6eaf3d0b4fc2e6e2861b04a7f10aa55640cf4",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/76c6eaf3d0b4fc2e6e2861b04a7f10aa55640cf4",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/76c6eaf3d0b4fc2e6e2861b04a7f10aa55640cf4"
+      }
+    ]
+  },
+  {
+    "sha": "76c6eaf3d0b4fc2e6e2861b04a7f10aa55640cf4",
+    "node_id": "C_kwDOOBHeMNoAKDc2YzZlYWYzZDBiNGZjMmU2ZTI4NjFiMDRhN2YxMGFhNTU2NDBjZjQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-03T20:10:19Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-03T20:10:19Z"
+      },
+      "message": "update tsconfig to disable noUnusedParameters rule",
+      "tree": {
+        "sha": "9eec1510d553d80d3261f40bcfba35c0c4bd4bd2",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/9eec1510d553d80d3261f40bcfba35c0c4bd4bd2"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/76c6eaf3d0b4fc2e6e2861b04a7f10aa55640cf4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/76c6eaf3d0b4fc2e6e2861b04a7f10aa55640cf4",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/76c6eaf3d0b4fc2e6e2861b04a7f10aa55640cf4",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/76c6eaf3d0b4fc2e6e2861b04a7f10aa55640cf4/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c970676cc6e179583c82043e33afaa9439c81a40",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/c970676cc6e179583c82043e33afaa9439c81a40",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/c970676cc6e179583c82043e33afaa9439c81a40"
+      }
+    ]
+  },
+  {
+    "sha": "c970676cc6e179583c82043e33afaa9439c81a40",
+    "node_id": "C_kwDOOBHeMNoAKGM5NzA2NzZjYzZlMTc5NTgzYzgyMDQzZTMzYWZhYTk0MzljODFhNDA",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-03T20:06:57Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-03T20:06:57Z"
+      },
+      "message": "add testing setup with MSW, update TypeScript configuration, and enhance .gitignore",
+      "tree": {
+        "sha": "4afcb3567ba67065b325db580a5e8f88d52161d0",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/4afcb3567ba67065b325db580a5e8f88d52161d0"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/c970676cc6e179583c82043e33afaa9439c81a40",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/c970676cc6e179583c82043e33afaa9439c81a40",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/c970676cc6e179583c82043e33afaa9439c81a40",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/c970676cc6e179583c82043e33afaa9439c81a40/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "88ec47eb6f72b36902eea6dcc051151ce3a81138",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/88ec47eb6f72b36902eea6dcc051151ce3a81138",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/88ec47eb6f72b36902eea6dcc051151ce3a81138"
+      }
+    ]
+  },
+  {
+    "sha": "88ec47eb6f72b36902eea6dcc051151ce3a81138",
+    "node_id": "C_kwDOOBHeMNoAKDg4ZWM0N2ViNmY3MmIzNjkwMmVlYTZkY2MwNTExNTFjZTNhODExMzg",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-01T01:18:53Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-01T01:18:53Z"
+      },
+      "message": "Revert \"add VSCode extensions recommendations for ESLint\"\n\nThis reverts commit 0e9b406752c2dbb187bee169864308f12995498d.",
+      "tree": {
+        "sha": "b5f8ce23900faffaea2678a93aed2c05a4259e79",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/b5f8ce23900faffaea2678a93aed2c05a4259e79"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/88ec47eb6f72b36902eea6dcc051151ce3a81138",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/88ec47eb6f72b36902eea6dcc051151ce3a81138",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/88ec47eb6f72b36902eea6dcc051151ce3a81138",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/88ec47eb6f72b36902eea6dcc051151ce3a81138/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0e9b406752c2dbb187bee169864308f12995498d",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/0e9b406752c2dbb187bee169864308f12995498d",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/0e9b406752c2dbb187bee169864308f12995498d"
+      }
+    ]
+  },
+  {
+    "sha": "0e9b406752c2dbb187bee169864308f12995498d",
+    "node_id": "C_kwDOOBHeMNoAKDBlOWI0MDY3NTJjMmRiYjE4N2JlZTE2OTg2NDMwOGYxMjk5NTQ5OGQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-02-28T18:23:39Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-02-28T18:23:39Z"
+      },
+      "message": "add VSCode extensions recommendations for ESLint",
+      "tree": {
+        "sha": "45b24f07c06bf8c15081c738e989e65d2a2dd4ad",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/45b24f07c06bf8c15081c738e989e65d2a2dd4ad"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/0e9b406752c2dbb187bee169864308f12995498d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/0e9b406752c2dbb187bee169864308f12995498d",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/0e9b406752c2dbb187bee169864308f12995498d",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/0e9b406752c2dbb187bee169864308f12995498d/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "344817e897ddb2801a6e30107473183008647401",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/344817e897ddb2801a6e30107473183008647401",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/344817e897ddb2801a6e30107473183008647401"
+      }
+    ]
+  },
+  {
+    "sha": "344817e897ddb2801a6e30107473183008647401",
+    "node_id": "C_kwDOOBHeMNoAKDM0NDgxN2U4OTdkZGIyODAxYTZlMzAxMDc0NzMxODMwMDg2NDc0MDE",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-02-28T18:01:59Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-02-28T18:01:59Z"
+      },
+      "message": "refactor ESLint configuration, add Prettier integration, and update code formatting",
+      "tree": {
+        "sha": "b5f8ce23900faffaea2678a93aed2c05a4259e79",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/b5f8ce23900faffaea2678a93aed2c05a4259e79"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/344817e897ddb2801a6e30107473183008647401",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/344817e897ddb2801a6e30107473183008647401",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/344817e897ddb2801a6e30107473183008647401",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/344817e897ddb2801a6e30107473183008647401/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c174bbf398ce4d30312d75c984110d9ef8714d1f",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/c174bbf398ce4d30312d75c984110d9ef8714d1f",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/c174bbf398ce4d30312d75c984110d9ef8714d1f"
+      }
+    ]
+  },
+  {
+    "sha": "c174bbf398ce4d30312d75c984110d9ef8714d1f",
+    "node_id": "C_kwDOOBHeMNoAKGMxNzRiYmYzOThjZTRkMzAzMTJkNzVjOTg0MTEwZDllZjg3MTRkMWY",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-02-28T17:01:20Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-02-28T17:01:20Z"
+      },
+      "message": "add ESLint configuration and update dependencies for TypeScript and React",
+      "tree": {
+        "sha": "5f5949e110192ba60a3849f7fa830ce35a974a3c",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/5f5949e110192ba60a3849f7fa830ce35a974a3c"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/c174bbf398ce4d30312d75c984110d9ef8714d1f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/c174bbf398ce4d30312d75c984110d9ef8714d1f",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/c174bbf398ce4d30312d75c984110d9ef8714d1f",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/c174bbf398ce4d30312d75c984110d9ef8714d1f/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "82bca0a3160859bdb18590529794e27cc77e6fd4",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/82bca0a3160859bdb18590529794e27cc77e6fd4",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/82bca0a3160859bdb18590529794e27cc77e6fd4"
+      }
+    ]
+  },
+  {
+    "sha": "82bca0a3160859bdb18590529794e27cc77e6fd4",
+    "node_id": "C_kwDOOBHeMNoAKDgyYmNhMGEzMTYwODU5YmRiMTg1OTA1Mjk3OTRlMjdjYzc3ZTZmZDQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-02-28T16:34:25Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-02-28T16:34:25Z"
+      },
+      "message": "initialize React + TypeScript + Vite project with basic configuration and structure",
+      "tree": {
+        "sha": "7a3d0ff04831335655e2814216e79115a92cced2",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/trees/7a3d0ff04831335655e2814216e79115a92cced2"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/git/commits/82bca0a3160859bdb18590529794e27cc77e6fd4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/82bca0a3160859bdb18590529794e27cc77e6fd4",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/82bca0a3160859bdb18590529794e27cc77e6fd4",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/82bca0a3160859bdb18590529794e27cc77e6fd4/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "41bd2c2cadbf0d1a986fa0e5809ddc1a245497d7",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/RRLM-Frontend/commits/41bd2c2cadbf0d1a986fa0e5809ddc1a245497d7",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/RRLM-Frontend/commit/41bd2c2cadbf0d1a986fa0e5809ddc1a245497d7"
+      }
+    ]
+  }
+]

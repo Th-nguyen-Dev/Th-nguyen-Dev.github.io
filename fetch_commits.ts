@@ -77,7 +77,7 @@ if (!fs.existsSync(DATA_DIR)) {
 }
 
 // Import the content.json data
-const content = JSON.parse(fs.readFileSync("src/content.json", "utf-8"));
+const content = JSON.parse(fs.readFileSync("src/data/projects.json", "utf-8"));
 
 async function fetchAndSaveCommits() {
   for (const milestone of content) {
@@ -89,7 +89,7 @@ async function fetchAndSaveCommits() {
 
     try {
       const response = await fetch(
-        `https://api.github.com/repos/${owner}/${repo}/commits?sha=${branch}`,
+        `https://api.github.com/repos/${owner}/${repo}/commits?sha=${branch}&per_page=100`,
         {
           headers: {
             Authorization: `Bearer ${GITHUB_TOKEN}`,
@@ -104,7 +104,7 @@ async function fetchAndSaveCommits() {
         // Filter out commits by Ryan Nguyen
         data = data.filter(
           (commit) =>
-            commit.commit.author.email == "th.nguyen.developer@gmail.com",
+            commit.commit.committer.email == "th.nguyen.developer@gmail.com",
         );
         console.log(
           `Filtered out commits by Ryan Nguyen, ${data.length} commits remaining`,

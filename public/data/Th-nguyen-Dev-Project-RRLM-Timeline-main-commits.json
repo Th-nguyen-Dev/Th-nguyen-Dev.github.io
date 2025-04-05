@@ -1,0 +1,1313 @@
+[
+  {
+    "sha": "22b657baaa1a00d7724354a02df3b4581f6a00ac",
+    "node_id": "C_kwDOOQhmHNoAKDIyYjY1N2JhYWExYTAwZDc3MjQzNTRhMDJkZjNiNDU4MWY2YTAwYWM",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-31T02:49:48Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-31T02:49:48Z"
+      },
+      "message": "Update content.json descriptions and refactor Milestone component to handle array of descriptions",
+      "tree": {
+        "sha": "0c66262a1f821be148f3b12a1ef407d8fb9aa5a4",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/0c66262a1f821be148f3b12a1ef407d8fb9aa5a4"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/22b657baaa1a00d7724354a02df3b4581f6a00ac",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/22b657baaa1a00d7724354a02df3b4581f6a00ac",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/22b657baaa1a00d7724354a02df3b4581f6a00ac",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/22b657baaa1a00d7724354a02df3b4581f6a00ac/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "67054179f2ecfae0804d7ceecc27e88b96f8a033",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/67054179f2ecfae0804d7ceecc27e88b96f8a033",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/67054179f2ecfae0804d7ceecc27e88b96f8a033"
+      }
+    ]
+  },
+  {
+    "sha": "67054179f2ecfae0804d7ceecc27e88b96f8a033",
+    "node_id": "C_kwDOOQhmHNoAKDY3MDU0MTc5ZjJlY2ZhZTA4MDRkN2NlZWNjMjdlODhiOTZmOGEwMzM",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-31T01:47:12Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-31T01:47:12Z"
+      },
+      "message": "Remove unused contribution data file and enhance Milestone component layout and data transformation",
+      "tree": {
+        "sha": "76e6cff1427985e6b8ab1b8243ffcbdf7f2581ab",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/76e6cff1427985e6b8ab1b8243ffcbdf7f2581ab"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/67054179f2ecfae0804d7ceecc27e88b96f8a033",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/67054179f2ecfae0804d7ceecc27e88b96f8a033",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/67054179f2ecfae0804d7ceecc27e88b96f8a033",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/67054179f2ecfae0804d7ceecc27e88b96f8a033/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "85b04bc57332cfdd2c25a33ca78710444810e1f3",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/85b04bc57332cfdd2c25a33ca78710444810e1f3",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/85b04bc57332cfdd2c25a33ca78710444810e1f3"
+      }
+    ]
+  },
+  {
+    "sha": "85b04bc57332cfdd2c25a33ca78710444810e1f3",
+    "node_id": "C_kwDOOQhmHNoAKDg1YjA0YmM1NzMzMmNmZGQyYzI1YTMzY2E3ODcxMDQ0NDgxMGUxZjM",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-31T00:58:22Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-31T00:58:22Z"
+      },
+      "message": "Fix typos in content.json subtitles for clarity and consistency",
+      "tree": {
+        "sha": "719b2a844c09afaee642e2bcd67cc5871245e05f",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/719b2a844c09afaee642e2bcd67cc5871245e05f"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/85b04bc57332cfdd2c25a33ca78710444810e1f3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/85b04bc57332cfdd2c25a33ca78710444810e1f3",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/85b04bc57332cfdd2c25a33ca78710444810e1f3",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/85b04bc57332cfdd2c25a33ca78710444810e1f3/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ec4dc1be510268e056421d86b6204bdc6d75f7a1",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/ec4dc1be510268e056421d86b6204bdc6d75f7a1",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/ec4dc1be510268e056421d86b6204bdc6d75f7a1"
+      }
+    ]
+  },
+  {
+    "sha": "ec4dc1be510268e056421d86b6204bdc6d75f7a1",
+    "node_id": "C_kwDOOQhmHNoAKGVjNGRjMWJlNTEwMjY4ZTA1NjQyMWQ4NmI2MjA0YmRjNmQ3NWY3YTE",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-31T00:01:26Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-31T00:01:26Z"
+      },
+      "message": "Refactor Milestone component to remove commented-out code and improve type annotations in data transformation",
+      "tree": {
+        "sha": "b50db3024b98a1124ab7a745ef1c898e31750e7a",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/b50db3024b98a1124ab7a745ef1c898e31750e7a"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/ec4dc1be510268e056421d86b6204bdc6d75f7a1",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/ec4dc1be510268e056421d86b6204bdc6d75f7a1",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/ec4dc1be510268e056421d86b6204bdc6d75f7a1",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/ec4dc1be510268e056421d86b6204bdc6d75f7a1/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e475d30b3b546f24da5424fa8d489f36494f9070",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/e475d30b3b546f24da5424fa8d489f36494f9070",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/e475d30b3b546f24da5424fa8d489f36494f9070"
+      }
+    ]
+  },
+  {
+    "sha": "e475d30b3b546f24da5424fa8d489f36494f9070",
+    "node_id": "C_kwDOOQhmHNoAKGU0NzVkMzBiM2I1NDZmMjRkYTU0MjRmYThkNDg5ZjM2NDk0ZjkwNzA",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-30T23:58:21Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-30T23:58:21Z"
+      },
+      "message": "Add recharts dependency, update chart colors to pure red and green, and add contribution data files",
+      "tree": {
+        "sha": "e50178ca0e308359796be3755f6b638f6b6a9e08",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/e50178ca0e308359796be3755f6b638f6b6a9e08"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/e475d30b3b546f24da5424fa8d489f36494f9070",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/e475d30b3b546f24da5424fa8d489f36494f9070",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/e475d30b3b546f24da5424fa8d489f36494f9070",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/e475d30b3b546f24da5424fa8d489f36494f9070/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "641395e9e9bf39b7387869ae4e410fe8b0a53513",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/641395e9e9bf39b7387869ae4e410fe8b0a53513",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/641395e9e9bf39b7387869ae4e410fe8b0a53513"
+      }
+    ]
+  },
+  {
+    "sha": "641395e9e9bf39b7387869ae4e410fe8b0a53513",
+    "node_id": "C_kwDOOQhmHNoAKDY0MTM5NWU5ZTliZjM5YjczODc4NjlhZTRlNDEwZmU4YjBhNTM1MTM",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T09:24:46Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T09:24:46Z"
+      },
+      "message": "Remove unnecessary React import from App component",
+      "tree": {
+        "sha": "58b23168851db5069b722da1f866bd21bd2fe765",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/58b23168851db5069b722da1f866bd21bd2fe765"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/641395e9e9bf39b7387869ae4e410fe8b0a53513",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/641395e9e9bf39b7387869ae4e410fe8b0a53513",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/641395e9e9bf39b7387869ae4e410fe8b0a53513",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/641395e9e9bf39b7387869ae4e410fe8b0a53513/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c3e55378c9c4c02cb5d0057df629aa60bb830328",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/c3e55378c9c4c02cb5d0057df629aa60bb830328",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/c3e55378c9c4c02cb5d0057df629aa60bb830328"
+      }
+    ]
+  },
+  {
+    "sha": "c3e55378c9c4c02cb5d0057df629aa60bb830328",
+    "node_id": "C_kwDOOQhmHNoAKGMzZTU1Mzc4YzljNGMwMmNiNWQwMDU3ZGY2MjlhYTYwYmI4MzAzMjg",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T09:23:28Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T09:23:28Z"
+      },
+      "message": "Refactor Milestone component to remove unused auth_token prop and enhance error handling in fetchCommits function",
+      "tree": {
+        "sha": "83a8e9a12a25a88690853a4688c1f93739c7d21f",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/83a8e9a12a25a88690853a4688c1f93739c7d21f"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/c3e55378c9c4c02cb5d0057df629aa60bb830328",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/c3e55378c9c4c02cb5d0057df629aa60bb830328",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/c3e55378c9c4c02cb5d0057df629aa60bb830328",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/c3e55378c9c4c02cb5d0057df629aa60bb830328/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "33b1792bc1e93557855844b2804101e0f46b3f5d",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/33b1792bc1e93557855844b2804101e0f46b3f5d",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/33b1792bc1e93557855844b2804101e0f46b3f5d"
+      }
+    ]
+  },
+  {
+    "sha": "33b1792bc1e93557855844b2804101e0f46b3f5d",
+    "node_id": "C_kwDOOQhmHNoAKDMzYjE3OTJiYzFlOTM1NTc4NTU4NDRiMjgwNDEwMWUwZjQ2YjNmNWQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T09:20:10Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T09:20:10Z"
+      },
+      "message": "Update build script in package.json and modify GitHub Actions workflow to use updated token secret",
+      "tree": {
+        "sha": "8e13ee4282c4abf422574f908fbbb751db27417b",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/8e13ee4282c4abf422574f908fbbb751db27417b"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/33b1792bc1e93557855844b2804101e0f46b3f5d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/33b1792bc1e93557855844b2804101e0f46b3f5d",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/33b1792bc1e93557855844b2804101e0f46b3f5d",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/33b1792bc1e93557855844b2804101e0f46b3f5d/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7bcdf4fc028d5a12571359c5f993470a2b8b2958",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/7bcdf4fc028d5a12571359c5f993470a2b8b2958",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/7bcdf4fc028d5a12571359c5f993470a2b8b2958"
+      }
+    ]
+  },
+  {
+    "sha": "7bcdf4fc028d5a12571359c5f993470a2b8b2958",
+    "node_id": "C_kwDOOQhmHNoAKDdiY2RmNGZjMDI4ZDVhMTI1NzEzNTljNWY5OTM0NzBhMmI4YjI5NTg",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T09:18:09Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T09:18:09Z"
+      },
+      "message": "Add fetch_commits script, update App component imports, and modify tsconfig for new file inclusion",
+      "tree": {
+        "sha": "f5c7af08c7df7d192b9cab6fa0653835ebfba13d",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/f5c7af08c7df7d192b9cab6fa0653835ebfba13d"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/7bcdf4fc028d5a12571359c5f993470a2b8b2958",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/7bcdf4fc028d5a12571359c5f993470a2b8b2958",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/7bcdf4fc028d5a12571359c5f993470a2b8b2958",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/7bcdf4fc028d5a12571359c5f993470a2b8b2958/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8cb7661d0957d79004c533984fbd095969504381",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/8cb7661d0957d79004c533984fbd095969504381",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/8cb7661d0957d79004c533984fbd095969504381"
+      }
+    ]
+  },
+  {
+    "sha": "8cb7661d0957d79004c533984fbd095969504381",
+    "node_id": "C_kwDOOQhmHNoAKDhjYjc2NjFkMDk1N2Q3OTAwNGM1MzM5ODRmYmQwOTU5Njk1MDQzODE",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T08:58:11Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T08:58:11Z"
+      },
+      "message": "Update .gitignore, enhance GitHub Actions workflow, and refactor App component for improved structure and functionality",
+      "tree": {
+        "sha": "8463b71efc2a89f80064ed4e0f57c8802c549c4c",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/8463b71efc2a89f80064ed4e0f57c8802c549c4c"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/8cb7661d0957d79004c533984fbd095969504381",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/8cb7661d0957d79004c533984fbd095969504381",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/8cb7661d0957d79004c533984fbd095969504381",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/8cb7661d0957d79004c533984fbd095969504381/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "de8bc89094d14cdfca35bc494f3f558d71638701",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/de8bc89094d14cdfca35bc494f3f558d71638701",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/de8bc89094d14cdfca35bc494f3f558d71638701"
+      }
+    ]
+  },
+  {
+    "sha": "de8bc89094d14cdfca35bc494f3f558d71638701",
+    "node_id": "C_kwDOOQhmHNoAKGRlOGJjODkwOTRkMTRjZGZjYTM1YmM0OTRmM2Y1NThkNzE2Mzg3MDE",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T04:08:00Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T04:08:00Z"
+      },
+      "message": "Remove unnecessary React import from App component",
+      "tree": {
+        "sha": "3cd6c8f7a3181a18f8d4281574c0662e4f11a6ec",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/3cd6c8f7a3181a18f8d4281574c0662e4f11a6ec"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/de8bc89094d14cdfca35bc494f3f558d71638701",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/de8bc89094d14cdfca35bc494f3f558d71638701",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/de8bc89094d14cdfca35bc494f3f558d71638701",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/de8bc89094d14cdfca35bc494f3f558d71638701/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e034fd2bd507a3d5b09c1c2e59520951ad61354e",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/e034fd2bd507a3d5b09c1c2e59520951ad61354e",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/e034fd2bd507a3d5b09c1c2e59520951ad61354e"
+      }
+    ]
+  },
+  {
+    "sha": "e034fd2bd507a3d5b09c1c2e59520951ad61354e",
+    "node_id": "C_kwDOOQhmHNoAKGUwMzRmZDJiZDUwN2EzZDViMDljMWMyZTU5NTIwOTUxYWQ2MTM1NGU",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T04:06:59Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T04:06:59Z"
+      },
+      "message": "Refactor App component by removing unused CardAction and CardFooter imports",
+      "tree": {
+        "sha": "21bf1115219c6d4f3bdd5c17ec423cb9e8eb477b",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/21bf1115219c6d4f3bdd5c17ec423cb9e8eb477b"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/e034fd2bd507a3d5b09c1c2e59520951ad61354e",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/e034fd2bd507a3d5b09c1c2e59520951ad61354e",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/e034fd2bd507a3d5b09c1c2e59520951ad61354e",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/e034fd2bd507a3d5b09c1c2e59520951ad61354e/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "416e18a6326b706af9fb42447b48add2e0f80755",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/416e18a6326b706af9fb42447b48add2e0f80755",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/416e18a6326b706af9fb42447b48add2e0f80755"
+      }
+    ]
+  },
+  {
+    "sha": "416e18a6326b706af9fb42447b48add2e0f80755",
+    "node_id": "C_kwDOOQhmHNoAKDQxNmUxOGE2MzI2YjcwNmFmOWZiNDI0NDdiNDhhZGQyZTBmODA3NTU",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T04:05:31Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T04:05:31Z"
+      },
+      "message": "Add utility functions and UI components with Tailwind CSS integration",
+      "tree": {
+        "sha": "058803dee7d6c8e6a72a3976cd77fe5739c2cd06",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/058803dee7d6c8e6a72a3976cd77fe5739c2cd06"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/416e18a6326b706af9fb42447b48add2e0f80755",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/416e18a6326b706af9fb42447b48add2e0f80755",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/416e18a6326b706af9fb42447b48add2e0f80755",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/416e18a6326b706af9fb42447b48add2e0f80755/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "12c5968cce1d68e01a0b04ae728f633182049f29",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/12c5968cce1d68e01a0b04ae728f633182049f29",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/12c5968cce1d68e01a0b04ae728f633182049f29"
+      }
+    ]
+  },
+  {
+    "sha": "12c5968cce1d68e01a0b04ae728f633182049f29",
+    "node_id": "C_kwDOOQhmHNoAKDEyYzU5NjhjY2UxZDY4ZTAxYTBiMDRhZTcyOGY2MzMxODIwNDlmMjk",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T01:38:32Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T01:38:32Z"
+      },
+      "message": "Merge remote-tracking branch 'refs/remotes/origin/main'",
+      "tree": {
+        "sha": "e064577e28dbce220ce419ae576ccb1f70aaf741",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/e064577e28dbce220ce419ae576ccb1f70aaf741"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/12c5968cce1d68e01a0b04ae728f633182049f29",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/12c5968cce1d68e01a0b04ae728f633182049f29",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/12c5968cce1d68e01a0b04ae728f633182049f29",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/12c5968cce1d68e01a0b04ae728f633182049f29/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "9978835be01c821350a326324c87f8d3b354010a",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/9978835be01c821350a326324c87f8d3b354010a",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/9978835be01c821350a326324c87f8d3b354010a"
+      },
+      {
+        "sha": "1903d5f2c7698d8b64d0ac5c3226b18033569fd4",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/1903d5f2c7698d8b64d0ac5c3226b18033569fd4",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/1903d5f2c7698d8b64d0ac5c3226b18033569fd4"
+      }
+    ]
+  },
+  {
+    "sha": "9978835be01c821350a326324c87f8d3b354010a",
+    "node_id": "C_kwDOOQhmHNoAKDk5Nzg4MzViZTAxYzgyMTM1MGEzMjYzMjRjODdmOGQzYjM1NDAxMGE",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T01:38:16Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T01:38:16Z"
+      },
+      "message": "Set base path for project deployment",
+      "tree": {
+        "sha": "dbb8e3cf952e12ba731b87538d87058902dfaa95",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/dbb8e3cf952e12ba731b87538d87058902dfaa95"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/9978835be01c821350a326324c87f8d3b354010a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/9978835be01c821350a326324c87f8d3b354010a",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/9978835be01c821350a326324c87f8d3b354010a",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/9978835be01c821350a326324c87f8d3b354010a/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "cf5805949dcc421d87aa2ed36dd829a302a36e9c",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/cf5805949dcc421d87aa2ed36dd829a302a36e9c",
+        "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/cf5805949dcc421d87aa2ed36dd829a302a36e9c"
+      }
+    ]
+  },
+  {
+    "sha": "cf5805949dcc421d87aa2ed36dd829a302a36e9c",
+    "node_id": "C_kwDOOQhmHNoAKGNmNTgwNTk0OWRjYzQyMWQ4N2FhMmVkMzZkZDgyOWEzMDJhMzZlOWM",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T01:25:03Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-29T01:25:03Z"
+      },
+      "message": "Initial Commit",
+      "tree": {
+        "sha": "0657c815367e2d13d684a4bf3bce28c255104859",
+        "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/trees/0657c815367e2d13d684a4bf3bce28c255104859"
+      },
+      "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/git/commits/cf5805949dcc421d87aa2ed36dd829a302a36e9c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/cf5805949dcc421d87aa2ed36dd829a302a36e9c",
+    "html_url": "https://github.com/Th-nguyen-Dev/Project-RRLM-Timeline/commit/cf5805949dcc421d87aa2ed36dd829a302a36e9c",
+    "comments_url": "https://api.github.com/repos/Th-nguyen-Dev/Project-RRLM-Timeline/commits/cf5805949dcc421d87aa2ed36dd829a302a36e9c/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": []
+  }
+]

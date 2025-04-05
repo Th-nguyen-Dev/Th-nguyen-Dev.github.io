@@ -1,0 +1,1560 @@
+[
+  {
+    "sha": "58994cd13c1d1b7cc71eb671b406eeb35a50a97b",
+    "node_id": "C_kwDONJTxLdoAKDU4OTk0Y2QxM2MxZDFiN2NjNzFlYjY3MWI0MDZlZWIzNWE1MGE5N2I",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-11T18:37:58Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-11T18:37:58Z"
+      },
+      "message": "Refactor chat prompt for math tutoring and enhance CORS settings in server configuration",
+      "tree": {
+        "sha": "f8316516367bdc453f69488acfbfd01791b6228f",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/f8316516367bdc453f69488acfbfd01791b6228f"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/58994cd13c1d1b7cc71eb671b406eeb35a50a97b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/58994cd13c1d1b7cc71eb671b406eeb35a50a97b",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/58994cd13c1d1b7cc71eb671b406eeb35a50a97b",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/58994cd13c1d1b7cc71eb671b406eeb35a50a97b/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2c00407248de5743188ac3e9a5fb1943274f12f7",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/2c00407248de5743188ac3e9a5fb1943274f12f7",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/2c00407248de5743188ac3e9a5fb1943274f12f7"
+      }
+    ]
+  },
+  {
+    "sha": "2c00407248de5743188ac3e9a5fb1943274f12f7",
+    "node_id": "C_kwDONJTxLdoAKDJjMDA0MDcyNDhkZTU3NDMxODhhYzNlOWE1ZmIxOTQzMjc0ZjEyZjc",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T23:21:06Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-05T23:21:06Z"
+      },
+      "message": "Update database path and change server port to 9990 in backend and frontend configurations",
+      "tree": {
+        "sha": "c726513bbacfb8a1a0b6ae5d9e58690ad9b52353",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/c726513bbacfb8a1a0b6ae5d9e58690ad9b52353"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/2c00407248de5743188ac3e9a5fb1943274f12f7",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/2c00407248de5743188ac3e9a5fb1943274f12f7",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/2c00407248de5743188ac3e9a5fb1943274f12f7",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/2c00407248de5743188ac3e9a5fb1943274f12f7/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c3b3144dccb283aca9a63bac2e660d4c2ec24f5f",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/c3b3144dccb283aca9a63bac2e660d4c2ec24f5f",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/c3b3144dccb283aca9a63bac2e660d4c2ec24f5f"
+      }
+    ]
+  },
+  {
+    "sha": "c3b3144dccb283aca9a63bac2e660d4c2ec24f5f",
+    "node_id": "C_kwDONJTxLdoAKGMzYjMxNDRkY2NiMjgzYWNhOWE2M2JhYzJlNjYwZDRjMmVjMjRmNWY",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T19:40:44Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T19:40:44Z"
+      },
+      "message": "Update server port from 8000 to 9000 in backend and frontend configurations",
+      "tree": {
+        "sha": "fe8910d0f0139705fc2d92752948b1937e869d0a",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/fe8910d0f0139705fc2d92752948b1937e869d0a"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/c3b3144dccb283aca9a63bac2e660d4c2ec24f5f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/c3b3144dccb283aca9a63bac2e660d4c2ec24f5f",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/c3b3144dccb283aca9a63bac2e660d4c2ec24f5f",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/c3b3144dccb283aca9a63bac2e660d4c2ec24f5f/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "9c761b3fc86cc83c519976df55eab40aebce5918",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/9c761b3fc86cc83c519976df55eab40aebce5918",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/9c761b3fc86cc83c519976df55eab40aebce5918"
+      }
+    ]
+  },
+  {
+    "sha": "9c761b3fc86cc83c519976df55eab40aebce5918",
+    "node_id": "C_kwDONJTxLdoAKDljNzYxYjNmYzg2Y2M4M2M1MTk5NzZkZjU1ZWFiNDBhZWJjZTU5MTg",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T18:44:37Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T18:44:37Z"
+      },
+      "message": "Add Python integration and update chat services to use PythonBridge",
+      "tree": {
+        "sha": "070bef600b8a5f074d6f24ac10164f04f0924717",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/070bef600b8a5f074d6f24ac10164f04f0924717"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/9c761b3fc86cc83c519976df55eab40aebce5918",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/9c761b3fc86cc83c519976df55eab40aebce5918",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/9c761b3fc86cc83c519976df55eab40aebce5918",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/9c761b3fc86cc83c519976df55eab40aebce5918/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e58e73e3faf928aad54a60533e7c29b505c1d176",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/e58e73e3faf928aad54a60533e7c29b505c1d176",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/e58e73e3faf928aad54a60533e7c29b505c1d176"
+      }
+    ]
+  },
+  {
+    "sha": "e58e73e3faf928aad54a60533e7c29b505c1d176",
+    "node_id": "C_kwDONJTxLdoAKGU1OGU3M2UzZmFmOTI4YWFkNTRhNjA1MzNlN2MyOWI1MDVjMWQxNzY",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T17:20:22Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T17:20:22Z"
+      },
+      "message": "Comment out PostgreSQL database initialization code in main.go",
+      "tree": {
+        "sha": "9fe9229119af296a01e6aadafb53e4da64e71712",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/9fe9229119af296a01e6aadafb53e4da64e71712"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/e58e73e3faf928aad54a60533e7c29b505c1d176",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/e58e73e3faf928aad54a60533e7c29b505c1d176",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/e58e73e3faf928aad54a60533e7c29b505c1d176",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/e58e73e3faf928aad54a60533e7c29b505c1d176/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "627b06f037938da07df9dc12eac1f6221b1103a7",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/627b06f037938da07df9dc12eac1f6221b1103a7",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/627b06f037938da07df9dc12eac1f6221b1103a7"
+      }
+    ]
+  },
+  {
+    "sha": "627b06f037938da07df9dc12eac1f6221b1103a7",
+    "node_id": "C_kwDONJTxLdoAKDYyN2IwNmYwMzc5MzhkYTA3ZGY5ZGMxMmVhYzFmNjIyMWIxMTAzYTc",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T17:15:26Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T17:15:26Z"
+      },
+      "message": "Update server port from 8080 to 8000 in backend and frontend configuration",
+      "tree": {
+        "sha": "920053082627f07d3b351f2e67069f0e54e632a1",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/920053082627f07d3b351f2e67069f0e54e632a1"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/627b06f037938da07df9dc12eac1f6221b1103a7",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/627b06f037938da07df9dc12eac1f6221b1103a7",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/627b06f037938da07df9dc12eac1f6221b1103a7",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/627b06f037938da07df9dc12eac1f6221b1103a7/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2de5387e515877da7b2ca50c6b87f4a690d5b02f",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/2de5387e515877da7b2ca50c6b87f4a690d5b02f",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/2de5387e515877da7b2ca50c6b87f4a690d5b02f"
+      }
+    ]
+  },
+  {
+    "sha": "2de5387e515877da7b2ca50c6b87f4a690d5b02f",
+    "node_id": "C_kwDONJTxLdoAKDJkZTUzODdlNTE1ODc3ZGE3YjJjYTUwYzZiODdmNGE2OTBkNWIwMmY",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T00:28:40Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-04T00:28:40Z"
+      },
+      "message": "Comment out unused methods in ChatHandlers and ChatService interfaces",
+      "tree": {
+        "sha": "1806dd9ec8afb4b262ca2eeb9c2c895ef6fec7f8",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/1806dd9ec8afb4b262ca2eeb9c2c895ef6fec7f8"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/2de5387e515877da7b2ca50c6b87f4a690d5b02f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/2de5387e515877da7b2ca50c6b87f4a690d5b02f",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/2de5387e515877da7b2ca50c6b87f4a690d5b02f",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/2de5387e515877da7b2ca50c6b87f4a690d5b02f/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a8f75c97215373646e0e52a8edc503b7250ddf7c",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/a8f75c97215373646e0e52a8edc503b7250ddf7c",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/a8f75c97215373646e0e52a8edc503b7250ddf7c"
+      }
+    ]
+  },
+  {
+    "sha": "a8f75c97215373646e0e52a8edc503b7250ddf7c",
+    "node_id": "C_kwDONJTxLdoAKGE4Zjc1Yzk3MjE1MzczNjQ2ZTBlNTJhOGVkYzUwM2I3MjUwZGRmN2M",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-03T20:58:50Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2025-03-03T20:58:50Z"
+      },
+      "message": "Code moved from old repository to new official repository",
+      "tree": {
+        "sha": "728631f78c838f12e55be2332afdb47532883a44",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/728631f78c838f12e55be2332afdb47532883a44"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/a8f75c97215373646e0e52a8edc503b7250ddf7c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/a8f75c97215373646e0e52a8edc503b7250ddf7c",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/a8f75c97215373646e0e52a8edc503b7250ddf7c",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/a8f75c97215373646e0e52a8edc503b7250ddf7c/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7494dc8859e29cf2196ef1b6e839451960b6cdcd",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/7494dc8859e29cf2196ef1b6e839451960b6cdcd",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/7494dc8859e29cf2196ef1b6e839451960b6cdcd"
+      }
+    ]
+  },
+  {
+    "sha": "7494dc8859e29cf2196ef1b6e839451960b6cdcd",
+    "node_id": "C_kwDONJTxLdoAKDc0OTRkYzg4NTllMjljZjIxOTZlZjFiNmU4Mzk0NTE5NjBiNmNkY2Q",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-20T13:24:10Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-20T13:24:10Z"
+      },
+      "message": "export to pdf",
+      "tree": {
+        "sha": "89a453ef2a3704bd8bbd35815b6b27dc5747d76e",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/89a453ef2a3704bd8bbd35815b6b27dc5747d76e"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/7494dc8859e29cf2196ef1b6e839451960b6cdcd",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/7494dc8859e29cf2196ef1b6e839451960b6cdcd",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/7494dc8859e29cf2196ef1b6e839451960b6cdcd",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/7494dc8859e29cf2196ef1b6e839451960b6cdcd/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "dda3b51996b5158d9cf6dbf7d7beb27063085323",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/dda3b51996b5158d9cf6dbf7d7beb27063085323",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/dda3b51996b5158d9cf6dbf7d7beb27063085323"
+      }
+    ]
+  },
+  {
+    "sha": "dda3b51996b5158d9cf6dbf7d7beb27063085323",
+    "node_id": "C_kwDONJTxLdoAKGRkYTNiNTE5OTZiNTE1OGQ5Y2Y2ZGJmN2Q3YmViMjcwNjMwODUzMjM",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-20T13:23:43Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-20T13:23:43Z"
+      },
+      "message": "Update Component_Contracts to accurately document the contracts between the frontend and backend",
+      "tree": {
+        "sha": "7bd16c9dc1d59c9d8e00bf591d6c09c8f6aeb78a",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/7bd16c9dc1d59c9d8e00bf591d6c09c8f6aeb78a"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/dda3b51996b5158d9cf6dbf7d7beb27063085323",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/dda3b51996b5158d9cf6dbf7d7beb27063085323",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/dda3b51996b5158d9cf6dbf7d7beb27063085323",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/dda3b51996b5158d9cf6dbf7d7beb27063085323/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6da431460a9814cf00160e1ff9013e858a3196c3",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/6da431460a9814cf00160e1ff9013e858a3196c3",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/6da431460a9814cf00160e1ff9013e858a3196c3"
+      }
+    ]
+  },
+  {
+    "sha": "6da431460a9814cf00160e1ff9013e858a3196c3",
+    "node_id": "C_kwDONJTxLdoAKDZkYTQzMTQ2MGE5ODE0Y2YwMDE2MGUxZmY5MDEzZTg1OGEzMTk2YzM",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-19T23:14:40Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-19T23:14:40Z"
+      },
+      "message": "put in the functional requirements file",
+      "tree": {
+        "sha": "3bd8b5fd1ba9efd1be0aa3b02ff0a2e0388660a3",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/3bd8b5fd1ba9efd1be0aa3b02ff0a2e0388660a3"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/6da431460a9814cf00160e1ff9013e858a3196c3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/6da431460a9814cf00160e1ff9013e858a3196c3",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/6da431460a9814cf00160e1ff9013e858a3196c3",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/6da431460a9814cf00160e1ff9013e858a3196c3/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d6b92c8447f4251ed5f3e1034ec2725244c7ea06",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/d6b92c8447f4251ed5f3e1034ec2725244c7ea06",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/d6b92c8447f4251ed5f3e1034ec2725244c7ea06"
+      }
+    ]
+  },
+  {
+    "sha": "d6b92c8447f4251ed5f3e1034ec2725244c7ea06",
+    "node_id": "C_kwDONJTxLdoAKGQ2YjkyYzg0NDdmNDI1MWVkNWYzZTEwMzRlYzI3MjUyNDRjN2VhMDY",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-19T22:47:04Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-19T22:47:04Z"
+      },
+      "message": "Rewrite component contracts",
+      "tree": {
+        "sha": "de046c5dfff6496cdb1f5718fcbd239883e05172",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/de046c5dfff6496cdb1f5718fcbd239883e05172"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/d6b92c8447f4251ed5f3e1034ec2725244c7ea06",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/d6b92c8447f4251ed5f3e1034ec2725244c7ea06",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/d6b92c8447f4251ed5f3e1034ec2725244c7ea06",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/d6b92c8447f4251ed5f3e1034ec2725244c7ea06/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "04374d9605fc700bb6f3b0e7c3d97ec30b982fb6",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/04374d9605fc700bb6f3b0e7c3d97ec30b982fb6",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/04374d9605fc700bb6f3b0e7c3d97ec30b982fb6"
+      }
+    ]
+  },
+  {
+    "sha": "04374d9605fc700bb6f3b0e7c3d97ec30b982fb6",
+    "node_id": "C_kwDONJTxLdoAKDA0Mzc0ZDk2MDVmYzcwMGJiNmYzYjBlN2MzZDk3ZWMzMGI5ODJmYjY",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-17T21:41:08Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-17T21:41:08Z"
+      },
+      "message": "Create new versin of the project_status",
+      "tree": {
+        "sha": "d08bf31e640b9de1c80585af59c977a5d580f3d7",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/d08bf31e640b9de1c80585af59c977a5d580f3d7"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/04374d9605fc700bb6f3b0e7c3d97ec30b982fb6",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/04374d9605fc700bb6f3b0e7c3d97ec30b982fb6",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/04374d9605fc700bb6f3b0e7c3d97ec30b982fb6",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/04374d9605fc700bb6f3b0e7c3d97ec30b982fb6/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5f1ed2ac6c997c96057fb0d46002a4c3277fa097",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/5f1ed2ac6c997c96057fb0d46002a4c3277fa097",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/5f1ed2ac6c997c96057fb0d46002a4c3277fa097"
+      }
+    ]
+  },
+  {
+    "sha": "5f1ed2ac6c997c96057fb0d46002a4c3277fa097",
+    "node_id": "C_kwDONJTxLdoAKDVmMWVkMmFjNmM5OTdjOTYwNTdmYjBkNDYwMDJhNGMzMjc3ZmEwOTc",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-17T00:12:12Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-17T00:12:12Z"
+      },
+      "message": "Make a pdf version",
+      "tree": {
+        "sha": "ab079f249df0a6790d95abeb40be540ef545d89e",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/ab079f249df0a6790d95abeb40be540ef545d89e"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/5f1ed2ac6c997c96057fb0d46002a4c3277fa097",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/5f1ed2ac6c997c96057fb0d46002a4c3277fa097",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/5f1ed2ac6c997c96057fb0d46002a4c3277fa097",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/5f1ed2ac6c997c96057fb0d46002a4c3277fa097/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b4f3641e3d935c2d417db9387d94737e8b2784bd",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/b4f3641e3d935c2d417db9387d94737e8b2784bd",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/b4f3641e3d935c2d417db9387d94737e8b2784bd"
+      }
+    ]
+  },
+  {
+    "sha": "b4f3641e3d935c2d417db9387d94737e8b2784bd",
+    "node_id": "C_kwDONJTxLdoAKGI0ZjM2NDFlM2Q5MzVjMmQ0MTdkYjkzODdkOTQ3MzdlOGIyNzg0YmQ",
+    "commit": {
+      "author": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-17T00:10:43Z"
+      },
+      "committer": {
+        "name": "Ryan Nguyen",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-12-17T00:10:43Z"
+      },
+      "message": "Create a document for current progress status",
+      "tree": {
+        "sha": "47a9278b8976b90fe0984a7a870237d25c2b86de",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/47a9278b8976b90fe0984a7a870237d25c2b86de"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/b4f3641e3d935c2d417db9387d94737e8b2784bd",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/b4f3641e3d935c2d417db9387d94737e8b2784bd",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/b4f3641e3d935c2d417db9387d94737e8b2784bd",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/b4f3641e3d935c2d417db9387d94737e8b2784bd/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "697d4f80524d096851db4c06074f7d1a64e63ad2",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/697d4f80524d096851db4c06074f7d1a64e63ad2",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/697d4f80524d096851db4c06074f7d1a64e63ad2"
+      }
+    ]
+  },
+  {
+    "sha": "e71259d2df7a029959b59e4696be31de5d1c943c",
+    "node_id": "C_kwDONJTxLdoAKGU3MTI1OWQyZGY3YTAyOTk1OWI1OWU0Njk2YmUzMWRlNWQxYzk0M2M",
+    "commit": {
+      "author": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-06T23:32:37Z"
+      },
+      "committer": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-06T23:32:37Z"
+      },
+      "message": "Update Functional Requirement Brainstorm.txt",
+      "tree": {
+        "sha": "176cb241779066d00c9edc123802e18af468c2aa",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/176cb241779066d00c9edc123802e18af468c2aa"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/e71259d2df7a029959b59e4696be31de5d1c943c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/e71259d2df7a029959b59e4696be31de5d1c943c",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/e71259d2df7a029959b59e4696be31de5d1c943c",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/e71259d2df7a029959b59e4696be31de5d1c943c/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d621e66b2caeed2561ae87cc1c1a6e2d3b8fd1ca",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/d621e66b2caeed2561ae87cc1c1a6e2d3b8fd1ca",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/d621e66b2caeed2561ae87cc1c1a6e2d3b8fd1ca"
+      }
+    ]
+  },
+  {
+    "sha": "d621e66b2caeed2561ae87cc1c1a6e2d3b8fd1ca",
+    "node_id": "C_kwDONJTxLdoAKGQ2MjFlNjZiMmNhZWVkMjU2MWFlODdjYzFjMWE2ZTJkM2I4ZmQxY2E",
+    "commit": {
+      "author": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-06T20:02:43Z"
+      },
+      "committer": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-06T20:02:43Z"
+      },
+      "message": "Update Functional Requirement Brainstorm.txt",
+      "tree": {
+        "sha": "a9b9014a926a6d2aa5c976316bb07fd4119ae36c",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/a9b9014a926a6d2aa5c976316bb07fd4119ae36c"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/d621e66b2caeed2561ae87cc1c1a6e2d3b8fd1ca",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/d621e66b2caeed2561ae87cc1c1a6e2d3b8fd1ca",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/d621e66b2caeed2561ae87cc1c1a6e2d3b8fd1ca",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/d621e66b2caeed2561ae87cc1c1a6e2d3b8fd1ca/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e04cd53212d4ed5036485f7c98bddf5ca49b4f36",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/e04cd53212d4ed5036485f7c98bddf5ca49b4f36",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/e04cd53212d4ed5036485f7c98bddf5ca49b4f36"
+      }
+    ]
+  },
+  {
+    "sha": "e04cd53212d4ed5036485f7c98bddf5ca49b4f36",
+    "node_id": "C_kwDONJTxLdoAKGUwNGNkNTMyMTJkNGVkNTAzNjQ4NWY3Yzk4YmRkZjVjYTQ5YjRmMzY",
+    "commit": {
+      "author": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-05T22:18:05Z"
+      },
+      "committer": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-05T22:18:05Z"
+      },
+      "message": "Update document #15",
+      "tree": {
+        "sha": "5104b266478c20a147b7553fbe64f0ad7484bfef",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/5104b266478c20a147b7553fbe64f0ad7484bfef"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/e04cd53212d4ed5036485f7c98bddf5ca49b4f36",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/e04cd53212d4ed5036485f7c98bddf5ca49b4f36",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/e04cd53212d4ed5036485f7c98bddf5ca49b4f36",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/e04cd53212d4ed5036485f7c98bddf5ca49b4f36/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "9a816e546278841ec58c384c8fed987a9fc03e58",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/9a816e546278841ec58c384c8fed987a9fc03e58",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/9a816e546278841ec58c384c8fed987a9fc03e58"
+      }
+    ]
+  },
+  {
+    "sha": "9a816e546278841ec58c384c8fed987a9fc03e58",
+    "node_id": "C_kwDONJTxLdoAKDlhODE2ZTU0NjI3ODg0MWVjNThjMzg0YzhmZWQ5ODdhOWZjMDNlNTg",
+    "commit": {
+      "author": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-05T16:34:57Z"
+      },
+      "committer": {
+        "name": "Th-nguyen-Dev",
+        "email": "th.nguyen.developer@gmail.com",
+        "date": "2024-11-05T16:34:57Z"
+      },
+      "message": "Upload Meeting Notes",
+      "tree": {
+        "sha": "ab4cc4fe1434d46697993e12f50508616b79f072",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/trees/ab4cc4fe1434d46697993e12f50508616b79f072"
+      },
+      "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/git/commits/9a816e546278841ec58c384c8fed987a9fc03e58",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/9a816e546278841ec58c384c8fed987a9fc03e58",
+    "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/9a816e546278841ec58c384c8fed987a9fc03e58",
+    "comments_url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/9a816e546278841ec58c384c8fed987a9fc03e58/comments",
+    "author": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Th-nguyen-Dev",
+      "id": 147442211,
+      "node_id": "U_kgDOCMnKIw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147442211?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Th-nguyen-Dev",
+      "html_url": "https://github.com/Th-nguyen-Dev",
+      "followers_url": "https://api.github.com/users/Th-nguyen-Dev/followers",
+      "following_url": "https://api.github.com/users/Th-nguyen-Dev/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Th-nguyen-Dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Th-nguyen-Dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Th-nguyen-Dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/Th-nguyen-Dev/orgs",
+      "repos_url": "https://api.github.com/users/Th-nguyen-Dev/repos",
+      "events_url": "https://api.github.com/users/Th-nguyen-Dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Th-nguyen-Dev/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "370ba8915a767e09ac9230bc4ca2f01e0b79682c",
+        "url": "https://api.github.com/repos/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commits/370ba8915a767e09ac9230bc4ca2f01e0b79682c",
+        "html_url": "https://github.com/Bellevue-College-ProfWentao/2024-2025-senior-capstone-project-placeholder-team/commit/370ba8915a767e09ac9230bc4ca2f01e0b79682c"
+      }
+    ]
+  }
+]
