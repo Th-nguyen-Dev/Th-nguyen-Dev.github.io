@@ -40,12 +40,8 @@ function ProjectPanelText({
   }, [api, isVisible]);
 
   const newButton = useRef();
-  const changeTextColor = (color) => (event) => {
-    event.target.style.color = color;
-  };
 
   const onClick = (event) => {
-    changeTextColor("black")(event);
     if (newButton.current) {
       newButton.current.style.display = "none";
     }
