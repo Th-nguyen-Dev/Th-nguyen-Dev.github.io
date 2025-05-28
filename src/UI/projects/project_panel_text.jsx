@@ -59,8 +59,11 @@ function ProjectPanelText({
     <div ref={panelRef}>
       <animated.div style={spring}>
         <div className="w-full h-auto flex-row flex gap-14 max-lg:flex-col max-lg:gap-y-5 items-center ">
-          <div className="gap-y-3 h-fit w-1/2 max-w-1/2 max-xl:w-1/2 max-lg:w-full flex flex-col">
-            <div className="relative flex flex-col pb-10 w-full">
+          <div className="gap-y-5 h-fit w-1/2 max-w-1/2 max-xl:w-1/2 max-lg:w-full flex flex-col">
+            {/* <div className="flex items-center justify-center">
+              <span className="text-2xl font-semibold">{projectType}</span>
+            </div> */}
+            <div className="relative flex flex-col w-full">
               <div ref={newButton}>
                 <div className="absolute top-0 right-0 h-6 w-6 rounded-full bg-green-500"></div>
                 <div className="absolute top-0 right-0 h-6 w-6 rounded-full bg-slate-100 animate-ping"></div>
@@ -77,9 +80,7 @@ function ProjectPanelText({
               </Button>
             </div>
             {/* <h2 className="whitespace-nowrap">{projectType}</h2> */}
-            <div className="flex items-center justify-between">
-              <span className="text-2xl font-semibold">{projectType}</span>
-            </div>
+
             {/* <h2 className="whitespace-nowrap">{progress}</h2> */}
             <Progress value={progressValue} className="w-full h-4" />
             <div className="text-xl font-light">{description}</div>
