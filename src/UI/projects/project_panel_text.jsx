@@ -40,7 +40,7 @@ function ProjectPanelText({
     <div ref={panelRef}>
       <animated.div style={spring} className="break-inside-avoid">
         <div className="w-full h-auto flex-row flex gap-x-10 max-lg:flex-col max-lg:gap-y-5 items-center ">
-          <div className="space-y-3 h-fit w-3/5 max-xl:w-1/2 max-lg:w-full flex flex-col">
+          <div className="space-y-3 h-fit w-1/2 max-xl:w-1/2 max-lg:w-full flex flex-col">
             <h1 className="font-bold">
               {tittleLink ? (
                 <a
@@ -65,7 +65,7 @@ function ProjectPanelText({
             {children ? (
               children
             ) : (
-              <div className="w-full aspect-video bg-white text-black text-center text-2xl flex items-center justify-center">
+              <div className="w-full aspect-video bg-white text-black text-center text-2xl flex items-center justify-center opacity-50">
                 {" "}
                 Coming Soon!
               </div>
