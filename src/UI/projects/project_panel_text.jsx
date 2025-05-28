@@ -71,7 +71,7 @@ function ProjectPanelText({
                 className={buttonStyle}
                 onClick={onClick}
               >
-                <span className="text-5xl max-lg:text-xl max-md:text-lg transition-resize whitespace-normal h-fit py-4 text-left">
+                <span className="text-4xl max-lg:text-2xl max-md:text-lg transition-resize whitespace-normal h-fit py-4 text-left">
                   {title}
                 </span>
               </Button>
