@@ -17,7 +17,7 @@ function ProjectPanelText({
   const panelRef = useRef();
   const isVisible = useIsVisible(panelRef);
   const buttonStyle =
-    "font-bold max-w-full min-w-6 w-full max-h-28 min-h-20 h-auto text-3xl max-lg:text-xl max-md:text-xl transition-resize select-none rounded-full";
+    "font-bold max-w-full min-w-6 w-full h-auto rounded-full bg-transparent hover:text-black text-white";
 
   const [spring, api] = useSpring(
     () => ({
@@ -55,20 +55,12 @@ function ProjectPanelText({
     }
   };
 
-  const onPointerEnter = (event) => {
-    changeTextColor("black")(event);
-  };
-
-  const onPointerLeave = (event) => {
-    changeTextColor("white")(event);
-  };
-
   return (
     <div ref={panelRef}>
-      <animated.div style={spring} className="break-inside-avoid">
-        <div className="w-full h-auto flex-row flex gap-x-10 max-lg:flex-col max-lg:gap-y-5 items-center ">
-          <div className="space-y-3 h-fit w-1/2 max-xl:w-1/2 max-lg:w-full flex flex-col">
-            <div className="relative flex flex-col items-center justify-center pb-6">
+      <animated.div style={spring}>
+        <div className="w-full h-auto flex-row flex gap-14 max-lg:flex-col max-lg:gap-y-5 items-center ">
+          <div className="space-y-3 h-fit w-1/2 max-w-1/2 max-xl:w-1/2 max-lg:w-full flex flex-col">
+            <div className="relative flex flex-col pb-6 w-full">
               <div ref={newButton}>
                 <div className="absolute top-0 right-0 h-6 w-6 rounded-full bg-green-500"></div>
                 <div className="absolute top-0 right-0 h-6 w-6 rounded-full bg-slate-100 animate-ping"></div>
@@ -77,11 +69,11 @@ function ProjectPanelText({
                 variant="outline"
                 size={"lg"}
                 className={buttonStyle}
-                onPointerOver={onPointerEnter}
-                onPointerOut={onPointerLeave}
                 onClick={onClick}
               >
-                {title}
+                <span className="text-5xl max-lg:text-xl max-md:text-lg transition-resize whitespace-normal h-fit py-6 text-left">
+                  {title}
+                </span>
               </Button>
             </div>
             {/* <h2 className="whitespace-nowrap">{projectType}</h2> */}
@@ -90,7 +82,7 @@ function ProjectPanelText({
             <Progress value={progressValue} className="w-full h-4" />
             <div className="text-xl font-light">{description}</div>
           </div>
-          <div className="flex-grow">
+          <div className="w-1/2 max-xl:w-1/2 max-lg:w-full h-auto flex items-center justify-center">
             {children ? (
               children
             ) : (

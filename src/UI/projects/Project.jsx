@@ -77,11 +77,17 @@ function Project() {
             progress="Progress: Implementation"
             progressValue={60}
             description="This is the group project I led and worked on during my Software Engineering course. Our 3-month project was to create a turn-based combat system in Unity, with an emphasis on learning about the software development cycle. Overall, I think this is one of the most memorable and difficult projects I have ever worked on. This is purely because of the nuanced team dynamics, the scope of the project, and the tool learning curve of Unity and C#. The project is currently on hiatus due to the quarter ending, but it is number one on my list to finish. "
+            children={
+              <img
+                src="/images/project-delta.jpg"
+                className="aspect-video overflow-clip"
+              ></img>
+            }
           />
         </div>
         <div className="Reverse Calculator">
           <ProjectPanelText
-            title="Reverse Polish Calculator with Antlr Grammar Tree"
+            title="Reverse Polish Calculator with Antlr Context-Free Grammar"
             tittleLink="https://github.com/Th-nguyen-Dev/Reverse-Polish-Calculator-ANTLR"
             projectType="College Project"
             date="Winter 2024"
