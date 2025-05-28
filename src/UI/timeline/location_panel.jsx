@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import { setTimelineToggle } from "@/context/reducer/timeline_toggle";
 
 import { Button } from "@/components/ui/button";
+import { animated, useSpring } from "@react-spring/web";
 import { useIsVisible } from "@/Hook/useIsVisible";
-import { useSpring, animated } from "@react-spring/web";
 
 export function MileStonePanel({ title, location, date, link }) {
   const milestonePanelRef = useRef();
@@ -156,11 +156,7 @@ function LocationPanel({ location, buttonText, mainText, milestones }) {
       </div>
       <br></br>
       <br></br>
-      <animated.span
-        style={spring}
-        ref={mainTextRef}
-        className="font-extralight"
-      >
+      <animated.span style={spring} ref={mainTextRef} className="font-light">
         {mainText}
       </animated.span>
       <br></br>

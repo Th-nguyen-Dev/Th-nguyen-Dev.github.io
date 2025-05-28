@@ -62,7 +62,7 @@ function ProjectPanelText({
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
               <AccordionTrigger className="items-center justify-center h-14 bg-transparent"></AccordionTrigger>
-              <AccordionContent className="text-xl font-extralight mt-6">
+              <AccordionContent className="text-xl font-light mt-6">
                 {description}
               </AccordionContent>
             </AccordionItem>

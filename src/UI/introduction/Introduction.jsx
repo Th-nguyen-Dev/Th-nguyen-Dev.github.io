@@ -62,7 +62,7 @@ function Introduction() {
               <p className="text-3xl">My name is Ryan Nguyen</p>
             </h1>
             <br></br>
-            <h2 className="text-xl font-extralight">
+            <h2 className="text-xl font-light">
               I am a full stack developer with a passion for designs and all
               things interactive.
               <br />
