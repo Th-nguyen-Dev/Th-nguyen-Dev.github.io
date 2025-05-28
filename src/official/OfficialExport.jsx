@@ -82,7 +82,7 @@ function OfficialExport() {
         }}
         color="black"
         camera={{ fov: 20, position: [0, 0, 2000] }}
-        performance={{ min: 0.01 }}
+        performance={{ min: 0.01, debounce: 10 }}
       >
         <AdaptiveDpr pixelated />
         <Suspense fallback={PLoader()}>

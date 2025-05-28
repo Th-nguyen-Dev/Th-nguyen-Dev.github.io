@@ -21,14 +21,25 @@ function Project() {
     }
   }, [dispatch, isVisible]);
 
+  const SeparatorWithText = ({ text }) => (
+    <div className="relative flex py-5 gap-x-5 items-center">
+      <div className="flex-grow border-t border-white"></div>
+      <span className="flex-shrink mx-4t text-white font-semibold text-2xl">
+        {text}
+      </span>
+      <div className="flex-grow border-t border-white"></div>
+    </div>
+  );
+
   const projectPanels = useMemo(
     () => (
       <div className="grid grid-cols-1 gap-20">
+        {SeparatorWithText({ text: "2025 Projects" })}
         <div className="Portfolio Website">
           <ProjectPanelText
-            title="Ballbrawl"
+            title="Ballbrawl - Global Game Jam 2025"
             tittleLink="https://ballbrawl.com/"
-            projectType="Game Jam/ Personal Project"
+            projectType="Game Jam / Personal Project"
             date="2025 - Present"
             progress="Progress: Ideation"
             progressValue={95}
@@ -48,9 +59,9 @@ function Project() {
         </div>
         <div className="Portfolio Website">
           <ProjectPanelText
-            title="Tutorbot"
+            title="Tutorbot - A Personalized AI Tutor"
             tittleLink="https://tutorbot.me"
-            projectType="Game Jam/ Personal Project"
+            projectType="College Project"
             date="2025 - Present"
             progress="Progress: Completed"
             progressValue={95}
@@ -68,9 +79,27 @@ function Project() {
             }
           />
         </div>
-        <div className="Project Delta - 3D Turn-based RPG in Unity">
+        <div className="Portfolio Website">
           <ProjectPanelText
-            title="Project Delta - 3D Turn-based RPG in Unity"
+            title="Rainingbot - A Weather Prediction AI"
+            tittleLink="https://github.com/Th-nguyen-Dev/Weather-Predition-Project"
+            projectType="College Project"
+            date="2025"
+            progress="Progress: Completed"
+            progressValue={100}
+            description="This is the final project for my Machine Learning course. The goal for this project was to create a weather prediction AI that can predict the weather for the next day. The AI is based on a hybrid neural network model that combines a Graph Neural Network (GNN) and a Transformer model. The GNN is used to process the spatial data of the weather stations, while the Transformer model is used to process the temporal data of the weather. The project is written in Python, and uses PyTorch for the neural network, and Pandas for data processing. The model is trained over 4 millions data points from the NOAA weather dataset, achieving a mean absolute error of 1.0 on average."
+            children={
+              <img
+                src="/images/raining-bot.png"
+                className="aspect-video overflow-clip"
+              ></img>
+            }
+          />
+        </div>
+        {SeparatorWithText({ text: "2024 Projects" })}
+        <div className="Project Delta - Unity 3D Turn-based RPG">
+          <ProjectPanelText
+            title="Project Delta - Unity 3D Turn-based RPG"
             tittleLink=""
             projectType="College Project"
             date="Spring 2024"
@@ -107,6 +136,7 @@ function Project() {
             description="This was a love letter to my friends who are avid rock climbers. The project was written in Javascript, and React for the frontend, and a mock backend with Google Map API for the map data. The project goal was to provide a simple and tap-to-use weather forecast for rock climbers to plan their climbing trips. I would love to continue working on this as a side project after the completion of my portfolio website."
           />
         </div>
+        {SeparatorWithText({ text: "2021 Projects" })}
         <div className="Visualization_Dijkstra_algorithm">
           <ProjectPanelText
             title="Dijkstra's Algorithm Visualization"

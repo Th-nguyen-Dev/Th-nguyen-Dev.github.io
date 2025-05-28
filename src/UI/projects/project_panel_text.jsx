@@ -77,7 +77,9 @@ function ProjectPanelText({
               </Button>
             </div>
             {/* <h2 className="whitespace-nowrap">{projectType}</h2> */}
-            <span className="text-2xl font-semibold">{date}</span>
+            <div className="flex items-center justify-between">
+              <span className="text-2xl font-semibold">{projectType}</span>
+            </div>
             {/* <h2 className="whitespace-nowrap">{progress}</h2> */}
             <Progress value={progressValue} className="w-full h-4" />
             <div className="text-xl font-light">{description}</div>
