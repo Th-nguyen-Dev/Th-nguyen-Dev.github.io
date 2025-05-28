@@ -59,7 +59,7 @@ function ProjectPanelText({
             <span className="text-2xl font-semibold">{date}</span>
             {/* <h2 className="whitespace-nowrap">{progress}</h2> */}
             <Progress value={progressValue} className="w-full h-4" />
-            <div>{description}</div>
+            <div className="text-xl font-light">{description}</div>
           </div>
           <div className="flex-grow">
             {children ? (
@@ -67,7 +67,7 @@ function ProjectPanelText({
             ) : (
               <div className="w-full aspect-video bg-white text-black text-center text-2xl flex items-center justify-center opacity-50">
                 {" "}
-                Coming Soon!
+                Demo Coming Soon!
               </div>
             )}
           </div>
