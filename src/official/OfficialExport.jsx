@@ -1,6 +1,12 @@
 import React, { useRef, useState, Suspense, useCallback } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { Scroll, ScrollControls, useProgress, Html } from "@react-three/drei";
+import {
+  Scroll,
+  ScrollControls,
+  useProgress,
+  Html,
+  AdaptiveDpr,
+} from "@react-three/drei";
 
 import AmbientLight from "../lights/ambient_light";
 import DirectionalLights from "../lights/directional_light";
@@ -76,7 +82,9 @@ function OfficialExport() {
         }}
         color="black"
         camera={{ fov: 20, position: [0, 0, 2000] }}
+        performance={{ min: 0.01 }}
       >
+        <AdaptiveDpr pixelated />
         <Suspense fallback={PLoader()}>
           <color attach="background" args={["#000000"]} />
           <CanvasDOM />

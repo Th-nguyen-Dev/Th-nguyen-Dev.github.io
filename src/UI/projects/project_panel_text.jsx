@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { useIsVisible } from "@/Hook/useIsVisible";
 import { useSpring, animated } from "@react-spring/web";
 import { Progress } from "@/components/ui/progress";
+import { Button } from "@/components/ui/button";
 
 function ProjectPanelText({
   title,
@@ -15,6 +16,8 @@ function ProjectPanelText({
 }) {
   const panelRef = useRef();
   const isVisible = useIsVisible(panelRef);
+  const buttonStyle =
+    "font-bold max-w-full min-w-6 w-full max-h-28 min-h-20 h-auto text-3xl max-lg:text-xl max-md:text-xl transition-resize select-none rounded-full";
 
   const [spring, api] = useSpring(
     () => ({
@@ -36,25 +39,51 @@ function ProjectPanelText({
     });
   }, [api, isVisible]);
 
+  const newButton = useRef();
+  const changeTextColor = (color) => (event) => {
+    event.target.style.color = color;
+  };
+
+  const onClick = (event) => {
+    changeTextColor("black")(event);
+    if (newButton.current) {
+      newButton.current.style.display = "none";
+    }
+
+    if (tittleLink) {
+      window.open(tittleLink, "_blank");
+    }
+  };
+
+  const onPointerEnter = (event) => {
+    changeTextColor("black")(event);
+  };
+
+  const onPointerLeave = (event) => {
+    changeTextColor("white")(event);
+  };
+
   return (
     <div ref={panelRef}>
       <animated.div style={spring} className="break-inside-avoid">
         <div className="w-full h-auto flex-row flex gap-x-10 max-lg:flex-col max-lg:gap-y-5 items-center ">
           <div className="space-y-3 h-fit w-1/2 max-xl:w-1/2 max-lg:w-full flex flex-col">
-            <h1 className="font-bold">
-              {tittleLink ? (
-                <a
-                  href={tittleLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  {title}
-                </a>
-              ) : (
-                title
-              )}
-            </h1>
+            <div className="relative flex flex-col items-center justify-center pb-6">
+              <div ref={newButton}>
+                <div className="absolute top-0 right-0 h-6 w-6 rounded-full bg-green-500"></div>
+                <div className="absolute top-0 right-0 h-6 w-6 rounded-full bg-slate-100 animate-ping"></div>
+              </div>
+              <Button
+                variant="outline"
+                size={"lg"}
+                className={buttonStyle}
+                onPointerOver={onPointerEnter}
+                onPointerOut={onPointerLeave}
+                onClick={onClick}
+              >
+                {title}
+              </Button>
+            </div>
             {/* <h2 className="whitespace-nowrap">{projectType}</h2> */}
             <span className="text-2xl font-semibold">{date}</span>
             {/* <h2 className="whitespace-nowrap">{progress}</h2> */}
@@ -66,7 +95,6 @@ function ProjectPanelText({
               children
             ) : (
               <div className="w-full aspect-video bg-white text-black text-center text-2xl flex items-center justify-center opacity-50">
-                {" "}
                 Demo Coming Soon!
               </div>
             )}

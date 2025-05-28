@@ -146,7 +146,7 @@ function LocationPanel({ location, buttonText, mainText, milestones }) {
         <Button
           variant="outline"
           size={"lg"}
-          className={buttonStyle + "animate-ping"}
+          className={buttonStyle}
           onPointerOver={onPointerEnter(location)}
           onPointerOut={onPointerLeave}
           onClick={onClick}

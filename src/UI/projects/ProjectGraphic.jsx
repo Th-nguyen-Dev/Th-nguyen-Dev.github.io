@@ -25,7 +25,7 @@ function ProjectGraphic() {
         <br />
         <br />
         <br />
-        <div className="columns-2 space-y-4 max-sm:columns-1 transition-all">
+        <div className="columns-2 space-y-4 max-sm:columns-1 transition-all ">
           <iframe
             className="rounded-lg w-full transition-resize"
             height={"500vh"}
