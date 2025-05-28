@@ -59,8 +59,8 @@ function ProjectPanelText({
     <div ref={panelRef}>
       <animated.div style={spring}>
         <div className="w-full h-auto flex-row flex gap-14 max-lg:flex-col max-lg:gap-y-5 items-center ">
-          <div className="space-y-3 h-fit w-1/2 max-w-1/2 max-xl:w-1/2 max-lg:w-full flex flex-col">
-            <div className="relative flex flex-col pb-6 w-full">
+          <div className="gap-y-3 h-fit w-1/2 max-w-1/2 max-xl:w-1/2 max-lg:w-full flex flex-col">
+            <div className="relative flex flex-col pb-10 w-full">
               <div ref={newButton}>
                 <div className="absolute top-0 right-0 h-6 w-6 rounded-full bg-green-500"></div>
                 <div className="absolute top-0 right-0 h-6 w-6 rounded-full bg-slate-100 animate-ping"></div>
@@ -71,7 +71,7 @@ function ProjectPanelText({
                 className={buttonStyle}
                 onClick={onClick}
               >
-                <span className="text-5xl max-lg:text-xl max-md:text-lg transition-resize whitespace-normal h-fit py-6 text-left">
+                <span className="text-5xl max-lg:text-xl max-md:text-lg transition-resize whitespace-normal h-fit py-4 text-left">
                   {title}
                 </span>
               </Button>
