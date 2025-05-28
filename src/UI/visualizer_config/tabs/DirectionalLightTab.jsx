@@ -14,7 +14,9 @@ import TabsSubContent from "./TabsSubContent";
 const DirectionalLightTab = () => {
   return (
     <AccordionItem value="directional_light">
-      <AccordionTrigger>Directional Light</AccordionTrigger>
+      <AccordionTrigger className="text-accent">
+        Directional Light
+      </AccordionTrigger>
       <AccordionContent>
         <div>
           <TabsSubContent label="Rotation">

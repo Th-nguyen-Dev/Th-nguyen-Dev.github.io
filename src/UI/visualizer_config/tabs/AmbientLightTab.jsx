@@ -11,7 +11,7 @@ import TabsSubContent from "./TabsSubContent";
 const AmbientLightTab = () => {
   return (
     <AccordionItem value="ambient_light">
-      <AccordionTrigger>Ambient Light</AccordionTrigger>
+      <AccordionTrigger className="text-accent">Ambient Light</AccordionTrigger>
       <AccordionContent>
         <div className="gap-y-4">
           <TabsSubContent label="Intensity">

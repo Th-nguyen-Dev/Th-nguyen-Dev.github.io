@@ -12,10 +12,10 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 const VisualizerConfig = () => {
   return (
-    <header className="sticky w-screen h-full px-8 py-8 flex justify-end items-end">
+    <header className="sticky w-screen h-full px-8 py-8 flex justify-end items-end text-foreground">
       <div>
         <Popover>
-          <PopoverTrigger className="w-16 h-10 rounded-full items-center bg-transparent hover:bg-foreground ring-1 ring-foreground justify-center flex hover:text-background focus:outline-none">
+          <PopoverTrigger className="w-16 h-10 rounded-full items-center bg-background hover:bg-foreground ring-1 ring-foreground justify-center flex hover:text-background focus:outline-none">
             <GrMenu size={28} color="" />
           </PopoverTrigger>
           <PopoverContent className="my-5 z-50 w-full transition-all bg-background ">
