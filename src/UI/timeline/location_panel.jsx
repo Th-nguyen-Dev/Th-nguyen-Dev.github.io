@@ -69,7 +69,7 @@ export function MileStoneList({ milestones }) {
 
 function LocationPanel({ location, buttonText, mainText, milestones }) {
   const buttonStyle =
-    "font-bold max-w-full min-w-6 w-full max-h-28 min-h-20 h-auto text-5xl max-sm:text-2xl transition-resize select-none rounded-full";
+    "font-bold max-w-full min-w-6 w-full max-h-28 min-h-20 h-auto text-5xl max-lg:text-3xl max-md:text-3xl transition-resize select-none rounded-full";
   const dispatch = useDispatch();
   const newButton = useRef();
   const changeTextColor = (color) => (event) => {

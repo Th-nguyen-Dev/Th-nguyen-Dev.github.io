@@ -70,6 +70,7 @@ function OfficialExport() {
         ref={canvasRef}
         className="canvas pointer-events-auto z-10"
         gl={{
+          alpha: true,
           powerPreference: "high-performance",
           antialias: false,
         }}

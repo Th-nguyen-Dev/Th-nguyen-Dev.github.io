@@ -23,7 +23,51 @@ function Project() {
 
   const projectPanels = useMemo(
     () => (
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 gap-20">
+        <div className="Portfolio Website">
+          <ProjectPanelText
+            title="Ballbrawl"
+            tittleLink="https://ballbrawl.com/"
+            projectType="Game Jam/ Personal Project"
+            date="2025 - Present"
+            progress="Progress: Ideation"
+            progressValue={95}
+            description="This project is a game I and my friends made during the Global Game Jam 2025 which we later iterated on and released as a full feature web game. The game jam theme was 'bubble', and we took it literally as bubbles in a ball pit. Thus, a 3D physics battle arena game was born, loosely inspired by Super Monkey Ball, Supper Smash Bros, and Fall Guys. The game is currently awaiting its public release on other popular web gaming platforms. The game is written in Rust, WebGL, and translated to WebAssembly for performance, it is available on both desktop and mobile browsers."
+            children={
+              <iframe
+                className="w-full aspect-video"
+                src="https://www.youtube.com/embed/Tv3mU94IUPg?si=G803etrziJB0ZVqb"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            }
+          />
+        </div>
+        <div className="Portfolio Website">
+          <ProjectPanelText
+            title="Tutorbot"
+            tittleLink="https://tutorbot.me"
+            projectType="Game Jam/ Personal Project"
+            date="2025 - Present"
+            progress="Progress: Completed"
+            progressValue={95}
+            description="This is the capstone project for my Bachelor's degree in Computer Science. The project is a web-based AI tutor that develops and adapts to the student's learning style. The project aims to be the middle man between the student and the teacher, providing a personalized learning / teaching experience for both students and teachers. The project demonstrated full understanding of developing a full stack application with a focus on AI and machine learning. By leveraging a serverless architecture with AWS Lambdas, Dynamodb, and Cognito, the software is not only cost effective, but also highly scalable. Tech stack includes React, Next.js, Typescript, AWS, Langchain for the frontend. The backend is written in Go, Python, Langchain, and Gemini API. The product is awaiting delivery to the client."
+            children={
+              <iframe
+                className="w-full aspect-video"
+                src="https://www.youtube.com/embed/R-Ij9uAofhs?si=_XVA2QedWWyNxcXx"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            }
+          />
+        </div>
         <div className="Portfolio Website">
           <ProjectPanelText
             title="Node-Based Material Creator For Three.js"

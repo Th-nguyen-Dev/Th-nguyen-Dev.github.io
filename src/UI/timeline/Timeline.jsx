@@ -21,7 +21,7 @@ function Timeline() {
       <>
         <LocationPanel
           location={"My Tho"}
-          buttonText={"My Tho, Vietnam"}
+          buttonText={"My Tho, VN"}
           mainText={
             "Originally from the small city of My Tho, Vietnam, I grew up with a little Windows XP computer passed down from my brother. I remember spending hours playing games and dreaming of the day I could make one myself. Around 8th grade, that dream came true. The school-mandated textbook introduced me to Turbo Pascal, an ancient, forgotten, user-friendly, 1-indexed array language, and I was completely hooked! I even asked my parents to pay for extra classes so I could learn more about programming and attend coding competitions. Even though I no longer have any of the old code I wrote back then, I still hold on to the countless hours of debugging and crafting the perfect Turbo Pascal program."
           }
