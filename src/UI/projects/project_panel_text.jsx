@@ -59,7 +59,7 @@ function ProjectPanelText({
     <div ref={panelRef}>
       <animated.div style={spring}>
         <div className="w-full h-auto flex-row flex gap-14 max-lg:flex-col max-lg:gap-y-5 items-center ">
-          <div className="gap-y-5 h-fit w-1/2 max-w-1/2 max-xl:w-1/2 max-lg:w-full flex flex-col">
+          <div className="gap-y-8 h-fit w-1/2 max-w-1/2 max-xl:w-1/2 max-lg:w-full flex flex-col">
             {/* <div className="flex items-center justify-center">
               <span className="text-2xl font-semibold">{projectType}</span>
             </div> */}
