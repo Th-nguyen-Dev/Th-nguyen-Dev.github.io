@@ -21,9 +21,9 @@ export default function OfficialHTML({ htmlRef }) {
             text={"The Earth is 4.5 billion year old."}
             helpText={"Hint: You can hover over the buttons to travel."}
           />
-          <Timeline />
-          <Interim text={"Coral reefs are Earth's largest living structure."} />
           <Project />
+          <Interim text={"Coral reefs are Earth's largest living structure."} />
+          <Timeline />
           <Interim text={"The Moon is drifting away from Earth."} />
           <ProjectGraphic />
           <Interim text={"The Moon helps stabilize the Earth's wobble"} />
