@@ -24,7 +24,7 @@ export default function OfficialHTML({ htmlRef }) {
           <Project />
           <Interim text={"Coral reefs are Earth's largest living structure."} />
           <Timeline />
-          <Interim text={"The Moon is drifting away from Earth."} />
+          <Interim text={"The Moon is drifting away from Earth. Scary!"} />
           <ProjectGraphic />
           <Interim text={"The Moon helps stabilize the Earth's wobble"} />
         </div>
