@@ -67,7 +67,7 @@ function Introduction() {
               things interactive.
               <br />
               <br />
-As a recent Computer Science graduate from Bellevue College, I specialize in engineering robust, scalable systems that solve complex user problems. My background in graphic programming and UI design has transitioned into a focus on Application Modernization, Generative AI pipelines, and Simulation Platforms. I am driven by a desire to own every step of the development process—from architecting secure data flows and optimizing database latency to crafting adaptive interfaces that reduce cognitive load for diverse users.
+As a recent Computer Science graduate from Bellevue College, I specialize in engineering robust, scalable systems that solve complex user problems. My background in graphic programming and UI design has transitioned into a focus on Application Modernization, Generative AI pipelines, and Simulation Platforms. From architecting secure data flows and optimizing database latency to crafting adaptive interfaces that reduce cognitive load for diverse users, I am driven by a desire to own every step of the development process .
             </h2>
           </div>
         </animated.div>
