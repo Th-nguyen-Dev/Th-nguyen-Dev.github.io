@@ -74,7 +74,7 @@ function Header() {
             <NavigationMenuItem className="w-full">
               <NavigationMenuLink
                 className={navigationMenuTriggerStyle() + " w-full"}
-                href="https://www.behance.net/ryannguyen35"
+                href="https://www.behance.net/sebastiannguyen35"
                 target="_blank"
                 onFocus={onSelect}
                 onPointerOver={onPointerOver(setBehanceColor)}
