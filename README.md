@@ -163,8 +163,8 @@ To run this project locally:
 1.  Clone the repository:
 
 ```sh
-git clone https://github.com/th-nguyen-dev/ryannguyenweb.git
-cd ryannguyenweb
+git clone https://github.com/th-nguyen-dev/sebastiannguyenweb.git
+cd sebastiannguyenweb
 ```
 
 2.  Install dependencies:
