@@ -59,7 +59,7 @@ function Introduction() {
                   Hello World!
                 </strong>
               </p>
-              <p className="text-3xl">My name is Ryan Nguyen</p>
+              <p className="text-3xl">My name is Sebastian Nguyen</p>
             </h1>
             <br></br>
             <h2 className="text-xl font-light">
