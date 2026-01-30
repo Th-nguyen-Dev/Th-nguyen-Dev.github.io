@@ -67,14 +67,7 @@ function Introduction() {
               things interactive.
               <br />
               <br />
-              Currently, I am working toward a degree in Computer Science at
-              Bellevue College in Washington. I have a background in graphic
-              design, graphic programming, game development, algorithm, and UI
-              design. I grew up with computers and technology, and have always
-              been fascinated with the use of technology to create interactive
-              experiences. From video games to tools that allows for these
-              creative experiences, I have always wanted to be at every step of
-              the process.
+As a recent Computer Science graduate from Bellevue College, I specialize in engineering robust, scalable systems that solve complex user problems. My background in graphic programming and UI design has transitioned into a focus on Application Modernization, Generative AI pipelines, and Simulation Platforms. I am driven by a desire to own every step of the development process—from architecting secure data flows and optimizing database latency to crafting adaptive interfaces that reduce cognitive load for diverse users.
             </h2>
           </div>
         </animated.div>
