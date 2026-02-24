@@ -57,7 +57,7 @@ function Header() {
             <NavigationMenuItem className="w-full">
               <NavigationMenuLink
                 className={navigationMenuTriggerStyle() + " w-full"}
-                href="https://www.linkedin.com/in/hung-nguyen-dev/"
+                href="https://www.linkedin.com/in/sebastian-nguyen-csdev/"
                 target="_blank"
                 onFocus={onSelect}
                 onPointerOver={onPointerOver(setLinkedInColor)}
